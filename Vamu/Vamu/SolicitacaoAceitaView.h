@@ -10,6 +10,7 @@
 #import "AceitacaoCarona.h"
 #import "Participante.h"
 #import "BaixarImagemService.h"
+#import "NotificacaoService.h"
 
 @interface SolicitacaoAceitaView : UIView
 
@@ -17,6 +18,8 @@
 
 @property (strong, nonatomic) AceitacaoCarona *solicitacao;
 @property (strong, nonatomic) BaixarImagemService *imagemService;
+@property (strong, nonatomic) NotificacaoService *notificacaoService;
+
 @property (strong, nonatomic) IBOutlet UILabel *lblNome;
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeCarro;
 @property (strong, nonatomic) IBOutlet UILabel *lblViagens;

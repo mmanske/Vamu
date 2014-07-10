@@ -11,7 +11,7 @@
 
 @implementation SolicitacaoAceitaView
 
-@synthesize lblNome, lblNomeCarro, lblViagens, imgMotorista, solicitacao = _solicitacao, imagemService;
+@synthesize lblNome, lblNomeCarro, lblViagens, imgMotorista, solicitacao = _solicitacao, imagemService, notificacaoService;
 
 -(id)exibirSolicitacao:(AceitacaoCarona*) solicitacao{
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"SolicitacaoAceitaView" owner:self options:nil];
@@ -32,6 +32,9 @@
 }
 
 - (IBAction)btnVamuClick:(id)sender {
+    notificacaoService = [NotificacaoService new];
+    notificacaoService.delegate = self;
+    [notificacaoService confirmacaoLeitura:_solicitacao.codNotificacao];
     [self removeFromSuperview];
 }
 

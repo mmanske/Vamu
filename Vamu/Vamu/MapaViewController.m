@@ -20,7 +20,6 @@
 #import "ConsultarParticipanteService.h"
 #import "BaixarImagemService.h"
 #import "NegacaoCarona.h"
-#import "CaronaSolicitacaoNegada.h"
 
 @interface MapaViewController ()
 
@@ -537,6 +536,12 @@
 #pragma mark - SolicitacaoAceitaViewDelegate
 
 -(void)confirmarSolicitacao:(AceitacaoCarona *)solicitacao{
+    [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
+}
+
+#pragma mark - NegacaoCaronaDelegate
+
+-(void)confirmarNegada:(NegacaoCarona *)solicitacao{
     [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
 }
 

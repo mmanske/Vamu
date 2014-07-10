@@ -13,7 +13,7 @@
 
 @protocol CaronaNegadaDelegate <NSObject>
 
--(void) confirmarSolicitacao:(NegacaoCarona*) solicitacao;
+-(void) confirmarNegada:(NegacaoCarona*) solicitacao;
 
 @end
 

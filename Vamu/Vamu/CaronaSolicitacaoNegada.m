@@ -33,8 +33,8 @@
 }
 
 - (IBAction)btnRecusaClick:(id)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(confirmarSolicitacao:)]) {
-        [self.delegate confirmarSolicitacao:_solicitacao];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(confirmarNegada:)]) {
+        [self.delegate confirmarNegada:_solicitacao];
     }
     [self removeFromSuperview];
 }

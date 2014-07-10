@@ -129,6 +129,14 @@
         self.dadosRetorno = nil;
         return;
     }
+    NSRange strCaronaAindaNaoEmbarcou = [self.dadosRetorno rangeOfString:@"msg:033"];
+    if (strCaronaAindaNaoEmbarcou.length > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(caronaAindaNaoEmbarcou)]) {
+            [self.delegate caronaAindaNaoEmbarcou];
+        }
+        self.dadosRetorno = nil;
+        return;
+    }
     
     NSRange strFalha = [self.dadosRetorno rangeOfString:@"msg:117"];
     if (strFalha.length > 0) {

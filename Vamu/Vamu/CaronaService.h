@@ -30,5 +30,6 @@
 -(void) solicitacaoEnviada;
 -(void) solicitacaoAceita;
 -(void) falhaAoEnviarSolicitacao;
+-(void) caronaAindaNaoEmbarcou;
 
 @end

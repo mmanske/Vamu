@@ -118,7 +118,7 @@
     
     if (![participanteLogado.motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         grupoView = [[GrupoView alloc] iniciar];
-        grupoView.center = CGPointMake(self.view.frame.size.width / 2, 244);
+        grupoView.center = CGPointMake(self.view.frame.size.width / 2, 420);
         [grupoView setHidden:YES];
         grupoView.alpha = 0.0f;
         

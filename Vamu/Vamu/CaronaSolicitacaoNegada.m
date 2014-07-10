@@ -24,9 +24,9 @@
     mainView.imgMotorista.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
     mainView.solicitacao = solicitacao;
-    mainView.lblNomeMotorista.text = _solicitacao.remetente.nome;
-    mainView.lblModeloVeiculo.text = [NSString stringWithFormat:@"%@ - %@ - %@ - %@", _solicitacao.modeloVeiculo, _solicitacao.ano, _solicitacao.cor, _solicitacao.placa];
-    mainView.lblNumViagens.text = [NSString stringWithFormat:@"%@ viagem(ns)", _solicitacao.numViagensMotorista];
+    mainView.lblNomeMotorista.text = solicitacao.remetente.nome;
+    mainView.lblModeloVeiculo.text = [NSString stringWithFormat:@"%@ - %@ - %@ - %@", solicitacao.modeloVeiculo, solicitacao.ano, solicitacao.cor, solicitacao.placa];
+    mainView.lblNumViagens.text = [NSString stringWithFormat:@"%@ viagem(ns)", solicitacao.numViagensMotorista];
     mainView.lblMotivoRecusa.text = solicitacao.mensagem;
     
     return mainView;

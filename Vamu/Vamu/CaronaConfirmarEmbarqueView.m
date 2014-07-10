@@ -43,6 +43,7 @@
     }
 }
 
+
 -(void)finalizaBaixarImagem{
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", _solicitacao.remetente.cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];

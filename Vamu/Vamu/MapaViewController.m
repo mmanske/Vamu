@@ -546,7 +546,7 @@
     
     [confirmarEmbarque carregarImagemMotorista];
     
-    [self.view addSubview:solicitacaoView];
+    [self.view addSubview:confirmarEmbarque];
 }
 
 #pragma mark - NegacaoCaronaDelegate

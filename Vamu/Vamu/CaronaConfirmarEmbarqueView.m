@@ -11,7 +11,7 @@
 
 @implementation CaronaConfirmarEmbarqueView
 
-@synthesize lblModeloVeiculo, lblNomeMotorista, lblNumViagens, imagemService, imgMotorista, solicitacao = _solicitacao;
+@synthesize lblModeloVeiculo, lblNomeMotorista, lblNumViagens, imgMotorista, solicitacao = _solicitacao, imagemService;
 
 -(id)exibirSolicitacao:(AceitacaoCarona*) solicitacao{
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"CaronaConfirmarEmbarqueView" owner:self options:nil];
@@ -42,7 +42,6 @@
         [self.delegate cancelouCarona:_solicitacao];
     }
 }
-
 
 -(void)finalizaBaixarImagem{
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", _solicitacao.remetente.cpf];

@@ -24,9 +24,6 @@
 
 @property (nonatomic) id delegate;
 
--(id)exibirSolicitacao:(AceitacaoCarona*) solicitacao;
--(void)carregarImagemMotorista;
-
 @property (strong, nonatomic) AceitacaoCarona *solicitacao;
 @property (strong, nonatomic) BaixarImagemService *imagemService;
 
@@ -34,6 +31,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblModeloVeiculo;
 @property (strong, nonatomic) IBOutlet UILabel *lblNumViagens;
 @property (strong, nonatomic) IBOutlet UIImageView *imgMotorista;
+
+-(id)exibirSolicitacao:(AceitacaoCarona*) solicitacao;
+-(void)carregarImagemMotorista;
 
 - (IBAction)btnEmbarqueiClick:(id)sender;
 - (IBAction)btnCancelarClick:(id)sender;

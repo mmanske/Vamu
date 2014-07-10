@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vamu/MapaViewController.m"
-            timestampString = "426714138.54847"
+            timestampString = "426714817.795944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "546"
-            endingLineNumber = "546"
+            startingLineNumber = "542"
+            endingLineNumber = "542"
             landmarkName = "-confirmarSolicitacao:"
             landmarkType = "5">
          </BreakpointContent>

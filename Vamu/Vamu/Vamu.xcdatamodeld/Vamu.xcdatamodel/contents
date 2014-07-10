@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AceitacaoCarona" representedClassName="AceitacaoCarona" syncable="YES">
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
+    <entity name="Configuracao" representedClassName="Configuracao" syncable="YES">
+        <attribute name="ultLatitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="ultLongitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Grupo" representedClassName="Grupo" syncable="YES">
+        <attribute name="ativarFiltros" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="codGrupo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="receberSolicitacao" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="visivel" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="moderador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="participantes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
+    <entity name="GrupoAtivo" representedClassName="GrupoAtivo" syncable="YES">
+        <relationship name="grupo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grupo" syncable="YES"/>
+        <relationship name="motoristasAtivos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MotoristaAtivo" syncable="YES"/>
+    </entity>
+    <entity name="MensagemCancelamento" representedClassName="MensagemCancelamento" syncable="YES">
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MotoristaAtivo" representedClassName="MotoristaAtivo" syncable="YES">
+        <attribute name="codPessoa" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="codViagem" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="descViagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rota" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rota" syncable="YES"/>
+        <relationship name="veiculo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Veiculo" syncable="YES"/>
+    </entity>
+    <entity name="Notificacao" representedClassName="Notificacao" syncable="YES">
+        <attribute name="codGrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="codigo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dataCadastro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomeDestino" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomeGrupo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="viagens" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="solicitante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
+    <entity name="Participante" representedClassName="Participante" syncable="YES">
+        <attribute name="apelido" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bairro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="celular" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cidade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codParticipante" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="complemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cpf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endereco" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fixo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitudeAtual" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latitudeFinal" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitudeAtual" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitudeFinal" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="motorista" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nascimento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sexo" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="viajensCarona" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="viajensMotorista" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="carro" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Veiculo" inverseName="participante" inverseEntity="Veiculo" syncable="YES"/>
+        <relationship name="trajetosFavoritos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TrajetoFavorito" inverseName="participante" inverseEntity="TrajetoFavorito" syncable="YES"/>
+    </entity>
+    <entity name="Ponto" representedClassName="Ponto" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="ordem" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Rota" representedClassName="Rota" syncable="YES">
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pontos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ponto" syncable="YES"/>
+    </entity>
+    <entity name="Seguradora" representedClassName="Seguradora" syncable="YES">
+        <attribute name="codSeguradora" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SolicitacaoAdesao" representedClassName="SolicitacaoAdesao" syncable="YES">
+        <attribute name="codGrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dataCadastro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomeGrupo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recebida" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="viagens" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
+    <entity name="SolicitacaoCarona" representedClassName="SolicitacaoCarona" syncable="YES">
+        <attribute name="apelidoRemetente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codgrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="codRemetente" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomeDestino" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomeRemetente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numViagens" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="recebida" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
+    <entity name="TrajetoFavorito" representedClassName="TrajetoFavorito" syncable="YES">
+        <attribute name="codigo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="participante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" inverseName="trajetosFavoritos" inverseEntity="Participante" syncable="YES"/>
+    </entity>
+    <entity name="Veiculo" representedClassName="Veiculo" syncable="YES">
+        <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idBanco" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modelo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="renavan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seguradora" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="participante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" inverseName="carro" inverseEntity="Participante" syncable="YES"/>
+        <relationship name="seg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Seguradora" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Configuracao" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Grupo" positionX="0" positionY="0" width="128" height="163"/>
+        <element name="GrupoAtivo" positionX="18" positionY="162" width="128" height="75"/>
+        <element name="MensagemCancelamento" positionX="18" positionY="162" width="128" height="58"/>
+        <element name="MotoristaAtivo" positionX="9" positionY="153" width="128" height="148"/>
+        <element name="Notificacao" positionX="9" positionY="153" width="128" height="195"/>
+        <element name="Participante" positionX="0" positionY="0" width="128" height="435"/>
+        <element name="Ponto" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Rota" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Seguradora" positionX="9" positionY="153" width="128" height="75"/>
+        <element name="SolicitacaoAdesao" positionX="18" positionY="162" width="128" height="163"/>
+        <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="225"/>
+        <element name="TrajetoFavorito" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="Veiculo" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="AceitacaoCarona" positionX="9" positionY="153" width="128" height="88"/>
+    </elements>
+</model>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>690BF58E-1B5C-4D75-9B80-052DCCF7C169</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SlidingPanelController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E472D465-4A37-41AB-B215-4A795EA0FCFB</key>
+		<string>http://www.entersistemas.com.br/projects/vamu/iOS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Vamu/Componentes/MSSlidingPanelController-master/Examples/SlidingPanelController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E472D465-4A37-41AB-B215-4A795EA0FCFB</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>E472D465-4A37-41AB-B215-4A795EA0FCFB</key>
+		<string>http://www.entersistemas.com.br/projects/vamu/iOS</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://www.entersistemas.com.br/projects/vamu/iOS/Vamu/Componentes/MSSlidingPanelController-master/Examples/SlidingPanelController.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E472D465-4A37-41AB-B215-4A795EA0FCFB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E472D465-4A37-41AB-B215-4A795EA0FCFB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,3 @@
+
+[{"idBanco":1, "placa":"kqk-2938", "renavan":"291839289", "marca":"Hiunday", "modelo": "Tucson", "cor":"Preto", "ano":"2012", "seguradora":"Porto Seguro", "codParticipante":"3"},
+ {"idBanco":2, "placa":"abc-1234", "renavan":"728372615", "marca":"Kia", "modelo": "Sportage", "cor":"Azul", "ano":"2013", "seguradora":"Bradesco Seguros", "codParticipante":"2"}]

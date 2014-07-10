@@ -1,0 +1,63 @@
+
+[
+ 
+   {
+     "codParticipante":"1",
+     "cpf":"40388201819",
+     "senha":"12345", 
+     "nome":"Guilherme Augusto Barreto", 
+     "apelido":"Guil", 
+     "email":"gassis1000@gmail.com", 
+     "sexo":0, 
+     "nascimento":"18/10/1991", 
+     "celular":"21983090611", 
+     "fixo":"2193829382", 
+     "cep":"27883-029", 
+     "endereco":"Rua que sobe e desce", 
+     "numero":"1", 
+     "complemento":"casa 1", 
+     "bairro":"Edson", 
+     "cidade":"Rio de Janeiro", 
+     "uf": "RJ"
+    }
+    ,
+    {
+     "codParticipante":"3",
+     "cpf":"123",
+     "senha":"123",
+     "nome":"Ivete Sangalo",
+     "apelido":"Ivete",
+     "email":"ivete@gmail.com",
+     "sexo":0, 
+     "nascimento":"18/10/1972",
+     "celular":"21983090611", 
+     "fixo":"2193829382", 
+     "cep":"27883-029", 
+     "endereco":"Rua que sobe e desce", 
+     "numero":"1", 
+     "complemento":"casa 1", 
+     "bairro":"Edson", 
+     "cidade":"Rio de Janeiro", 
+     "uf": "RJ"
+    }
+    ,
+   {
+     "codParticipante":"2",
+     "cpf":"12345678910",
+     "senha":"123",
+     "nome":"Mércio Dirla",
+     "apelido":"Dirlei",
+     "email":"mercio@gmail.com",
+     "sexo":1,
+     "nascimento":"10/02/1961",
+     "celular":"21983746352",
+     "fixo":"2194839483",
+     "cep":"27883-029",
+     "endereco":"Rua que sobe e desce",
+     "numero":"2",
+     "complemento":"casa 2",
+     "bairro":"Gonçalo",
+     "cidade":"Rio de Janeiro",
+     "uf": "RJ"
+   }
+ ]

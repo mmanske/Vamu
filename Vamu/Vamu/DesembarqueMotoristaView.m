@@ -7,6 +7,7 @@
 //
 
 #import "DesembarqueMotoristaView.h"
+#import "AppHelper.h"
 
 @implementation DesembarqueMotoristaView
 
@@ -21,6 +22,11 @@
     mainView.carona = participante;
     mainView.lblNomeCarona.text = participante.nome;
     mainView.lblDestinoCarona.text = @"Av. Das Américas";
+
+    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", participante.cpf];
+    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    imgCarona.image = [UIImage imageWithContentsOfFile:imageFileName];
+    
     
     [mainView setBackgroundColor:[UIColor colorWithRed:0.4 green:0.667 blue:0.267 alpha:1.0]];
     

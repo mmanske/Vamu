@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Participante.h"
 #import "CustomActivityView.h"
+#import "KSEnhancedKeyboard.h"
 
-@interface EditarParticipanteViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface EditarParticipanteViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, KSEnhancedKeyboardDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgBg;
 @property (strong, nonatomic) IBOutlet UITextField *edtCPF;

@@ -237,6 +237,7 @@
 
 -(void)loginSenhaInvalida{
     [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Senha inválida." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 -(void)onOcorreuTimeout:(NSString *)msg{

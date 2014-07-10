@@ -9,6 +9,10 @@
 #import "EditarParticipanteViewController.h"
 #import "ParticipanteService.h"
 #import "AppHelper.h"
+#import "MascaraHelper.h"
+#import "CSNotificationView.h"
+#import "Validations.h"
+
 
 @interface EditarParticipanteViewController (){
     BOOL imagemCarregada;
@@ -20,6 +24,10 @@
 @property (strong, nonatomic) CustomActivityView *ampulheta;
 @property (strong, nonatomic) ParticipanteService *participanteService;
 @property (nonatomic, strong) Participante *participante;
+@property (strong, nonatomic) MascaraHelper *mascaraHelper;
+@property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
+@property (nonatomic) NSMutableArray *formItems;
+
 
 @end
 
@@ -28,13 +36,35 @@
 @synthesize participante;
 @synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF, edtDataNascimento, edtEmail, edtEndereco, edtNomeParticipante, edtNumero, edtSenha, edtSexo, edtTelFixo, edtUF;
 @synthesize scrollView;
-@synthesize imgBg, imgParticipante;
+@synthesize imgBg, imgParticipante, enhancedKeyboard;
 @synthesize ampulheta;
-@synthesize participanteService;
+@synthesize participanteService, mascaraHelper, formItems;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    self.formItems = [NSMutableArray new];
+    UIView *subView = [self.view viewWithTag:88];
+    
+    for (UIView *view in [subView subviews]) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            [formItems addObject:view];
+        }
+    }
+    
+    subView = [self.view viewWithTag:89];
+    
+    for (UIView *view in [subView subviews]) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            [formItems addObject:view];
+        }
+    }
+    
+    self.enhancedKeyboard = [KSEnhancedKeyboard new];
+    self.enhancedKeyboard.delegate = self;
+
     
     sexos = @[@"Masculino", @"Feminino"];
     
@@ -69,6 +99,8 @@
     
     participanteService = [ParticipanteService new];
     participanteService.delegate = self;
+    
+    mascaraHelper = [MascaraHelper new];    
     
 }
 
@@ -107,6 +139,112 @@
     edtUF.text = participante.uf;
 }
 
+-(BOOL) validouCampos{
+    
+    if ([edtCPF.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo CPF"];
+        return NO;
+    }
+    if (![Validations validateCPFWithNSString: [AppHelper limparCPF:edtCPF.text]]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"CPF inválido"];
+        return NO;
+    }
+    if ([edtSenha.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo senha"];
+        return NO;
+    }
+    if ([edtConfirmarSenha.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo confirmar senha"];
+        return NO;
+    }
+    if ([edtNomeParticipante.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo nome"];
+        return NO;
+    }
+    if ([edtApelido.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo apelido"];
+        return NO;
+    }
+    if ([edtEmail.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo email"];
+        return NO;
+    }
+    if ([edtSexo.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo sexo"];
+        return NO;
+    }
+    if ([edtDataNascimento.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo nascimento"];
+        return NO;
+    }
+    if ([edtCelular.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
+        return NO;
+    }
+    if ([edtTelFixo.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo fixo"];
+        return NO;
+    }
+    if (![edtSenha.text isEqualToString:edtConfirmarSenha.text]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Senha não confere"];
+        return NO;
+    }
+    
+    if (!imagemCarregada) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Selecione uma foto"];
+        return NO;
+    }
+    
+    if ([edtCEP.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo CEP"];
+        return NO;
+    }
+    if ([edtEndereco.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo endereço"];
+        return NO;
+    }
+    if ([edtNumero.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo número"];
+        return NO;
+    }
+    if ([edtBairro.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo bairro"];
+        return NO;
+    }
+    if ([edtCidade.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo cidade"];
+        return NO;
+    }
+    if ([edtUF.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo UF"];
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void) alterarParticipante{
+    participante.cpf = edtCPF.text;
+    participante.senha = edtSenha.text;
+    participante.nome = edtNomeParticipante.text;
+    participante.apelido = edtApelido.text;
+    participante.email = edtEmail.text;
+    participante.sexo = [NSNumber numberWithInt:0];
+    participante.nascimento = edtDataNascimento.text;
+    participante.celular = edtCelular.text;
+    participante.fixo = edtTelFixo.text;
+    participante.cep = edtCEP.text;
+    participante.endereco = edtEndereco.text;
+    participante.numero = edtNumero.text;
+    participante.complemento = edtComplemento.text;
+    participante.bairro = edtBairro.text;
+    participante.cidade = edtCidade.text;
+    participante.uf = edtUF.text;
+}
+
+
+
+
 - (IBAction)btnInserirFotoClick:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Adicionar Foto" delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:imagemCarregada ? @"Excluir foto" : nil otherButtonTitles:@"Escolher foto existente", @"Tirar Foto", nil];
     
@@ -114,6 +252,15 @@
 }
 
 - (IBAction)btnSalvarClick:(id)sender {
+    
+    
+    if ([self validouCampos]) {
+        [ampulheta exibir];
+        [self alterarParticipante];
+        [participanteService alterarParticipante:participante];
+    }
+
+    
 }
 
 - (IBAction)btnCancelarClick:(id)sender {
@@ -125,6 +272,16 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    
+    if (textField == edtCPF) {
+        return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_CPF];
+    }
+    return YES;
+}
+
 
 #pragma mark - UIActionSheetDelegate
 
@@ -204,6 +361,65 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [textField setInputAccessoryView:[self.enhancedKeyboard getToolbarWithPrevEnabled:YES NextEnabled:YES DoneEnabled:YES]];
+}
+
+- (void)nextDidTouchDown
+{
+    
+    for (int i=0; i<[self.formItems count]; i++)
+    {
+        UITextField *field = [formItems objectAtIndex:i];
+        if ([field isEditing] && i!=[self.formItems count]-1)
+        {
+            field = [formItems objectAtIndex:i+1];
+            [field becomeFirstResponder];
+            UIView *parentView = field.superview;
+            CGFloat y = 120;
+            if (parentView.tag == 89) {
+                y = 340 + field.frame.origin.y;
+            } else {
+                y = 30 + field.frame.origin.y;
+            }
+            
+            if (field.frame.origin.y + parentView.frame.origin.y > 140) {
+                CGPoint ponto = CGPointMake(0, y);
+                [scrollView setContentOffset:ponto animated:YES];
+            }
+            break;
+        }
+    }
+}
+
+- (void)doneDidTouchDown
+{
+    
+    for (UITextField *field in self.formItems) {
+        if ([field isEditing]) {
+            [field resignFirstResponder];
+            break;
+        }
+    }
+}
+
+- (void)previousDidTouchDown
+{
+    for (int i=0; i<[self.formItems count]; i++)
+    {
+        UITextField *field = [formItems objectAtIndex:i];
+        if ([field isEditing] && i!=0)
+        {
+            
+            field = [formItems objectAtIndex:i-1];
+            [field becomeFirstResponder];
+            break;
+        }
+    }
 }
 
 @end

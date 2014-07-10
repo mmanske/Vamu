@@ -7,10 +7,11 @@
 //
 
 #import "DesembarqueCaronaView.h"
+#import "AppHelper.h"
 
 @implementation DesembarqueCaronaView
 
-@synthesize btnDesembarquei, lblKM, delegate;
+@synthesize btnDesembarquei, lblKM, delegate, caronaService;
 
 -(id) iniciar{
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"DesembarqueCaronaView" owner:self options:nil];
@@ -20,6 +21,15 @@
 }
 
 - (IBAction)btnDesembarqueiClick:(id)sender {
+    caronaService = [CaronaService new];
+    caronaService.delegate = self;
+    [caronaService desembarqueCarona:[AppHelper getParticipanteLogado]];
+}
+
+#pragma mark - CaronaServiceDelegate
+
+-(void)desembarqueConcluido{
+    [self removeFromSuperview];
     if (self.delegate && [self.delegate respondsToSelector:@selector(desembarquei)]) {
         [self.delegate desembarquei];
     }

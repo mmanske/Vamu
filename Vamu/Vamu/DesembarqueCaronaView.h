@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Participante.h"
+#import "CaronaService.h"
 
 @protocol DesembarqueCaronaViewDelegate <NSObject>
 
@@ -19,6 +20,7 @@
     id <DesembarqueCaronaViewDelegate> delegate;
 }
 
+@property (strong, nonatomic) CaronaService *caronaService;
 @property (strong, nonatomic) Participante *carona;
 @property (weak, nonatomic) IBOutlet UILabel *lblKM;
 @property (weak, nonatomic) IBOutlet UIButton *btnDesembarquei;

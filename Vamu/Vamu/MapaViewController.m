@@ -101,6 +101,7 @@
     
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [AppHelper getParticipanteLogado].cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    lblDestino.text = @"Avenida Embaixador Abelardo Bueno";
     
     imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
     
@@ -502,13 +503,12 @@
 #pragma mark - DesembarqueCaronaViewDelegate
 
 -(void)desembarquei{
-    [ampulheta exibir];
-    [caronaService desembarqueCarona:[AppHelper getParticipanteLogado]];
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:@"Viagem encerrada com sucesso" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)desembarqueConcluido{
     [ampulheta esconder];
-    //ir para a tela de resumo da viagem (que não existe)
 }
 
 -(void) embarqueConcluido{

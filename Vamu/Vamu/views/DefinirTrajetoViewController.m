@@ -24,6 +24,9 @@
 @property (strong, nonatomic) MKRoute *rotaFavorita;
 @property (strong, nonatomic) PlacesService *placeServices;
 @property (nonatomic, strong) NSMutableArray *lugares;
+@property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
+@property (nonatomic) NSArray *formItems;
+
 
 @end
 
@@ -45,7 +48,7 @@
 @synthesize ampulheta;
 @synthesize rotaService;
 @synthesize rotaFavorita;
-@synthesize placeServices;
+@synthesize placeServices, enhancedKeyboard, formItems;
 @synthesize lugares = _lugares;
 
 - (void)viewDidLoad
@@ -107,6 +110,13 @@
     
     [edtDestino registerAutoCompleteCellClass:[DEMOCustomAutoCompleteCell class]
                        forCellReuseIdentifier:@"CustomCellId"];
+    
+    self.formItems = [NSArray arrayWithObjects:edtDestino, nil];
+    self.enhancedKeyboard = [KSEnhancedKeyboard new];
+    self.enhancedKeyboard.delegate = self;
+
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -398,6 +408,73 @@
 -(BOOL)autoCompleteTextField:(MLPAutoCompleteTextField *)textField shouldConfigureCell:(UITableViewCell *)cell withAutoCompleteString:(NSString *)autocompleteString withAttributedString:(NSAttributedString *)boldedString forAutoCompleteObject:(id<MLPAutoCompletionObject>)autocompleteObject forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return YES;
+}
+
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    [textField setInputAccessoryView:[self.enhancedKeyboard getToolbarWithPrevEnabled:NO NextEnabled:NO DoneEnabled:YES]];
+    if (textField == edtDestino) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDelegate:self];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y - 100.0), self.view.frame.size.width, self.view.frame.size.height);
+        [UIView commitAnimations];
+    }
+
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField == edtDestino) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDelegate:self];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y + 100.0), self.view.frame.size.width, self.view.frame.size.height);
+        [UIView commitAnimations];
+    }
+}
+
+
+- (void)nextDidTouchDown
+{
+    
+    for (int i=0; i<[self.formItems count]; i++)
+    {
+        UITextField *field = [formItems objectAtIndex:i];
+        if ([field isEditing] && i!=[self.formItems count]-1)
+        {
+            field = [formItems objectAtIndex:i+1];
+            [field becomeFirstResponder];
+            break;
+        }
+    }
+}
+
+- (void)doneDidTouchDown
+{
+    
+    for (UITextField *field in self.formItems) {
+        if ([field isEditing]) {
+            [field resignFirstResponder];
+            break;
+        }
+    }
+}
+
+- (void)previousDidTouchDown
+{
+    for (int i=0; i<[self.formItems count]; i++)
+    {
+        UITextField *field = [formItems objectAtIndex:i];
+        if ([field isEditing] && i!=0)
+        {
+            
+            field = [formItems objectAtIndex:i-1];
+            [field becomeFirstResponder];
+            break;
+        }
+    }
 }
 
 @end

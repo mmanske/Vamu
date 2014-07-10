@@ -17,8 +17,9 @@
 #import "MLPAutoCompleteTextField.h"
 #import "PlacesService.h"
 #import "DEMOCustomAutoCompleteCell.h"
+#import "KSEnhancedKeyboard.h"
 
-@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate>
+@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate, KSEnhancedKeyboardDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *edtOrigem;
 @property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *edtDestino;

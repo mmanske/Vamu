@@ -22,32 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Vamu/views/DefinirTrajetoViewController.m"
-            timestampString = "426655745.281526"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vamu/MLPAutoCompleteTextField.m"
-            timestampString = "426656504.541923"
+            timestampString = "426680336.834034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "804"
-            endingLineNumber = "804"
-            landmarkName = "-autoCompleteTableViewFrameForTextField:"
+            startingLineNumber = "446"
+            endingLineNumber = "446"
+            landmarkName = "-expandDropDownAutoCompleteTableForNumberOfRows:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

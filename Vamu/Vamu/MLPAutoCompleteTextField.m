@@ -444,6 +444,7 @@ withAutoCompleteString:(NSString *)string
         
         [self.superview bringSubviewToFront:self];
         UIView *rootView = [self.window.subviews objectAtIndex:0];
+        //UIView *rootView = self.superview;
         [rootView insertSubview:self.autoCompleteTableView
                          belowSubview:self];
         [self.autoCompleteTableView setUserInteractionEnabled:YES];
@@ -777,7 +778,7 @@ withAutoCompleteString:(NSString *)string
     CGFloat height = [self autoCompleteTableHeightForTextField:textField withNumberOfRows:numberOfRows];
     
     newTableViewFrame.size.height = height;
-    newTableViewFrame.origin.y    = converted_originY + 10;
+    newTableViewFrame.origin.y    = converted_originY + 25;
     
     if(!textField.autoCompleteTableAppearsAsKeyboardAccessory){
         newTableViewFrame.size.height += textfieldTopInset;

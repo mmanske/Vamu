@@ -69,6 +69,7 @@
 }
 
 -(void)desembarqueConcluido{
+    [self removeFromSuperview];
     if (self.delegate && [self.delegate respondsToSelector:@selector(desembarcou:)]) {
         [self.delegate desembarcou:carona];
     }

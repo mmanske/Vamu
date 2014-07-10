@@ -520,7 +520,7 @@
 #pragma mark - DesembarqueMotoristaViewDelegate
 
 -(void)desembarcou:(Participante *)participante{
-    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:[NSString stringWithFormat:@"viagem do participante %@ encerrada com sucesso!", participante.nome] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:[NSString stringWithFormat:@"Viagem do participante %@ encerrada com sucesso!", participante.nome] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)embarcou:(Participante *)participante{

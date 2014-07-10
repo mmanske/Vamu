@@ -14,6 +14,11 @@
 
 @dynamic codNotificacao;
 @dynamic codViagem;
+@dynamic modeloVeiculo;
+@dynamic placa;
+@dynamic cor;
+@dynamic numViagensMotorista;
+@dynamic ano;
 @dynamic destinatario;
 @dynamic remetente;
 

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AceitacaoCarona" representedClassName="AceitacaoCarona" syncable="YES">
+        <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="codViagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modeloVeiculo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numViagensMotorista" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="placa" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
         <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
     </entity>
@@ -37,14 +42,19 @@
         <relationship name="veiculo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Veiculo" syncable="YES"/>
     </entity>
     <entity name="Notificacao" representedClassName="Notificacao" syncable="YES">
+        <attribute name="anoVeiculo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="codGrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="codigo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="corVeiculo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dataCadastro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modeloVeiculo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeDestino" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeGrupo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numViagensMotorista" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="placaVeiculo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tipo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="viagens" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
@@ -138,13 +148,13 @@
         <relationship name="seg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Seguradora" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AceitacaoCarona" positionX="9" positionY="153" width="128" height="105"/>
+        <element name="AceitacaoCarona" positionX="9" positionY="153" width="128" height="180"/>
         <element name="Configuracao" positionX="0" positionY="0" width="128" height="75"/>
         <element name="Grupo" positionX="0" positionY="0" width="128" height="163"/>
         <element name="GrupoAtivo" positionX="18" positionY="162" width="128" height="75"/>
         <element name="MensagemCancelamento" positionX="18" positionY="162" width="128" height="58"/>
         <element name="MotoristaAtivo" positionX="9" positionY="153" width="128" height="148"/>
-        <element name="Notificacao" positionX="9" positionY="153" width="128" height="225"/>
+        <element name="Notificacao" positionX="9" positionY="153" width="128" height="298"/>
         <element name="Participante" positionX="0" positionY="0" width="128" height="450"/>
         <element name="Ponto" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Rota" positionX="0" positionY="0" width="128" height="75"/>

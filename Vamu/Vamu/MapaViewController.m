@@ -19,11 +19,13 @@
 #import "DesembarqueMotoristaView.h"
 #import "ConsultarParticipanteService.h"
 #import "BaixarImagemService.h"
+#import "SolicitacaoAceitaView.h"
 
 @interface MapaViewController ()
 
 @property BOOL statusInicial;
 @property (nonatomic, strong) SolicitacaoView *solicitacaoView;
+@property (nonatomic, strong) SolicitacaoAceitaView *solicitacaoAceitaView;
 @property (nonatomic, strong) GrupoView *grupoView;
 @property (nonatomic, strong) Participante *participanteLogado;
 @property (nonatomic, strong) NSMutableArray *motoristas;
@@ -54,6 +56,7 @@
 @synthesize motoristas;
 @synthesize caronaService;
 @synthesize solicitacaoView;
+@synthesize solicitacaoAceitaView;
 @synthesize solicitacaoRecusada;
 @synthesize notificacaoService;
 @synthesize pinsMapa;
@@ -112,6 +115,12 @@
     solicitacaoView.alpha = 0.0f;
     solicitacaoView.delegate = self;
     [self.view addSubview:solicitacaoView];
+    
+    solicitacaoAceitaView = [[SolicitacaoAceitaView alloc] init];
+    solicitacaoAceitaView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    [solicitacaoAceitaView setHidden:YES];
+    solicitacaoAceitaView.alpha = 0.0f;
+    [self.view addSubview:solicitacaoAceitaView];
     
     if (![participanteLogado.motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         grupoView = [[GrupoView alloc] iniciar];
@@ -342,7 +351,16 @@
 -(void) exibirSolicitacao{
     if ([[AppHelper getAceitacoes] count] > 0) {
         AceitacaoCarona *aceitacao = [[AppHelper getAceitacoes] objectAtIndex:0];
-        [consultarPartService consultarParticipante:aceitacao.remetente.codParticipante];
+        
+        [solicitacaoAceitaView exibirSolicitacao:aceitacao];
+        [solicitacaoAceitaView carregarImagemMotorista];
+        
+        [solicitacaoAceitaView setHidden:NO];
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             solicitacaoAceitaView.alpha = 1.0f;
+                         }
+                         completion:nil];
     }
     
     if ([[AppHelper getSolicitacoes] count] > 0) {

@@ -184,6 +184,12 @@
         NSNumber *codGrupo = [dicNotificacao objectForKey:@"codGrupo"];
         NSNumber *viagens = [dicNotificacao objectForKey:@"numViagens"];
         
+        NSString *modeloVeiculo = [dicNotificacao objectForKey:@"modeloVeiculo"];
+        NSString *placa = [dicNotificacao objectForKey:@"placa"];
+        NSString *anoVeiculo = [dicNotificacao objectForKey:@"ano"];
+        NSString *cor = [dicNotificacao objectForKey:@"cor"];
+        NSNumber *numViagensMotorista = [dicNotificacao objectForKey:@"numViagensMotorista"];
+        
         NSString *nomeGrupo = [dicNotificacao objectForKey:@"nomeGrupo"];
         NSString *nomeRemetente = [dicNotificacao objectForKey:@"nomeRemetente"];
         NSString *cpfRemetente = [dicNotificacao objectForKey:@"cpfRemetente"];
@@ -214,6 +220,11 @@
         remetente.carro = [NSSet setWithArray:carros];
         remetente.cpf = cpfRemetente;
         
+        notificacao.modeloVeiculo = modeloVeiculo;
+        notificacao.placaVeiculo = placa;
+        notificacao.anoVeiculo = anoVeiculo;
+        notificacao.corVeiculo = cor;
+        notificacao.numViagensMotorista = numViagensMotorista;
         notificacao.codigo = codigo;
         notificacao.tipo = tipoNotificacao;
         notificacao.codGrupo = codGrupo;

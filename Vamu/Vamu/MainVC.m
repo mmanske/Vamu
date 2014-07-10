@@ -263,6 +263,11 @@
             solicitacao.remetente = notificacao.solicitante;
             solicitacao.destinatario = notificacao.destinatario;
             solicitacao.codViagem = notificacao.mensagem;
+            solicitacao.numViagensMotorista = notificacao.numViagensMotorista;
+            solicitacao.ano = notificacao.anoVeiculo;
+            solicitacao.cor = notificacao.corVeiculo;
+            solicitacao.modeloVeiculo = notificacao.modeloVeiculo;
+            solicitacao.placa = notificacao.placaVeiculo;
             
             [aceitacoes addObject:solicitacao];
             

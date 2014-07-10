@@ -129,6 +129,10 @@
 }
 
 - (IBAction)btnIrClick:(id)sender {
+    if (edtDestino.text.length <= 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Definir Destino" message:@"Informa o destino da viagem" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;
+    }
     [ampulheta exibir];
     [rotas removeAllObjects];
     [tabela reloadData];

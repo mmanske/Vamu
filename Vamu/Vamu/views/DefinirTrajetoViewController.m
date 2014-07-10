@@ -54,7 +54,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.exibirNavigationBar = YES;
+    
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.backItem.title = @" ";
+
     self.title = @"Definir Trajeto";
     
     participanteLogado = [AppHelper getParticipanteLogado];
@@ -323,7 +326,9 @@
 
 -(void)salvouRota{
     [ampulheta esconder];
-    [self performSegueWithIdentifier:@"sgRoot" sender:self];
+    NSUInteger indexes[] = {1, 2};
+    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndexes:indexes length:2];
+    [self.mainSlideMenu openContentViewControllerForMenu:AMSlideMenuLeft atIndexPath:indexPath];
 }
 
 -(void)salvouRotaFavorita{

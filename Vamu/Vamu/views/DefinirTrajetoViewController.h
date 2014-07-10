@@ -10,7 +10,6 @@
 #import <MapKit/MapKit.h>
 #import "DefinirTrajetoCell.h"
 #import "RotaCell.h"
-#import "BaseViewController.h"
 #import "Participante.h"
 #import "Veiculo.h"
 #import "RotasVO.h"
@@ -18,8 +17,9 @@
 #import "PlacesService.h"
 #import "DEMOCustomAutoCompleteCell.h"
 #import "KSEnhancedKeyboard.h"
+#import "UIViewController+AMSlideMenu.h"
 
-@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate, KSEnhancedKeyboardDelegate>
+@interface DefinirTrajetoViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate, KSEnhancedKeyboardDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *edtOrigem;
 @property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *edtDestino;

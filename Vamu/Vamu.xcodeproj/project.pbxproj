@@ -44,7 +44,6 @@
 		416F2A2318E23DFE0097B2F2 /* DefinirTrajetoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416F2A2218E23DFE0097B2F2 /* DefinirTrajetoCell.xib */; };
 		4185ACAE18E98A2600519F12 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4185ACAD18E98A2600519F12 /* EXPhotoViewer.m */; };
 		418B218418D79CFE006781A9 /* CadastroVeiculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418B218318D79CFE006781A9 /* CadastroVeiculoViewController.m */; };
-		41F926C118F833BF00CD5181 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41F926C018F833BF00CD5181 /* GoogleMaps.bundle */; };
 		41F926C318F8343F00CD5181 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926C218F8343F00CD5181 /* SystemConfiguration.framework */; };
 		41F926C518F8344600CD5181 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926C418F8344600CD5181 /* OpenGLES.framework */; };
 		41F926C718F8344E00CD5181 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926C618F8344E00CD5181 /* libz.dylib */; };
@@ -94,6 +93,7 @@
 		794FDE7C194E58140052A32E /* btn-vamu-responde_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 794FDE78194E58140052A32E /* btn-vamu-responde_5.png */; };
 		794FDE82194E7CA30052A32E /* Vamu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 794FDE80194E7CA30052A32E /* Vamu.xcdatamodeld */; };
 		794FDE88194E7F9F0052A32E /* MensagemCancelamento.m in Sources */ = {isa = PBXBuildFile; fileRef = 794FDE87194E7F9F0052A32E /* MensagemCancelamento.m */; };
+		7951B630196EA36600B7C30C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7951B62F196EA36600B7C30C /* GoogleMaps.bundle */; };
 		795329561951F1C900B0E399 /* Seguradora.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329551951F1C900B0E399 /* Seguradora.m */; };
 		7953295A1951F22100B0E399 /* SeguradoraService.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329591951F22100B0E399 /* SeguradoraService.m */; };
 		7953295D1951F69100B0E399 /* Veiculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953295C1951F69000B0E399 /* Veiculo.m */; };
@@ -310,7 +310,6 @@
 		4185ACAD18E98A2600519F12 /* EXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPhotoViewer.m; sourceTree = "<group>"; };
 		418B218218D79CFE006781A9 /* CadastroVeiculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CadastroVeiculoViewController.h; path = views/CadastroVeiculoViewController.h; sourceTree = "<group>"; };
 		418B218318D79CFE006781A9 /* CadastroVeiculoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CadastroVeiculoViewController.m; path = views/CadastroVeiculoViewController.m; sourceTree = "<group>"; };
-		41F926C018F833BF00CD5181 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../GoogleMaps-iOS-1.7.2/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		41F926C218F8343F00CD5181 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41F926C418F8344600CD5181 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		41F926C618F8344E00CD5181 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -375,6 +374,7 @@
 		794FDE81194E7CA30052A32E /* Vamu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vamu.xcdatamodel; sourceTree = "<group>"; };
 		794FDE86194E7F9F0052A32E /* MensagemCancelamento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensagemCancelamento.h; sourceTree = "<group>"; };
 		794FDE87194E7F9F0052A32E /* MensagemCancelamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensagemCancelamento.m; sourceTree = "<group>"; };
+		7951B62F196EA36600B7C30C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		795329541951F1C900B0E399 /* Seguradora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seguradora.h; sourceTree = "<group>"; };
 		795329551951F1C900B0E399 /* Seguradora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seguradora.m; sourceTree = "<group>"; };
 		795329581951F22100B0E399 /* SeguradoraService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeguradoraService.h; sourceTree = "<group>"; };
@@ -1081,9 +1081,9 @@
 				41F926CA18F8347000CD5181 /* libc++.dylib */,
 				41F926C818F8346300CD5181 /* libicucore.dylib */,
 				41F926C618F8344E00CD5181 /* libz.dylib */,
+				7951B62F196EA36600B7C30C /* GoogleMaps.bundle */,
 				41F926C418F8344600CD5181 /* OpenGLES.framework */,
 				41F926C218F8343F00CD5181 /* SystemConfiguration.framework */,
-				41F926C018F833BF00CD5181 /* GoogleMaps.bundle */,
 				413C21F918F832E3002AFFF5 /* GoogleMaps.framework */,
 				79B9C83518CFE40300392833 /* MapKit.framework */,
 				79B9C83318CFE3FD00392833 /* CoreLocation.framework */,
@@ -1483,7 +1483,6 @@
 				79FDC74C18CE6B47003EE81D /* bg-fotos_5.png in Resources */,
 				79414646190DC0B5005C0235 /* ico-menu-alterasenha_4@2x.png in Resources */,
 				79FDC75C18CE6B47003EE81D /* ico-uploadimagem_5.png in Resources */,
-				41F926C118F833BF00CD5181 /* GoogleMaps.bundle in Resources */,
 				796A1E16192C2962008E08D2 /* GrupoCell.xib in Resources */,
 				793C371819329B9B00EEC65C /* btn-vergrupos-grupos-interno_5.png in Resources */,
 				79FDC75F18CE6DB6003EE81D /* input-off.png in Resources */,
@@ -1504,6 +1503,7 @@
 				796C8FBD194FBB0B00057093 /* EnviarSolicitacaoView.xib in Resources */,
 				7941464D190DC0B5005C0235 /* ico-menu-minhas-viagens_4@2x.png in Resources */,
 				79FDC74B18CE6B47003EE81D /* bar-esquecisenha_5.png in Resources */,
+				7951B630196EA36600B7C30C /* GoogleMaps.bundle in Resources */,
 				416CAC2718F5ACEC00E0810C /* RotaCell.xib in Resources */,
 				79FDC75118CE6B47003EE81D /* btn_entrar_5.png in Resources */,
 				79414649190DC0B5005C0235 /* ico-menu-editagrupos_4@2x.png in Resources */,

@@ -17,7 +17,7 @@
         return;
     }
     
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/%@", strURL, participante.codParticipante, participante.latitudeAtual, participante.longitudeAtual, [AppHelper getParticipanteLogado].codParticipante];
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/%@/%@", strURL, participante.codParticipante, participante.latitudeAtual, participante.longitudeAtual, [AppHelper getParticipanteLogado].codParticipante, [AppHelper getParticipanteLogado].codViagemAtual];
     
     [self consultarUrl:url timeOut:30];
 }

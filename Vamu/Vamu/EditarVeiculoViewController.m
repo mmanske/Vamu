@@ -95,7 +95,19 @@
             edtModelo.text = veiculo.modelo;
             edtPlaca.text = veiculo.placa;
             edtRenavam.text = veiculo.renavan;
-            edtSegurador.text = veiculo.seguradora;
+            
+            
+            if (veiculo.seguradora) {
+                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.seguradora];
+                NSArray *segs = [Seguradora getWithPredicate:filtro];
+                if ([segs count] > 0) {
+                    Seguradora *seg = [segs objectAtIndex:0];
+                    edtSegurador.text = seg.descricao;
+                }
+                
+
+                
+            }
 
             
             

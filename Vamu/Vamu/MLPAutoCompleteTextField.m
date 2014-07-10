@@ -567,7 +567,9 @@ withAutoCompleteString:(NSString *)string
 
 - (void)resetDropDownAutoCompleteTableFrameForNumberOfRows:(NSInteger)numberOfRows
 {
-    [self.autoCompleteTableView.layer setCornerRadius:self.autoCompleteTableCornerRadius];
+//    [self.autoCompleteTableView.layer setCornerRadius:self.autoCompleteTableCornerRadius];
+    
+    [self.autoCompleteTableView.layer setCornerRadius:0];
     
     CGRect newAutoCompleteTableViewFrame = [self autoCompleteTableViewFrameForTextField:self forNumberOfRows:numberOfRows];
     
@@ -635,7 +637,8 @@ withAutoCompleteString:(NSString *)string
 
 - (void)setRoundedRectStyleForAutoCompleteTableView
 {
-    [self setAutoCompleteTableCornerRadius:8.0];
+//    [self setAutoCompleteTableCornerRadius:8.0];
+    [self setAutoCompleteTableCornerRadius:0];
     [self setAutoCompleteTableOriginOffset:CGSizeMake(0, -18)];
     [self setAutoCompleteScrollIndicatorInsets:UIEdgeInsetsMake(18, 0, 0, 0)];
     [self setAutoCompleteContentInsets:UIEdgeInsetsMake(18, 0, 0, 0)];
@@ -665,7 +668,8 @@ withAutoCompleteString:(NSString *)string
 
 - (void)setNoneStyleForAutoCompleteTableView
 {
-    [self setAutoCompleteTableCornerRadius:8.0];
+    [self setAutoCompleteTableCornerRadius:0];
+//    [self setAutoCompleteTableCornerRadius:8.0];
     [self setAutoCompleteTableOriginOffset:CGSizeMake(0, 7)];
     [self setAutoCompleteScrollIndicatorInsets:UIEdgeInsetsZero];
     [self setAutoCompleteContentInsets:UIEdgeInsetsZero];
@@ -773,7 +777,7 @@ withAutoCompleteString:(NSString *)string
     CGFloat height = [self autoCompleteTableHeightForTextField:textField withNumberOfRows:numberOfRows];
     
     newTableViewFrame.size.height = height;
-    newTableViewFrame.origin.y    = converted_originY;
+    newTableViewFrame.origin.y    = converted_originY + 10;
     
     if(!textField.autoCompleteTableAppearsAsKeyboardAccessory){
         newTableViewFrame.size.height += textfieldTopInset;

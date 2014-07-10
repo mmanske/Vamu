@@ -57,9 +57,9 @@
 		7916E4C419439CA100F844BB /* MotoristaAtivo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7916E4C319439CA100F844BB /* MotoristaAtivo.m */; };
 		7916E4C719439D4800F844BB /* GrupoAtivo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7916E4C619439D4800F844BB /* GrupoAtivo.m */; };
 		792CE77F196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE777196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m */; };
-		792CE780196E33F900CF7CA2 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE779196E33F900CF7CA2 /* MLPAutoCompleteTextField.m */; };
 		792CE781196E33F900CF7CA2 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE77E196E33F900CF7CA2 /* NSString+Levenshtein.m */; };
 		792CE785196E341500CF7CA2 /* PlacesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE784196E341500CF7CA2 /* PlacesService.m */; };
+		792CE78A196E43A600CF7CA2 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE789196E43A600CF7CA2 /* MLPAutoCompleteTextField.m */; };
 		793C370B193299EA00EEC65C /* GrupoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C370A193299EA00EEC65C /* GrupoView.m */; };
 		793C370D193299F500EEC65C /* GrupoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 793C370C193299F500EEC65C /* GrupoView.xib */; };
 		793C371519329B9B00EEC65C /* btn-vergrupos_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 793C370F19329B9B00EEC65C /* btn-vergrupos_5.png */; };
@@ -326,8 +326,6 @@
 		7916E4C619439D4800F844BB /* GrupoAtivo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrupoAtivo.m; sourceTree = "<group>"; };
 		792CE776196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOCustomAutoCompleteCell.h; sourceTree = "<group>"; };
 		792CE777196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOCustomAutoCompleteCell.m; sourceTree = "<group>"; };
-		792CE778196E33F900CF7CA2 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
-		792CE779196E33F900CF7CA2 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
 		792CE77A196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
 		792CE77B196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
 		792CE77C196E33F900CF7CA2 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
@@ -335,6 +333,8 @@
 		792CE77E196E33F900CF7CA2 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
 		792CE783196E341500CF7CA2 /* PlacesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesService.h; sourceTree = "<group>"; };
 		792CE784196E341500CF7CA2 /* PlacesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesService.m; sourceTree = "<group>"; };
+		792CE788196E43A600CF7CA2 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		792CE789196E43A600CF7CA2 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
 		793C3709193299EA00EEC65C /* GrupoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrupoView.h; sourceTree = "<group>"; };
 		793C370A193299EA00EEC65C /* GrupoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrupoView.m; sourceTree = "<group>"; };
 		793C370C193299F500EEC65C /* GrupoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrupoView.xib; sourceTree = "<group>"; };
@@ -750,10 +750,10 @@
 		792CE774196E33E000CF7CA2 /* AutoComplete */ = {
 			isa = PBXGroup;
 			children = (
+				792CE788196E43A600CF7CA2 /* MLPAutoCompleteTextField.h */,
+				792CE789196E43A600CF7CA2 /* MLPAutoCompleteTextField.m */,
 				792CE776196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.h */,
 				792CE777196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m */,
-				792CE778196E33F900CF7CA2 /* MLPAutoCompleteTextField.h */,
-				792CE779196E33F900CF7CA2 /* MLPAutoCompleteTextField.m */,
 				792CE77A196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDataSource.h */,
 				792CE77B196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDelegate.h */,
 				792CE77C196E33F900CF7CA2 /* MLPAutoCompletionObject.h */,
@@ -1672,7 +1672,6 @@
 				795C489A191EFD1800352EA5 /* AMSlideMenuMainViewController.m in Sources */,
 				796A1E0C192C1039008E08D2 /* RecuperarSenhaService.m in Sources */,
 				79AEB7F71927F7CE00C097A5 /* ActivityVamu.m in Sources */,
-				792CE780196E33F900CF7CA2 /* MLPAutoCompleteTextField.m in Sources */,
 				795C4898191EFD1800352EA5 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				79B6FCDA191B042200C51F5D /* VeiculoService.m in Sources */,
 				79CD5EE1193A6E7D00162630 /* Grupo.m in Sources */,
@@ -1683,6 +1682,7 @@
 				7FE440BA1943BF6B00F26C85 /* GrupoViewCell.m in Sources */,
 				7E7EEFB5196CB190001E9EF5 /* Notificacao.m in Sources */,
 				79F8683318D0E2380080BC32 /* MapaViewController.m in Sources */,
+				792CE78A196E43A600CF7CA2 /* MLPAutoCompleteTextField.m in Sources */,
 				79F8682818D0E1A80080BC32 /* RECommonFunctions.m in Sources */,
 				4185ACAE18E98A2600519F12 /* EXPhotoViewer.m in Sources */,
 				796B1FCA19315B2500FADDAC /* Rota.m in Sources */,

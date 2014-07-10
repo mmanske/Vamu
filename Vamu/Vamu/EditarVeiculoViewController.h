@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Seguradora.h"
 #import "SeguradoraService.h"
+#import "KSEnhancedKeyboard.h"
 
-@interface EditarVeiculoViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface EditarVeiculoViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, KSEnhancedKeyboardDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgBackground;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;

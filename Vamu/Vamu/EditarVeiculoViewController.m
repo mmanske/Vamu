@@ -25,6 +25,9 @@
 @property (nonatomic, strong) UIPickerView *pickerSeguradora;
 @property (strong, nonatomic) NSArray *seguradoras;
 @property (nonatomic, strong) EnviarImagemService *enviarImagemService;
+@property (nonatomic) NSMutableArray *formItems;
+@property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
+
 
 @end
 
@@ -34,7 +37,7 @@
 @synthesize imgCarro;
 @synthesize veiculo;
 @synthesize ampulheta;
-@synthesize veiculoService, imgBackground, enviarImagemService;
+@synthesize veiculoService, imgBackground, enviarImagemService, enhancedKeyboard, formItems;
 @synthesize seguradoras, seguradoraService, pickerSeguradora, scrollView;
 
 - (void)viewDidLoad
@@ -42,6 +45,18 @@
     [super viewDidLoad];
     
     self.title = @"Editar Veículo";
+    
+    self.formItems = [NSMutableArray new];
+    UIView *subView = [self.view viewWithTag:88];
+    
+    for (UIView *view in [subView subviews]) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            [formItems addObject:view];
+        }
+    }
+    self.enhancedKeyboard = [KSEnhancedKeyboard new];
+    self.enhancedKeyboard.delegate = self;
+    
     
     veiculoService = [VeiculoService new];
     veiculoService.delegate = self;
@@ -315,5 +330,55 @@
     [[[UIAlertView alloc] initWithTitle:@"Cadastro de veículo" message:@"Erro ao Enviar a Foto" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [textField setInputAccessoryView:[self.enhancedKeyboard getToolbarWithPrevEnabled:YES NextEnabled:YES DoneEnabled:YES]];
+}
+
+- (void)nextDidTouchDown
+{
+    
+    for (int i=0; i<[self.formItems count]; i++)
+    {
+        UITextField *field = [formItems objectAtIndex:i];
+        if ([field isEditing] && i!=[self.formItems count]-1)
+        {
+            field = [formItems objectAtIndex:i+1];
+            [field becomeFirstResponder];
+            if (i >= 3) {
+                CGFloat y = 40;
+                CGPoint ponto = CGPointMake(0, y);
+                [scrollView setContentOffset:ponto animated:YES];
+            }
+            break;
+        }
+    }
+}
+
+- (void)doneDidTouchDown
+{
+    
+    for (UITextField *field in self.formItems) {
+        if ([field isEditing]) {
+            [field resignFirstResponder];
+            break;
+        }
+    }
+}
+
+- (void)previousDidTouchDown
+{
+    for (int i=0; i<[self.formItems count]; i++)
+    {
+        UITextField *field = [formItems objectAtIndex:i];
+        if ([field isEditing] && i!=0)
+        {
+            
+            field = [formItems objectAtIndex:i-1];
+            [field becomeFirstResponder];
+            break;
+        }
+    }
+}
 
 @end

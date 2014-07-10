@@ -144,7 +144,7 @@
 		79AEB80019280EAE00C097A5 /* FavoritoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AEB7FF19280EAE00C097A5 /* FavoritoCell.xib */; };
 		79B6FCC5191AEFE300C51F5D /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCC4191AEFE200C51F5D /* BaseService.m */; };
 		79B6FCC9191AEFF900C51F5D /* ParticipanteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCC8191AEFF900C51F5D /* ParticipanteService.m */; };
-		79B6FCCC191AF03500C51F5D /* DadosConexaoService1.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCCB191AF03500C51F5D /* DadosConexaoService1.m */; };
+		79B6FCCC191AF03500C51F5D /* DadosConexaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCCB191AF03500C51F5D /* DadosConexaoService.m */; };
 		79B6FCD0191AF4D900C51F5D /* Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCCF191AF4D900C51F5D /* Validations.m */; };
 		79B6FCD4191AF9BA00C51F5D /* CustomActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCD2191AF9BA00C51F5D /* CustomActivityView.m */; };
 		79B6FCD7191AFAF900C51F5D /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6FCD6191AFAF900C51F5D /* CustomAlertView.m */; };
@@ -458,7 +458,7 @@
 		79B6FCC7191AEFF900C51F5D /* ParticipanteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipanteService.h; sourceTree = "<group>"; };
 		79B6FCC8191AEFF900C51F5D /* ParticipanteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipanteService.m; sourceTree = "<group>"; };
 		79B6FCCA191AF03500C51F5D /* DadosConexaoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosConexaoService.h; sourceTree = "<group>"; };
-		79B6FCCB191AF03500C51F5D /* DadosConexaoService1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosConexaoService1.m; sourceTree = "<group>"; };
+		79B6FCCB191AF03500C51F5D /* DadosConexaoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosConexaoService.m; sourceTree = "<group>"; };
 		79B6FCCE191AF4D900C51F5D /* Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validations.h; sourceTree = "<group>"; };
 		79B6FCCF191AF4D900C51F5D /* Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validations.m; sourceTree = "<group>"; };
 		79B6FCD2191AF9BA00C51F5D /* CustomActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivityView.m; sourceTree = "<group>"; };
@@ -1211,7 +1211,7 @@
 			isa = PBXGroup;
 			children = (
 				79B6FCCA191AF03500C51F5D /* DadosConexaoService.h */,
-				79B6FCCB191AF03500C51F5D /* DadosConexaoService1.m */,
+				79B6FCCB191AF03500C51F5D /* DadosConexaoService.m */,
 				792CE783196E341500CF7CA2 /* PlacesService.h */,
 				792CE784196E341500CF7CA2 /* PlacesService.m */,
 				79B6FCC3191AEFE200C51F5D /* BaseService.h */,
@@ -1662,7 +1662,7 @@
 				79FDC6FF18CE696B003EE81D /* main.m in Sources */,
 				79B6FCC5191AEFE300C51F5D /* BaseService.m in Sources */,
 				79B6FCD4191AF9BA00C51F5D /* CustomActivityView.m in Sources */,
-				79B6FCCC191AF03500C51F5D /* DadosConexaoService1.m in Sources */,
+				79B6FCCC191AF03500C51F5D /* DadosConexaoService.m in Sources */,
 				416CAC2D18F5EAA500E0810C /* CustomAnnotation.m in Sources */,
 				79F9D159194C92D200C7D3E8 /* Ponto.m in Sources */,
 				79B6FCC9191AEFF900C51F5D /* ParticipanteService.m in Sources */,

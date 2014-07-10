@@ -116,7 +116,7 @@
     
     foto.layer.cornerRadius = foto.bounds.size.width/2;
     foto.layer.masksToBounds = YES;
-    foto.layer.borderWidth = 2;
+    foto.layer.borderWidth = 1;
     foto.layer.borderColor = [UIColor whiteColor].CGColor;
     foto.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     

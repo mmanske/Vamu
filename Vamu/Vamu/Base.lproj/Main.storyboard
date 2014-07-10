@@ -443,11 +443,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgapp_5.png" id="ven-sb-C0G">
-                                <rect key="frame" x="0.0" y="-74" width="320" height="1040"/>
+                                <rect key="frame" x="0.0" y="-71" width="320" height="1040"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view tag="88" contentMode="scaleToFill" id="9ei-qE-kJA">
-                                <rect key="frame" x="8" y="36" width="305" height="462"/>
+                                <rect key="frame" x="8" y="39" width="305" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="CPF" minimumFontSize="17" background="input-off.png" id="l5G-T3-cFd">
@@ -504,10 +504,16 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aa9-yo-Vok">
-                                        <rect key="frame" x="162" y="370" width="123" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" background="input-off.png" id="n8V-Lu-TBW">
+                                        <rect key="frame" x="5" y="320" width="295" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aa9-yo-Vok">
+                                        <rect key="frame" x="1" y="322" width="138" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Inserir Foto" image="ico-uploadimagem_5.png">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -516,29 +522,25 @@
                                             <action selector="btnInserirFotoClick:" destination="YJ6-rc-IBD" eventType="touchUpInside" id="cav-dh-UPA"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-fotos_5.png" id="L2a-OW-SUh">
-                                        <rect key="frame" x="5" y="340" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados Pessoais:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ppC-hM-Z5M">
-                                <rect key="frame" x="8" y="16" width="124" height="21"/>
+                                <rect key="frame" x="8" y="19" width="124" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="POK-Uq-FWr">
-                                <rect key="frame" x="8" y="518" width="73" height="21"/>
+                                <rect key="frame" x="8" y="410" width="73" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="89" contentMode="scaleToFill" id="AUU-BC-hGv">
-                                <rect key="frame" x="8" y="540" width="305" height="259"/>
+                                <rect key="frame" x="8" y="432" width="305" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="CEP" minimumFontSize="17" background="input-off.png" id="Vhg-Hd-uW0">
@@ -587,7 +589,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fbo-9m-J7E">
-                                <rect key="frame" x="172" y="807" width="128" height="51"/>
+                                <rect key="frame" x="172" y="699" width="128" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Salvar" backgroundImage="btn_salvar_5.png">
@@ -599,7 +601,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eyr-jD-ssu">
-                                <rect key="frame" x="20" y="807" width="128" height="51"/>
+                                <rect key="frame" x="20" y="699" width="128" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Cancelar" backgroundImage="btn_cancelar_5.png">
@@ -610,6 +612,10 @@
                                     <action selector="btnCancelarClick:" destination="YJ6-rc-IBD" eventType="touchUpInside" id="58M-dF-8e6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-fotos_5.png" id="U7z-Ca-VVl">
+                                <rect key="frame" x="8" y="747" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Novo Participante" id="u9r-T7-TB2">
@@ -636,7 +642,7 @@
                         <outlet property="edtSenha" destination="tgI-G9-w6v" id="Wid-Sg-c1Z"/>
                         <outlet property="edtSexo" destination="E72-k2-l00" id="P6K-KV-9iY"/>
                         <outlet property="edtUF" destination="2o2-xe-um9" id="b94-S8-Vth"/>
-                        <outlet property="foto" destination="L2a-OW-SUh" id="Ngo-lZ-ey1"/>
+                        <outlet property="foto" destination="U7z-Ca-VVl" id="7Kd-oQ-dXg"/>
                         <outlet property="imgBackGround" destination="ven-sb-C0G" id="jL8-C8-PtU"/>
                         <outlet property="scrollView" destination="BoY-KM-vdl" id="aAv-mq-0rI"/>
                         <segue destination="24n-zb-QMt" kind="push" identifier="sgCadVeiculo" id="Zdt-hA-PjR"/>

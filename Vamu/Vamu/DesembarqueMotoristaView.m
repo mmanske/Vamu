@@ -22,6 +22,8 @@
     mainView.carona = solicitacao.remetente;
     mainView.lblNomeCarona.text = mainView.carona.nome;
     mainView.lblDestinoCarona.text = solicitacao.nomeDestino;
+    mainView.carona.latitudeAtual = [NSNumber numberWithFloat:[solicitacao.latitudeRemetente floatValue]];
+    mainView.carona.longitudeAtual = [NSNumber numberWithFloat:[solicitacao.longitudeRemetente floatValue]];
     
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", mainView.carona.cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];

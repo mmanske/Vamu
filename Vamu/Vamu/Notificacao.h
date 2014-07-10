@@ -2,7 +2,7 @@
 //  Notificacao.h
 //  Vamu
 //
-//  Created by Márcio S. Manske on 08/07/14.
+//  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -16,10 +16,12 @@
 @property (nonatomic, retain) NSNumber * codigo;
 @property (nonatomic, retain) NSString * dataCadastro;
 @property (nonatomic, retain) NSString * mensagem;
+@property (nonatomic, retain) NSString * nomeDestino;
 @property (nonatomic, retain) NSString * nomeGrupo;
 @property (nonatomic, retain) NSNumber * tipo;
 @property (nonatomic, retain) NSNumber * viagens;
-@property (nonatomic, retain) NSString * nomeDestino;
+@property (nonatomic, retain) NSString * latitude;
+@property (nonatomic, retain) NSString * longitude;
 @property (nonatomic, retain) Participante *destinatario;
 @property (nonatomic, retain) Participante *solicitante;
 

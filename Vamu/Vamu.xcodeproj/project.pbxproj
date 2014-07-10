@@ -97,6 +97,8 @@
 		7951B637196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951B635196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png */; };
 		7951B638196ECC7500B7C30C /* btn-recusar-x_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951B636196ECC7500B7C30C /* btn-recusar-x_5.png */; };
 		7951B63E196EE4AC00B7C30C /* AceitacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B63D196EE4AC00B7C30C /* AceitacaoCarona.m */; };
+		7951B647196EE8F200B7C30C /* SolicitacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B646196EE8F200B7C30C /* SolicitacaoCarona.m */; };
+		7951B64A196EE8F300B7C30C /* Notificacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B649196EE8F300B7C30C /* Notificacao.m */; };
 		795329561951F1C900B0E399 /* Seguradora.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329551951F1C900B0E399 /* Seguradora.m */; };
 		7953295A1951F22100B0E399 /* SeguradoraService.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329591951F22100B0E399 /* SeguradoraService.m */; };
 		7953295D1951F69100B0E399 /* Veiculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953295C1951F69000B0E399 /* Veiculo.m */; };
@@ -234,8 +236,6 @@
 		7E7EEFAE196CA63F001E9EF5 /* DesembarqueMotoristaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EEFAD196CA63F001E9EF5 /* DesembarqueMotoristaView.m */; };
 		7E7EEFB1196CAD51001E9EF5 /* btn-desembarcou_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EEFAF196CAD51001E9EF5 /* btn-desembarcou_5.png */; };
 		7E7EEFB2196CAD51001E9EF5 /* btn-desembarquei_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EEFB0196CAD51001E9EF5 /* btn-desembarquei_5.png */; };
-		7E7EEFB5196CB190001E9EF5 /* Notificacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EEFB4196CB190001E9EF5 /* Notificacao.m */; };
-		7E7EEFB8196CB26F001E9EF5 /* SolicitacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EEFB7196CB26F001E9EF5 /* SolicitacaoCarona.m */; };
 		7E7EEFBE196CE520001E9EF5 /* ConsultarParticipanteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EEFBD196CE520001E9EF5 /* ConsultarParticipanteService.m */; };
 		7EA4C41B1965093500913741 /* BaixarImagemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA4C41A1965093500913741 /* BaixarImagemService.m */; };
 		7EA4C41E196531C100913741 /* EnviarImagemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA4C41D196531C100913741 /* EnviarImagemService.m */; };
@@ -381,6 +381,10 @@
 		7951B636196ECC7500B7C30C /* btn-recusar-x_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-recusar-x_5.png"; path = "../../Imagens/recorte-com-menu-23-04-2014/btn-recusar-x_5.png"; sourceTree = "<group>"; };
 		7951B63C196EE4AC00B7C30C /* AceitacaoCarona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AceitacaoCarona.h; sourceTree = "<group>"; };
 		7951B63D196EE4AC00B7C30C /* AceitacaoCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AceitacaoCarona.m; sourceTree = "<group>"; };
+		7951B645196EE8F200B7C30C /* SolicitacaoCarona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolicitacaoCarona.h; sourceTree = "<group>"; };
+		7951B646196EE8F200B7C30C /* SolicitacaoCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolicitacaoCarona.m; sourceTree = "<group>"; };
+		7951B648196EE8F300B7C30C /* Notificacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notificacao.h; sourceTree = "<group>"; };
+		7951B649196EE8F300B7C30C /* Notificacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notificacao.m; sourceTree = "<group>"; };
 		795329541951F1C900B0E399 /* Seguradora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seguradora.h; sourceTree = "<group>"; };
 		795329551951F1C900B0E399 /* Seguradora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seguradora.m; sourceTree = "<group>"; };
 		795329581951F22100B0E399 /* SeguradoraService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeguradoraService.h; sourceTree = "<group>"; };
@@ -580,10 +584,6 @@
 		7E7EEFAD196CA63F001E9EF5 /* DesembarqueMotoristaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesembarqueMotoristaView.m; sourceTree = "<group>"; };
 		7E7EEFAF196CAD51001E9EF5 /* btn-desembarcou_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-desembarcou_5.png"; path = "../../Imagens/recorte-com-menu-23-04-2014/640x1136/btn-desembarcou_5.png"; sourceTree = "<group>"; };
 		7E7EEFB0196CAD51001E9EF5 /* btn-desembarquei_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-desembarquei_5.png"; path = "../../Imagens/recorte-com-menu-23-04-2014/640x1136/btn-desembarquei_5.png"; sourceTree = "<group>"; };
-		7E7EEFB3196CB190001E9EF5 /* Notificacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notificacao.h; sourceTree = "<group>"; };
-		7E7EEFB4196CB190001E9EF5 /* Notificacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notificacao.m; sourceTree = "<group>"; };
-		7E7EEFB6196CB26F001E9EF5 /* SolicitacaoCarona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolicitacaoCarona.h; sourceTree = "<group>"; };
-		7E7EEFB7196CB26F001E9EF5 /* SolicitacaoCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolicitacaoCarona.m; sourceTree = "<group>"; };
 		7E7EEFBC196CE520001E9EF5 /* ConsultarParticipanteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultarParticipanteService.h; sourceTree = "<group>"; };
 		7E7EEFBD196CE520001E9EF5 /* ConsultarParticipanteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultarParticipanteService.m; sourceTree = "<group>"; };
 		7EA4C4191965093500913741 /* BaixarImagemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaixarImagemService.h; sourceTree = "<group>"; };
@@ -1162,12 +1162,12 @@
 			isa = PBXGroup;
 			children = (
 				794FDE80194E7CA30052A32E /* Vamu.xcdatamodeld */,
+				7951B648196EE8F300B7C30C /* Notificacao.h */,
+				7951B649196EE8F300B7C30C /* Notificacao.m */,
+				7951B645196EE8F200B7C30C /* SolicitacaoCarona.h */,
+				7951B646196EE8F200B7C30C /* SolicitacaoCarona.m */,
 				7951B63C196EE4AC00B7C30C /* AceitacaoCarona.h */,
 				7951B63D196EE4AC00B7C30C /* AceitacaoCarona.m */,
-				7E7EEFB6196CB26F001E9EF5 /* SolicitacaoCarona.h */,
-				7E7EEFB7196CB26F001E9EF5 /* SolicitacaoCarona.m */,
-				7E7EEFB3196CB190001E9EF5 /* Notificacao.h */,
-				7E7EEFB4196CB190001E9EF5 /* Notificacao.m */,
 				794FDE86194E7F9F0052A32E /* MensagemCancelamento.h */,
 				794FDE87194E7F9F0052A32E /* MensagemCancelamento.m */,
 				7916E4C219439CA100F844BB /* MotoristaAtivo.h */,
@@ -1621,6 +1621,7 @@
 				79654F8319577F5A007E91F8 /* Constants.m in Sources */,
 				79B9C81718CFD7C900392833 /* BaseViewController.m in Sources */,
 				79B6FCD7191AFAF900C51F5D /* CustomAlertView.m in Sources */,
+				7951B64A196EE8F300B7C30C /* Notificacao.m in Sources */,
 				795329561951F1C900B0E399 /* Seguradora.m in Sources */,
 				7953295D1951F69100B0E399 /* Veiculo.m in Sources */,
 				792CE781196E33F900CF7CA2 /* NSString+Levenshtein.m in Sources */,
@@ -1638,6 +1639,7 @@
 				79CD5EDB193A5AFD00162630 /* EditarVeiculoViewController.m in Sources */,
 				7ED5039A196C3C4000A2C6E3 /* MascaraHelper.m in Sources */,
 				79C39A3D193BA19B00FE8D14 /* Participante.m in Sources */,
+				7951B647196EE8F200B7C30C /* SolicitacaoCarona.m in Sources */,
 				79F8683618D0E4780080BC32 /* MenuViewController.m in Sources */,
 				79AEB7FE19280E9A00C097A5 /* FavoritoCell.m in Sources */,
 				79FDC70318CE696B003EE81D /* AppDelegate.m in Sources */,
@@ -1656,7 +1658,6 @@
 				7965694D191853350014DB1E /* CadastroGrupoViewController.m in Sources */,
 				79DCA8E01946075600E96C1E /* AMTextFieldNumberPad.m in Sources */,
 				793C370B193299EA00EEC65C /* GrupoView.m in Sources */,
-				7E7EEFB8196CB26F001E9EF5 /* SolicitacaoCarona.m in Sources */,
 				79AEB7F11927E69000C097A5 /* LoginService.m in Sources */,
 				79FDC6FF18CE696B003EE81D /* main.m in Sources */,
 				79B6FCC5191AEFE300C51F5D /* BaseService.m in Sources */,
@@ -1687,7 +1688,6 @@
 				793DD56C18F9FD8D0033C897 /* CadastroParticipanteViewController.m in Sources */,
 				418B218418D79CFE006781A9 /* CadastroVeiculoViewController.m in Sources */,
 				7FE440BA1943BF6B00F26C85 /* GrupoViewCell.m in Sources */,
-				7E7EEFB5196CB190001E9EF5 /* Notificacao.m in Sources */,
 				79F8683318D0E2380080BC32 /* MapaViewController.m in Sources */,
 				792CE78A196E43A600CF7CA2 /* MLPAutoCompleteTextField.m in Sources */,
 				79F8682818D0E1A80080BC32 /* RECommonFunctions.m in Sources */,

@@ -2,7 +2,7 @@
 //  SolicitacaoCarona.m
 //  Vamu
 //
-//  Created by Márcio S. Manske on 08/07/14.
+//  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -17,11 +17,13 @@
 @dynamic codNotificacao;
 @dynamic codRemetente;
 @dynamic mensagem;
+@dynamic nomeDestino;
 @dynamic nomeRemetente;
 @dynamic numViagens;
 @dynamic recebida;
 @dynamic tipo;
-@dynamic nomeDestino;
+@dynamic latitudeRemetente;
+@dynamic longitudeRemetente;
 @dynamic destinatario;
 @dynamic remetente;
 

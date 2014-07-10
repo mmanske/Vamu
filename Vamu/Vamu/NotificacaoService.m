@@ -191,6 +191,9 @@
         NSString *mensagem = [dicNotificacao objectForKey:@"mensagem"];
         NSString *destinoCarona = [dicNotificacao objectForKey:@"destinoCarona"];
         
+        NSString *latitude = [dicNotificacao objectForKey:@"latitude"];
+        NSString *longitude = [dicNotificacao objectForKey:@"longitude"];
+        
         NSDictionary *dicVeiculos = [dicNotificacao objectForKey:@"veiculos"];
         NSMutableArray *carros = [NSMutableArray new];
         for (NSDictionary *dicVeiculo in dicVeiculos) {
@@ -221,6 +224,8 @@
         notificacao.destinatario = [AppHelper getParticipanteLogado];
         notificacao.mensagem = mensagem;
         notificacao.nomeDestino = destinoCarona;
+        notificacao.latitude = latitude;
+        notificacao.longitude = longitude;
         
         [retorno addObject:notificacao];
         

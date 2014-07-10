@@ -40,6 +40,8 @@
         <attribute name="codGrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="codigo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="dataCadastro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeDestino" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeGrupo" optional="YES" attributeType="String" syncable="YES"/>
@@ -104,6 +106,8 @@
         <attribute name="codgrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="codRemetente" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitudeRemetente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitudeRemetente" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeDestino" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeRemetente" optional="YES" attributeType="String" syncable="YES"/>
@@ -139,13 +143,13 @@
         <element name="GrupoAtivo" positionX="18" positionY="162" width="128" height="75"/>
         <element name="MensagemCancelamento" positionX="18" positionY="162" width="128" height="58"/>
         <element name="MotoristaAtivo" positionX="9" positionY="153" width="128" height="148"/>
-        <element name="Notificacao" positionX="9" positionY="153" width="128" height="195"/>
+        <element name="Notificacao" positionX="9" positionY="153" width="128" height="225"/>
         <element name="Participante" positionX="0" positionY="0" width="128" height="435"/>
         <element name="Ponto" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Rota" positionX="0" positionY="0" width="128" height="75"/>
         <element name="Seguradora" positionX="9" positionY="153" width="128" height="75"/>
         <element name="SolicitacaoAdesao" positionX="18" positionY="162" width="128" height="163"/>
-        <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="225"/>
+        <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="253"/>
         <element name="TrajetoFavorito" positionX="0" positionY="0" width="128" height="120"/>
         <element name="Veiculo" positionX="0" positionY="0" width="128" height="195"/>
     </elements>

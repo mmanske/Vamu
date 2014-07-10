@@ -2,7 +2,7 @@
 //  Notificacao.m
 //  Vamu
 //
-//  Created by Márcio S. Manske on 08/07/14.
+//  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -16,10 +16,12 @@
 @dynamic codigo;
 @dynamic dataCadastro;
 @dynamic mensagem;
+@dynamic nomeDestino;
 @dynamic nomeGrupo;
 @dynamic tipo;
 @dynamic viagens;
-@dynamic nomeDestino;
+@dynamic latitude;
+@dynamic longitude;
 @dynamic destinatario;
 @dynamic solicitante;
 

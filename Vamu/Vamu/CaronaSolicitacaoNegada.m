@@ -1,21 +1,21 @@
 //
-//  SolicitacaoAceitaView.m
+//  CaronaSolicitacaoNegada.m
 //  Vamu
 //
 //  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
-#import "SolicitacaoAceitaView.h"
+#import "CaronaSolicitacaoNegada.h"
 #import "AppHelper.h"
 
-@implementation SolicitacaoAceitaView
+@implementation CaronaSolicitacaoNegada
 
-@synthesize lblNome, lblNomeCarro, lblViagens, imgMotorista, solicitacao = _solicitacao, imagemService, delegate;
+@synthesize lblModeloVeiculo, lblMotivoRecusa, lblNomeMotorista, lblNumViagens, imgMotorista, solicitacao = _solicitacao, imagemService;
 
--(id)exibirSolicitacao:(AceitacaoCarona*) solicitacao{
-    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"SolicitacaoAceitaView" owner:self options:nil];
-    SolicitacaoAceitaView *mainView = [subviewArray objectAtIndex:0];
+-(id)exibirSolicitacao:(NegacaoCarona*) solicitacao{
+    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"CaronaSolicitacaoNegada" owner:self options:nil];
+    CaronaSolicitacaoNegada *mainView = [subviewArray objectAtIndex:0];
     
     mainView.imgMotorista.layer.cornerRadius = mainView.imgMotorista.bounds.size.width/2;
     mainView.imgMotorista.layer.masksToBounds = YES;
@@ -24,14 +24,15 @@
     mainView.imgMotorista.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
     mainView.solicitacao = solicitacao;
-    mainView.lblNome.text = solicitacao.remetente.nome;
-    mainView.lblNomeCarro.text = [NSString stringWithFormat:@"%@ - %@ - %@ - %@", solicitacao.modeloVeiculo, solicitacao.ano, solicitacao.cor, solicitacao.placa];
-    mainView.lblViagens.text = [NSString stringWithFormat:@"%@ viagem(ns)", solicitacao.numViagensMotorista];
+    mainView.lblNomeMotorista.text = _solicitacao.remetente.nome;
+    mainView.lblModeloVeiculo.text = [NSString stringWithFormat:@"%@ - %@ - %@ - %@", _solicitacao.modeloVeiculo, _solicitacao.ano, _solicitacao.cor, _solicitacao.placa];
+    mainView.lblNumViagens.text = [NSString stringWithFormat:@"%@ viagem(ns)", _solicitacao.numViagensMotorista];
+    mainView.lblMotivoRecusa.text = solicitacao.mensagem;
     
     return mainView;
 }
 
-- (IBAction)btnVamuClick:(id)sender {
+- (IBAction)btnRecusaClick:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(confirmarSolicitacao:)]) {
         [self.delegate confirmarSolicitacao:_solicitacao];
     }

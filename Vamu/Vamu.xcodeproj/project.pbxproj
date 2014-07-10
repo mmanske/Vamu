@@ -102,6 +102,9 @@
 		7951B653196EFD3F00B7C30C /* SolicitacaoAceitaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B652196EFD3F00B7C30C /* SolicitacaoAceitaView.m */; };
 		7951B656196F021C00B7C30C /* Notificacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B655196F021C00B7C30C /* Notificacao.m */; };
 		7951B659196F028700B7C30C /* AceitacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B658196F028700B7C30C /* AceitacaoCarona.m */; };
+		7951B65C196F10D900B7C30C /* CaronaSolicitacaoNegada.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951B65B196F10D900B7C30C /* CaronaSolicitacaoNegada.xib */; };
+		7951B65F196F10E700B7C30C /* CaronaSolicitacaoNegada.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B65E196F10E700B7C30C /* CaronaSolicitacaoNegada.m */; };
+		7951B665196F158500B7C30C /* NegacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B664196F158500B7C30C /* NegacaoCarona.m */; };
 		795329561951F1C900B0E399 /* Seguradora.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329551951F1C900B0E399 /* Seguradora.m */; };
 		7953295A1951F22100B0E399 /* SeguradoraService.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329591951F22100B0E399 /* SeguradoraService.m */; };
 		7953295D1951F69100B0E399 /* Veiculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953295C1951F69000B0E399 /* Veiculo.m */; };
@@ -392,6 +395,11 @@
 		7951B655196F021C00B7C30C /* Notificacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notificacao.m; sourceTree = "<group>"; };
 		7951B657196F028700B7C30C /* AceitacaoCarona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AceitacaoCarona.h; sourceTree = "<group>"; };
 		7951B658196F028700B7C30C /* AceitacaoCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AceitacaoCarona.m; sourceTree = "<group>"; };
+		7951B65B196F10D900B7C30C /* CaronaSolicitacaoNegada.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaronaSolicitacaoNegada.xib; sourceTree = "<group>"; };
+		7951B65D196F10E700B7C30C /* CaronaSolicitacaoNegada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaronaSolicitacaoNegada.h; sourceTree = "<group>"; };
+		7951B65E196F10E700B7C30C /* CaronaSolicitacaoNegada.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaronaSolicitacaoNegada.m; sourceTree = "<group>"; };
+		7951B663196F158500B7C30C /* NegacaoCarona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NegacaoCarona.h; sourceTree = "<group>"; };
+		7951B664196F158500B7C30C /* NegacaoCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NegacaoCarona.m; sourceTree = "<group>"; };
 		795329541951F1C900B0E399 /* Seguradora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seguradora.h; sourceTree = "<group>"; };
 		795329551951F1C900B0E399 /* Seguradora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seguradora.m; sourceTree = "<group>"; };
 		795329581951F22100B0E399 /* SeguradoraService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeguradoraService.h; sourceTree = "<group>"; };
@@ -829,6 +837,7 @@
 		794FDE6F194E56A30052A32E /* SolicitacaoView */ = {
 			isa = PBXGroup;
 			children = (
+				7951B65A196F10BE00B7C30C /* CaronaSolicitacaoNegada */,
 				7951B64E196EFD1500B7C30C /* CaronaSolicitacaoAceita */,
 				794FDE70194E56BD0052A32E /* SolicitacaoView.xib */,
 				794FDE72194E56CC0052A32E /* SolicitacaoView.h */,
@@ -845,6 +854,16 @@
 				7951B652196EFD3F00B7C30C /* SolicitacaoAceitaView.m */,
 			);
 			name = CaronaSolicitacaoAceita;
+			sourceTree = "<group>";
+		};
+		7951B65A196F10BE00B7C30C /* CaronaSolicitacaoNegada */ = {
+			isa = PBXGroup;
+			children = (
+				7951B65B196F10D900B7C30C /* CaronaSolicitacaoNegada.xib */,
+				7951B65D196F10E700B7C30C /* CaronaSolicitacaoNegada.h */,
+				7951B65E196F10E700B7C30C /* CaronaSolicitacaoNegada.m */,
+			);
+			name = CaronaSolicitacaoNegada;
 			sourceTree = "<group>";
 		};
 		795C4887191EFD1800352EA5 /* AMSlideMenu */ = {
@@ -1178,6 +1197,8 @@
 			isa = PBXGroup;
 			children = (
 				794FDE80194E7CA30052A32E /* Vamu.xcdatamodeld */,
+				7951B663196F158500B7C30C /* NegacaoCarona.h */,
+				7951B664196F158500B7C30C /* NegacaoCarona.m */,
 				7951B657196F028700B7C30C /* AceitacaoCarona.h */,
 				7951B658196F028700B7C30C /* AceitacaoCarona.m */,
 				7951B654196F021C00B7C30C /* Notificacao.h */,
@@ -1546,6 +1567,7 @@
 				7951B638196ECC7500B7C30C /* btn-recusar-x_5.png in Resources */,
 				79AEB80019280EAE00C097A5 /* FavoritoCell.xib in Resources */,
 				79FDC6FD18CE696B003EE81D /* InfoPlist.strings in Resources */,
+				7951B65C196F10D900B7C30C /* CaronaSolicitacaoNegada.xib in Resources */,
 				79414636190DC0A6005C0235 /* bg-menu_4@2x.png in Resources */,
 				79DCA8E11946075600E96C1E /* AMTextFieldNumberPad.bundle in Resources */,
 				416F2A2318E23DFE0097B2F2 /* DefinirTrajetoCell.xib in Resources */,
@@ -1630,6 +1652,7 @@
 				7951B656196F021C00B7C30C /* Notificacao.m in Sources */,
 				792CE77F196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m in Sources */,
 				7E7EEFBE196CE520001E9EF5 /* ConsultarParticipanteService.m in Sources */,
+				7951B665196F158500B7C30C /* NegacaoCarona.m in Sources */,
 				79F8682918D0E1A80080BC32 /* REFrostedContainerViewController.m in Sources */,
 				4167497E18D3A507004FB893 /* Model.m in Sources */,
 				79C39A2E193B990C00FE8D14 /* AceitarParticipacaoViewController.m in Sources */,
@@ -1709,6 +1732,7 @@
 				7951B653196EFD3F00B7C30C /* SolicitacaoAceitaView.m in Sources */,
 				79F8683318D0E2380080BC32 /* MapaViewController.m in Sources */,
 				792CE78A196E43A600CF7CA2 /* MLPAutoCompleteTextField.m in Sources */,
+				7951B65F196F10E700B7C30C /* CaronaSolicitacaoNegada.m in Sources */,
 				79F8682818D0E1A80080BC32 /* RECommonFunctions.m in Sources */,
 				4185ACAE18E98A2600519F12 /* EXPhotoViewer.m in Sources */,
 				796B1FCA19315B2500FADDAC /* Rota.m in Sources */,

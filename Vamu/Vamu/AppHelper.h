@@ -38,6 +38,9 @@
 +(NSMutableArray*) getAceitacoes;
 +(void) setAceitacoes:(NSMutableArray*) aceitacoes;
 
++(NSMutableArray*) getNegacoes;
++(void) setNegacoes:(NSMutableArray*) negacoes;
+
 +(MKRoute*)getRota;
 +(void)setRota:(MKRoute*) rota;
 

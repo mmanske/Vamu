@@ -97,6 +97,15 @@
     [delegate setAceitacoes:aceitacoes];
 }
 
++(NSMutableArray *)getNegacoes{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] negacoes];
+}
+
++(void)setNegacoes:(NSMutableArray *)negacoes{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setNegacoes:negacoes];
+}
+
 +(NSMutableArray *)getMotoristas{
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] motoristas];
 }

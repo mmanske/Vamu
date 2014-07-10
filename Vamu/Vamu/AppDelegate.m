@@ -27,6 +27,7 @@
     self.solicitacoes = nil;
     self.nomeDestino = nil;
     self.aceitacoes = nil;
+    self.negacoes = nil;
     
     [self customizeNavigationBar];
     

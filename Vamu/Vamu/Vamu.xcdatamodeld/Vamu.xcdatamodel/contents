@@ -41,6 +41,18 @@
         <relationship name="rota" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rota" syncable="YES"/>
         <relationship name="veiculo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Veiculo" syncable="YES"/>
     </entity>
+    <entity name="NegacaoCarona" representedClassName="NegacaoCarona" syncable="YES">
+        <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="codViagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modeloVeiculo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numViagensMotorista" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="placa" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
     <entity name="Notificacao" representedClassName="Notificacao" syncable="YES">
         <attribute name="anoVeiculo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="codGrupo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -163,5 +175,6 @@
         <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="253"/>
         <element name="TrajetoFavorito" positionX="0" positionY="0" width="128" height="120"/>
         <element name="Veiculo" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="NegacaoCarona" positionX="9" positionY="153" width="128" height="193"/>
     </elements>
 </model>

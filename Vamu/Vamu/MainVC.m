@@ -12,6 +12,7 @@
 #import "SolicitacaoAdesao.h"
 #import "SolicitacaoCarona.h"
 #import "AceitacaoCarona.h"
+#import "NegacaoCarona.h"
 
 @interface MainVC ()
 
@@ -221,6 +222,7 @@
     
     NSMutableArray *solicitacoes = [NSMutableArray new];
     NSMutableArray *aceitacoes = [NSMutableArray new];
+    NSMutableArray *negacoes   = [NSMutableArray new];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Atualizar Mapa" object:self];
     
@@ -270,6 +272,25 @@
             solicitacao.placa = notificacao.placaVeiculo;
             
             [aceitacoes addObject:solicitacao];
+            
+            [solicitacao save:nil];
+        }
+        
+        if ([notificacao.tipo isEqualToNumber:[NSNumber numberWithInt:5]]) {
+            NegacaoCarona *solicitacao = [NegacaoCarona new];
+            
+            solicitacao.codNotificacao = notificacao.codigo;
+            solicitacao.remetente = notificacao.solicitante;
+            solicitacao.destinatario = notificacao.destinatario;
+            solicitacao.codViagem = notificacao.mensagem;
+            solicitacao.numViagensMotorista = notificacao.numViagensMotorista;
+            solicitacao.ano = notificacao.anoVeiculo;
+            solicitacao.cor = notificacao.corVeiculo;
+            solicitacao.modeloVeiculo = notificacao.modeloVeiculo;
+            solicitacao.placa = notificacao.placaVeiculo;
+            solicitacao.mensagem = notificacao.mensagem;
+            
+            [negacoes addObject:solicitacao];
             
             [solicitacao save:nil];
         }

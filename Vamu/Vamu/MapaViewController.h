@@ -15,8 +15,9 @@
 #import "EnviarSolicitacaoView.h"
 #import "DesembarqueCaronaView.h"
 #import "DesembarqueMotoristaView.h"
+#import "SolicitacaoAceitaView.h"
 
-@interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate>
+@interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate, SolicitacaoAceitaViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
 @property (strong, nonatomic) IBOutlet UIButton *btnLocalizacao;

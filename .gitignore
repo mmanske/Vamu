@@ -36,4 +36,10 @@ Vamu/Vamu.xcodeproj/project.xcworkspace/xcuserdata/Guilherme.xcuserdatad/UserInt
 
 *.xcuserstate
 
+<<<<<<< HEAD
 *.xcuserstate
+=======
+*.xcbkptlist
+>>>>>>> FETCH_HEAD
+
+*.xcbkptlist

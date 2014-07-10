@@ -131,8 +131,6 @@
     solicitacaoView.delegate = self;
     [self.view addSubview:solicitacaoView];
     
-    
-    
     if (![participanteLogado.motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         grupoView = [[GrupoView alloc] iniciar];
         grupoView.center = CGPointMake(self.view.frame.size.width / 2, 420);
@@ -163,6 +161,10 @@
     
     baixarImagemService = [BaixarImagemService new];
     baixarImagemService.delegate = self;
+    
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:[[AppHelper getParticipanteLogado].latitudeAtual floatValue] longitude:[[AppHelper getParticipanteLogado].longitudeAtual floatValue]];
+    
+    [self getAddressFromCurruntLocation:location];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -332,15 +334,7 @@
 }
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
-//    if([view.annotation isKindOfClass:[MotoristaPin class]]) {
-//        EnviarSolicitacaoView *calloutView = (EnviarSolicitacaoView *)[[[NSBundle mainBundle] loadNibNamed:@"EnviarSolicitacaoView" owner:self options:nil] objectAtIndex:0];
-//        calloutView.lblNomeParticipante.text = @"Guilherme";
-//        [calloutView iniciar];
-//        CGRect calloutViewFrame = calloutView.frame;
-//        calloutViewFrame.origin = CGPointMake(-calloutViewFrame.size.width/2 + 15, -calloutViewFrame.size.height);
-//        calloutView.frame = calloutViewFrame;
-//        [view addSubview:calloutView];
-//    }
+
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -570,7 +564,6 @@
 
 -(void)confirmarNegada:(NegacaoCarona *)solicitacao{
     [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
-    
 }
 
 #pragma mark - ConfirmaEmbarqueDelegate
@@ -581,6 +574,22 @@
 
 -(void)cancelouCarona:(AceitacaoCarona *)solicitacao{
     [caronaService caronaCancelaEmbarque:solicitacao];
+}
+
+-(void)getAddressFromCurruntLocation:(CLLocation *)location{
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if(placemarks && placemarks.count > 0)
+         {
+             CLPlacemark *placemark= [placemarks objectAtIndex:0];
+             
+             NSString *endereco = [NSString stringWithFormat:@"%@, %@, %@",[placemark thoroughfare],[placemark locality],[placemark administrativeArea]];
+             
+             lblOrigem.text = endereco;
+        
+         }
+     }];
 }
 
 @end

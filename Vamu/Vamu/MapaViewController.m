@@ -506,11 +506,6 @@
     
 }
 
--(void) caronaAindaNaoEmbarcou {
-    [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Embarque de Carona" message:@"Carona ainda não confirmou o Embarque" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
-}
-
 #pragma mark - DesembarqueMotoristaViewDelegate
 
 -(void)desembarcou:(Participante *)participante{
@@ -518,7 +513,8 @@
 }
 
 -(void)embarcou:(Participante *)participante{
-    [caronaService confirmarEmbarque:participante];
+//    [caronaService confirmarEmbarque:participante];
+    [self embarqueConcluido];
 }
 
 -(void)cancelouEmbarque:(Participante *)participante{

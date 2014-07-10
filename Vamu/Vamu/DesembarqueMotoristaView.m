@@ -11,7 +11,7 @@
 
 @implementation DesembarqueMotoristaView
 
-@synthesize delegate, lblDestinoCarona, lblNomeCarona, imgCarona, carona;
+@synthesize delegate, lblDestinoCarona, lblNomeCarona, imgCarona, carona, caronaService;
 
 @synthesize btnCancelou, btnDesembarcou, btnEmbarcou;
 
@@ -43,15 +43,28 @@
 }
 
 - (IBAction)btnEmbarcouClick:(id)sender {
-    btnEmbarcou.hidden = btnCancelou.hidden = YES;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(embarcou:)]) {
-        [self.delegate embarcou:carona];
-    }
+    caronaService = [CaronaService new];
+    caronaService.delegate = self;
+    [caronaService confirmarEmbarque:carona];
+    
 }
 
 - (IBAction)btnCancelouEmbarqueClick:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(cancelouEmbarque:)]) {
         [self.delegate cancelouEmbarque:carona];
+    }
+}
+
+#pragma mark - CaronaServiceDelegate
+
+-(void)caronaAindaNaoEmbarcou{
+    [[[UIAlertView alloc] initWithTitle:@"Embarque de Carona" message:@"Carona ainda não confirmou o Embarque" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+}
+
+-(void)embarqueConcluido{
+    btnEmbarcou.hidden = btnCancelou.hidden = YES;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(embarcou:)]) {
+        [self.delegate embarcou:carona];
     }
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Participante.h"
 #import "SolicitacaoCarona.h"
+#import "CaronaService.h"
 
 @protocol DesembarqueMotoristaViewDelegate <NSObject>
 
@@ -34,6 +35,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnEmbarcou;
 @property (strong, nonatomic) IBOutlet UIButton *btnCancelou;
 @property (strong, nonatomic) SolicitacaoCarona *solicitacao;
+@property (strong, nonatomic) CaronaService *caronaService;
 
 - (IBAction)btnDesembarcouClick:(id)sender;
 - (IBAction)btnEmbarcouClick:(id)sender;

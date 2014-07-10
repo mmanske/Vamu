@@ -16,14 +16,16 @@
 -(void) aceitarSolicitacao:(SolicitacaoCarona*) solicitacao;
 -(void) desembarqueCarona:(Participante*) participanteCarona;
 -(void) desembarqueMotorista:(Participante*) participanteCarona;
-
 -(void) solicitarCarona:(NSString*) codMotorista destino:(NSString*) destino;
+
+-(void) confirmarEmbarque:(Participante*) participante;
 
 @end
 
 @interface NSObject (CaronaServiceDelegate)
 
 -(void) desembarqueConcluido;
+-(void) embarqueConcluido;
 -(void) mensagensCancelamento:(NSArray*) mensagens;
 -(void) solicitacaoEnviada;
 -(void) solicitacaoAceita;

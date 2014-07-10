@@ -476,6 +476,10 @@
     //ir para a tela de resumo da viagem (que não existe)
 }
 
+-(void) embarqueConcluido{
+    
+}
+
 #pragma mark - DesembarqueMotoristaViewDelegate
 
 -(void)desembarcou:(Participante *)participante{
@@ -483,7 +487,7 @@
 }
 
 -(void)embarcou:(Participante *)participante{
-    
+    [caronaService confirmarEmbarque:participante];
 }
 
 -(void)cancelouEmbarque:(Participante *)participante{

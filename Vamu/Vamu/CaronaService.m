@@ -11,6 +11,17 @@
 
 @implementation CaronaService
 
+-(void)confirmarEmbarque:(Participante *)participante{
+    NSString *strURL = [self confereURLConexao:@"carona/embarque"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@", strURL, participante.codParticipante, participante.latitudeAtual, participante.longitudeAtual];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
 -(void)desembarqueCarona:(Participante *)participanteCarona{
     NSString *strURL = [self confereURLConexao:@"carona/desembarque"];
     if (strURL == nil) {
@@ -96,6 +107,15 @@
     if (strDesembarqueConcluido.length > 0) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(desembarqueConcluido)]) {
             [self.delegate desembarqueConcluido];
+        }
+        self.dadosRetorno = nil;
+        return;
+    }
+    
+    NSRange strConfirmarEmbarque = [self.dadosRetorno rangeOfString:@"msg:024"];
+    if (strConfirmarEmbarque.length > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(embarqueConcluido)]) {
+            [self.delegate embarqueConcluido];
         }
         self.dadosRetorno = nil;
         return;

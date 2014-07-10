@@ -7,10 +7,12 @@
 //
 
 #import "SolicitacaoView.h"
+#import "Participante.h"
+#import "AppHelper.h"
 
 @implementation SolicitacaoView
 
-@synthesize lblNomeParticipante, lblNumViajens, imgParticipante , btnRecusar, btnVamu, solicitacao, delegate;
+@synthesize lblNomeParticipante, lblNumViajens, imgParticipante , btnRecusar, btnVamu, solicitacao, delegate, imagemService;
 
 -(id)iniciar{
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"SolicitacaoView" owner:self options:nil];
@@ -59,6 +61,19 @@
         }
     }
     return isInside;
+}
+
+-(void)carregarImagemCarona{
+    imagemService = [BaixarImagemService new];
+    imagemService.delegate = self;
+    
+    [imagemService baixarImagemDePessoa:solicitacao.remetente.cpf];
+}
+
+-(void)finalizaBaixarImagem{
+    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", solicitacao.remetente.cpf];
+    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    self.imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
 }
 
 @end

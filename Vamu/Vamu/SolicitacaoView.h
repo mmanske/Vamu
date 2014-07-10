@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SolicitacaoCarona.h"
 #import "CaronaService.h"
+#import "BaixarImagemService.h"
 
 @protocol SolicitacaoViewDelegate <NSObject>
 
@@ -28,10 +29,12 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgParticipante;
 @property (strong, nonatomic) SolicitacaoCarona *solicitacao;
 @property (strong, nonatomic) CaronaService *caronaService;
+@property (strong, nonatomic) BaixarImagemService *imagemService;
 @property (nonatomic) id delegate;
 
 - (IBAction)btnVamuClick:(id)sender;
 - (IBAction)btnRecusarClick:(id)sender;
+- (void) carregarImagemCarona;
 
 -(id) iniciar;
 

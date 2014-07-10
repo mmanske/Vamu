@@ -354,6 +354,7 @@
             solicitacaoView.lblNomeParticipante.text = solicitacao.remetente.nome;
             solicitacaoView.lblNumViajens.text       = [NSString stringWithFormat:@"%@", solicitacao.numViagens];
             solicitacaoView.solicitacao = solicitacao;
+            [solicitacaoView carregarImagemCarona];
             
             [solicitacaoView setHidden:NO];
             [UIView animateWithDuration:0.3

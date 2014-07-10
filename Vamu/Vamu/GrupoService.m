@@ -56,7 +56,7 @@
         return;
     }
     
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@", strURL, nome, [AppHelper getParticipanteLogado].codParticipante];
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante, nome];
     
     [self consultarUrl:url timeOut:30];
 }

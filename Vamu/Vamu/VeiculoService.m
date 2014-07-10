@@ -60,6 +60,8 @@
 -(void)trataRecebimento{
     [super trataRecebimento];
     
+    NSLog(@"%@", self.dadosRetorno);
+    
     NSRange strRange = [self.dadosRetorno rangeOfString:@"HTTP Status 404"];
     if (strRange.length > 0) {
         [self enviaMensagemErro:@"Erro na carga de dados"];
@@ -69,7 +71,14 @@
     
     NSRange rangeErro = [self.dadosRetorno rangeOfString:@"Erro"];
     if (rangeErro.length > 0) {
-        [self enviaMensagemErro:self.dadosRetorno];
+        [self enviaMensagemErro:@"Falha ao processar requisição. Tente novamente"];
+        self.dadosRetorno = nil;
+        return;
+    }
+    
+    NSRange rangeErro001 = [self.dadosRetorno rangeOfString:@"Erro:001"];
+    if (rangeErro001.length > 0) {
+        [self enviaMensagemErro:@"Erro ao salvar veículo"];
         self.dadosRetorno = nil;
         return;
     }
@@ -95,6 +104,12 @@
     }
     
     self.dadosRetorno = nil;
+}
+
+-(void)enviaMensagemErro:(NSString *)msgErro{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(veiculoEnviaMensagemErro:)]) {
+        [self.delegate veiculoEnviaMensagemErro:msgErro];
+    }
 }
 
 -(void)onOcorreuTimeout:(NSString *)msg{

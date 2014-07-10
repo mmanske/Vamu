@@ -37,9 +37,9 @@
 
 
 - (IBAction)btnDesembarcouClick:(id)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(desembarcou:)]) {
-        [self.delegate desembarcou:carona];
-    }
+    caronaService = [CaronaService new];
+    caronaService.delegate = self;
+    [caronaService desembarqueCarona:carona];
 }
 
 - (IBAction)btnEmbarcouClick:(id)sender {
@@ -65,6 +65,12 @@
     btnEmbarcou.hidden = btnCancelou.hidden = YES;
     if (self.delegate && [self.delegate respondsToSelector:@selector(embarcou:)]) {
         [self.delegate embarcou:carona];
+    }
+}
+
+-(void)desembarqueConcluido{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(desembarcou:)]) {
+        [self.delegate desembarcou:carona];
     }
 }
 

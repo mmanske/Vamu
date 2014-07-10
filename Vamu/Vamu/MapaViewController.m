@@ -105,7 +105,6 @@
     
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [AppHelper getParticipanteLogado].cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
-    lblDestino.text = @"Avenida Embaixador Abelardo Bueno";
     
     imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
     
@@ -521,7 +520,7 @@
 #pragma mark - DesembarqueMotoristaViewDelegate
 
 -(void)desembarcou:(Participante *)participante{
-    
+    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:[NSString stringWithFormat:@"viagem do participante %@ encerrada com sucesso!", participante.nome] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)embarcou:(Participante *)participante{

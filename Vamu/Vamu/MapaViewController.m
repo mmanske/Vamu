@@ -64,6 +64,7 @@
 @synthesize consultarPartService;
 @synthesize baixarImagemService;
 @synthesize motoristaSolicitado;
+@synthesize lblDestino, lblOrigem, lblNomeParticipante, imgParticipante;
 
 - (void)viewDidLoad
 {
@@ -91,6 +92,17 @@
     
     notificacaoService = [NotificacaoService new];
     notificacaoService.delegate = self;
+    
+    imgParticipante.layer.cornerRadius = imgParticipante.bounds.size.width/2;
+    imgParticipante.layer.masksToBounds = YES;
+    imgParticipante.layer.borderWidth = 1;
+    imgParticipante.layer.borderColor = [UIColor whiteColor].CGColor;
+    imgParticipante.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
+    
+    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [AppHelper getParticipanteLogado].cpf];
+    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    
+    imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
     
     self.title = @"Mapa";
     

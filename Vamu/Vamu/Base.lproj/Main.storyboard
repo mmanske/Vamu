@@ -1084,7 +1084,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PaP-Tc-Edu">
-                                <rect key="frame" x="254" y="316" width="46" height="42"/>
+                                <rect key="frame" x="254" y="292" width="46" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -1097,7 +1097,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fcx-vz-hiX">
-                                <rect key="frame" x="254" y="392" width="46" height="42"/>
+                                <rect key="frame" x="254" y="368" width="46" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -1110,7 +1110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="541-1L-e0K">
-                                <rect key="frame" x="254" y="442" width="46" height="42"/>
+                                <rect key="frame" x="254" y="418" width="46" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -1192,6 +1192,17 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QKP-FY-c5c">
+                                <rect key="frame" x="5" y="112" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ivete Sangalo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8dQ-Fc-9Jg">
+                                <rect key="frame" x="58" y="124" width="258" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1201,7 +1212,11 @@
                         <outlet property="btnVerGrupos" destination="j6B-NW-ee3" id="xHC-5O-sGg"/>
                         <outlet property="btnZoomIn" destination="Fcx-vz-hiX" id="PQH-Ow-sDf"/>
                         <outlet property="btnZoomOut" destination="541-1L-e0K" id="B2n-ze-TgC"/>
+                        <outlet property="imgParticipante" destination="QKP-FY-c5c" id="0AG-bt-TuZ"/>
                         <outlet property="imgVerGrupos" destination="dV4-Ea-l5Q" id="EBg-rK-ude"/>
+                        <outlet property="lblDestino" destination="ou7-mz-kOF" id="LKE-A6-uMm"/>
+                        <outlet property="lblNomeParticipante" destination="8dQ-Fc-9Jg" id="gdK-Fm-U92"/>
+                        <outlet property="lblOrigem" destination="gg6-E3-C0a" id="9Fq-uK-jG3"/>
                         <outlet property="lblVerGrupos" destination="aQJ-zg-09T" id="HgG-Te-16B"/>
                         <outlet property="mapa" destination="MD3-XN-2Fy" id="Wat-QE-jfg"/>
                         <outlet property="viewVerGrupos" destination="cuV-gM-UyC" id="rbR-r7-hhh"/>

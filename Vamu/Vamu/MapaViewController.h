@@ -21,6 +21,10 @@
 
 @interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate, SolicitacaoAceitaViewDelegate, CaronaNegadaDelegate, ConfirmarEmbarqueDelegate>
 
+@property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;
+@property (strong, nonatomic) IBOutlet UILabel *lblOrigem;
+@property (strong, nonatomic) IBOutlet UILabel *lblDestino;
+@property (strong, nonatomic) IBOutlet UIImageView *imgParticipante;
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
 @property (strong, nonatomic) IBOutlet UIButton *btnLocalizacao;
 @property (strong, nonatomic) IBOutlet UIButton *btnZoomIn;

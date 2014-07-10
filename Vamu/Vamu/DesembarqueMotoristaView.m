@@ -25,7 +25,7 @@
     
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", mainView.carona.cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
-    imgCarona.image = [UIImage imageWithContentsOfFile:imageFileName];
+    mainView.imgCarona.image = [UIImage imageWithContentsOfFile:imageFileName];
     
     
     [mainView setBackgroundColor:[UIColor colorWithRed:0.4 green:0.667 blue:0.267 alpha:1.0]];
@@ -33,23 +33,6 @@
     return mainView;
 }
 
--(id) iniciarComParticipante:(Participante *)participante{
-    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"DesembarqueMotoristaView" owner:self options:nil];
-    DesembarqueMotoristaView *mainView = [subviewArray objectAtIndex:0];
-    
-    mainView.carona = participante;
-    mainView.lblNomeCarona.text = participante.nome;
-    mainView.lblDestinoCarona.text = @"Av. Das Américas";
-
-    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", participante.cpf];
-    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
-    imgCarona.image = [UIImage imageWithContentsOfFile:imageFileName];
-    
-    
-    [mainView setBackgroundColor:[UIColor colorWithRed:0.4 green:0.667 blue:0.267 alpha:1.0]];
-    
-    return mainView;
-}
 
 - (IBAction)btnDesembarcouClick:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(desembarcou:)]) {

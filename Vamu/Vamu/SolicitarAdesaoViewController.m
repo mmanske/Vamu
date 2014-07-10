@@ -97,7 +97,8 @@
 #pragma mark - GrupoServiceDelegate
 
 -(void)grupoConsultaNomeRetorno:(NSMutableArray *)grupos{
-    retorno = grupos;
+    [retorno removeAllObjects];
+    [retorno addObjectsFromArray:grupos];
     [tabela reloadData];
 }
 
@@ -124,6 +125,7 @@
 
 -(void)onSolicitouParticipacao:(Grupo *)grupo{
     [ampulheta exibir];
+    [edtNomeGrupo resignFirstResponder];
     [grupoService solicitarAdesao:grupo participanteSolicitante:[AppHelper getParticipanteLogado]];
 }
 

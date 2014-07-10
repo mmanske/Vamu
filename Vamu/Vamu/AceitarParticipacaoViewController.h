@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaixarImagemService.h"
 
 @interface AceitarParticipacaoViewController : UIViewController
 
+@property (strong, nonatomic) BaixarImagemService *imagemService;
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeGrupo;
 @property (strong, nonatomic) IBOutlet UIImageView *imgParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;

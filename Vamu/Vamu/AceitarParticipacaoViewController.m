@@ -33,6 +33,7 @@
 @synthesize solicitacao;
 @synthesize grupoService;
 @synthesize notificacaoService;
+@synthesize imagemService;
 
 - (void)viewDidLoad
 {
@@ -49,6 +50,9 @@
     notificacaoService = [NotificacaoService new];
     notificacaoService.delegate = self;
     
+    imagemService = [BaixarImagemService new];
+    imagemService.delegate = self;
+    
     imgParticipante.layer.cornerRadius = imgParticipante.bounds.size.width/2;
     imgParticipante.layer.masksToBounds = YES;
     imgParticipante.layer.borderWidth = 2;
@@ -63,6 +67,7 @@
         solicitacao = [solicitacoes objectAtIndex:0];
         lblNomeParticipante.text = solicitacao.remetente.nome;
         lblNomeGrupo.text = solicitacao.nomeGrupo;
+        [imagemService baixarImagemDePessoa:solicitacao.remetente.cpf];
     }
 }
 
@@ -133,6 +138,14 @@
     } else {
         solicitacao = nil;
     }
+}
+
+#pragma mark - ImagemServiceDelegate
+
+-(void)finalizaBaixarImagem{
+    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", solicitacao.remetente.cpf];
+    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    self.imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
 }
 
 @end

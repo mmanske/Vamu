@@ -412,10 +412,7 @@
 #pragma mark - SolicitacaoViewDelegate
 
 -(void)solicitacaoAceita{
-//    DesembarqueCaronaView *desembarqueCaronaView = [[DesembarqueCaronaView alloc] iniciar];
-//    desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, );
-//    desembarqueCaronaView.delegate = self;
-//    desembarqueCaronaView.carona = solicitacao.remetente;
+
 }
 
 -(void)aceitarSolicitacao:(SolicitacaoCarona *)solicitacao{
@@ -505,7 +502,10 @@
 -(void) embarqueConcluido{
     //Confirmou o embarque - Ações para carona
     
-    //Exibir view de desembarque
+    DesembarqueCaronaView *desembarqueCaronaView = [[DesembarqueCaronaView alloc] iniciar];
+    desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height - 100);
+    desembarqueCaronaView.delegate = self;
+    [self.view addSubview:desembarqueCaronaView];
 }
 
 #pragma mark - DesembarqueMotoristaViewDelegate

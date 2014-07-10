@@ -32,6 +32,7 @@
 }
 
 - (IBAction)btnEmbarqueiClick:(id)sender {
+    [self removeFromSuperview];
     if (self.delegate && [self.delegate respondsToSelector:@selector(embarcouCarona:)]) {
         [self.delegate embarcouCarona: _solicitacao];
     }

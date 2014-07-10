@@ -73,7 +73,7 @@
     tabela.delegate = self;
     tabela.dataSource = self;
     edtOrigem.text  = @"Minha Localização Atual";
-    edtDestino.text = @"Avenida das Américas, Barra da Tijuca, Rio de Janeiro";
+   // edtDestino.text = @"Avenida das Américas, Barra da Tijuca, Rio de Janeiro";
     [tabela registerClass:[RotaCell class] forCellWithReuseIdentifier:@"RotaCell"];
     
     if (participanteLogado) {

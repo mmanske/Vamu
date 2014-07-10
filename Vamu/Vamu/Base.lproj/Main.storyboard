@@ -1248,7 +1248,7 @@
                                 <rect key="frame" x="0.0" y="89" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="8gu-RT-ESw">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="8gu-RT-ESw">
                                         <rect key="frame" x="20" y="7" width="230" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
@@ -1336,6 +1336,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.9548927919708029" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Az8-dP-i56" appends="YES" id="2zd-EK-XOE"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Definir Trajeto" id="4pi-yE-q6q">
                         <barButtonItem key="backBarButtonItem" title=" " id="zyp-zQ-6IA"/>
@@ -1352,6 +1356,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZZ-pH-pm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Az8-dP-i56">
+                    <connections>
+                        <action selector="clicouTela:" destination="YnN-uc-O9g" id="UtL-8f-1El"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3388" y="370"/>
         </scene>

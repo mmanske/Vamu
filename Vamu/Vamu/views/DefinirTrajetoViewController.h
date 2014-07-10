@@ -14,8 +14,9 @@
 #import "Participante.h"
 #import "Veiculo.h"
 #import "RotasVO.h"
+#import "KSEnhancedKeyboard.h"
 
-@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate>
+@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate , UITextFieldDelegate, KSEnhancedKeyboardDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *edtOrigem;
 @property (weak, nonatomic) IBOutlet UITextField *edtDestino;
@@ -30,6 +31,6 @@
 
 - (IBAction)btnIrClick:(id)sender;
 - (IBAction)btnFavoritosClick:(id)sender;
-
+- (IBAction)clicouTela:(id)sender;
 
 @end

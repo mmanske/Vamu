@@ -22,6 +22,7 @@
 @property (strong, nonatomic) CustomActivityView *ampulheta;
 @property (strong, nonatomic) RotaService *rotaService;
 @property (strong, nonatomic) MKRoute *rotaFavorita;
+@property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
 
 @end
 
@@ -42,7 +43,7 @@
 @synthesize veiculo;
 @synthesize ampulheta;
 @synthesize rotaService;
-@synthesize rotaFavorita;
+@synthesize rotaFavorita, enhancedKeyboard;
 
 - (void)viewDidLoad
 {
@@ -73,6 +74,7 @@
     tabela.delegate = self;
     tabela.dataSource = self;
     edtOrigem.text  = @"Minha Localização Atual";
+    edtDestino.delegate = self;
    // edtDestino.text = @"Avenida das Américas, Barra da Tijuca, Rio de Janeiro";
     [tabela registerClass:[RotaCell class] forCellWithReuseIdentifier:@"RotaCell"];
     
@@ -89,6 +91,10 @@
     
     rotaService = [RotaService new];
     rotaService.delegate = self;
+    
+    self.enhancedKeyboard = [KSEnhancedKeyboard new];
+    self.enhancedKeyboard.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -347,5 +353,26 @@
         [rotaService salvarDestinoFavorito:trajeto];
     }
 }
+
+- (void)nextDidTouchDown
+{
+    
+}
+
+- (void)doneDidTouchDown
+{
+        if ([edtDestino isEditing]) {
+            [edtDestino resignFirstResponder];
+        }
+}
+
+- (void)previousDidTouchDown
+{
+}
+
+- (IBAction)clicouTela:(id)sender {
+    [edtDestino resignFirstResponder];
+}
+
 
 @end

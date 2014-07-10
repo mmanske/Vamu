@@ -149,7 +149,6 @@
 		79B9C83418CFE3FD00392833 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B9C83318CFE3FD00392833 /* CoreLocation.framework */; };
 		79B9C83618CFE40300392833 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B9C83518CFE40300392833 /* MapKit.framework */; };
 		79B9C83B18CFE7E600392833 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B9C83A18CFE7E600392833 /* menu-icon.png */; };
-		79BF6AE8190DB74200F7D44A /* libPKRevealController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BF6AE7190DB71300F7D44A /* libPKRevealController.a */; };
 		79C030E81921770400D8A676 /* EditarParticipanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C030E71921770400D8A676 /* EditarParticipanteViewController.m */; };
 		79C39A2E193B990C00FE8D14 /* AceitarParticipacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C39A2D193B990C00FE8D14 /* AceitarParticipacaoViewController.m */; };
 		79C39A34193B9D1C00FE8D14 /* NotificacaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C39A33193B9D1C00FE8D14 /* NotificacaoService.m */; };
@@ -243,13 +242,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		79BF6AE6190DB71300F7D44A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 79BF6AE2190DB71300F7D44A /* PKRevealController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F9621E7B1815246000469E41;
-			remoteInfo = PKRevealController;
-		};
 		79FDC71C18CE696B003EE81D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79FDC6E518CE696A003EE81D /* Project object */;
@@ -463,7 +455,6 @@
 		79B9C83318CFE3FD00392833 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		79B9C83518CFE40300392833 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		79B9C83A18CFE7E600392833 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-icon.png"; path = "../../Imagens/recorte-formularios-imagens-com-cores-guia/640x1136/menu-icon.png"; sourceTree = "<group>"; };
-		79BF6AE2190DB71300F7D44A /* PKRevealController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PKRevealController.xcodeproj; path = "../../PKRevealController-master/Source/PKRevealController.xcodeproj"; sourceTree = "<group>"; };
 		79C030E61921770400D8A676 /* EditarParticipanteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditarParticipanteViewController.h; sourceTree = "<group>"; };
 		79C030E71921770400D8A676 /* EditarParticipanteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditarParticipanteViewController.m; sourceTree = "<group>"; };
 		79C39A2C193B990C00FE8D14 /* AceitarParticipacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AceitarParticipacaoViewController.h; sourceTree = "<group>"; };
@@ -597,7 +588,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BF6AE8190DB74200F7D44A /* libPKRevealController.a in Frameworks */,
 				41F926D318F8349900CD5181 /* AVFoundation.framework in Frameworks */,
 				41F926D118F8348F00CD5181 /* CoreText.framework in Frameworks */,
 				41F926CF18F8348700CD5181 /* GLKit.framework in Frameworks */,
@@ -939,14 +929,6 @@
 			name = "Base Views";
 			sourceTree = "<group>";
 		};
-		79BF6AE3190DB71300F7D44A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				79BF6AE7190DB71300F7D44A /* libPKRevealController.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		79CD5EE2193A7E5200162630 /* Outras */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,7 +1043,6 @@
 			children = (
 				79654F78195778CC007E91F8 /* AWSRuntime.framework */,
 				79654F79195778CC007E91F8 /* AWSS3.framework */,
-				79BF6AE2190DB71300F7D44A /* PKRevealController.xcodeproj */,
 				41F926D218F8349900CD5181 /* AVFoundation.framework */,
 				41F926D018F8348F00CD5181 /* CoreText.framework */,
 				41F926CE18F8348700CD5181 /* GLKit.framework */,
@@ -1436,12 +1417,6 @@
 			mainGroup = 79FDC6E418CE696A003EE81D;
 			productRefGroup = 79FDC6EE18CE696A003EE81D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 79BF6AE3190DB71300F7D44A /* Products */;
-					ProjectRef = 79BF6AE2190DB71300F7D44A /* PKRevealController.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				79FDC6EC18CE696A003EE81D /* Vamu */,
@@ -1449,16 +1424,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		79BF6AE7190DB71300F7D44A /* libPKRevealController.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libPKRevealController.a;
-			remoteRef = 79BF6AE6190DB71300F7D44A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		79FDC6EB18CE696A003EE81D /* Resources */ = {

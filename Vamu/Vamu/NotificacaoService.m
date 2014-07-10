@@ -188,7 +188,6 @@
         NSString *placa = [dicNotificacao objectForKey:@"placa"];
         NSString *anoVeiculo = [dicNotificacao objectForKey:@"ano"];
         NSString *cor = [dicNotificacao objectForKey:@"cor"];
-        NSNumber *numViagensMotorista = [dicNotificacao objectForKey:@"numViagensMotorista"];
         
         NSString *nomeGrupo = [dicNotificacao objectForKey:@"nomeGrupo"];
         NSString *nomeRemetente = [dicNotificacao objectForKey:@"nomeRemetente"];
@@ -224,7 +223,7 @@
         notificacao.placaVeiculo = placa;
         notificacao.anoVeiculo = anoVeiculo;
         notificacao.corVeiculo = cor;
-        notificacao.numViagensMotorista = numViagensMotorista;
+        notificacao.numViagensMotorista = viagens;
         notificacao.codigo = codigo;
         notificacao.tipo = tipoNotificacao;
         notificacao.codGrupo = codGrupo;

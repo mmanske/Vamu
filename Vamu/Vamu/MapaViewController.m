@@ -542,12 +542,32 @@
 
 -(void)confirmarSolicitacao:(AceitacaoCarona *)solicitacao{
     [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
+    
+    CaronaConfirmarEmbarqueView *confirmarEmbarque = [[CaronaConfirmarEmbarqueView alloc] exibirSolicitacao:solicitacao];
+    confirmarEmbarque.delegate = self;
+    confirmarEmbarque.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    [confirmarEmbarque setHidden:NO];
+    
+    [confirmarEmbarque carregarImagemMotorista];
+    
+    [self.view addSubview:solicitacaoView];
 }
 
 #pragma mark - NegacaoCaronaDelegate
 
 -(void)confirmarNegada:(NegacaoCarona *)solicitacao{
     [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
+    
+}
+
+#pragma mark - ConfirmaEmbarqueDelegate
+
+-(void)embarcouCarona:(AceitacaoCarona *)solicitacao{
+    [caronaService caronaConfirmarEmbarque:solicitacao];
+}
+
+-(void)cancelouCarona:(AceitacaoCarona *)solicitacao{
+    [caronaService caronaCancelaEmbarque:solicitacao];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "BaseService.h"
 #import "SolicitacaoCarona.h"
+#import "AceitacaoCarona.h"
 
 @interface CaronaService : BaseService
 
@@ -19,6 +20,8 @@
 -(void) solicitarCarona:(NSString*) codMotorista destino:(NSString*) destino;
 
 -(void) confirmarEmbarque:(Participante*) participante;
+-(void) caronaConfirmarEmbarque:(AceitacaoCarona*) solicitacao;
+-(void) caronaCancelaEmbarque:(AceitacaoCarona*) solicitacao;
 
 @end
 

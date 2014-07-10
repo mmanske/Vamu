@@ -22,6 +22,28 @@
     [self consultarUrl:url timeOut:30];
 }
 
+-(void)caronaCancelaEmbarque:(AceitacaoCarona *)solicitacao{
+    NSString *strURL = [self confereURLConexao:@"carona/desiste"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante, solicitacao.remetente.codParticipante, [AppHelper getParticipanteLogado].latitudeAtual, [AppHelper getParticipanteLogado].longitudeAtual];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
+-(void)caronaConfirmarEmbarque:(AceitacaoCarona *)solicitacao{
+    NSString *strURL = [self confereURLConexao:@"carona/confirmar"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante, solicitacao.remetente.codParticipante, [AppHelper getParticipanteLogado].latitudeAtual, [AppHelper getParticipanteLogado].longitudeAtual];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
 -(void)desembarqueCarona:(Participante *)participanteCarona{
     NSString *strURL = [self confereURLConexao:@"carona/desembarque"];
     if (strURL == nil) {

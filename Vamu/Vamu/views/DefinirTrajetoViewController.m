@@ -301,11 +301,13 @@
     
     [AppHelper setNomeDestino:edtDestino.text];
     
-    if ([[AppHelper getParticipanteLogado].motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
-        [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
-    } else {
-        [self salvouRota];
-    }
+    [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
+    
+//    if ([[AppHelper getParticipanteLogado].motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+//        [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
+//    } else {
+//        [self salvouRota];
+//    }
 }
 
 -(void)salvarRotaFavorita:(MKRoute *)rota{

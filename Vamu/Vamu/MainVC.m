@@ -298,6 +298,7 @@
     
     [AppHelper setSolicitacoes:solicitacoes];
     [AppHelper setAceitacoes:aceitacoes];
+    [AppHelper setNegacoes:negacoes];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Solicitacao Recebida" object:self];
 }

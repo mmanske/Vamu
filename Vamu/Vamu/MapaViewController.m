@@ -87,6 +87,10 @@
     rota = [AppHelper getRota];
     participanteLogado = [AppHelper getParticipanteLogado];
     
+    lblNomeParticipante.text = participanteLogado.nome;
+    
+    lblDestino.text = [AppHelper getNomeDestino];
+    
     caronaService = [CaronaService new];
     caronaService.delegate = self;
     

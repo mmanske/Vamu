@@ -94,8 +94,8 @@
 		794FDE82194E7CA30052A32E /* Vamu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 794FDE80194E7CA30052A32E /* Vamu.xcdatamodeld */; };
 		794FDE88194E7F9F0052A32E /* MensagemCancelamento.m in Sources */ = {isa = PBXBuildFile; fileRef = 794FDE87194E7F9F0052A32E /* MensagemCancelamento.m */; };
 		7951B630196EA36600B7C30C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7951B62F196EA36600B7C30C /* GoogleMaps.bundle */; };
-		7951B632196EBB5400B7C30C /* btn-embarcou-azulclaro_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951B631196EBB5400B7C30C /* btn-embarcou-azulclaro_5.png */; };
-		7951B634196EBBD300B7C30C /* btn-recusar-x_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951B633196EBBD300B7C30C /* btn-recusar-x_5.png */; };
+		7951B637196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951B635196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png */; };
+		7951B638196ECC7500B7C30C /* btn-recusar-x_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951B636196ECC7500B7C30C /* btn-recusar-x_5.png */; };
 		795329561951F1C900B0E399 /* Seguradora.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329551951F1C900B0E399 /* Seguradora.m */; };
 		7953295A1951F22100B0E399 /* SeguradoraService.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329591951F22100B0E399 /* SeguradoraService.m */; };
 		7953295D1951F69100B0E399 /* Veiculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953295C1951F69000B0E399 /* Veiculo.m */; };
@@ -377,8 +377,8 @@
 		794FDE86194E7F9F0052A32E /* MensagemCancelamento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensagemCancelamento.h; sourceTree = "<group>"; };
 		794FDE87194E7F9F0052A32E /* MensagemCancelamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensagemCancelamento.m; sourceTree = "<group>"; };
 		7951B62F196EA36600B7C30C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		7951B631196EBB5400B7C30C /* btn-embarcou-azulclaro_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-embarcou-azulclaro_5.png"; path = "../../../../iOS/Vamu/Imagens/recorte-com-menu-23-04-2014/640x1136/btn-embarcou-azulclaro_5.png"; sourceTree = "<group>"; };
-		7951B633196EBBD300B7C30C /* btn-recusar-x_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-recusar-x_5.png"; path = "../../../../iOS/Vamu/Imagens/recorte-com-menu-23-04-2014/640x1136/btn-recusar-x_5.png"; sourceTree = "<group>"; };
+		7951B635196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-embarcou-azulclaro_5.png"; path = "../../Imagens/recorte-com-menu-23-04-2014/btn-embarcou-azulclaro_5.png"; sourceTree = "<group>"; };
+		7951B636196ECC7500B7C30C /* btn-recusar-x_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-recusar-x_5.png"; path = "../../Imagens/recorte-com-menu-23-04-2014/btn-recusar-x_5.png"; sourceTree = "<group>"; };
 		795329541951F1C900B0E399 /* Seguradora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seguradora.h; sourceTree = "<group>"; };
 		795329551951F1C900B0E399 /* Seguradora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seguradora.m; sourceTree = "<group>"; };
 		795329581951F22100B0E399 /* SeguradoraService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeguradoraService.h; sourceTree = "<group>"; };
@@ -1281,8 +1281,8 @@
 		79FDC73718CE6B30003EE81D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				7951B633196EBBD300B7C30C /* btn-recusar-x_5.png */,
-				7951B631196EBB5400B7C30C /* btn-embarcou-azulclaro_5.png */,
+				7951B635196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png */,
+				7951B636196ECC7500B7C30C /* btn-recusar-x_5.png */,
 				7E7EEFAF196CAD51001E9EF5 /* btn-desembarcou_5.png */,
 				7E7EEFB0196CAD51001E9EF5 /* btn-desembarquei_5.png */,
 				794FDE75194E58140052A32E /* btn-embarquei_5.png */,
@@ -1514,7 +1514,7 @@
 				79FDC75118CE6B47003EE81D /* btn_entrar_5.png in Resources */,
 				79414649190DC0B5005C0235 /* ico-menu-editagrupos_4@2x.png in Resources */,
 				413E660418F72C09002B2907 /* Participantes.txt in Resources */,
-				7951B632196EBB5400B7C30C /* btn-embarcou-azulclaro_5.png in Resources */,
+				7951B637196ECC7500B7C30C /* btn-embarcou-azulclaro_5.png in Resources */,
 				7941464B190DC0B5005C0235 /* ico-menu-email-convite_4@2x.png in Resources */,
 				7FE440BC1943BF7800F26C85 /* GrupoViewCell.xib in Resources */,
 				79DCA8F4194627ED00E96C1E /* AppIcon58x58.png in Resources */,
@@ -1526,7 +1526,7 @@
 				794FDE7C194E58140052A32E /* btn-vamu-responde_5.png in Resources */,
 				79AEB7F41927F7BD00C097A5 /* ActivityVamu.xib in Resources */,
 				413C21F718F830E5002AFFF5 /* ico-trocausuario-iniciosistema_4.png in Resources */,
-				7951B634196EBBD300B7C30C /* btn-recusar-x_5.png in Resources */,
+				7951B638196ECC7500B7C30C /* btn-recusar-x_5.png in Resources */,
 				79AEB80019280EAE00C097A5 /* FavoritoCell.xib in Resources */,
 				79FDC6FD18CE696B003EE81D /* InfoPlist.strings in Resources */,
 				79414636190DC0A6005C0235 /* bg-menu_4@2x.png in Resources */,

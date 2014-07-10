@@ -301,13 +301,12 @@
     
     [AppHelper setNomeDestino:edtDestino.text];
     
-    [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
     
-//    if ([[AppHelper getParticipanteLogado].motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
-//        [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
-//    } else {
-//        [self salvouRota];
-//    }
+    if ([[AppHelper getParticipanteLogado].motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
+    } else {
+        [self salvouRota];
+    }
 }
 
 -(void)salvarRotaFavorita:(MKRoute *)rota{

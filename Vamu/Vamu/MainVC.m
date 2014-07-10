@@ -262,6 +262,7 @@
             solicitacao.codNotificacao = notificacao.codigo;
             solicitacao.remetente = notificacao.solicitante;
             solicitacao.destinatario = notificacao.destinatario;
+            solicitacao.codViagem = notificacao.mensagem;
             
             [aceitacoes addObject:solicitacao];
             

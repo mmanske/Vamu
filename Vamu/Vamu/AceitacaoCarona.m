@@ -2,7 +2,7 @@
 //  AceitacaoCarona.m
 //  Vamu
 //
-//  Created by Márcio S. Manske on 08/07/14.
+//  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -13,6 +13,7 @@
 @implementation AceitacaoCarona
 
 @dynamic codNotificacao;
+@dynamic codViagem;
 @dynamic destinatario;
 @dynamic remetente;
 

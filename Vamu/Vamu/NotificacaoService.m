@@ -186,6 +186,7 @@
         
         NSString *nomeGrupo = [dicNotificacao objectForKey:@"nomeGrupo"];
         NSString *nomeRemetente = [dicNotificacao objectForKey:@"nomeRemetente"];
+        NSString *cpfRemetente = [dicNotificacao objectForKey:@"cpfRemetente"];
         NSString *dataCadastro = [dicNotificacao objectForKey:@"dataCadastro"];
         NSString *mensagem = [dicNotificacao objectForKey:@"mensagem"];
         
@@ -207,6 +208,7 @@
         remetente.codParticipante = [NSString stringWithFormat:@"%@", codRemetente];
         remetente.nome = nomeRemetente;
         remetente.carro = [NSSet setWithArray:carros];
+        remetente.cpf = cpfRemetente;
         
         notificacao.codigo = codigo;
         notificacao.tipo = tipoNotificacao;

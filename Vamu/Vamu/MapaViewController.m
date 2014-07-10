@@ -396,17 +396,13 @@
     
     float altura = self.view.frame.size.height - 25;
 
-
-    
-    DesembarqueMotoristaView *desembarqueMotorista = [[DesembarqueMotoristaView alloc] iniciarComParticipante:solicitacao.remetente];
+    DesembarqueMotoristaView *desembarqueMotorista = [[DesembarqueMotoristaView alloc] iniciarSolicitacao:solicitacao];
     desembarqueMotorista.center = CGPointMake(self.view.frame.size.width / 2, altura - ([caronas count] * 51));
     desembarqueMotorista.delegate = self;
     
     [self.view addSubview:desembarqueMotorista];
     
     [caronas addObject:solicitacao.remetente];
-    
-//    [self.view addSubview:desembarqueCaronaView];
     
     [caronaService aceitarSolicitacao:solicitacao];
     [UIView animateWithDuration:0.3

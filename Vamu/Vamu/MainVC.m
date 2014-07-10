@@ -249,7 +249,7 @@
             solicitacao.remetente = notificacao.solicitante;
             solicitacao.numViagens = notificacao.viagens;
             solicitacao.destinatario = notificacao.destinatario;
-            solicitacao.nomeDestino = notificacao.mensagem;
+            solicitacao.nomeDestino = notificacao.nomeDestino;
             
             [solicitacoes addObject:solicitacao];
             

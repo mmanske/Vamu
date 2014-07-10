@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Participante.h"
+#import "SolicitacaoCarona.h"
 
 @protocol DesembarqueMotoristaViewDelegate <NSObject>
 
@@ -23,7 +24,7 @@
 
 @property (nonatomic) id delegate;
 
--(id) iniciarComParticipante:(Participante*) participante;
+-(id) iniciarSolicitacao:(SolicitacaoCarona*) solicitacao;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgCarona;
 @property (weak, nonatomic) IBOutlet UILabel *lblNomeCarona;
@@ -32,6 +33,7 @@
 @property (strong, nonatomic) Participante *carona;
 @property (strong, nonatomic) IBOutlet UIButton *btnEmbarcou;
 @property (strong, nonatomic) IBOutlet UIButton *btnCancelou;
+@property (strong, nonatomic) SolicitacaoCarona *solicitacao;
 
 - (IBAction)btnDesembarcouClick:(id)sender;
 - (IBAction)btnEmbarcouClick:(id)sender;

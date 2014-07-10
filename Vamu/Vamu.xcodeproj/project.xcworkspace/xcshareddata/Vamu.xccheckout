@@ -5,55 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AC5D7DAA-851D-4D3E-B6F9-1AFF4441BFEF</string>
+	<string>D7958C12-3671-4E8C-800A-EAFE0D4C3359</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Vamu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9A91C2F3-7203-452C-8707-E1361E92E153</key>
-		<string>http://cmnetlxweb2/svn/repos/mobile/iOS/PreVenda/Boticario%20Mobile/Boticario%20Mobile/AMTextFieldNumberPad.bundle</string>
-		<key>E472D465-4A37-41AB-B215-4A795EA0FCFB</key>
-		<string>http://www.entersistemas.com.br/projects/vamu/iOS</string>
+		<key>F322F334-6352-429A-BA8E-F99454502B2E</key>
+		<string>https://github.com/mmanske/Vamu.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Vamu/Vamu/Vamu.xcodeproj/project.xcworkspace</string>
+	<string>Vamu/Vamu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9A91C2F3-7203-452C-8707-E1361E92E153</key>
-		<string>../../Vamu/AMTextFieldNumberPad.bundle</string>
-		<key>E472D465-4A37-41AB-B215-4A795EA0FCFB</key>
-		<string>../../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>9A91C2F3-7203-452C-8707-E1361E92E153</key>
-		<string>http://cmnetlxweb2/svn/repos</string>
-		<key>E472D465-4A37-41AB-B215-4A795EA0FCFB</key>
-		<string>http://www.entersistemas.com.br/projects/vamu/iOS</string>
+		<key>F322F334-6352-429A-BA8E-F99454502B2E</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://www.entersistemas.com.br/projects/vamu/iOS/Vamu/Vamu/Vamu.xcodeproj</string>
+	<string>https://github.com/mmanske/Vamu.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E472D465-4A37-41AB-B215-4A795EA0FCFB</string>
+	<string>F322F334-6352-429A-BA8E-F99454502B2E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9A91C2F3-7203-452C-8707-E1361E92E153</string>
+			<string>F322F334-6352-429A-BA8E-F99454502B2E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AMTextFieldNumberPad.bundle</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E472D465-4A37-41AB-B215-4A795EA0FCFB</string>
-			<key>IDESourceControlWCCName</key>
-			<string>iOS</string>
+			<string>Vamu</string>
 		</dict>
 	</array>
 </dict>

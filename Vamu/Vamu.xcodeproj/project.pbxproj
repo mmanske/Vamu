@@ -56,6 +56,10 @@
 		41F926D318F8349900CD5181 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926D218F8349900CD5181 /* AVFoundation.framework */; };
 		7916E4C419439CA100F844BB /* MotoristaAtivo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7916E4C319439CA100F844BB /* MotoristaAtivo.m */; };
 		7916E4C719439D4800F844BB /* GrupoAtivo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7916E4C619439D4800F844BB /* GrupoAtivo.m */; };
+		792CE77F196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE777196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m */; };
+		792CE780196E33F900CF7CA2 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE779196E33F900CF7CA2 /* MLPAutoCompleteTextField.m */; };
+		792CE781196E33F900CF7CA2 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE77E196E33F900CF7CA2 /* NSString+Levenshtein.m */; };
+		792CE785196E341500CF7CA2 /* PlacesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CE784196E341500CF7CA2 /* PlacesService.m */; };
 		793C370B193299EA00EEC65C /* GrupoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C370A193299EA00EEC65C /* GrupoView.m */; };
 		793C370D193299F500EEC65C /* GrupoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 793C370C193299F500EEC65C /* GrupoView.xib */; };
 		793C371519329B9B00EEC65C /* btn-vergrupos_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 793C370F19329B9B00EEC65C /* btn-vergrupos_5.png */; };
@@ -320,6 +324,17 @@
 		7916E4C319439CA100F844BB /* MotoristaAtivo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotoristaAtivo.m; sourceTree = "<group>"; };
 		7916E4C519439D4800F844BB /* GrupoAtivo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrupoAtivo.h; sourceTree = "<group>"; };
 		7916E4C619439D4800F844BB /* GrupoAtivo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrupoAtivo.m; sourceTree = "<group>"; };
+		792CE776196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOCustomAutoCompleteCell.h; sourceTree = "<group>"; };
+		792CE777196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOCustomAutoCompleteCell.m; sourceTree = "<group>"; };
+		792CE778196E33F900CF7CA2 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		792CE779196E33F900CF7CA2 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		792CE77A196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		792CE77B196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		792CE77C196E33F900CF7CA2 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		792CE77D196E33F900CF7CA2 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		792CE77E196E33F900CF7CA2 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		792CE783196E341500CF7CA2 /* PlacesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesService.h; sourceTree = "<group>"; };
+		792CE784196E341500CF7CA2 /* PlacesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesService.m; sourceTree = "<group>"; };
 		793C3709193299EA00EEC65C /* GrupoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrupoView.h; sourceTree = "<group>"; };
 		793C370A193299EA00EEC65C /* GrupoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrupoView.m; sourceTree = "<group>"; };
 		793C370C193299F500EEC65C /* GrupoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrupoView.xib; sourceTree = "<group>"; };
@@ -730,6 +745,22 @@
 				793DD56B18F9FD8D0033C897 /* CadastroParticipanteViewController.m */,
 			);
 			name = Cadastros;
+			sourceTree = "<group>";
+		};
+		792CE774196E33E000CF7CA2 /* AutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				792CE776196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.h */,
+				792CE777196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m */,
+				792CE778196E33F900CF7CA2 /* MLPAutoCompleteTextField.h */,
+				792CE779196E33F900CF7CA2 /* MLPAutoCompleteTextField.m */,
+				792CE77A196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDataSource.h */,
+				792CE77B196E33F900CF7CA2 /* MLPAutoCompleteTextFieldDelegate.h */,
+				792CE77C196E33F900CF7CA2 /* MLPAutoCompletionObject.h */,
+				792CE77D196E33F900CF7CA2 /* NSString+Levenshtein.h */,
+				792CE77E196E33F900CF7CA2 /* NSString+Levenshtein.m */,
+			);
+			name = AutoComplete;
 			sourceTree = "<group>";
 		};
 		793C3707193299D700EEC65C /* GrupoView */ = {
@@ -1177,6 +1208,8 @@
 			children = (
 				79B6FCCA191AF03500C51F5D /* DadosConexaoService.h */,
 				79B6FCCB191AF03500C51F5D /* DadosConexaoService.m */,
+				792CE783196E341500CF7CA2 /* PlacesService.h */,
+				792CE784196E341500CF7CA2 /* PlacesService.m */,
 				79B6FCC3191AEFE200C51F5D /* BaseService.h */,
 				79B6FCC4191AEFE200C51F5D /* BaseService.m */,
 				413E660818F72EB7002B2907 /* DemoService.h */,
@@ -1214,6 +1247,7 @@
 		79FDC73318CE69E2003EE81D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				792CE774196E33E000CF7CA2 /* AutoComplete */,
 				7EA98E08196C76EE0048154E /* DesembarcarView */,
 				7EA4C41F1965413C00913741 /* Keyboard */,
 				796C8FBB194FBAF700057093 /* EnviarSolicitacaoView */,
@@ -1568,17 +1602,20 @@
 				7EA4C41E196531C100913741 /* EnviarImagemService.m in Sources */,
 				7EA4C4221965415600913741 /* KSEnhancedKeyboard.m in Sources */,
 				795C489C191EFD1800352EA5 /* AMSlideMenuRightTableViewController.m in Sources */,
+				792CE77F196E33F900CF7CA2 /* DEMOCustomAutoCompleteCell.m in Sources */,
 				7E7EEFBE196CE520001E9EF5 /* ConsultarParticipanteService.m in Sources */,
 				79F8682918D0E1A80080BC32 /* REFrostedContainerViewController.m in Sources */,
 				4167497E18D3A507004FB893 /* Model.m in Sources */,
 				79C39A2E193B990C00FE8D14 /* AceitarParticipacaoViewController.m in Sources */,
 				794FDE82194E7CA30052A32E /* Vamu.xcdatamodeld in Sources */,
+				792CE785196E341500CF7CA2 /* PlacesService.m in Sources */,
 				4153154818F82CDB0087AB9D /* SelecionarTipoViewController.m in Sources */,
 				79654F8319577F5A007E91F8 /* Constants.m in Sources */,
 				79B9C81718CFD7C900392833 /* BaseViewController.m in Sources */,
 				79B6FCD7191AFAF900C51F5D /* CustomAlertView.m in Sources */,
 				795329561951F1C900B0E399 /* Seguradora.m in Sources */,
 				7953295D1951F69100B0E399 /* Veiculo.m in Sources */,
+				792CE781196E33F900CF7CA2 /* NSString+Levenshtein.m in Sources */,
 				79C39A34193B9D1C00FE8D14 /* NotificacaoService.m in Sources */,
 				4153154718F82CDB0087AB9D /* MapaGoogleViewController.m in Sources */,
 				796A1E14192C2957008E08D2 /* GrupoCell.m in Sources */,
@@ -1635,6 +1672,7 @@
 				795C489A191EFD1800352EA5 /* AMSlideMenuMainViewController.m in Sources */,
 				796A1E0C192C1039008E08D2 /* RecuperarSenhaService.m in Sources */,
 				79AEB7F71927F7CE00C097A5 /* ActivityVamu.m in Sources */,
+				792CE780196E33F900CF7CA2 /* MLPAutoCompleteTextField.m in Sources */,
 				795C4898191EFD1800352EA5 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				79B6FCDA191B042200C51F5D /* VeiculoService.m in Sources */,
 				79CD5EE1193A6E7D00162630 /* Grupo.m in Sources */,

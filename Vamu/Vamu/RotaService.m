@@ -139,8 +139,8 @@
         return;
     }
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(salvouRota)]) {
-        [self.delegate salvouRota];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(salvouRota:)]) {
+        [self.delegate salvouRota:[NSNumber numberWithInt:[self.dadosRetorno intValue]]];
     }
 }
 

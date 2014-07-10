@@ -2,7 +2,7 @@
 //  Participante.m
 //  Vamu
 //
-//  Created by Guilherme Augusto on 01/06/14.
+//  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -24,6 +24,10 @@
 @dynamic email;
 @dynamic endereco;
 @dynamic fixo;
+@dynamic latitudeAtual;
+@dynamic latitudeFinal;
+@dynamic longitudeAtual;
+@dynamic longitudeFinal;
 @dynamic motorista;
 @dynamic nascimento;
 @dynamic nome;
@@ -33,10 +37,7 @@
 @dynamic uf;
 @dynamic viajensCarona;
 @dynamic viajensMotorista;
-@dynamic latitudeAtual;
-@dynamic longitudeAtual;
-@dynamic latitudeFinal;
-@dynamic longitudeFinal;
+@dynamic codViagemAtual;
 @dynamic carro;
 @dynamic trajetosFavoritos;
 

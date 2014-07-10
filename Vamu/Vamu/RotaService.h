@@ -25,7 +25,7 @@
 @interface NSObject (RotaServiceDelegate)
 
 -(void) cancelouRotaFavorita;
--(void) salvouRota;
+-(void) salvouRota:(NSNumber*) codViagem;
 -(void) salvouRotaFavorita;
 -(void) rotaFalhaAoSalvarNotificacoes;
 -(void) rotaFalhaAoSalvarViagem;

@@ -2,7 +2,7 @@
 //  Participante.h
 //  Vamu
 //
-//  Created by Guilherme Augusto on 01/06/14.
+//  Created by Guilherme Augusto on 10/07/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -23,6 +23,10 @@
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * endereco;
 @property (nonatomic, retain) NSString * fixo;
+@property (nonatomic, retain) NSNumber * latitudeAtual;
+@property (nonatomic, retain) NSNumber * latitudeFinal;
+@property (nonatomic, retain) NSNumber * longitudeAtual;
+@property (nonatomic, retain) NSNumber * longitudeFinal;
 @property (nonatomic, retain) NSNumber * motorista;
 @property (nonatomic, retain) NSString * nascimento;
 @property (nonatomic, retain) NSString * nome;
@@ -32,10 +36,7 @@
 @property (nonatomic, retain) NSString * uf;
 @property (nonatomic, retain) NSNumber * viajensCarona;
 @property (nonatomic, retain) NSNumber * viajensMotorista;
-@property (nonatomic, retain) NSNumber * latitudeAtual;
-@property (nonatomic, retain) NSNumber * longitudeAtual;
-@property (nonatomic, retain) NSNumber * latitudeFinal;
-@property (nonatomic, retain) NSNumber * longitudeFinal;
+@property (nonatomic, retain) NSNumber * codViagemAtual;
 @property (nonatomic, retain) NSSet *carro;
 @property (nonatomic, retain) NSSet *trajetosFavoritos;
 @end

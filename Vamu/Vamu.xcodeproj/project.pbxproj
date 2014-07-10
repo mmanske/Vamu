@@ -99,6 +99,7 @@
 		7951B63E196EE4AC00B7C30C /* AceitacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B63D196EE4AC00B7C30C /* AceitacaoCarona.m */; };
 		7951B647196EE8F200B7C30C /* SolicitacaoCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B646196EE8F200B7C30C /* SolicitacaoCarona.m */; };
 		7951B64A196EE8F300B7C30C /* Notificacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B649196EE8F300B7C30C /* Notificacao.m */; };
+		7951B64D196EEE1C00B7C30C /* Participante.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951B64C196EEE1C00B7C30C /* Participante.m */; };
 		795329561951F1C900B0E399 /* Seguradora.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329551951F1C900B0E399 /* Seguradora.m */; };
 		7953295A1951F22100B0E399 /* SeguradoraService.m in Sources */ = {isa = PBXBuildFile; fileRef = 795329591951F22100B0E399 /* SeguradoraService.m */; };
 		7953295D1951F69100B0E399 /* Veiculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953295C1951F69000B0E399 /* Veiculo.m */; };
@@ -161,7 +162,6 @@
 		79C030E81921770400D8A676 /* EditarParticipanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C030E71921770400D8A676 /* EditarParticipanteViewController.m */; };
 		79C39A2E193B990C00FE8D14 /* AceitarParticipacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C39A2D193B990C00FE8D14 /* AceitarParticipacaoViewController.m */; };
 		79C39A34193B9D1C00FE8D14 /* NotificacaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C39A33193B9D1C00FE8D14 /* NotificacaoService.m */; };
-		79C39A3D193BA19B00FE8D14 /* Participante.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C39A3C193BA19B00FE8D14 /* Participante.m */; };
 		79C39A5B193BD10500FE8D14 /* SolicitacaoAdesao.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C39A5A193BD10500FE8D14 /* SolicitacaoAdesao.m */; };
 		79CD5EDB193A5AFD00162630 /* EditarVeiculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CD5EDA193A5AFD00162630 /* EditarVeiculoViewController.m */; };
 		79CD5EDE193A6D7B00162630 /* ConsultaGrupoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CD5EDD193A6D7B00162630 /* ConsultaGrupoService.m */; };
@@ -385,6 +385,8 @@
 		7951B646196EE8F200B7C30C /* SolicitacaoCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolicitacaoCarona.m; sourceTree = "<group>"; };
 		7951B648196EE8F300B7C30C /* Notificacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notificacao.h; sourceTree = "<group>"; };
 		7951B649196EE8F300B7C30C /* Notificacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notificacao.m; sourceTree = "<group>"; };
+		7951B64B196EEE1C00B7C30C /* Participante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participante.h; sourceTree = "<group>"; };
+		7951B64C196EEE1C00B7C30C /* Participante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participante.m; sourceTree = "<group>"; };
 		795329541951F1C900B0E399 /* Seguradora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seguradora.h; sourceTree = "<group>"; };
 		795329551951F1C900B0E399 /* Seguradora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seguradora.m; sourceTree = "<group>"; };
 		795329581951F22100B0E399 /* SeguradoraService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeguradoraService.h; sourceTree = "<group>"; };
@@ -486,8 +488,6 @@
 		79C39A2D193B990C00FE8D14 /* AceitarParticipacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AceitarParticipacaoViewController.m; sourceTree = "<group>"; };
 		79C39A32193B9D1C00FE8D14 /* NotificacaoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificacaoService.h; sourceTree = "<group>"; };
 		79C39A33193B9D1C00FE8D14 /* NotificacaoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificacaoService.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		79C39A3B193BA19B00FE8D14 /* Participante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participante.h; sourceTree = "<group>"; };
-		79C39A3C193BA19B00FE8D14 /* Participante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participante.m; sourceTree = "<group>"; };
 		79C39A59193BD10500FE8D14 /* SolicitacaoAdesao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolicitacaoAdesao.h; sourceTree = "<group>"; };
 		79C39A5A193BD10500FE8D14 /* SolicitacaoAdesao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolicitacaoAdesao.m; sourceTree = "<group>"; };
 		79CD5ED9193A5AFD00162630 /* EditarVeiculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditarVeiculoViewController.h; sourceTree = "<group>"; };
@@ -1162,6 +1162,8 @@
 			isa = PBXGroup;
 			children = (
 				794FDE80194E7CA30052A32E /* Vamu.xcdatamodeld */,
+				7951B64B196EEE1C00B7C30C /* Participante.h */,
+				7951B64C196EEE1C00B7C30C /* Participante.m */,
 				7951B648196EE8F300B7C30C /* Notificacao.h */,
 				7951B649196EE8F300B7C30C /* Notificacao.m */,
 				7951B645196EE8F200B7C30C /* SolicitacaoCarona.h */,
@@ -1182,8 +1184,6 @@
 				796B1FC919315B2500FADDAC /* Rota.m */,
 				79CD5EDF193A6E7D00162630 /* Grupo.h */,
 				79CD5EE0193A6E7D00162630 /* Grupo.m */,
-				79C39A3B193BA19B00FE8D14 /* Participante.h */,
-				79C39A3C193BA19B00FE8D14 /* Participante.m */,
 				7916E4C519439D4800F844BB /* GrupoAtivo.h */,
 				7916E4C619439D4800F844BB /* GrupoAtivo.m */,
 				79F9D157194C92D200C7D3E8 /* Ponto.h */,
@@ -1630,6 +1630,7 @@
 				796A1E14192C2957008E08D2 /* GrupoCell.m in Sources */,
 				7EA98E0E196C772F0048154E /* DesembarqueCaronaView.m in Sources */,
 				79B6FCD0191AF4D900C51F5D /* Validations.m in Sources */,
+				7951B64D196EEE1C00B7C30C /* Participante.m in Sources */,
 				796B1FC319315A0E00FADDAC /* RotaService.m in Sources */,
 				794FDE5F194E43750052A32E /* PedirCaronaButton.m in Sources */,
 				4167497F18D3A507004FB893 /* Model+JSONKit.m in Sources */,
@@ -1638,7 +1639,6 @@
 				79F8682C18D0E1A80080BC32 /* UIView+REFrostedViewController.m in Sources */,
 				79CD5EDB193A5AFD00162630 /* EditarVeiculoViewController.m in Sources */,
 				7ED5039A196C3C4000A2C6E3 /* MascaraHelper.m in Sources */,
-				79C39A3D193BA19B00FE8D14 /* Participante.m in Sources */,
 				7951B647196EE8F200B7C30C /* SolicitacaoCarona.m in Sources */,
 				79F8683618D0E4780080BC32 /* MenuViewController.m in Sources */,
 				79AEB7FE19280E9A00C097A5 /* FavoritoCell.m in Sources */,

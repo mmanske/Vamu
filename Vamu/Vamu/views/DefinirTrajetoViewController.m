@@ -305,7 +305,7 @@
     if ([[AppHelper getParticipanteLogado].motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
     } else {
-        [self salvouRota];
+        [self salvouRota:[NSNumber numberWithInt:0]];
     }
 }
 
@@ -329,10 +329,11 @@
     [[[UIAlertView alloc] initWithTitle:@"Trajeto" message:@"Destino Removido!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
--(void)salvouRota{
+-(void)salvouRota:(NSNumber *)codViagem{
     [ampulheta esconder];
     NSUInteger indexes[] = {1, 2};
     NSIndexPath *indexPath = [NSIndexPath indexPathWithIndexes:indexes length:2];
+    [[AppHelper getParticipanteLogado] setCodViagemAtual:codViagem];
     [self.mainSlideMenu openContentViewControllerForMenu:AMSlideMenuLeft atIndexPath:indexPath];
 }
 

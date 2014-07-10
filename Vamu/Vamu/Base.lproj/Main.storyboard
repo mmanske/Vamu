@@ -498,20 +498,14 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Celular" minimumFontSize="17" background="input-off.png" id="9Ta-Bp-UZd">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Telefone" minimumFontSize="17" background="input-off.png" id="9Ta-Bp-UZd">
                                         <rect key="frame" x="5" y="285" width="295" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Fixo" minimumFontSize="17" background="input-off.png" id="Xak-6q-vpw">
-                                        <rect key="frame" x="5" y="320" width="295" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aa9-yo-Vok">
-                                        <rect key="frame" x="162" y="388" width="123" height="40"/>
+                                        <rect key="frame" x="162" y="370" width="123" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Inserir Foto" image="ico-uploadimagem_5.png">
@@ -523,7 +517,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-fotos_5.png" id="L2a-OW-SUh">
-                                        <rect key="frame" x="5" y="358" width="100" height="100"/>
+                                        <rect key="frame" x="5" y="340" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -636,7 +630,6 @@
                         <outlet property="edtConfirmarSenha" destination="Bf1-lx-Rnx" id="nWe-by-4ri"/>
                         <outlet property="edtEmail" destination="EJp-h7-F7H" id="i8y-ii-yJi"/>
                         <outlet property="edtEndereco" destination="cng-0V-x6N" id="Prg-ZE-rFL"/>
-                        <outlet property="edtFixo" destination="Xak-6q-vpw" id="qZJ-uT-UUD"/>
                         <outlet property="edtNascimento" destination="dGs-Uo-neA" id="VSH-bM-cPD"/>
                         <outlet property="edtNome" destination="IMt-5P-YfK" id="qAK-4E-n5C"/>
                         <outlet property="edtNumero" destination="5rN-cX-rqk" id="3tI-wL-Afg"/>
@@ -2080,20 +2073,14 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Celular" minimumFontSize="17" background="input-off.png" id="XIF-wF-OIG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Telefone" minimumFontSize="17" background="input-off.png" id="XIF-wF-OIG">
                                         <rect key="frame" x="5" y="285" width="295" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Fixo" minimumFontSize="17" background="input-off.png" id="ZyU-db-q7n">
-                                        <rect key="frame" x="5" y="320" width="295" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g7I-WS-DbE">
-                                        <rect key="frame" x="162" y="390" width="123" height="35"/>
+                                        <rect key="frame" x="162" y="373" width="123" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Inserir Foto" image="ico-uploadimagem_5.png">
@@ -2105,7 +2092,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-fotos_5.png" id="hC6-35-XAV">
-                                        <rect key="frame" x="5" y="358" width="100" height="100"/>
+                                        <rect key="frame" x="5" y="341" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -2220,7 +2207,6 @@
                         <outlet property="edtNumero" destination="4UO-T0-s1X" id="V5k-EQ-ore"/>
                         <outlet property="edtSenha" destination="w6t-ki-4dc" id="p57-Mt-iFV"/>
                         <outlet property="edtSexo" destination="74O-Ur-BiG" id="48Q-ac-caD"/>
-                        <outlet property="edtTelFixo" destination="ZyU-db-q7n" id="PTt-WW-Nfw"/>
                         <outlet property="edtUF" destination="rFz-Lf-Pzz" id="uEG-0n-U2k"/>
                         <outlet property="imgBg" destination="D0f-wk-43B" id="xjF-Xp-8QG"/>
                         <outlet property="imgParticipante" destination="hC6-35-XAV" id="QjE-8r-PGF"/>

@@ -12,6 +12,7 @@
 #import "MascaraHelper.h"
 #import "CSNotificationView.h"
 #import "Validations.h"
+#import "EnviarImagemService.h"
 
 
 @interface EditarParticipanteViewController (){
@@ -27,17 +28,18 @@
 @property (strong, nonatomic) MascaraHelper *mascaraHelper;
 @property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
 @property (nonatomic) NSMutableArray *formItems;
+@property (nonatomic, strong) EnviarImagemService *enviarImagemService;
 
-
+-(void) mensagemDeErro:(NSString*) mensagem;
 @end
 
 @implementation EditarParticipanteViewController
 
 @synthesize participante;
-@synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF, edtDataNascimento, edtEmail, edtEndereco, edtNomeParticipante, edtNumero, edtSenha, edtSexo, edtTelFixo, edtUF;
+@synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF, edtDataNascimento, edtEmail, edtEndereco, edtNomeParticipante, edtNumero, edtSenha, edtSexo, edtUF;
 @synthesize scrollView;
 @synthesize imgBg, imgParticipante, enhancedKeyboard;
-@synthesize ampulheta;
+@synthesize ampulheta, enviarImagemService;
 @synthesize participanteService, mascaraHelper, formItems;
 
 - (void)viewDidLoad
@@ -93,14 +95,17 @@
     imgParticipante.layer.borderColor = [UIColor whiteColor].CGColor;
     imgParticipante.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
-    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtTelFixo.delegate = edtDataNascimento.delegate = edtNomeParticipante.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = self;
+    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtDataNascimento.delegate = edtNomeParticipante.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = self;
     
     ampulheta = [CustomActivityView new];
     
     participanteService = [ParticipanteService new];
     participanteService.delegate = self;
     
-    mascaraHelper = [MascaraHelper new];    
+    mascaraHelper = [MascaraHelper new];
+    enviarImagemService = [EnviarImagemService new];
+    enviarImagemService.delegate = self;
+
     
 }
 
@@ -117,7 +122,10 @@
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", participante.cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
     imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
-
+    imagemCarregada = NO;
+    if (imgParticipante.image) {
+        imagemCarregada = YES;
+    }
     
     
     edtApelido.text = participante.apelido;
@@ -135,7 +143,6 @@
     edtNumero.text = participante.numero;
     edtSenha.text = participante.senha;
     edtSexo.text = [participante.sexo isEqualToNumber:[NSNumber numberWithInt:0]] ? @"Masculino" : @"Feminino";
-    edtTelFixo.text = participante.fixo;
     edtUF.text = participante.uf;
 }
 
@@ -179,10 +186,6 @@
     }
     if ([edtCelular.text isEqualToString:@""]) {
         [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
-        return NO;
-    }
-    if ([edtTelFixo.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo fixo"];
         return NO;
     }
     if (![edtSenha.text isEqualToString:edtConfirmarSenha.text]) {
@@ -232,7 +235,6 @@
     participante.sexo = [NSNumber numberWithInt:0];
     participante.nascimento = edtDataNascimento.text;
     participante.celular = edtCelular.text;
-    participante.fixo = edtTelFixo.text;
     participante.cep = edtCEP.text;
     participante.endereco = edtEndereco.text;
     participante.numero = edtNumero.text;
@@ -256,6 +258,7 @@
     
     if ([self validouCampos]) {
         [ampulheta exibir];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         [self alterarParticipante];
         [participanteService alterarParticipante:participante];
     }
@@ -420,6 +423,62 @@
             break;
         }
     }
+}
+
+-(void)participanteEnviaMensagemErro:(NSString *)mensagem{
+    [self mensagemDeErro:mensagem];
+}
+
+-(void)participanteNaoValidouApelido:(NSString *)mensagem{
+    [self mensagemDeErro:mensagem];
+}
+
+-(void)participanteNaoValidouCPF:(NSString *)mensagem{
+    [self mensagemDeErro:mensagem];
+}
+
+-(void)participanteNaoValidouEmail:(NSString *)mensagem{
+    [self mensagemDeErro:mensagem];
+}
+
+
+-(void) mensagemDeErro:(NSString*) mensagem {
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Alterar meus Dados" message:mensagem delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+}
+
+-(void)participanteCadastradoComSucesso:(NSString *)codParticipante{
+    if (imgParticipante.image) {
+        
+        NSString *nomeArquivo = [NSString stringWithFormat:@"%@.jpg", participante.cpf];
+        NSString* absoluteFileName = [AppHelper getAbsolutePathForImageFile:nomeArquivo];
+        
+        NSData *imageToSave = UIImageJPEGRepresentation(imgParticipante.image, 0.2);
+        [imageToSave writeToFile:absoluteFileName atomically:YES];
+        
+        [enviarImagemService enviarImagemDePessoa:edtCPF.text imagem:imageToSave];
+    } else {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [ampulheta esconder];
+        [[[UIAlertView alloc] initWithTitle:@"Alterar meus Dados" message:@"Dados alterados com sucesso" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        
+    }
+    
+}
+
+-(void) finalizaEnviarImagem {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Alterar meus Dados" message:@"Dados alterados com sucesso" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    
+    
+}
+
+-(void) erroAoEnviarImagem {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Alterar meus Dados" message:@"Erro ao Enviar a Foto " delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+    
 }
 
 @end

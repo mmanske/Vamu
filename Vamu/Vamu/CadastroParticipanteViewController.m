@@ -38,7 +38,7 @@
 @synthesize scrollView;
 @synthesize imgBackGround;
 @synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF;
-@synthesize edtEmail, edtEndereco, edtFixo, edtNascimento, edtNome, edtNumero, edtSenha, edtSexo, edtUF;
+@synthesize edtEmail, edtEndereco, edtNascimento, edtNome, edtNumero, edtSenha, edtSexo, edtUF;
 @synthesize foto, formItems;
 @synthesize participanteService, enhancedKeyboard;
 @synthesize ampulheta, pickerSexo, cpf, senha, enviarImagemService, mascaraHelper;
@@ -54,7 +54,6 @@
     edtCPF.text = @"40388201819";
     edtEmail.text = @"gassis1000@gmail.com";
     edtEndereco.text = @"Trav. Francisco Ferreira";
-    edtFixo.text = @"2134652497";
     edtNascimento.text = @"18/10/1991";
     edtNome.text = @"Guilherme Augusto Barreto de Assis";
     edtNumero.text = @"6";
@@ -121,7 +120,7 @@
     foto.layer.borderColor = [UIColor whiteColor].CGColor;
     foto.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
-    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtFixo.delegate = edtNascimento.delegate = edtNome.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = self;
+    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtNascimento.delegate = edtNome.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = self;
     
 //    [self dadosTeste];
     
@@ -167,8 +166,6 @@
     edtEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtEmail.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
     
     edtEndereco.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtEndereco.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
-    
-    edtFixo.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtFixo.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
     
     edtNascimento.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtNascimento.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
     
@@ -343,10 +340,6 @@
         [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
         return NO;
     }
-    if ([edtFixo.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo fixo"];
-        return NO;
-    }
     if (![edtSenha.text isEqualToString:edtConfirmarSenha.text]) {
         [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Senha não confere"];
         return NO;
@@ -394,8 +387,6 @@
     participanteCriado.sexo = [NSNumber numberWithInt:0];
     participanteCriado.nascimento = edtNascimento.text;
     participanteCriado.celular = edtCelular.text;
-    participanteCriado.fixo = edtFixo.text;
-//    participanteCriado.foto = UIImageJPEGRepresentation(foto.image, 0.1);
     participanteCriado.cep = edtCEP.text;
     participanteCriado.endereco = edtEndereco.text;
     participanteCriado.numero = edtNumero.text;

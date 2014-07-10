@@ -34,7 +34,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *edtSexo;
 @property (strong, nonatomic) IBOutlet UITextField *edtNascimento;
 @property (strong, nonatomic) IBOutlet UITextField *edtCelular;
-@property (strong, nonatomic) IBOutlet UITextField *edtFixo;
 @property (strong, nonatomic) IBOutlet UIImageView *foto;
 
 

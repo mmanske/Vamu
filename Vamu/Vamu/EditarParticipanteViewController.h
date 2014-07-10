@@ -23,7 +23,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *edtSexo;
 @property (strong, nonatomic) IBOutlet UITextField *edtDataNascimento;
 @property (strong, nonatomic) IBOutlet UITextField *edtCelular;
-@property (strong, nonatomic) IBOutlet UITextField *edtTelFixo;
 @property (strong, nonatomic) IBOutlet UIButton *btnInserirFoto;
 @property (strong, nonatomic) IBOutlet UIImageView *imgParticipante;
 @property (strong, nonatomic) IBOutlet UITextField *edtCEP;

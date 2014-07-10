@@ -173,7 +173,7 @@
     
     NSString *apelido = [dic objectForKey:@"apelido"];
     NSString *bairro  = [dic objectForKey:@"bairro"];
-    NSString *celular = [dic objectForKey:@"celular"];
+    NSString *celular = [dic objectForKey:@"telefone1"];
     NSString *cep     = [dic objectForKey:@"cep"];
     NSString *cidade  = [dic objectForKey:@"cidade"];
     NSNumber *codPart = [dic objectForKey:@"codigoPessoa"];
@@ -181,8 +181,7 @@
     NSString *cpf     = [dic objectForKey:@"cpf"];
     NSString *email   = [dic objectForKey:@"email"];
     NSString *endere  = [dic objectForKey:@"endereco"];
-    NSString *fixo    = [dic objectForKey:@"fixo"];
-    NSString *nasci   = [dic objectForKey:@"nascimento"];
+    NSString *nasci   = [dic objectForKey:@"dataNascimento"];
     NSString *nome    = [dic objectForKey:@"nome"];
     NSString *numero  = [dic objectForKey:@"numero"];
     NSString *senha   = [dic objectForKey:@"senha"];
@@ -201,7 +200,6 @@
     participanteLogado.cpf             = cpf;
     participanteLogado.email           = email;
     participanteLogado.endereco        = endere;
-    participanteLogado.fixo            = fixo;
     participanteLogado.nascimento      = nasci;
     participanteLogado.nome            = nome;
     participanteLogado.numero          = numero;
@@ -210,6 +208,8 @@
     participanteLogado.uf              = uf;
     participanteLogado.viajensMotorista = vjMotori;
     participanteLogado.viajensCarona = vjCarona;
+    
+
     
     BOOL isAtivo = NO;
     
@@ -224,7 +224,7 @@
         NSString *modelo  = [dicCarro objectForKey:@"modelo"];
         NSString *placa   = [dicCarro objectForKey:@"placa"];
         NSString *renavam = [NSString stringWithFormat:@"%@", [NSNumber numberWithInt:[[dicCarro objectForKey:@"renavam"] intValue]]];
-        NSString *segura  = [dicCarro objectForKey:@"seguradora"];
+        NSString *segura  = [dicCarro objectForKey:@"codSeguradora"];
         
         Veiculo *veiculo   = [Veiculo new];
         veiculo.ano        = [NSString stringWithFormat:@"%@", ano];
@@ -235,6 +235,7 @@
         veiculo.placa      = placa;
         veiculo.renavan    = renavam;
         veiculo.seguradora = segura;
+
         
         veiculo.participante = participanteLogado;
         [participanteLogado addCarroObject:veiculo];

@@ -480,9 +480,16 @@
 
 #pragma mark - DesembarqueMotoristaViewDelegate
 
--(void)desembarcou{
-    [ampulheta exibir];
-    [caronaService desembarqueCarona:[AppHelper getParticipanteLogado]];
+-(void)desembarcou:(Participante *)participante{
+    
+}
+
+-(void)embarcou:(Participante *)participante{
+    
+}
+
+-(void)cancelouEmbarque:(Participante *)participante{
+    
 }
 
 #pragma mark - ConsultarParticipanteServiceDelegate

@@ -11,7 +11,9 @@
 
 @protocol DesembarqueMotoristaViewDelegate <NSObject>
 
--(void) desembarcou;
+-(void) desembarcou:(Participante*) participante;
+-(void) embarcou:(Participante*) participante;
+-(void) cancelouEmbarque:(Participante*) participante;
 
 @end
 
@@ -28,8 +30,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDestinoCarona;
 @property (weak, nonatomic) IBOutlet UIButton *btnDesembarcou;
 @property (strong, nonatomic) Participante *carona;
+@property (strong, nonatomic) IBOutlet UIButton *btnEmbarcou;
+@property (strong, nonatomic) IBOutlet UIButton *btnCancelou;
 
 - (IBAction)btnDesembarcouClick:(id)sender;
+- (IBAction)btnEmbarcouClick:(id)sender;
+- (IBAction)btnCancelouEmbarqueClick:(id)sender;
 
 
 @end

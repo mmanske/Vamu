@@ -12,6 +12,8 @@
 
 @synthesize delegate, lblDestinoCarona, lblNomeCarona, imgCarona, carona;
 
+@synthesize btnCancelou, btnDesembarcou, btnEmbarcou;
+
 -(id) iniciarComParticipante:(Participante *)participante{
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"DesembarqueMotoristaView" owner:self options:nil];
     DesembarqueMotoristaView *mainView = [subviewArray objectAtIndex:0];
@@ -26,8 +28,21 @@
 }
 
 - (IBAction)btnDesembarcouClick:(id)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(desembarcou)]) {
-        [self.delegate desembarcou];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(desembarcou:)]) {
+        [self.delegate desembarcou:carona];
+    }
+}
+
+- (IBAction)btnEmbarcouClick:(id)sender {
+    btnEmbarcou.hidden = btnCancelou.hidden = YES;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(embarcou:)]) {
+        [self.delegate embarcou:carona];
+    }
+}
+
+- (IBAction)btnCancelouEmbarqueClick:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cancelouEmbarque:)]) {
+        [self.delegate cancelouEmbarque:carona];
     }
 }
 

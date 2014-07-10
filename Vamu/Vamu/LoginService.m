@@ -224,7 +224,7 @@
         NSString *modelo  = [dicCarro objectForKey:@"modelo"];
         NSString *placa   = [dicCarro objectForKey:@"placa"];
         NSString *renavam = [NSString stringWithFormat:@"%@", [NSNumber numberWithInt:[[dicCarro objectForKey:@"renavam"] intValue]]];
-        NSString *segura  = [dicCarro objectForKey:@"codSeguradora"];
+        NSNumber *segura  = [dicCarro objectForKey:@"codSeguradora"];
         
         Veiculo *veiculo   = [Veiculo new];
         veiculo.ano        = [NSString stringWithFormat:@"%@", ano];
@@ -234,7 +234,10 @@
         veiculo.modelo     = modelo;
         veiculo.placa      = placa;
         veiculo.renavan    = renavam;
-        veiculo.seguradora = segura;
+        if (segura) {
+            veiculo.seguradora = [NSString stringWithFormat:@"%@", segura ];    
+        }
+        
 
         
         veiculo.participante = participanteLogado;

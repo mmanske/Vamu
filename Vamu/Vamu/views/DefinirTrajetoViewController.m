@@ -22,7 +22,8 @@
 @property (strong, nonatomic) CustomActivityView *ampulheta;
 @property (strong, nonatomic) RotaService *rotaService;
 @property (strong, nonatomic) MKRoute *rotaFavorita;
-@property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
+@property (strong, nonatomic) PlacesService *placeServices;
+@property (nonatomic, strong) NSMutableArray *lugares;
 
 @end
 
@@ -43,7 +44,9 @@
 @synthesize veiculo;
 @synthesize ampulheta;
 @synthesize rotaService;
-@synthesize rotaFavorita, enhancedKeyboard;
+@synthesize rotaFavorita;
+@synthesize placeServices;
+@synthesize lugares = _lugares;
 
 - (void)viewDidLoad
 {
@@ -74,7 +77,6 @@
     tabela.delegate = self;
     tabela.dataSource = self;
     edtOrigem.text  = @"Minha Localização Atual";
-    edtDestino.delegate = self;
    // edtDestino.text = @"Avenida das Américas, Barra da Tijuca, Rio de Janeiro";
     [tabela registerClass:[RotaCell class] forCellWithReuseIdentifier:@"RotaCell"];
     
@@ -92,9 +94,19 @@
     rotaService = [RotaService new];
     rotaService.delegate = self;
     
-    self.enhancedKeyboard = [KSEnhancedKeyboard new];
-    self.enhancedKeyboard.delegate = self;
-
+    _lugares = [NSMutableArray new];
+    
+    placeServices = [PlacesService new];
+    placeServices.delegate = self;
+    
+    edtDestino.delegate = self;
+    edtDestino.autoCompleteDataSource = self;
+    edtDestino.autoCompleteDelegate = self;
+    
+    [edtDestino setAutoCompleteTableAppearsAsKeyboardAccessory:NO];
+    
+    [edtDestino registerAutoCompleteCellClass:[DEMOCustomAutoCompleteCell class]
+                       forCellReuseIdentifier:@"CustomCellId"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -354,25 +366,38 @@
     }
 }
 
-- (void)nextDidTouchDown
-{
+#pragma mark - PlacesServiceDelegate
+
+-(void)placesFound:(NSMutableArray *)lugares{
+    _lugares = lugares;
+    NSLog(@"%@", lugares);
+}
+
+-(void)noPlacesFound{
+    [_lugares removeAllObjects];
+}
+
+#pragma mark - UIText
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if (edtDestino.text.length > 3) {
+        [placeServices consultar:edtDestino.text];
+    } else {
+        [_lugares removeAllObjects];
+    }
     
+    return YES;
 }
 
-- (void)doneDidTouchDown
-{
-        if ([edtDestino isEditing]) {
-            [edtDestino resignFirstResponder];
-        }
+#pragma mark - AutoComplete
+
+-(NSArray *)autoCompleteTextField:(MLPAutoCompleteTextField *)textField possibleCompletionsForString:(NSString *)string{
+    return _lugares;
 }
 
-- (void)previousDidTouchDown
-{
+-(BOOL)autoCompleteTextField:(MLPAutoCompleteTextField *)textField shouldConfigureCell:(UITableViewCell *)cell withAutoCompleteString:(NSString *)autocompleteString withAttributedString:(NSAttributedString *)boldedString forAutoCompleteObject:(id<MLPAutoCompletionObject>)autocompleteObject forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
 }
-
-- (IBAction)clicouTela:(id)sender {
-    [edtDestino resignFirstResponder];
-}
-
 
 @end

@@ -14,12 +14,14 @@
 #import "Participante.h"
 #import "Veiculo.h"
 #import "RotasVO.h"
-#import "KSEnhancedKeyboard.h"
+#import "MLPAutoCompleteTextField.h"
+#import "PlacesService.h"
+#import "DEMOCustomAutoCompleteCell.h"
 
-@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate , UITextFieldDelegate, KSEnhancedKeyboardDelegate>
+@interface DefinirTrajetoViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *edtOrigem;
-@property (weak, nonatomic) IBOutlet UITextField *edtDestino;
+@property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *edtDestino;
 @property (weak, nonatomic) IBOutlet UICollectionView *tabela;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMotorista;
 @property (weak, nonatomic) IBOutlet UILabel *lblNomeMotorista;
@@ -31,6 +33,6 @@
 
 - (IBAction)btnIrClick:(id)sender;
 - (IBAction)btnFavoritosClick:(id)sender;
-- (IBAction)clicouTela:(id)sender;
+
 
 @end

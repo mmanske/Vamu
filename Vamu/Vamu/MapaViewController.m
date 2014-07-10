@@ -359,7 +359,7 @@
     }
     
     if ([[AppHelper getNegacoes] count] > 0) {
-        NegacaoCarona *negacao = [[AppHelper getAceitacoes] objectAtIndex:0];
+        NegacaoCarona *negacao = [[AppHelper getNegacoes] objectAtIndex:0];
         
         CaronaSolicitacaoNegada *solicitacaoNegadaView = [[CaronaSolicitacaoNegada alloc] exibirSolicitacao:negacao];
         solicitacaoNegadaView.delegate = self;

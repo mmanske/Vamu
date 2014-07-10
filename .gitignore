@@ -8,3 +8,7 @@ Vamu/Vamu.xcodeproj/project.xcworkspace/xcuserdata/Guilherme.xcuserdatad/UserInt
 
 *.xcuserstate
 >>>>>>> FETCH_HEAD
+
+*.xcbkptlist
+
+*.xcuserstate

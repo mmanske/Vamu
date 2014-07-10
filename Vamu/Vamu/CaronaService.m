@@ -135,7 +135,9 @@
     }
     
     NSRange strConfirmarEmbarque = [self.dadosRetorno rangeOfString:@"msg:024"];
-    if (strConfirmarEmbarque.length > 0) {
+    NSRange strConfirmarEmbarqu2 = [self.dadosRetorno rangeOfString:@"msg:022"];
+    
+    if (strConfirmarEmbarque.length > 0 || strConfirmarEmbarqu2.length > 0) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(embarqueConcluido)]) {
             [self.delegate embarqueConcluido];
         }

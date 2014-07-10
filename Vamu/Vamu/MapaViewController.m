@@ -503,7 +503,9 @@
 }
 
 -(void) embarqueConcluido{
+    //Confirmou o embarque - Ações para carona
     
+    //Exibir view de desembarque
 }
 
 #pragma mark - DesembarqueMotoristaViewDelegate
@@ -513,8 +515,7 @@
 }
 
 -(void)embarcou:(Participante *)participante{
-//    [caronaService confirmarEmbarque:participante];
-    [self embarqueConcluido];
+    //Confirmou o embarque - Ações para motorista
 }
 
 -(void)cancelouEmbarque:(Participante *)participante{

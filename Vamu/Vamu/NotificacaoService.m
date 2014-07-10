@@ -189,6 +189,7 @@
         NSString *cpfRemetente = [dicNotificacao objectForKey:@"cpfRemetente"];
         NSString *dataCadastro = [dicNotificacao objectForKey:@"dataCadastro"];
         NSString *mensagem = [dicNotificacao objectForKey:@"mensagem"];
+        NSString *destinoCarona = [dicNotificacao objectForKey:@"destinoCarona"];
         
         NSDictionary *dicVeiculos = [dicNotificacao objectForKey:@"veiculos"];
         NSMutableArray *carros = [NSMutableArray new];
@@ -219,6 +220,7 @@
         notificacao.dataCadastro = dataCadastro;
         notificacao.destinatario = [AppHelper getParticipanteLogado];
         notificacao.mensagem = mensagem;
+        notificacao.nomeDestino = destinoCarona;
         
         [retorno addObject:notificacao];
         

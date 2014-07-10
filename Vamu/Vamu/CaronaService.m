@@ -71,7 +71,7 @@
         return;
     }
     
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante, codMotorista,@"%20"];
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante, codMotorista, [destino stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     
     NSLog(@"%@", url);
     

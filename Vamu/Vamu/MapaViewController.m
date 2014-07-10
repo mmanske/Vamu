@@ -352,7 +352,7 @@
             SolicitacaoCarona *solicitacao = [[AppHelper getSolicitacoes] objectAtIndex:0];
 
             solicitacaoView.lblNomeParticipante.text = solicitacao.remetente.nome;
-            solicitacaoView.lblNumViajens.text       = [NSString stringWithFormat:@"%@", solicitacao.numViagens];
+            solicitacaoView.lblNumViajens.text       = [NSString stringWithFormat:@"%@ viagem(ns)", solicitacao.numViagens];
             solicitacaoView.solicitacao = solicitacao;
             [solicitacaoView carregarImagemCarona];
             
@@ -386,16 +386,17 @@
 #pragma mark - SolicitacaoViewDelegate
 
 -(void)solicitacaoAceita{
+//    DesembarqueCaronaView *desembarqueCaronaView = [[DesembarqueCaronaView alloc] iniciar];
+//    desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, );
+//    desembarqueCaronaView.delegate = self;
+//    desembarqueCaronaView.carona = solicitacao.remetente;
 }
 
 -(void)aceitarSolicitacao:(SolicitacaoCarona *)solicitacao{
     
     float altura = self.view.frame.size.height - 25;
-//
-//    DesembarqueCaronaView *desembarqueCaronaView = [[DesembarqueCaronaView alloc] iniciar];
-//    desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, altura - ([caronas count] * 51));
-//    desembarqueCaronaView.delegate = self;
-//    desembarqueCaronaView.carona = solicitacao.remetente;
+
+
     
     DesembarqueMotoristaView *desembarqueMotorista = [[DesembarqueMotoristaView alloc] iniciarComParticipante:solicitacao.remetente];
     desembarqueMotorista.center = CGPointMake(self.view.frame.size.width / 2, altura - ([caronas count] * 51));

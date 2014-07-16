@@ -39,6 +39,7 @@
 
 
 - (IBAction)btnSairClick:(id)sender {
+    [AppHelper apagarUsuarioLogado];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

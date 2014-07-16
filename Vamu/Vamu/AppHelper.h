@@ -50,4 +50,12 @@
 +(NSString*) getAbsolutePathForImageFile:(NSString*) fileName;
 +(NSString*) limparCPF:(NSString*) cpf;
 
++(NSString*) deviceToken;
++(void)setDeviceToken:(NSString*)token;
+
++(void) salvarUsuario:(NSString*) cpf senha:(NSString*) senha;
++(NSDictionary*) carregaUsuarioLogado;
++(void) apagarUsuarioLogado;
+
+
 @end

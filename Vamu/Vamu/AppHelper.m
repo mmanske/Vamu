@@ -11,6 +11,9 @@
 
 
 #define kPreferencesName @"Vamu.plist"
+static NSString * const userConfigFile = @"UserConfig";
+static NSString * const userConfigFileComplete = @"UserConfig.plist";
+static NSString * const DeviceTokenKey = @"DeviceToken";
 
 @implementation AppHelper
 
@@ -132,5 +135,35 @@
     }
     return nil;
 }
+
++ (NSString*)deviceToken
+{
+	return [[NSUserDefaults standardUserDefaults] stringForKey:DeviceTokenKey];
+}
+
++ (void)setDeviceToken:(NSString*)token
+{
+	[[NSUserDefaults standardUserDefaults] setObject:token forKey:DeviceTokenKey];
+}
+
+
++(void) salvarUsuario:(NSString*) cpf senha:(NSString*) senha {
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:cpf, @"cpf", senha, @"senha", nil];
+    NSString *fileName = [AppHelper getAbsolutePathForImageFile: userConfigFileComplete];
+    [dic writeToFile:fileName atomically:YES];
+}
+
++(NSDictionary*) carregaUsuarioLogado {
+    NSString *fileName = [AppHelper getAbsolutePathForImageFile: userConfigFileComplete];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:fileName];
+    return dic;
+}
+
++(void) apagarUsuarioLogado {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *fileName = [AppHelper getAbsolutePathForImageFile: userConfigFileComplete];
+    [fileManager removeItemAtPath:fileName error:nil];
+}
+
 
 @end

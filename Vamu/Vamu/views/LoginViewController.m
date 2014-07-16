@@ -70,7 +70,6 @@
     
     mascaraHelper = [MascaraHelper new];
     baixandoImagemPessoa = YES;
-    
 }
 
 -(void) placeHolderTextField{
@@ -81,6 +80,16 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = YES;
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    NSDictionary *dadosUsuario = [AppHelper carregaUsuarioLogado];
+    if (dadosUsuario) {
+        edtCPF.text = [dadosUsuario objectForKey:@"cpf"];
+        edtSenha.text = [dadosUsuario objectForKey:@"senha"];
+        [self btnEntrarClick:nil];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -188,6 +197,7 @@
 -(void)loginContaNaoAtiva: (Participante*) participante{
     [ampulheta esconder];
     [AppHelper setParticipanteLogado:participante];
+    [AppHelper salvarUsuario:participante.cpf senha:edtSenha.text];
     [self performSegueWithIdentifier:@"sgCadastrarVeiculo" sender:self];
 }
 
@@ -232,6 +242,7 @@
     //A ampulheta será escondida após o download do participante
 //    [ampulheta esconder];
     [AppHelper setParticipanteLogado:participante];
+    [AppHelper salvarUsuario:participante.cpf senha:edtSenha.text];
     [baixarImagemService baixarImagemDePessoa:participante.cpf];
 }
 

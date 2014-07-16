@@ -9,7 +9,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AppHelper.h"
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -43,7 +43,10 @@
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
-	NSLog(@"My token is: %@", deviceToken);
+    NSString *token = [[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""];
+    token = [[token description] stringByReplacingOccurrencesOfString: @">" withString: @""];
+    token = [[token description] stringByReplacingOccurrencesOfString: @" " withString: @""];
+    [AppHelper setDeviceToken:token];
 }
 
 

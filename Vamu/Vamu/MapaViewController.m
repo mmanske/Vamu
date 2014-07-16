@@ -20,6 +20,10 @@
 #import "ConsultarParticipanteService.h"
 #import "BaixarImagemService.h"
 #import "NegacaoCarona.h"
+#import "CaronaDesembarcou.h"
+#import "MotoristaDesembarcouCarona.h"
+#import "FinalizacaoViagem.h"
+
 
 @interface MapaViewController ()
 
@@ -399,6 +403,20 @@
                              }
                              completion:nil];
         }
+    }
+    
+    if ([[AppHelper getDesembarqueCarona] count] > 0) {
+        CaronaDesembarcou *desembarque = [[AppHelper getDesembarqueCarona] objectAtIndex:0];
+        NSLog(@"%@", desembarque);
+        
+        [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
+    }
+    
+    if ([[AppHelper getDesembarqueMotorista] count] > 0) {
+        MotoristaDesembarcouCarona *desembarque = [[AppHelper getDesembarqueMotorista] objectAtIndex:0];
+        NSLog(@"%@", desembarque);
+        
+        [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
     }
 }
 

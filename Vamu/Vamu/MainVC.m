@@ -13,6 +13,9 @@
 #import "SolicitacaoCarona.h"
 #import "AceitacaoCarona.h"
 #import "NegacaoCarona.h"
+#import "MotoristaDesembarcouCarona.h"
+#import "CaronaDesembarcou.h"
+#import "FinalizacaoViagem.h"
 
 @interface MainVC ()
 
@@ -223,6 +226,9 @@
     NSMutableArray *solicitacoes = [NSMutableArray new];
     NSMutableArray *aceitacoes = [NSMutableArray new];
     NSMutableArray *negacoes   = [NSMutableArray new];
+    NSMutableArray *desembarqueCarona = [NSMutableArray new];
+    NSMutableArray *desembarqueMotorista = [NSMutableArray new];
+    NSMutableArray *finalizacoes = [NSMutableArray new];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Atualizar Mapa" object:self];
     
@@ -294,11 +300,39 @@
             
             [solicitacao save:nil];
         }
+        
+        if ([notificacao.tipo isEqualToNumber:[NSNumber numberWithInt:9]]) {
+            CaronaDesembarcou *caronaDesembarcou = [CaronaDesembarcou new];
+            caronaDesembarcou.remetente = notificacao.solicitante;
+            caronaDesembarcou.destinatario = notificacao.destinatario;
+            caronaDesembarcou.codNotificacao = notificacao.codigo;
+            
+            [desembarqueCarona addObject:caronaDesembarcou];
+        }
+        
+        if ([notificacao.tipo isEqualToNumber:[NSNumber numberWithInt:10]]) {
+            MotoristaDesembarcouCarona *motoristaDesembarcouCarona = [MotoristaDesembarcouCarona new];
+            motoristaDesembarcouCarona.remetente = notificacao.solicitante;
+            motoristaDesembarcouCarona.destinatario = notificacao.destinatario;
+            motoristaDesembarcouCarona.codNotificacao = notificacao.codigo;
+            
+            [desembarqueMotorista addObject:motoristaDesembarcouCarona];
+        }
+        
+        if ([notificacao.tipo isEqualToNumber:[NSNumber numberWithInt:11]]) {
+            FinalizacaoViagem *finalizacaoViagem = [FinalizacaoViagem new];
+            finalizacaoViagem.codNotificacao = notificacao.codigo;
+            
+            [finalizacoes addObject:finalizacaoViagem];
+        }
     }
     
     [AppHelper setSolicitacoes:solicitacoes];
     [AppHelper setAceitacoes:aceitacoes];
     [AppHelper setNegacoes:negacoes];
+    [AppHelper setDesembarqueCarona:desembarqueCarona];
+    [AppHelper setDesembarqueMotorista:desembarqueMotorista];
+    [AppHelper setFinalizacaoViagem:finalizacoes];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Solicitacao Recebida" object:self];
 }

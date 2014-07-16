@@ -32,6 +32,15 @@
 +(NSMutableArray*) getGrupos;
 +(void) setGrupos:(NSMutableArray*) grupos;
 
++(NSMutableArray*) getDesembarqueCarona;
++(void) setDesembarqueCarona:(NSMutableArray*) desembarques;
+
++(NSMutableArray*) getDesembarqueMotorista;
++(void) setDesembarqueMotorista:(NSMutableArray*) desembarques;
+
++(NSMutableArray*) getFinalizacaoViagem;
++(void) setFinalizacaoViagem:(NSMutableArray*) finalizacoes;
+
 +(NSMutableArray*) getSolicitacoes;
 +(void) setSolicitacoes:(NSMutableArray*) solicitacoes;
 

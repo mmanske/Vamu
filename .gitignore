@@ -128,3 +128,7 @@ Vamu/Vamu.xcodeproj/project.xcworkspace/xcuserdata/Guilherme.xcuserdatad/UserInt
 =======
 Vamu/Vamu.xcodeproj/project.pbxproj
 >>>>>>> FETCH_HEAD
+
+*.xcuserstate
+
+*.xcbkptlist

@@ -31,7 +31,11 @@
         return;
     }
     NSString *cpfSemMascara = [AppHelper limparCPF:cpf];
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@", strURL, cpfSemMascara, senha];
+    
+    NSString* token = [AppHelper deviceToken];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/iOS", strURL, cpfSemMascara, senha, token];
     
     [self consultarUrl:url timeOut:60];
 }

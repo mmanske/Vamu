@@ -28,6 +28,9 @@
     self.nomeDestino = nil;
     self.aceitacoes = nil;
     self.negacoes = nil;
+    self.desembarqueCarona = nil;
+    self.desembarqueMotorista = nil;
+    self.finalizacaoViagem = nil;
     
     [self customizeNavigationBar];
     

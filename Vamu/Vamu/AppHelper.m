@@ -127,6 +127,33 @@ static NSString * const DeviceTokenKey = @"DeviceToken";
     [delegate setNomeDestino:nomeDestino];
 }
 
++(NSMutableArray *)getDesembarqueCarona{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] desembarqueCarona];
+}
+
++(NSMutableArray *)getDesembarqueMotorista{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] desembarqueMotorista];
+}
+
++(NSMutableArray *)getFinalizacaoViagem{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] finalizacaoViagem];
+}
+
++(void)setDesembarqueCarona:(NSMutableArray *)desembarques{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setDesembarqueCarona:desembarques];
+}
+
++(void)setDesembarqueMotorista:(NSMutableArray *)desembarques{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setDesembarqueMotorista:desembarques];
+}
+
++(void)setFinalizacaoViagem:(NSMutableArray *)finalizacoes{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setFinalizacaoViagem:finalizacoes];
+}
+
 +(NSString*) limparCPF:(NSString*) cpf {
     if (cpf) {
         NSString *cpfSemMascara = [cpf stringByReplacingOccurrencesOfString:@"." withString:@""];

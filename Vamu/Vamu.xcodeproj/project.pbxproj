@@ -44,6 +44,13 @@
 		416F2A2318E23DFE0097B2F2 /* DefinirTrajetoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416F2A2218E23DFE0097B2F2 /* DefinirTrajetoCell.xib */; };
 		4185ACAE18E98A2600519F12 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4185ACAD18E98A2600519F12 /* EXPhotoViewer.m */; };
 		418B218418D79CFE006781A9 /* CadastroVeiculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418B218318D79CFE006781A9 /* CadastroVeiculoViewController.m */; };
+		41DE1AC119760D0000E2D013 /* FinalizacaoViagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DE1AC019760D0000E2D013 /* FinalizacaoViagem.m */; };
+		41DE1AC419760D0100E2D013 /* CaronaDesembarcou.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DE1AC319760D0100E2D013 /* CaronaDesembarcou.m */; };
+		41DE1AC719760D0100E2D013 /* MotoristaDesembarcouCarona.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DE1AC619760D0100E2D013 /* MotoristaDesembarcouCarona.m */; };
+		41DE1ACA1976170700E2D013 /* ResumoCaronaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DE1AC91976170700E2D013 /* ResumoCaronaViewController.m */; };
+		41DE1ACD1976173200E2D013 /* ResumoMotoristaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DE1ACC1976173200E2D013 /* ResumoMotoristaViewController.m */; };
+		41DE1AD119761CDB00E2D013 /* ResumoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DE1AD019761CDB00E2D013 /* ResumoCell.m */; };
+		41DE1AD319761CE500E2D013 /* ResumoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41DE1AD219761CE500E2D013 /* ResumoCell.xib */; };
 		41F926C318F8343F00CD5181 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926C218F8343F00CD5181 /* SystemConfiguration.framework */; };
 		41F926C518F8344600CD5181 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926C418F8344600CD5181 /* OpenGLES.framework */; };
 		41F926C718F8344E00CD5181 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F926C618F8344E00CD5181 /* libz.dylib */; };
@@ -319,6 +326,19 @@
 		4185ACAD18E98A2600519F12 /* EXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPhotoViewer.m; sourceTree = "<group>"; };
 		418B218218D79CFE006781A9 /* CadastroVeiculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CadastroVeiculoViewController.h; path = views/CadastroVeiculoViewController.h; sourceTree = "<group>"; };
 		418B218318D79CFE006781A9 /* CadastroVeiculoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CadastroVeiculoViewController.m; path = views/CadastroVeiculoViewController.m; sourceTree = "<group>"; };
+		41DE1ABF19760D0000E2D013 /* FinalizacaoViagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalizacaoViagem.h; sourceTree = "<group>"; };
+		41DE1AC019760D0000E2D013 /* FinalizacaoViagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalizacaoViagem.m; sourceTree = "<group>"; };
+		41DE1AC219760D0100E2D013 /* CaronaDesembarcou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaronaDesembarcou.h; sourceTree = "<group>"; };
+		41DE1AC319760D0100E2D013 /* CaronaDesembarcou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaronaDesembarcou.m; sourceTree = "<group>"; };
+		41DE1AC519760D0100E2D013 /* MotoristaDesembarcouCarona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotoristaDesembarcouCarona.h; sourceTree = "<group>"; };
+		41DE1AC619760D0100E2D013 /* MotoristaDesembarcouCarona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotoristaDesembarcouCarona.m; sourceTree = "<group>"; };
+		41DE1AC81976170700E2D013 /* ResumoCaronaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumoCaronaViewController.h; sourceTree = "<group>"; };
+		41DE1AC91976170700E2D013 /* ResumoCaronaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumoCaronaViewController.m; sourceTree = "<group>"; };
+		41DE1ACB1976173200E2D013 /* ResumoMotoristaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumoMotoristaViewController.h; sourceTree = "<group>"; };
+		41DE1ACC1976173200E2D013 /* ResumoMotoristaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumoMotoristaViewController.m; sourceTree = "<group>"; };
+		41DE1ACF19761CDB00E2D013 /* ResumoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumoCell.h; sourceTree = "<group>"; };
+		41DE1AD019761CDB00E2D013 /* ResumoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumoCell.m; sourceTree = "<group>"; };
+		41DE1AD219761CE500E2D013 /* ResumoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumoCell.xib; sourceTree = "<group>"; };
 		41F926C218F8343F00CD5181 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41F926C418F8344600CD5181 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		41F926C618F8344E00CD5181 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -769,6 +789,16 @@
 			name = Cadastros;
 			sourceTree = "<group>";
 		};
+		41DE1ACE19761CC400E2D013 /* ResumoCell */ = {
+			isa = PBXGroup;
+			children = (
+				41DE1ACF19761CDB00E2D013 /* ResumoCell.h */,
+				41DE1AD019761CDB00E2D013 /* ResumoCell.m */,
+				41DE1AD219761CE500E2D013 /* ResumoCell.xib */,
+			);
+			name = ResumoCell;
+			sourceTree = "<group>";
+		};
 		792CE774196E33E000CF7CA2 /* AutoComplete */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,6 +1062,10 @@
 				79F8683518D0E4780080BC32 /* MenuViewController.m */,
 				416F2A1A18E230CB0097B2F2 /* DefinirTrajetoViewController.h */,
 				416F2A1B18E230CB0097B2F2 /* DefinirTrajetoViewController.m */,
+				41DE1AC81976170700E2D013 /* ResumoCaronaViewController.h */,
+				41DE1AC91976170700E2D013 /* ResumoCaronaViewController.m */,
+				41DE1ACB1976173200E2D013 /* ResumoMotoristaViewController.h */,
+				41DE1ACC1976173200E2D013 /* ResumoMotoristaViewController.m */,
 			);
 			name = Outras;
 			sourceTree = "<group>";
@@ -1213,6 +1247,12 @@
 			isa = PBXGroup;
 			children = (
 				794FDE80194E7CA30052A32E /* Vamu.xcdatamodeld */,
+				41DE1AC519760D0100E2D013 /* MotoristaDesembarcouCarona.h */,
+				41DE1AC619760D0100E2D013 /* MotoristaDesembarcouCarona.m */,
+				41DE1AC219760D0100E2D013 /* CaronaDesembarcou.h */,
+				41DE1AC319760D0100E2D013 /* CaronaDesembarcou.m */,
+				41DE1ABF19760D0000E2D013 /* FinalizacaoViagem.h */,
+				41DE1AC019760D0000E2D013 /* FinalizacaoViagem.m */,
 				7951B663196F158500B7C30C /* NegacaoCarona.h */,
 				7951B664196F158500B7C30C /* NegacaoCarona.m */,
 				7951B657196F028700B7C30C /* AceitacaoCarona.h */,
@@ -1304,6 +1344,7 @@
 		79FDC73318CE69E2003EE81D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				41DE1ACE19761CC400E2D013 /* ResumoCell */,
 				792CE774196E33E000CF7CA2 /* AutoComplete */,
 				7EA98E08196C76EE0048154E /* DesembarcarView */,
 				7EA4C41F1965413C00913741 /* Keyboard */,
@@ -1492,7 +1533,7 @@
 				ORGANIZATIONNAME = "Enter Sistemas";
 				TargetAttributes = {
 					79FDC6EC18CE696A003EE81D = {
-						DevelopmentTeam = FZR2L9BZM8;
+						DevelopmentTeam = DD65PVLY3J;
 					};
 					79FDC71518CE696B003EE81D = {
 						TestTargetID = 79FDC6EC18CE696A003EE81D;
@@ -1594,6 +1635,7 @@
 				796BA62C19006A3900CD39A5 /* ico-estrela-carona_5.png in Resources */,
 				793C371619329B9B00EEC65C /* btn-vergrupos-especial-grupos_5.png in Resources */,
 				793C370D193299F500EEC65C /* GrupoView.xib in Resources */,
+				41DE1AD319761CE500E2D013 /* ResumoCell.xib in Resources */,
 				4136FB4F18DA3CC100B30A83 /* CSNotificationView.xcassets in Resources */,
 				794FDE7B194E58140052A32E /* btn-vamu_5.png in Resources */,
 				79F8D6BC18FB45EE0060E4AF /* logo9.png in Resources */,
@@ -1659,6 +1701,7 @@
 			files = (
 				4167497D18D3A507004FB893 /* JSONObjects.m in Sources */,
 				7EA4C41B1965093500913741 /* BaixarImagemService.m in Sources */,
+				41DE1AC419760D0100E2D013 /* CaronaDesembarcou.m in Sources */,
 				79F18A0B193176E600BA5DF9 /* MotoristaPin.m in Sources */,
 				416CAC2A18F5AD0100E0810C /* RotaCell.m in Sources */,
 				795C489B191EFD1800352EA5 /* AMSlideMenuRightMenuSegue.m in Sources */,
@@ -1677,6 +1720,7 @@
 				792CE785196E341500CF7CA2 /* PlacesService.m in Sources */,
 				4153154818F82CDB0087AB9D /* SelecionarTipoViewController.m in Sources */,
 				79654F8319577F5A007E91F8 /* Constants.m in Sources */,
+				41DE1ACA1976170700E2D013 /* ResumoCaronaViewController.m in Sources */,
 				79B9C81718CFD7C900392833 /* BaseViewController.m in Sources */,
 				79B6FCD7191AFAF900C51F5D /* CustomAlertView.m in Sources */,
 				795329561951F1C900B0E399 /* Seguradora.m in Sources */,
@@ -1701,13 +1745,16 @@
 				79F8683618D0E4780080BC32 /* MenuViewController.m in Sources */,
 				79AEB7FE19280E9A00C097A5 /* FavoritoCell.m in Sources */,
 				79FDC70318CE696B003EE81D /* AppDelegate.m in Sources */,
+				41DE1AD119761CDB00E2D013 /* ResumoCell.m in Sources */,
 				79F9D156194C888D00C7D3E8 /* RotasVO.m in Sources */,
+				41DE1ACD1976173200E2D013 /* ResumoMotoristaViewController.m in Sources */,
 				4136FB5018DA3CC100B30A83 /* CSNotificationView.m in Sources */,
 				794FDE62194E46DC0052A32E /* CaronaService.m in Sources */,
 				7916E4C419439CA100F844BB /* MotoristaAtivo.m in Sources */,
 				79CD5EDE193A6D7B00162630 /* ConsultaGrupoService.m in Sources */,
 				7916E4C719439D4800F844BB /* GrupoAtivo.m in Sources */,
 				794FDE88194E7F9F0052A32E /* MensagemCancelamento.m in Sources */,
+				41DE1AC119760D0000E2D013 /* FinalizacaoViagem.m in Sources */,
 				795C4899191EFD1800352EA5 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				795C48A0191EFF3400352EA5 /* MainVC.m in Sources */,
 				7E7EEFAE196CA63F001E9EF5 /* DesembarqueMotoristaView.m in Sources */,
@@ -1744,6 +1791,7 @@
 				79CD5EE1193A6E7D00162630 /* Grupo.m in Sources */,
 				79FDC76418CE7CF0003EE81D /* RecuperarSenhaViewController.m in Sources */,
 				796A1E10192C2843008E08D2 /* CancelarParticipacaoViewController.m in Sources */,
+				41DE1AC719760D0100E2D013 /* MotoristaDesembarcouCarona.m in Sources */,
 				793DD56C18F9FD8D0033C897 /* CadastroParticipanteViewController.m in Sources */,
 				418B218418D79CFE006781A9 /* CadastroVeiculoViewController.m in Sources */,
 				7FE440BA1943BF6B00F26C85 /* GrupoViewCell.m in Sources */,

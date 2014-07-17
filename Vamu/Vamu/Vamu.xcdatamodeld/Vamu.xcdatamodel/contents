@@ -11,9 +11,17 @@
         <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
         <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
     </entity>
+    <entity name="CaronaDesembarcou" representedClassName="CaronaDesembarcou" syncable="YES">
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+    </entity>
     <entity name="Configuracao" representedClassName="Configuracao" syncable="YES">
         <attribute name="ultLatitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="ultLongitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="FinalizacaoViagem" representedClassName="FinalizacaoViagem" syncable="YES">
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Grupo" representedClassName="Grupo" syncable="YES">
         <attribute name="ativarFiltros" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -40,6 +48,11 @@
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="rota" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rota" syncable="YES"/>
         <relationship name="veiculo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Veiculo" syncable="YES"/>
+    </entity>
+    <entity name="MotoristaDesembarcouCarona" representedClassName="MotoristaDesembarcouCarona" syncable="YES">
+        <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinatario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
+        <relationship name="remetente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
     </entity>
     <entity name="NegacaoCarona" representedClassName="NegacaoCarona" syncable="YES">
         <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
@@ -166,6 +179,7 @@
         <element name="GrupoAtivo" positionX="18" positionY="162" width="128" height="75"/>
         <element name="MensagemCancelamento" positionX="18" positionY="162" width="128" height="58"/>
         <element name="MotoristaAtivo" positionX="9" positionY="153" width="128" height="148"/>
+        <element name="NegacaoCarona" positionX="9" positionY="153" width="128" height="193"/>
         <element name="Notificacao" positionX="9" positionY="153" width="128" height="298"/>
         <element name="Participante" positionX="0" positionY="0" width="128" height="450"/>
         <element name="Ponto" positionX="0" positionY="0" width="128" height="90"/>
@@ -175,6 +189,8 @@
         <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="253"/>
         <element name="TrajetoFavorito" positionX="0" positionY="0" width="128" height="120"/>
         <element name="Veiculo" positionX="0" positionY="0" width="128" height="195"/>
-        <element name="NegacaoCarona" positionX="9" positionY="153" width="128" height="193"/>
+        <element name="CaronaDesembarcou" positionX="27" positionY="171" width="128" height="88"/>
+        <element name="MotoristaDesembarcouCarona" positionX="36" positionY="180" width="128" height="90"/>
+        <element name="FinalizacaoViagem" positionX="45" positionY="189" width="128" height="58"/>
     </elements>
 </model>

@@ -9,6 +9,7 @@
 #import "SplashViewController.h"
 #import "BaixarImagemService.h"
 #import "Veiculo.h"
+#import "AppHelper.h"
 
 @interface SplashViewController ()
 
@@ -73,22 +74,30 @@
 }
 
 -(void)loginCPFNaoCadastrado{
-    UIAlertView *alertCadastro = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF não cadastrado. Deseja cadastrar?" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"Sim", nil];
+    [AppHelper apagarUsuarioLogado];
+    //UIAlertView *alertCadastro = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF não cadastrado. Deseja cadastrar?" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"Sim", nil];
     
-    alertCadastro.tag = 0;
-    [alertCadastro show];
+    //alertCadastro.tag = 0;
+    //[alertCadastro show];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
 }
 
 -(void)loginErro:(NSString *)erro{
-    [[[UIAlertView alloc] initWithTitle:@"Login" message:erro delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    [AppHelper apagarUsuarioLogado];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
+//    [[[UIAlertView alloc] initWithTitle:@"Login" message:erro delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 -(void)loginErroSenhaTerceiraTentativa{
-    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Você erro a senha pela terceira vez. Sua conta ficará bloqueada por 15 minutos." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    [AppHelper apagarUsuarioLogado];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
+  //  [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Você erro a senha pela terceira vez. Sua conta ficará bloqueada por 15 minutos." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 -(void)loginFalhaAoSalvarAcesso{
-    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Erro ao registrar o acesso." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    [AppHelper apagarUsuarioLogado];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
+//    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Erro ao registrar o acesso." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 -(void)loginMotoristaComViagem{
@@ -97,11 +106,12 @@
 
 -(void)loginMotoristaSemViagem{
     
-    UIAlertView *alertSessao = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF ativo em outra sessão. Deseja prosseguir o login?" delegate:self cancelButtonTitle:@"Não" otherButtonTitles:@"Sim", nil];
+  //  UIAlertView *alertSessao = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF ativo em outra sessão. Deseja prosseguir o login?" delegate:self cancelButtonTitle:@"Não" otherButtonTitles:@"Sim", nil];
     
-    alertSessao.tag = 1;
+    //alertSessao.tag = 1;
     
-    [alertSessao show];
+    //[alertSessao show];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
 }
 
 -(void)loginOk:(Participante *)participante{
@@ -111,11 +121,15 @@
 }
 
 -(void)loginSenhaInvalida{
-    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Senha inválida." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    [AppHelper apagarUsuarioLogado];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
+//    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Senha inválida." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 -(void)onOcorreuTimeout:(NSString *)msg{
-    [[[UIAlertView alloc] initWithTitle:@"Login" message:msg delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    [AppHelper apagarUsuarioLogado];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
+  //  [[[UIAlertView alloc] initWithTitle:@"Login" message:msg delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
 #pragma mark - AlertViewDelegate
@@ -125,14 +139,17 @@
     switch (alertView.tag) {
         case 0:
             if (buttonIndex == 1) {
-                [self performSegueWithIdentifier:@"sgCadastroParticipante" sender:self];
+                [AppHelper apagarUsuarioLogado];
+//                [self performSegueWithIdentifier:@"sgCadastroParticipante" sender:self];
+                [self performSegueWithIdentifier:@"sgLogin" sender:nil];
             }
             break;
             
         case 1:
             if (buttonIndex == 1) {
-                NSString *cpfLimpo = [AppHelper limparCPF:cpf];
-                [loginService derrubarSessao:cpfLimpo];
+//                NSString *cpfLimpo = [AppHelper limparCPF:cpf];
+  //              [loginService derrubarSessao:cpfLimpo];
+                [self performSegueWithIdentifier:@"sgLogin" sender:nil];
             }
             break;
             

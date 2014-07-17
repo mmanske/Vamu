@@ -136,7 +136,7 @@
     
     if (![participanteLogado.motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         grupoView = [[GrupoView alloc] iniciar];
-        grupoView.center = CGPointMake(self.view.frame.size.width / 2, 420);
+        grupoView.center = CGPointMake(self.view.frame.size.width / 2, viewVerGrupos.frame.origin.y + viewVerGrupos.frame.size.height + 135);
         [grupoView setHidden:YES];
         grupoView.alpha = 0.0f;
         
@@ -165,12 +165,13 @@
     baixarImagemService = [BaixarImagemService new];
     baixarImagemService.delegate = self;
     
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:[[AppHelper getParticipanteLogado].latitudeAtual floatValue] longitude:[[AppHelper getParticipanteLogado].longitudeAtual floatValue]];
-    
-    [self getAddressFromCurruntLocation:location];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:[[AppHelper getParticipanteLogado].latitudeAtual floatValue] longitude:[[AppHelper getParticipanteLogado].longitudeAtual floatValue]];
+    [self getAddressFromCurruntLocation:location];
+    
     Configuracao *config = [Configuracao alloc];
     NSArray *configs = [Configuracao getAll];
     if ([configs count] > 0) {

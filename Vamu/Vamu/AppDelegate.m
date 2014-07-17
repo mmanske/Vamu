@@ -21,6 +21,7 @@
     
     NetworkHelper *netHelper = [NetworkHelper new];
     NSString *macAddr = [netHelper getLocalMacAddress];
+    
     self.macAddressDevice = macAddr;
     self.motoristas = nil;
     self.grupos = nil;
@@ -35,7 +36,6 @@
     [self customizeNavigationBar];
     
     [GMSServices provideAPIKey:@"AIzaSyAmjpaFgO4GisCiSBkP3paAE2yURhmCwMc"];
-    
     
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];

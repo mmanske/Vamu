@@ -28,6 +28,17 @@
     return dicGrupo;
 }
 
+-(void)gruposParticipanteLogado{
+    NSString *strURL = [self confereURLConexao:@"grupo/atualizarStatusParticipante"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
 -(void)cancelarParticipacao:(Grupo *)grupo status:(NSString*)status{
     NSString *strURL = [self confereURLConexao:@"grupo/atualizarStatusParticipante"];
     if (strURL == nil) {

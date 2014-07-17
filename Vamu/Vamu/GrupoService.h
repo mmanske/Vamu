@@ -14,6 +14,7 @@
 
 -(void) cadastrarGrupo:(Grupo*) grupo;
 -(void) consultarGrupoPorNome:(NSString*) nome;
+-(void) gruposParticipanteLogado;
 -(void) solicitarAdesao:(Grupo*) grupo participanteSolicitante:(Participante*) participante;
 -(void) aceitarParticipacao:(NSString*) codGrupo codParticipante:(NSString*) codParticipante;
 -(void) cancelarParticipacao:(Grupo*) grupo status:(NSString*) status;

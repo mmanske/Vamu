@@ -242,7 +242,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Selecionar Tipo" id="rCM-s6-tZv">
-                        <barButtonItem key="backBarButtonItem" title=" Sair" id="sz3-iK-YKQ"/>
+                        <barButtonItem key="backBarButtonItem" id="sz3-iK-YKQ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="N5W-ID-6vn">
+                            <connections>
+                                <action selector="btnSairClick:" destination="ccs-OK-CRh" id="RBO-0I-0fU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

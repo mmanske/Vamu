@@ -70,6 +70,7 @@
     
     mascaraHelper = [MascaraHelper new];
     baixandoImagemPessoa = YES;
+    self.navigationItem.hidesBackButton = YES;
 }
 
 -(void) placeHolderTextField{
@@ -79,6 +80,8 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+    edtCPF.text = @"";
+    edtSenha.text = @"";
     self.navigationController.navigationBarHidden = YES;
 }
 

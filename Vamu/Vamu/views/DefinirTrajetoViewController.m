@@ -56,7 +56,8 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBarHidden = NO;
-    self.navigationController.navigationBar.backItem.title = @" ";
+//    [self.navigationItem setHidesBackButton:YES animated:YES];
+//    self.navigationController.navigationBar.backItem.title = @"Sair";
 
     self.title = @"Definir Trajeto";
     
@@ -120,6 +121,10 @@
 
     
 
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [self.navigationItem setHidesBackButton:YES];
 }
 
 - (void)didReceiveMemoryWarning

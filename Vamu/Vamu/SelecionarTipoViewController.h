@@ -28,5 +28,6 @@
 
 - (IBAction)btnMotoristaClick:(id)sender;
 - (IBAction)btnCaronaClick:(id)sender;
+- (IBAction)btnSairClick:(id)sender;
 
 @end

@@ -68,6 +68,11 @@
     }
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationItem.hidesBackButton = YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -99,6 +104,11 @@
     carona = YES;
     [part setMotorista:[NSNumber numberWithBool:NO]];
     [self performSegueWithIdentifier:@"sgDefinirTrajeto" sender:self];
+}
+
+- (IBAction)btnSairClick:(id)sender {
+    [AppHelper apagarUsuarioLogado];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

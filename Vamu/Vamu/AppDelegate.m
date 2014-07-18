@@ -34,11 +34,13 @@
     self.finalizacaoViagem = nil;
     
     [self customizeNavigationBar];
-    
+    [AppHelper setDeviceToken:nil];
     [GMSServices provideAPIKey:@"AIzaSyAmjpaFgO4GisCiSBkP3paAE2yURhmCwMc"];
     
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
+    //[[UIApplication sharedApplication] unregisterForRemoteNotifications];
     
     return YES;
 }
@@ -53,6 +55,9 @@
 }
 
 
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"Error in registration. Error: %@", err);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

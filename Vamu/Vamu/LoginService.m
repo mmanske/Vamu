@@ -33,7 +33,9 @@
     NSString *cpfSemMascara = [AppHelper limparCPF:cpf];
     
     NSString* token = [AppHelper deviceToken];
-    
+    if (!token) {
+        token = @"NULL";
+    }
     
     NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/iOS", strURL, cpfSemMascara, senha, token];
     

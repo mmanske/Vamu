@@ -22,7 +22,7 @@
 
 +(NSString*)getBaseURL {
     //    return @"http://www.vamu.eco.br/VamuServer";
-    //    return @"http://172.27.171.52:8080/VamuServer";
+    //    return @"http://172.27.170.246:8080/VamuServer";
     
     return @"http://107.170.189.97:8080/VamuServer";
     //return @"http://192.168.0.4:8080/VamuServer";

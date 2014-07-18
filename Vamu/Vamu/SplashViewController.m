@@ -115,7 +115,7 @@
 }
 
 -(void)loginOk:(Participante *)participante{
-    [AppHelper setParticipanteLogado:participante];
+    [AppHelper setParticipanteLogado:participante]; 
     [AppHelper salvarUsuario:participante.cpf senha:senha];
     [baixarImagemService baixarImagemDePessoa:participante.cpf];
 }

@@ -289,48 +289,7 @@
     [edtCPF resignFirstResponder];
 }
 
-/*
-- (void)formatInput:(UITextField*)aTextField string:(NSString*)aString range:(NSRange)aRange
-{
-   
-    //Copying the contents of UITextField to an variable to add new chars later
-    NSString* value = aTextField.text;
-    
-    NSString* formattedValue = value;
-    
-    //Make sure to retrieve the newly entered char on UITextField
-    aRange.length = 1;
-    
-    NSString* _mask = [mascaraCPF substringWithRange:aRange];
-    
-    //Checking if there's a char mask at current position of cursor
-    if (_mask != nil) {
-        NSString *regex = @"[0-9]*";
-        
-        NSPredicate *regextest = [NSPredicate
-                                  predicateWithFormat:@"SELF MATCHES %@", regex];
-        //Checking if the character at this position isn't a digit
-        if (! [regextest evaluateWithObject:_mask]) {
-            //If the character at current position is a special char this char must be appended to the user entered text
-            formattedValue = [formattedValue stringByAppendingString:_mask];
-        }
-        
-        if (aRange.location + 1 < [mascaraCPF length]) {
-            _mask =  [mascaraCPF substringWithRange:NSMakeRange(aRange.location + 1, 1)];
-            if([_mask isEqualToString:@" "])
-                formattedValue = [formattedValue stringByAppendingString:_mask];
-        }
-    }
-    //Adding the user entered character
-    formattedValue = [formattedValue stringByAppendingString:aString];
-    
-    //Refreshing UITextField value
-    aTextField.text = formattedValue;
-} */
 
-//This method comes from UITextFieldDelegate
-//and this is the most important piece of mask
-//functionality.
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if (textField == edtCPF) {

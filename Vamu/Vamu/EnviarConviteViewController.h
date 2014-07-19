@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GrupoService.h"
 
-@interface EnviarConviteViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface EnviarConviteViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tabela;
 @property (weak, nonatomic) IBOutlet UITextField *edtEmail;

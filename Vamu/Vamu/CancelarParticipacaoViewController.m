@@ -110,6 +110,11 @@
     [[[UIAlertView alloc] initWithTitle:@"Cancelar Participação" message:@"Cancelamento de participação efetuado" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
+-(void)grupoEnviaMensagemErro:(NSString *)mensagem{
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Cancelar Participação" message:mensagem delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+}
+
 #pragma mark - ConsultaGrupoServiceDelegate
 
 -(void)grupoConsultaRetorno:(NSMutableArray *)grupos{

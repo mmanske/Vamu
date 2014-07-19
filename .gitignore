@@ -146,6 +146,7 @@ Vamu/Vamu.xcodeproj/project.pbxproj
 *.xcuserstate
 
 *.xcuserstate
+<<<<<<< HEAD
 
 *.xccheckout
 
@@ -158,3 +159,7 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 *.storyboard
 
 *.xcuserstate
+=======
+>>>>>>> FETCH_HEAD
+
+*.xccheckout

@@ -12,6 +12,9 @@
 
 @interface GrupoService : BaseService
 
+-(void) consultarGruposParticipante;
+-(void) enviarConvite:(NSString*) codGrupo email:(NSString*) email;
+-(void) consultarGrupoPorPessoa;
 -(void) cadastrarGrupo:(Grupo*) grupo;
 -(void) consultarGrupoPorNome:(NSString*) nome;
 -(void) gruposParticipanteLogado;

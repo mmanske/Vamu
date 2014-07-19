@@ -11,6 +11,39 @@
 
 @implementation GrupoService
 
+-(void)consultarGruposParticipante{
+    NSString *strURL = [self confereURLConexao:@"grupo/consultaParticipantes"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
+-(void)enviarConvite:(NSString *)codGrupo email:(NSString *)email{
+    NSString *strURL = [self confereURLConexao:@"grupo/convidarParticipante"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@", strURL, codGrupo, email];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
+-(void)consultarGrupoPorPessoa{
+    NSString *strURL = [self confereURLConexao:@"grupo/consultaAdmin"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
 -(NSMutableDictionary*) dicionarioGrupo:(Grupo*) grupo{
     NSMutableDictionary *dicGrupo = [NSMutableDictionary new];
 
@@ -98,6 +131,15 @@
     [super trataRecebimento];
     
     NSLog(@"%@", self.dadosRetorno);
+    
+    NSRange strError = [self.dadosRetorno rangeOfString:@"Error"];
+    if (strError.length > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(grupoEnviaMensagemErro:)]) {
+            [self.delegate grupoEnviaMensagemErro:@"Erro ao processar requisição"];
+        }
+        self.dadosRetorno = nil;
+        return;
+    }
     
     NSRange strErro = [self.dadosRetorno rangeOfString:@"Erro:118"];
     if (strErro.length > 0) {

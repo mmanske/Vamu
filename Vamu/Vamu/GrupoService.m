@@ -11,6 +11,28 @@
 
 @implementation GrupoService
 
+-(void)enviarConvite:(NSString *)codGrupo email:(NSString *)email{
+    NSString *strURL = [self confereURLConexao:@"grupo/convidarParticipante"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@", strURL, codGrupo, email];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
+-(void)consultarGrupoPorPessoa{
+    NSString *strURL = [self confereURLConexao:@"grupo/consultaAdmin"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
 -(NSMutableDictionary*) dicionarioGrupo:(Grupo*) grupo{
     NSMutableDictionary *dicGrupo = [NSMutableDictionary new];
 

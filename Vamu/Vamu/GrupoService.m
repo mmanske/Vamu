@@ -11,6 +11,17 @@
 
 @implementation GrupoService
 
+-(void)consultarGruposParticipante{
+    NSString *strURL = [self confereURLConexao:@"grupo/consultaParticipantes"];
+    if (strURL == nil) {
+        return;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, [AppHelper getParticipanteLogado].codParticipante];
+    
+    [self consultarUrl:url timeOut:30];
+}
+
 -(void)enviarConvite:(NSString *)codGrupo email:(NSString *)email{
     NSString *strURL = [self confereURLConexao:@"grupo/convidarParticipante"];
     if (strURL == nil) {

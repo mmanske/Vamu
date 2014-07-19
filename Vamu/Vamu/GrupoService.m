@@ -121,6 +121,15 @@
     
     NSLog(@"%@", self.dadosRetorno);
     
+    NSRange strError = [self.dadosRetorno rangeOfString:@"Error"];
+    if (strError.length > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(grupoEnviaMensagemErro:)]) {
+            [self.delegate grupoEnviaMensagemErro:@"Erro ao processar requisição"];
+        }
+        self.dadosRetorno = nil;
+        return;
+    }
+    
     NSRange strErro = [self.dadosRetorno rangeOfString:@"Erro:118"];
     if (strErro.length > 0) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(grupoEnviaMensagemErro:)]) {

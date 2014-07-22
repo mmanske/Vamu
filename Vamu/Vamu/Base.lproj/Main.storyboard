@@ -1161,11 +1161,11 @@
                                 <rect key="frame" x="0.0" y="109" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zN0-Fc-63i">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ponto-a.png" id="zN0-Fc-63i">
                                 <rect key="frame" x="3" y="161" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3J8-fl-QlF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ponto-b.png" id="3J8-fl-QlF">
                                 <rect key="frame" x="3" y="196" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -3030,6 +3030,8 @@
         <image name="input-off.png" width="334" height="60"/>
         <image name="ivete.jpeg" width="212" height="238"/>
         <image name="logo1.png" width="552" height="721"/>
+        <image name="ponto-a.png" width="46" height="46"/>
+        <image name="ponto-b.png" width="46" height="46"/>
         <image name="splash_5.png" width="640" height="1136"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -48,7 +48,7 @@
     
     NSString *rotaJson = [[self dicionarioRota:rota] JSONString];
     
-    [self lancarPost:strURL withPostString:rotaJson withTimeOut:60];
+    [self lancarPost:strURL withPostString:rotaJson withTimeOut:120];
 }
 
 -(void)salvarDestinoFavorito:(TrajetoFavorito *)destino{

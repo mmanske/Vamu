@@ -72,6 +72,7 @@
 }
 
 - (IBAction)clicouTela:(id)sender {
+    
     if ([edtDescricao isFirstResponder]) {
         [edtDescricao resignFirstResponder];
     }

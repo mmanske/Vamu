@@ -15,6 +15,7 @@
 #import "CadastroParticipanteViewController.h"
 #import "BaixarImagemService.h"
 #import "MascaraHelper.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -40,6 +41,7 @@
 @synthesize loginService;
 @synthesize ampulheta, baixandoImagemPessoa;
 @synthesize baixarImagemService, formItems, mascaraHelper;
+@synthesize lblVersao;
 
 //NSString *const mascaraCPF = @"000.000.000-00";
 
@@ -62,6 +64,7 @@
     edtSenha.delegate = self;
     edtCPF.delegate   = self;
     
+    lblVersao.text = [(AppDelegate*)[[UIApplication sharedApplication] delegate] numeroVersao];
     
     self.enhancedKeyboard = [KSEnhancedKeyboard new];
     self.enhancedKeyboard.delegate = self;
@@ -234,7 +237,7 @@
 -(void)loginMotoristaSemViagem{
     [ampulheta esconder];
     
-    UIAlertView *alertSessao = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF ativo em outra sessão. Deseja prosseguir o login?" delegate:self cancelButtonTitle:@"Não" otherButtonTitles:@"Sim", nil];
+    UIAlertView *alertSessao = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF ativo em outra sessão. Deseja prosseguir o login?" delegate:self cancelButtonTitle:@"Fechar" otherButtonTitles:@"Prosseguir", nil];
     
     alertSessao.tag = 1;
     
@@ -263,25 +266,25 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     [textField setInputAccessoryView:[self.enhancedKeyboard getToolbarWithPrevEnabled:YES NextEnabled:YES DoneEnabled:YES]];
-    if (textField == edtSenha) {
+//    if (textField == edtSenha) {
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDelegate:self];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationBeginsFromCurrentState:YES];
         self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y - 100.0), self.view.frame.size.width, self.view.frame.size.height);
         [UIView commitAnimations];
-    }
+//    }
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
-    if (textField == edtSenha) {
+//    if (textField == edtSenha) {
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDelegate:self];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationBeginsFromCurrentState:YES];
         self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y + 100.0), self.view.frame.size.width, self.view.frame.size.height);
         [UIView commitAnimations];
-    }
+//    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -331,7 +334,6 @@
 
 - (void)doneDidTouchDown
 {
-    
     for (UITextField *field in self.formItems) {
         if ([field isEditing]) {
             [field resignFirstResponder];

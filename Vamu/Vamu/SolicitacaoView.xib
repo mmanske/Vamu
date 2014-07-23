@@ -45,7 +45,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fyG-PD-jC0">
                     <rect key="frame" x="128" y="109" width="140" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="btn-vamu-responde_5.png">
+                    <state key="normal" backgroundImage="btn-vamu_5.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -66,7 +66,7 @@
     </objects>
     <resources>
         <image name="box-vamus_5.png" width="640" height="350"/>
-        <image name="btn-vamu-responde_5.png" width="500" height="131"/>
+        <image name="btn-vamu_5.png" width="322" height="131"/>
         <image name="btn_cancelar_5.png" width="254" height="94"/>
     </resources>
 </document>

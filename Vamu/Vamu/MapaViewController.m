@@ -315,6 +315,9 @@
         } else {
             pinView.annotation = annotation;
         }
+        
+        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, pinView.frame.size.width - 20, pinView.frame.size.height - 20)];
+        
         return pinView;
     }
     
@@ -328,6 +331,8 @@
         } else {
             pinView.image = [UIImage imageNamed:@"pin-mapa-verde_5.png"];
         }
+        
+        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, pinView.frame.size.width - 20, pinView.frame.size.height - 20)];
         
         pinView.canShowCallout = NO;
 //        pinView.calloutOffset = CGPointMake(0, 32);
@@ -409,15 +414,29 @@
     if ([[AppHelper getDesembarqueCarona] count] > 0) {
         CaronaDesembarcou *desembarque = [[AppHelper getDesembarqueCarona] objectAtIndex:0];
         NSLog(@"%@", desembarque);
+        [notificacaoService confirmacaoLeitura:desembarque.codNotificacao];
         
-        [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
+//        [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
     }
     
     if ([[AppHelper getDesembarqueMotorista] count] > 0) {
         MotoristaDesembarcouCarona *desembarque = [[AppHelper getDesembarqueMotorista] objectAtIndex:0];
         NSLog(@"%@", desembarque);
+        [notificacaoService confirmacaoLeitura:desembarque.codNotificacao];
         
-        [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
+//        [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
+    }
+    
+    if ([[AppHelper getFinalizacaoViagem] count] > 0) {
+        FinalizacaoViagem *finalizacao = [[AppHelper getFinalizacaoViagem] objectAtIndex:0];
+        NSLog(@"%@", finalizacao);
+        [notificacaoService confirmacaoLeitura:finalizacao.codNotificacao];
+        
+        if ([participanteLogado.motorista boolValue]) {
+            [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
+        } else {
+            [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
+        }
     }
 }
 
@@ -520,7 +539,6 @@
 
 -(void)desembarquei{
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:@"Viagem encerrada com sucesso" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)desembarqueConcluido{
@@ -534,20 +552,22 @@
     desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height - 100);
     desembarqueCaronaView.delegate = self;
     [self.view addSubview:desembarqueCaronaView];
+    [viewVerGrupos removeFromSuperview];
 }
 
 #pragma mark - DesembarqueMotoristaViewDelegate
 
 -(void)desembarcou:(Participante *)participante{
-    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:[NSString stringWithFormat:@"Viagem do participante %@ encerrada com sucesso!", participante.nome] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"Viagem" message:[NSString stringWithFormat:@"Viagem do participante %@ encerrada com sucesso!", participante.nome] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)embarcou:(Participante *)participante{
     //Confirmou o embarque - Ações para motorista
+    NSLog(@"teste");
 }
 
 -(void)cancelouEmbarque:(Participante *)participante{
-    
+
 }
 
 #pragma mark - ConsultarParticipanteServiceDelegate

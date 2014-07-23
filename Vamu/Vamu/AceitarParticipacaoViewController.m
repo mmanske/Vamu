@@ -13,6 +13,7 @@
 #import "AppHelper.h"
 #import "NotificacaoService.h"
 #import "CustomActivityView.h"
+#import "Veiculo.h"
 
 @interface AceitarParticipacaoViewController ()
 
@@ -34,6 +35,7 @@
 @synthesize grupoService;
 @synthesize notificacaoService;
 @synthesize imagemService;
+@synthesize lblCarro;
 
 - (void)viewDidLoad
 {
@@ -77,11 +79,13 @@
 }
 
 - (IBAction)btnRecusarClick:(id)sender {
-    [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
+    if (solicitacao.nomeGrupo.length > 0) {
+        [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
+    }
 }
 
 - (IBAction)btnAceitarClick:(id)sender {
-    if (![solicitacao isEqual:nil]) {
+    if (solicitacao.nomeGrupo.length > 0) {
         [ampulheta exibir];
         [grupoService aceitarParticipacao:[NSString stringWithFormat:@"%@", solicitacao.codGrupo] codParticipante:solicitacao.remetente.codParticipante];
     }

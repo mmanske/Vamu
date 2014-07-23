@@ -34,6 +34,7 @@
 @property (nonatomic, strong) NSMutableArray *finalizacaoViagem;
 
 @property (nonatomic, strong) NSString *nomeDestino;
+@property (nonatomic, strong) NSString *numeroVersao;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

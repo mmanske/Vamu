@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>36F94846-C83B-44D8-BC96-081ACB31EC6D</string>
+	<string>31BD0C59-72C1-42BA-A6FE-813DA906DEB3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Vamu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F322F334-6352-429A-BA8E-F99454502B2E</key>
-		<string>https://github.com/mmanske/Vamu.git</string>
+		<key>BDD7C798-2B9B-425D-8D08-176B8B96935F</key>
+		<string>https://github.com/gui-assis/Vamu.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Vamu/Vamu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F322F334-6352-429A-BA8E-F99454502B2E</key>
+		<key>BDD7C798-2B9B-425D-8D08-176B8B96935F</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mmanske/Vamu.git</string>
+	<string>https://github.com/gui-assis/Vamu.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F322F334-6352-429A-BA8E-F99454502B2E</string>
+	<string>BDD7C798-2B9B-425D-8D08-176B8B96935F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F322F334-6352-429A-BA8E-F99454502B2E</string>
+			<string>BDD7C798-2B9B-425D-8D08-176B8B96935F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Vamu</string>
 		</dict>

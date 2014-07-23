@@ -91,17 +91,17 @@
 
 -(void)recuperarSenhaOk{
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Sua senha foi enviada para o seu e-mail" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Senha enviada com sucesso." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)recuperarSenhaFalhaAoEnviar{
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Erro ao recuperar senha" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Erro ao recuperar senha." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)recuperarSenhaCPFNaoCadastrado{
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"CPF informado não cadastrado no VAMU" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"CPF inválido." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

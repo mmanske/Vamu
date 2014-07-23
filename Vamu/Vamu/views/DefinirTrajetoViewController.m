@@ -69,7 +69,7 @@
     imgMotorista.layer.borderColor = [UIColor whiteColor].CGColor;
     imgMotorista.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     lblTipo.text = @"";
-    if (carona) {
+    if (![participanteLogado.motorista boolValue]) {
         imgIcoIndicacao.image = [UIImage imageNamed:@"ico-indica-carona_5.png"];
         lblTipo.text = @"Carona";
     } else {

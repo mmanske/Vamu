@@ -75,4 +75,8 @@
     return kMascara_CPF;
 }
 
++(NSString *)MASCARA_TELEFONE{
+    return kMascara_TELEFONE;
+}
+
 @end

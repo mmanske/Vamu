@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblEstatisticasParticipante;
+@property (weak, nonatomic) IBOutlet UILabel *lblCarro;
 
 - (IBAction)btnRecusarClick:(id)sender;
 - (IBAction)btnAceitarClick:(id)sender;

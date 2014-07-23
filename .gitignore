@@ -169,3 +169,11 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 *.xcuserstate
 
 *.xcuserstate
+
+Vamu/Vamu/DadosConexaoService.m
+
+*.xccheckout
+
+*.xcuserstate
+
+*.xcbkptlist

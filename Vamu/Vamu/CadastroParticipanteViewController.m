@@ -248,11 +248,11 @@
 }
 
 -(void) AbrirCamera:(UIImagePickerController*) picker{
-    if ([edtCPF.text isEqualToString:@""]) {
-        [[[UIAlertView alloc] initWithTitle:@"Cadastrar foto" message:@"Para cadastrar a Foto, informe o CPF primeiro!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-        return;
-        
-    }
+//    if ([edtCPF.text isEqualToString:@""]) {
+//        [[[UIAlertView alloc] initWithTitle:@"Cadastrar foto" message:@"Para cadastrar a Foto, informe o CPF primeiro!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+//        return;
+//        
+//    }
 
     @try
     {
@@ -266,11 +266,11 @@
 }
 
 -(void) AbrirAlbum:(UIImagePickerController*) picker{
-    if ([edtCPF.text isEqualToString:@""]) {
-        [[[UIAlertView alloc] initWithTitle:@"Cadastrar foto" message:@"Para cadastrar a Foto, informe o CPF primeiro!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-        return;
-        
-    }
+//    if ([edtCPF.text isEqualToString:@""]) {
+//        [[[UIAlertView alloc] initWithTitle:@"Cadastrar foto" message:@"Para cadastrar a Foto, informe o CPF primeiro!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+//        return;
+//        
+//    }
 
     picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     [self presentViewController:picker animated:YES completion:nil];
@@ -282,8 +282,6 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     foto.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     imagemCarregada = YES;
-    
-
     
 }
 
@@ -301,77 +299,95 @@
 -(BOOL) validouCampos{
     
     if ([edtCPF.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo CPF"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo CPF"];
+        [[[UIAlertView alloc] initWithTitle:@"Cadastro de participante" message:@"Preencha o campo CPF" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if (![Validations validateCPFWithNSString: [AppHelper limparCPF:edtCPF.text]]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"CPF inválido"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"CPF inválido"];
+        [[[UIAlertView alloc] initWithTitle:nil message:@"CPF inválido" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtSenha.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo senha"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo senha"];
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Preencha o campo senha" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtConfirmarSenha.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo confirmar senha"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo confirmar senha"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo confirmar senha" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtNome.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo nome"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo nome"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo nome" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtApelido.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo apelido"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo apelido"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo apelido" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtEmail.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo email"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo email"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo email" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtSexo.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo sexo"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo sexo"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo sexo" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtNascimento.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo nascimento"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo nascimento"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo nascimento" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtCelular.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo celular" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if (![edtSenha.text isEqualToString:edtConfirmarSenha.text]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Senha não confere"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Senha não confere"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Senha não confere" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     
     if (!imagemCarregada) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Selecione uma foto"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Selecione uma foto"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Selecione uma foto" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     
     if ([edtCEP.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo CEP"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo CEP"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo CEP" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtEndereco.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo endereço"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo endereço"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo endereço" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtNumero.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo número"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo número"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo número" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtBairro.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo bairro"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo bairro"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo bairro" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtCidade.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo cidade"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo cidade"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo cidade" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     if ([edtUF.text isEqualToString:@""]) {
-        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo UF"];
+//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo UF"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo UF" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
     
@@ -501,6 +517,9 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    if (textField == edtCelular) {
+        return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_TELEFONE];
+    }
 
     if (textField == edtCPF) {
         return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_CPF];

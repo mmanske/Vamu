@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *edtSenha;
 @property (strong, nonatomic) IBOutlet UIView *viewCampos;
 @property (strong, nonatomic) IBOutlet UIButton *btnEntrar;
+@property (weak, nonatomic) IBOutlet UILabel *lblVersao;
 
 - (IBAction)clicouTela:(id)sender;
 - (IBAction)btnEntrarClick:(id)sender;

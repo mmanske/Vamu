@@ -167,6 +167,7 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 *.xccheckout
 
 *.xcuserstate
+<<<<<<< HEAD
 
 *.xcuserstate
 
@@ -175,3 +176,5 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 *.xcuserstate
 
 *.xcbkptlist
+=======
+>>>>>>> parent of bacfa8d... ignore

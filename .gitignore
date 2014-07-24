@@ -1,5 +1,5 @@
 
-Vamu/Vamu/DadosConexaoService.m
+
 
 <<<<<<< HEAD
 Vamu/Vamu.xcodeproj/project.xcworkspace/xcuserdata/Guilherme.xcuserdatad/UserInterfaceState.xcuserstate
@@ -167,15 +167,21 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 *.xccheckout
 
 *.xcuserstate
+<<<<<<< HEAD
 
 *.xcuserstate
-
-Vamu/Vamu/DadosConexaoService.m
 
 *.xccheckout
 
 *.xcuserstate
 
 *.xcbkptlist
+<<<<<<< HEAD
 
 *.xcuserstate
+=======
+=======
+>>>>>>> parent of bacfa8d... ignore
+>>>>>>> FETCH_HEAD
+
+*.xccheckout

@@ -463,7 +463,7 @@
 -(void) finalizaEnviarImagem {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Cadastro de veículo" message:@"Veículo cadastrado com sucesso" delegate:self cancelButtonTitle:@"Fechar" otherButtonTitles:@"Novo veículo", nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Cadastro de veículo" message:@"Veículo cadastrado com sucesso. Deseja cadastrar outro?" delegate:self cancelButtonTitle:@"Fechar" otherButtonTitles:@"Cadastrar", nil] show];
     
 }
 

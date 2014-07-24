@@ -193,7 +193,8 @@
 #pragma mark - LoginServiceDelegate
 
 -(void)loginCaronComViagem{
-    [self loginMotoristaSemViagem];
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF informado está em viagem. Favor verificar" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil]show];
 }
 
 -(void)loginCaronSemViagem{
@@ -231,7 +232,8 @@
 }
 
 -(void)loginMotoristaComViagem{
-    [self loginMotoristaSemViagem];
+    [ampulheta esconder];
+    [[[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF informado está em viagem. Favor verificar" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil]show];
 }
 
 -(void)loginMotoristaSemViagem{

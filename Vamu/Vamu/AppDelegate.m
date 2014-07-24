@@ -36,7 +36,6 @@
     
     [self customizeNavigationBar];
     [AppHelper setDeviceToken:nil];
-    [GMSServices provideAPIKey:@"AIzaSyAmjpaFgO4GisCiSBkP3paAE2yURhmCwMc"];
     
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];

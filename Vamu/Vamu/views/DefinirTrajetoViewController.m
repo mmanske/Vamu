@@ -61,7 +61,7 @@
 
     self.title = @"Definir Trajeto";
     
-    edtDestino.text = @"Avenida Embaixador Abelardo Bueno, Barra da Tijuca, Rio de Janeiro";
+//    edtDestino.text = @"Avenida Embaixador Abelardo Bueno, Barra da Tijuca, Rio de Janeiro";
     
     participanteLogado = [AppHelper getParticipanteLogado];
     

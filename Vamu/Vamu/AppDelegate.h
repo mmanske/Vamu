@@ -33,7 +33,8 @@
 @property (nonatomic, strong) NSMutableArray *desembarqueMotorista;
 @property (nonatomic, strong) NSMutableArray *finalizacaoViagem;
 
-@property (nonatomic, strong) NSString *nomeDestino;
+@property (nonatomic, strong) NSMutableString *nomeOrigem;
+@property (nonatomic, strong) NSMutableString *nomeDestino;
 @property (nonatomic, strong) NSString *numeroVersao;
 
 - (void)saveContext;

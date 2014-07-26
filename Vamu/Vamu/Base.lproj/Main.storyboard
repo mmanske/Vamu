@@ -1298,6 +1298,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.89411771297454834" green="0.90980398654937744" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ponto-b.png" id="T6O-aZ-2Mp">
+                                <rect key="frame" x="5" y="189" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ponto-a.png" id="kQ1-6X-CJK">
+                                <rect key="frame" x="5" y="159" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgapp_5.png" id="YUd-Cl-D6p">
                                 <rect key="frame" x="0.0" y="216" width="320" height="352"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1509,6 +1517,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.89411771299999998" green="0.90980398650000005" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ponto-b.png" id="ifA-H6-i7Y">
+                                <rect key="frame" x="5" y="148" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ponto-a.png" id="lwi-sd-eZw">
+                                <rect key="frame" x="5" y="118" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgapp_5.png" id="dIt-5i-Aaa">
                                 <rect key="frame" x="0.0" y="175" width="320" height="393"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1607,7 +1623,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="1" sectionFooterHeight="1" id="viJ-aC-0yL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" sectionHeaderHeight="1" sectionFooterHeight="1" id="viJ-aC-0yL">
                                 <rect key="frame" x="0.0" y="175" width="320" height="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1617,7 +1633,7 @@
                                         <rect key="frame" x="0.0" y="1" width="320" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fFg-1a-YXu" id="Cq2-zg-fDc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1625,7 +1641,7 @@
                                         <rect key="frame" x="0.0" y="31" width="320" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeF-qm-MOe" id="Vbh-mS-9tB">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1633,7 +1649,7 @@
                                         <rect key="frame" x="0.0" y="61" width="320" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DZl-63-ktQ" id="7eT-a7-97S">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1641,7 +1657,7 @@
                                         <rect key="frame" x="0.0" y="91" width="320" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CsQ-3U-eAS" id="b8q-Yx-T3T">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1653,6 +1669,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xew-Ia-ysv"/>
                     <connections>
+                        <outlet property="imgParticipante" destination="Z0e-J7-ElX" id="KgJ-O9-ZZs"/>
+                        <outlet property="lblDesconsumoParticipante" destination="BBw-ZD-Mym" id="jyi-bg-Gzo"/>
+                        <outlet property="lblDesconsumoVamu" destination="fUr-mf-Xgo" id="q7B-1z-b62"/>
+                        <outlet property="lblDesconsumoViagem" destination="HeF-Za-13H" id="POG-8J-ftE"/>
+                        <outlet property="lblDestino" destination="fcc-rz-kVG" id="hXV-fA-FqX"/>
+                        <outlet property="lblEmissaoParticipante" destination="fXM-ra-6jT" id="bFF-Lg-mHq"/>
+                        <outlet property="lblEmissaoVamu" destination="V9v-YK-COc" id="XyY-tj-SCe"/>
+                        <outlet property="lblEmissaoViagem" destination="D8N-KZ-MlJ" id="Hho-0f-FZH"/>
+                        <outlet property="lblNomeParticipante" destination="o2k-uT-sN6" id="3Xe-hx-Yrq"/>
+                        <outlet property="lblOrigem" destination="o0D-XU-ig8" id="4im-yd-k7y"/>
                         <outlet property="tabela" destination="viJ-aC-0yL" id="yb1-iY-SCF"/>
                     </connections>
                 </viewController>

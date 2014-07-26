@@ -316,7 +316,7 @@
             pinView.annotation = annotation;
         }
         
-        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, pinView.frame.size.width - 20, pinView.frame.size.height - 20)];
+        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, 46, 46)];
         
         return pinView;
     }
@@ -332,10 +332,9 @@
             pinView.image = [UIImage imageNamed:@"pin-mapa-verde_5.png"];
         }
         
-        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, pinView.frame.size.width - 20, pinView.frame.size.height - 20)];
+        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, 46, 46)];
         
         pinView.canShowCallout = NO;
-//        pinView.calloutOffset = CGPointMake(0, 32);
         
         return pinView;
     }
@@ -413,29 +412,20 @@
     
     if ([[AppHelper getDesembarqueCarona] count] > 0) {
         CaronaDesembarcou *desembarque = [[AppHelper getDesembarqueCarona] objectAtIndex:0];
-        NSLog(@"%@", desembarque);
         [notificacaoService confirmacaoLeitura:desembarque.codNotificacao];
-        
-//        [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
     }
     
     if ([[AppHelper getDesembarqueMotorista] count] > 0) {
         MotoristaDesembarcouCarona *desembarque = [[AppHelper getDesembarqueMotorista] objectAtIndex:0];
-        NSLog(@"%@", desembarque);
         [notificacaoService confirmacaoLeitura:desembarque.codNotificacao];
-        
-//        [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
     }
     
     if ([[AppHelper getFinalizacaoViagem] count] > 0) {
         FinalizacaoViagem *finalizacao = [[AppHelper getFinalizacaoViagem] objectAtIndex:0];
-        NSLog(@"%@", finalizacao);
         [notificacaoService confirmacaoLeitura:finalizacao.codNotificacao];
         
         if ([participanteLogado.motorista boolValue]) {
             [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
-        } else {
-            [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
         }
     }
 }
@@ -539,6 +529,7 @@
 
 -(void)desembarquei{
     [ampulheta esconder];
+    [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
 }
 
 -(void)desembarqueConcluido{
@@ -625,6 +616,8 @@
              NSString *endereco = [NSString stringWithFormat:@"%@, %@, %@",[placemark thoroughfare],[placemark locality],[placemark administrativeArea]];
              
              lblOrigem.text = endereco;
+             
+             [AppHelper setNomeOrigem:[NSMutableString stringWithString:endereco]];
         
          }
      }];

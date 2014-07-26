@@ -33,6 +33,7 @@
     self.desembarqueMotorista = nil;
     self.finalizacaoViagem = nil;
     self.numeroVersao = @"v0.8";
+    self.nomeOrigem = nil;
     
     [self customizeNavigationBar];
     [AppHelper setDeviceToken:nil];

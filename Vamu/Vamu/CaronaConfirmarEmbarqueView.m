@@ -33,6 +33,7 @@
 
 - (IBAction)btnEmbarqueiClick:(id)sender {
     [self removeFromSuperview];
+    [[AppHelper getParticipanteLogado] setCodViagemAtual:[NSNumber numberWithInt:[_solicitacao.codViagem intValue]]];
     if (self.delegate && [self.delegate respondsToSelector:@selector(embarcouCarona:)]) {
         [self.delegate embarcouCarona: _solicitacao];
     }

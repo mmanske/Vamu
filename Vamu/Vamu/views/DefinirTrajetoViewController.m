@@ -61,6 +61,8 @@
 
     self.title = @"Definir Trajeto";
     
+    edtDestino.text = @"Avenida Embaixador Abelardo Bueno, Barra da Tijuca, Rio de Janeiro";
+    
     participanteLogado = [AppHelper getParticipanteLogado];
     
     imgMotorista.layer.cornerRadius = imgMotorista.bounds.size.width/2;
@@ -278,6 +280,8 @@
 -(void)iniciarRota:(MKRoute *)rota{
     [ampulheta exibir];
     rotaSelecionada = rota;
+    
+    [AppHelper setNomeOrigem:[NSMutableString stringWithString:edtOrigem.text]];
     [AppHelper setRota:rota];
     
     Rota *rtRota = [Rota new];

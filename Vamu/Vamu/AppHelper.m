@@ -118,13 +118,22 @@ static NSString * const DeviceTokenKey = @"DeviceToken";
     [delegate setMotoristas:motoristas];
 }
 
-+(NSString*)getNomeDestino{
++(NSMutableString*)getNomeDestino{
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] nomeDestino];
 }
 
-+(void)setNomeDestino:(NSString*) nomeDestino{
++(void)setNomeDestino:(NSMutableString*) nomeDestino{
     AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
     [delegate setNomeDestino:nomeDestino];
+}
+
++(NSMutableString*)getNomeOrigem{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] nomeOrigem];
+}
+
++(void)setNomeOrigem:(NSMutableString*) nomeOrigem{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setNomeOrigem:nomeOrigem];
 }
 
 +(NSMutableArray *)getDesembarqueCarona{

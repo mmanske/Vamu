@@ -53,8 +53,11 @@
 +(MKRoute*)getRota;
 +(void)setRota:(MKRoute*) rota;
 
-+(NSString*)getNomeDestino;
-+(void)setNomeDestino:(NSString*) nomeDestino;
++(NSMutableString*)getNomeDestino;
++(void)setNomeDestino:(NSMutableString*) nomeDestino;
+
++(NSMutableString*)getNomeOrigem;
++(void)setNomeOrigem:(NSMutableString*) nomeOrigem;
 
 +(NSString*) getAbsolutePathForImageFile:(NSString*) fileName;
 +(NSString*) limparCPF:(NSString*) cpf;

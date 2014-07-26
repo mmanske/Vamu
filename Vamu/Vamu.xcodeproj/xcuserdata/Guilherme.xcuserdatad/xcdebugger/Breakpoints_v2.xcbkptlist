@@ -121,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vamu/CaronaService.m"
-            timestampString = "426725532.530729"
+            filePath = "Vamu/ResumoViagemService.m"
+            timestampString = "428036983.775855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-solicitarCarona:destino:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-resumoViagemMotorista"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

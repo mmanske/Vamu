@@ -185,3 +185,9 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 >>>>>>> FETCH_HEAD
 
 *.xccheckout
+
+*.xcuserstate
+
+*.xcbkptlist
+
+Vamu/Vamu/Base.lproj/Main.storyboard

@@ -424,7 +424,8 @@
         FinalizacaoViagem *finalizacao = [[AppHelper getFinalizacaoViagem] objectAtIndex:0];
         [notificacaoService confirmacaoLeitura:finalizacao.codNotificacao];
         
-        if ([participanteLogado.motorista boolValue]) {
+        
+        if (participanteLogado && [participanteLogado.motorista boolValue]) {
             [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
         }
     }

@@ -185,6 +185,7 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 >>>>>>> FETCH_HEAD
 
 *.xccheckout
+<<<<<<< HEAD
 
 *.xcuserstate
 
@@ -199,3 +200,5 @@ Vamu/Vamu/Base.lproj/Main.storyboard
 *.xcbkptlist
 
 *.xcuserstate
+=======
+>>>>>>> parent of 776b6f6... ignore

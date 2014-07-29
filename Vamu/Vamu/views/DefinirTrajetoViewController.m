@@ -90,7 +90,13 @@
     [tabela registerClass:[RotaCell class] forCellWithReuseIdentifier:@"RotaCell"];
     
     if (participanteLogado) {
-        lblNomeMotorista.text = participanteLogado.nome;
+        NSMutableString *tipo = [NSMutableString new];
+        if ([participanteLogado.motorista boolValue]) {
+            tipo = [NSMutableString stringWithString:@"- Motorista"];
+        } else {
+            tipo = [NSMutableString stringWithString:@"- Carona"];
+        }
+        lblNomeMotorista.text = [NSString stringWithFormat:@"%@ %@", participanteLogado.nome, tipo];
         
         NSString *fileName = [NSString stringWithFormat:@"%@.jpg", participanteLogado.cpf];
         NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];

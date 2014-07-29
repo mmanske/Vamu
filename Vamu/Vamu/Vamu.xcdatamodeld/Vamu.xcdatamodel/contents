@@ -114,6 +114,13 @@
         <relationship name="carro" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Veiculo" inverseName="participante" inverseEntity="Veiculo" syncable="YES"/>
         <relationship name="trajetosFavoritos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TrajetoFavorito" inverseName="participante" inverseEntity="TrajetoFavorito" syncable="YES"/>
     </entity>
+    <entity name="ParticipanteResumoVO" representedClassName="ParticipanteResumoVO" syncable="YES">
+        <attribute name="cpf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="horaFim" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="horaInicio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kmViagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Ponto" representedClassName="Ponto" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -174,11 +181,14 @@
     </entity>
     <elements>
         <element name="AceitacaoCarona" positionX="9" positionY="153" width="128" height="180"/>
+        <element name="CaronaDesembarcou" positionX="27" positionY="171" width="128" height="88"/>
         <element name="Configuracao" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="FinalizacaoViagem" positionX="45" positionY="189" width="128" height="58"/>
         <element name="Grupo" positionX="0" positionY="0" width="128" height="163"/>
         <element name="GrupoAtivo" positionX="18" positionY="162" width="128" height="75"/>
         <element name="MensagemCancelamento" positionX="18" positionY="162" width="128" height="58"/>
         <element name="MotoristaAtivo" positionX="9" positionY="153" width="128" height="148"/>
+        <element name="MotoristaDesembarcouCarona" positionX="36" positionY="180" width="128" height="90"/>
         <element name="NegacaoCarona" positionX="9" positionY="153" width="128" height="193"/>
         <element name="Notificacao" positionX="9" positionY="153" width="128" height="298"/>
         <element name="Participante" positionX="0" positionY="0" width="128" height="450"/>
@@ -189,8 +199,6 @@
         <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="253"/>
         <element name="TrajetoFavorito" positionX="0" positionY="0" width="128" height="120"/>
         <element name="Veiculo" positionX="0" positionY="0" width="128" height="195"/>
-        <element name="CaronaDesembarcou" positionX="27" positionY="171" width="128" height="88"/>
-        <element name="MotoristaDesembarcouCarona" positionX="36" positionY="180" width="128" height="90"/>
-        <element name="FinalizacaoViagem" positionX="45" positionY="189" width="128" height="58"/>
+        <element name="ParticipanteResumoVO" positionX="18" positionY="153" width="128" height="120"/>
     </elements>
 </model>

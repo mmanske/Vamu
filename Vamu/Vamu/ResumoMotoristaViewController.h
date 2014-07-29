@@ -21,5 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblEmissaoParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblDesconsumoVamu;
 @property (strong, nonatomic) IBOutlet UILabel *lblEmissaoVamu;
+@property (strong, nonatomic) IBOutlet UILabel *lblCarro;
+@property (strong, nonatomic) IBOutlet UILabel *lblPlaca;
 
 @end

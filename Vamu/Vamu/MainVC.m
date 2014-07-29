@@ -46,7 +46,7 @@
     
     NSDate *d = [NSDate dateWithTimeIntervalSinceNow:1];
     timerNotificacao = [[NSTimer alloc] initWithFireDate: d
-                                          interval:30
+                                          interval:10
                                             target:self
                                           selector:@selector(consultarNotificacoes:)
                                           userInfo:nil repeats:YES];

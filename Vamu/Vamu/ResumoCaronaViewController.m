@@ -10,17 +10,21 @@
 #import "ResumoViagemService.h"
 #import "CustomActivityView.h"
 #import "AppHelper.h"
+#import "Veiculo.h"
+#import "BaixarImagemService.h"
 
 @interface ResumoCaronaViewController ()
 
 @property (strong, nonatomic) ResumoViagemService *resumoService;
 @property (strong, nonatomic) CustomActivityView *ampulheta;
+@property (strong, nonatomic) BaixarImagemService *imagemService;
+@property (strong, nonatomic) NSMutableString *cpfMotorista;
 
 @end
 
 @implementation ResumoCaronaViewController
 
-@synthesize lblCarro, lblDataViagem, lblDesconsumoParticipante, lblDesconsumoVamu ,lblDesconsumoViagem, lblDestino, lblEmissaoParticipante, lblEmissaoVamu, lblEmissaoViagem, lblNomeMotorista, lblNomeParticipante, lblOrigem, lblPlaca, lblResumoViagem, imgMotorista, imgParticipante, ampulheta, resumoService;
+@synthesize lblCarro, lblDataViagem, lblDesconsumoParticipante, lblDesconsumoVamu ,lblDesconsumoViagem, lblDestino, lblEmissaoParticipante, lblEmissaoVamu, lblEmissaoViagem, lblNomeMotorista, lblNomeParticipante, lblOrigem, lblPlaca, lblResumoViagem, imgMotorista, imgParticipante, ampulheta, resumoService, imagemService, cpfMotorista;
 
 - (void)viewDidLoad
 {
@@ -42,8 +46,12 @@
     
     resumoService = [ResumoViagemService new];
     resumoService.delegate = self;
-    
     [resumoService resumoViagemCarona];
+    
+    imagemService = [BaixarImagemService new];
+    imagemService.delegate = self;
+    
+    cpfMotorista = [NSMutableString new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +63,19 @@
 #pragma mark - ResumoViagemServiceDelegate
 
 -(void)onRetornouResumo:(NSDictionary *)dicResumo{
-    [ampulheta esconder];
+    NSDictionary *veiculos = [dicResumo objectForKey:@"veiculoVO"];
+    
+    lblCarro.text = [NSString stringWithFormat:@"%@", [veiculos objectForKey:@"modelo"]];
+    lblPlaca.text = [NSString stringWithFormat:@"Placa %@", [veiculos objectForKey:@"placa"]];
+    
+    cpfMotorista = [dicResumo objectForKey:@"cpf"];
+    
+    [imagemService baixarImagemDePessoa:cpfMotorista];
+    
+    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [AppHelper getParticipanteLogado].cpf];
+    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    
+    imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
     
     lblNomeParticipante.text = [AppHelper getParticipanteLogado].nome;
     
@@ -84,6 +104,18 @@
     
     lblDesconsumoVamu.text = [NSString stringWithFormat:@"'Desconsumo' TOTAL do Vamu: %.2f km", [[dicResumo objectForKey:@"kmVamu"] floatValue]];
     
+    [ampulheta esconder];
+}
+
+#pragma mark - BaixarImagemServiceDelegate
+
+-(void)finalizaBaixarImagem{
+    [ampulheta esconder];
+    
+    NSString *fileName = [NSString stringWithFormat:@"%@.jpg", cpfMotorista];
+    NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
+    
+    imgMotorista.image = [UIImage imageWithContentsOfFile:imageFileName];
 }
 
 @end

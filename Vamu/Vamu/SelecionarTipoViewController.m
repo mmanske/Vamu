@@ -59,8 +59,8 @@
     
     for (Veiculo *veiculo in participanteLogado.carro) {
         if (veiculo.modelo.length > 0) {
-            lblCarro.text = veiculo.modelo;
-            lblPlaca.text = veiculo.placa;
+            lblCarro.text = [NSString stringWithFormat:@"%@ - %@", veiculo.modelo, veiculo.cor];
+            lblPlaca.text = [NSString stringWithFormat:@"Placa %@", veiculo.placa];
             lblCarro.hidden = lblPlaca.hidden = NO;
             veiculoSelecionado = veiculo;
             return;

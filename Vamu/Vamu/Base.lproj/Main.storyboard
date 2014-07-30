@@ -164,7 +164,7 @@
                                         <rect key="frame" x="6" y="17" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.72387197066326525" green="0.0596148962127208" blue="0.14629022051641485" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -223,7 +223,7 @@
                                         <rect key="frame" x="6" y="6" width="42" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.37647062540054321" green="0.65490198135375977" blue="0.32549020648002625" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1456,7 +1456,7 @@
             </objects>
             <point key="canvasLocation" x="5776" y="-2632"/>
         </scene>
-        <!--Resumo Motorista View Controller-->
+        <!--Resumo Motorista View Controller - Resumo da viagem-->
         <scene sceneID="8Zq-qQ-g7E">
             <objects>
                 <viewController id="TpK-oN-xpZ" customClass="ResumoMotoristaViewController" sceneMemberID="viewController">
@@ -1667,7 +1667,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xew-Ia-ysv"/>
+                    <navigationItem key="navigationItem" title="Resumo da viagem" id="Xew-Ia-ysv"/>
                     <connections>
                         <outlet property="imgParticipante" destination="Z0e-J7-ElX" id="2bf-bi-74D"/>
                         <outlet property="lblCarro" destination="LzU-p0-gXN" id="CTq-X1-KOO"/>

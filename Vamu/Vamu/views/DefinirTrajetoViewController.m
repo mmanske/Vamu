@@ -65,6 +65,10 @@
     
     participanteLogado = [AppHelper getParticipanteLogado];
     
+    for (Veiculo *vei in [AppHelper getParticipanteLogado].carro) {
+        veiculo = vei;
+    }
+    
     imgMotorista.layer.cornerRadius = imgMotorista.bounds.size.width/2;
     imgMotorista.layer.masksToBounds = YES;
     imgMotorista.layer.borderWidth = 2;

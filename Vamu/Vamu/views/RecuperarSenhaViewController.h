@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "RecuperarSenhaService.h"
+#import "SDCAlertView.h"
 
-@interface RecuperarSenhaViewController : BaseViewController<UITextFieldDelegate>
+@interface RecuperarSenhaViewController : BaseViewController<UITextFieldDelegate, SDCAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *edtEmail;
 @property (strong, nonatomic) IBOutlet UIButton *btnEnviar;

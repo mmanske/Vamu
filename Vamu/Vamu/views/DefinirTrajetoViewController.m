@@ -42,7 +42,6 @@
 @synthesize lblNomeMotorista;
 @synthesize participanteLogado;
 @synthesize imgIcoIndicacao;
-@synthesize lblTipo;
 @synthesize carona;
 @synthesize veiculo;
 @synthesize ampulheta;
@@ -74,16 +73,10 @@
     imgMotorista.layer.borderWidth = 2;
     imgMotorista.layer.borderColor = [UIColor whiteColor].CGColor;
     imgMotorista.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
-    lblTipo.text = @"";
     if (![participanteLogado.motorista boolValue]) {
         imgIcoIndicacao.image = [UIImage imageNamed:@"ico-indica-carona_5.png"];
-        lblTipo.text = @"Carona";
     } else {
         imgIcoIndicacao.image = [UIImage imageNamed:@"ico-indica-motorista_5.png"];
-        if (veiculo) {
-            lblTipo.text = [NSString stringWithFormat:@"%@ - %@ - %@", veiculo.modelo, veiculo.placa, veiculo.ano];
-        }
-        
     }
     
     rotas = [NSMutableArray new];
@@ -100,7 +93,8 @@
         } else {
             tipo = [NSMutableString stringWithString:@"- Carona"];
         }
-        lblNomeMotorista.text = [NSString stringWithFormat:@"%@ %@", participanteLogado.nome, tipo];
+        lblNomeMotorista.text = [NSString stringWithFormat:@"%@ %@", participanteLogado.apelido, tipo];
+
         
         NSString *fileName = [NSString stringWithFormat:@"%@.jpg", participanteLogado.cpf];
         NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];

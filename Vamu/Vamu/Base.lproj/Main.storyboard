@@ -794,7 +794,7 @@
             </objects>
             <point key="canvasLocation" x="2822" y="847"/>
         </scene>
-        <!--Cadastro Grupo View Controller - Cadastro-->
+        <!--Cadastro Grupo View Controller - Novo Grupo-->
         <scene sceneID="ajO-DE-Fat">
             <objects>
                 <viewController id="hkc-fZ-Zcj" customClass="CadastroGrupoViewController" sceneMemberID="viewController">
@@ -840,22 +840,22 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="4Yc-do-FpX">
-                                        <rect key="frame" x="8" y="246" width="305" height="45"/>
+                                        <rect key="frame" x="8" y="246" width="305" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="W3d-ng-bgK">
-                                                <rect key="frame" x="4" y="5" width="297" height="35"/>
+                                                <rect key="frame" x="4" y="5" width="297" height="49"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receber solicitação de adesão" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MEh-Ij-JKn">
-                                                        <rect key="frame" x="5" y="7" width="190" height="21"/>
+                                                        <rect key="frame" x="5" y="14" width="190" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="NcZ-1E-QcU">
-                                                        <rect key="frame" x="228" y="2" width="51" height="31"/>
+                                                        <rect key="frame" x="228" y="9" width="51" height="31"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </switch>
                                                 </subviews>
@@ -926,7 +926,7 @@
                                         <rect key="frame" x="19" y="361" width="128" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="Cancelar" backgroundImage="btn_cancelar_5.png">
+                                        <state key="normal" title="CANCELAR" backgroundImage="btn_cancelar_5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -938,7 +938,7 @@
                                         <rect key="frame" x="174" y="361" width="128" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="Salvar" backgroundImage="btn_salvar_5.png">
+                                        <state key="normal" title="SALVAR" backgroundImage="btn_salvar_5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -951,7 +951,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cadastro" id="Seu-Vh-3cn"/>
+                    <navigationItem key="navigationItem" title="Novo Grupo" id="Seu-Vh-3cn">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="YXo-3B-jbd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CF9-7r-Xc4">
+                                <rect key="frame" x="272" y="0.0" width="32" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ico-ajuda_4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnCancelar" destination="dZ7-EL-HFD" id="WLv-nC-gom"/>
                         <outlet property="btnSalvar" destination="SB7-iQ-pPH" id="Q3b-x7-J3o"/>
@@ -1205,6 +1215,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sDl-cf-fZn">
+                                <rect key="frame" x="36" y="110" width="19" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1215,6 +1229,7 @@
                         <outlet property="btnZoomIn" destination="Fcx-vz-hiX" id="PQH-Ow-sDf"/>
                         <outlet property="btnZoomOut" destination="541-1L-e0K" id="B2n-ze-TgC"/>
                         <outlet property="imgParticipante" destination="QKP-FY-c5c" id="0AG-bt-TuZ"/>
+                        <outlet property="imgTipoParticipange" destination="sDl-cf-fZn" id="GfU-y9-57w"/>
                         <outlet property="imgVerGrupos" destination="dV4-Ea-l5Q" id="EBg-rK-ude"/>
                         <outlet property="lblDestino" destination="ou7-mz-kOF" id="LKE-A6-uMm"/>
                         <outlet property="lblNomeParticipante" destination="8dQ-Fc-9Jg" id="gdK-Fm-U92"/>
@@ -1775,6 +1790,7 @@
                         <outlet property="btnEnviar" destination="txe-8f-huW" id="yPg-AO-ru3"/>
                         <outlet property="edtEmail" destination="itt-8X-u8M" id="3gM-Qe-f6H"/>
                         <outlet property="scrollView" destination="9Vk-qy-hpz" id="OtU-6r-FAO"/>
+                        <segue destination="YJ6-rc-IBD" kind="push" identifier="sgCadastroParticipanteRecSenha" id="xFH-uk-6gB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRw-2B-WCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1803,7 +1819,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ivete Sangalo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J3X-yt-jzH">
-                                        <rect key="frame" x="79" y="13" width="207" height="21"/>
+                                        <rect key="frame" x="79" y="26" width="207" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1813,13 +1829,6 @@
                                         <rect key="frame" x="6" y="7" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16y-jW-Gwl">
-                                        <rect key="frame" x="79" y="42" width="167" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mpA-GY-a5e">
                                         <rect key="frame" x="284" y="23" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1892,7 +1901,6 @@
                         <outlet property="imgIcoIndicacao" destination="B89-2H-wUc" id="ruA-9Z-pgC"/>
                         <outlet property="imgMotorista" destination="PE6-ho-qlb" id="avo-D7-u0Y"/>
                         <outlet property="lblNomeMotorista" destination="J3X-yt-jzH" id="cm2-0C-lFO"/>
-                        <outlet property="lblTipo" destination="16y-jW-Gwl" id="66Q-mz-RXY"/>
                         <outlet property="tabela" destination="z85-Rt-WQ5" id="90b-Jr-sa9"/>
                     </connections>
                 </viewController>
@@ -2460,7 +2468,7 @@
                                 <rect key="frame" x="172" y="446" width="128" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <state key="normal" title="ENVIAR CADASTRO" backgroundImage="btn_salvar_5.png">
+                                <state key="normal" title="ENVIAR CONVITE" backgroundImage="btn_salvar_5.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2557,21 +2565,21 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ative os grupos em que você quiser receber aviso quando um participante entrar como Motorista" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rsi-cM-tt2">
-                                <rect key="frame" x="6" y="71" width="288" height="37"/>
+                                <rect key="frame" x="6" y="71" width="288" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grupos:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="woW-db-ttf">
-                                <rect key="frame" x="6" y="112" width="62" height="21"/>
+                                <rect key="frame" x="6" y="130" width="129" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mqh-Wa-0qD">
-                                <rect key="frame" x="6" y="141" width="308" height="285"/>
+                                <rect key="frame" x="6" y="153" width="308" height="285"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3059,6 +3067,7 @@
         <image name="btn_cancelar_5.png" width="254" height="94"/>
         <image name="btn_entrar_5.png" width="224" height="93"/>
         <image name="btn_salvar_5.png" width="325" height="94"/>
+        <image name="ico-ajuda_4.png" width="29" height="29"/>
         <image name="ico-btn-vergrupos_5.png" width="52" height="52"/>
         <image name="ico-btnverde-iniciosistema_4.png" width="314" height="84"/>
         <image name="ico-btnvermelho-iniciosistema_4.png" width="314" height="84"/>
@@ -3097,7 +3106,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ana-VI-vKH"/>
-        <segue reference="jhD-LT-MKG"/>
+        <segue reference="7BG-nb-foW"/>
         <segue reference="w3Y-Df-HuJ"/>
+        <segue reference="xFH-uk-6gB"/>
     </inferredMetricsTieBreakers>
 </document>

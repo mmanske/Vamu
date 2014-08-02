@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIView *viewVerGrupos;
 @property (strong, nonatomic) IBOutlet UILabel *lblVerGrupos;
 @property (strong, nonatomic) IBOutlet UIImageView *imgVerGrupos;
+@property (weak, nonatomic) IBOutlet UIImageView *imgTipoParticipange;
 @property (strong, nonatomic) IBOutlet UIButton *btnVerGrupos;
 @property (strong, nonatomic) NSString *nomeDestino;
 

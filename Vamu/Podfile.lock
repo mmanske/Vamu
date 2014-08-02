@@ -1,0 +1,18 @@
+PODS:
+  - RBBAnimation (0.3.0)
+  - SDCAlertView (1.4):
+    - RBBAnimation (~> 0.3)
+    - SDCAutoLayout (~> 2.0)
+  - SDCAutoLayout (2.0)
+
+DEPENDENCIES:
+  - RBBAnimation (~> 0.3)
+  - SDCAlertView
+  - SDCAutoLayout (~> 2.0)
+
+SPEC CHECKSUMS:
+  RBBAnimation: 243d73be1a526f1b51d266b182e4aa0cfe9cbf64
+  SDCAlertView: 9d75ea96555ff4b68e09e856b913d0549e3ba8d3
+  SDCAutoLayout: 6acad78fe6a09278a064ac71609e8f484a7249fc
+
+COCOAPODS: 0.33.1

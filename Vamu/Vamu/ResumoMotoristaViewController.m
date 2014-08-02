@@ -128,7 +128,7 @@
         part.horaFim = horaFim;
         part.kmViagem = km;
         
-        [imagemService baixarImagemDePessoa:part.cpf];
+        //[imagemService baixarImagemDePessoa:part.cpf];
         
         [caronas addObject:part];
     }

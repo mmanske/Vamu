@@ -9,12 +9,16 @@
 #import "RecuperarSenhaViewController.h"
 #import "CSNotificationView.h"
 #import "CustomActivityView.h"
+#import "MascaraHelper.h"
+#import "Validations.h"
+#import "AppHelper.h"
+#import "CadastroParticipanteViewController.h"
 
 @interface RecuperarSenhaViewController ()
 
 @property (nonatomic, strong) RecuperarSenhaService *recuperarSenhaService;
 @property (nonatomic, strong) CustomActivityView *ampulheta;
-
+@property (strong, nonatomic) MascaraHelper *mascaraHelper;
 @end
 
 @implementation RecuperarSenhaViewController
@@ -23,7 +27,7 @@
 @synthesize edtEmail;
 @synthesize btnEnviar;
 @synthesize scrollView;
-@synthesize recuperarSenhaService;
+@synthesize recuperarSenhaService, mascaraHelper;
 
 - (void)viewDidLoad
 {
@@ -35,7 +39,10 @@
     recuperarSenhaService.delegate = self;
     
     ampulheta = [CustomActivityView new];
-    
+    mascaraHelper = [MascaraHelper new];
+
+    [[SDCAlertView appearance] setButtonTextColor:[UIColor greenColor]];
+    [[SDCAlertView appearance] setMessageLabelTextColor:[UIColor blackColor]];
 }
 
 -(void) viewDidAppear:(BOOL)animated{
@@ -57,6 +64,8 @@
 }
 
 - (IBAction)btnEnviarClick:(id)sender {
+    
+    
     if (edtEmail.text.length <= 0) {
         [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Informe o CPF"];
         return;
@@ -67,6 +76,13 @@
         CGPoint ponto = CGPointMake(0, 0);
         [scrollView setContentOffset:ponto animated:YES];
     }
+
+    if (![Validations validateCPFWithNSString: [AppHelper limparCPF:edtEmail.text]]) {
+        [[[SDCAlertView alloc] initWithTitle:nil message:@"CPF inválido." delegate:self cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
+        return;
+
+    }
+    
     
     [ampulheta exibir];
     [recuperarSenhaService recuperarSenha:edtEmail.text];
@@ -87,22 +103,47 @@
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == edtEmail) {
+        return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_CPF];
+    }
+    return YES;
+}
+
+
 #pragma mark - RecuperarSenhaServiceDelegate
 
 -(void)recuperarSenhaOk{
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Senha enviada com sucesso." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[SDCAlertView alloc] initWithTitle:nil message:@"Senha enviada com sucesso." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)recuperarSenhaFalhaAoEnviar{
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Erro ao recuperar senha." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[SDCAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"Erro ao recuperar senha." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 -(void)recuperarSenhaCPFNaoCadastrado{
+    
     [ampulheta esconder];
-    [[[UIAlertView alloc] initWithTitle:@"Recuperação de senha" message:@"CPF inválido." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    
+    
+    [[[SDCAlertView alloc] initWithTitle:@"Participante não cadastrado" message:@"Deseja se cadastrar ?" delegate:self cancelButtonTitle:@"Fechar" otherButtonTitles: @"Cadastrar", nil] show];
 }
+-(void)alertView:(SDCAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        [self performSegueWithIdentifier:@"sgCadastroParticipanteRecSenha" sender:self];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [edtEmail resignFirstResponder];
+    CadastroParticipanteViewController *view = segue.destinationViewController;
+    [view setCpf:edtEmail.text];
+    
+}
+
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;

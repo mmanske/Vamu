@@ -67,7 +67,7 @@
 @synthesize caronas;
 @synthesize consultarPartService;
 @synthesize baixarImagemService;
-@synthesize motoristaSolicitado;
+@synthesize motoristaSolicitado, imgTipoParticipange;
 @synthesize lblDestino, lblOrigem, lblNomeParticipante, imgParticipante;
 
 - (void)viewDidLoad
@@ -107,10 +107,21 @@
     imgParticipante.layer.borderColor = [UIColor whiteColor].CGColor;
     imgParticipante.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
+    
+    
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [AppHelper getParticipanteLogado].cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
     
     imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
+
+    if ([[AppHelper getParticipanteLogado].motorista boolValue]) {
+        imgTipoParticipange.image = [UIImage imageNamed:@"ico-indica-motorista_4.png"];
+    } else {
+        imgTipoParticipange.image = [UIImage imageNamed:@"ico-indica-carona_4.png"];
+    }
+
+
+    
     
     self.title = @"Mapa";
     

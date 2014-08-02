@@ -26,7 +26,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *tabela;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMotorista;
 @property (weak, nonatomic) IBOutlet UILabel *lblNomeMotorista;
-@property (strong, nonatomic) IBOutlet UILabel *lblTipo;
 @property (strong, nonatomic) Participante *participanteLogado;
 @property (strong, nonatomic) IBOutlet UIImageView *imgIcoIndicacao;
 @property BOOL carona;

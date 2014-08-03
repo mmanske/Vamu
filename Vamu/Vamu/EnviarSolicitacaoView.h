@@ -13,11 +13,15 @@
 @protocol EnviarSolicitacaoViewDelegate <NSObject>
 
 -(void) enviarSolicitacao:(SolicitacaoCarona*) solicitacao;
+-(void) solicitouCarona:(NSString*) cod;
 
 @end
 
-@interface EnviarSolicitacaoView : UIView
+@interface EnviarSolicitacaoView : UIView{
+    id <EnviarSolicitacaoViewDelegate> delegate;
+}
 
+@property (strong, nonatomic) NSString *codigo;
 @property (strong, nonatomic) MotoristaAtivo *motorista;
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblCarro;
@@ -25,8 +29,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgMotorista;
 @property (strong, nonatomic) IBOutlet UIButton *btnCancelar;
 @property (strong, nonatomic) IBOutlet UIButton *btnVamu;
+@property (nonatomic) id delegate;
 
--(void) iniciar;
+- (void)iniciar;
 - (IBAction)btnVamuClick:(id)sender;
 - (IBAction)btnCancelarClick:(id)sender;
 

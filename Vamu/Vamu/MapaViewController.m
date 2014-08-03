@@ -23,6 +23,7 @@
 #import "CaronaDesembarcou.h"
 #import "MotoristaDesembarcouCarona.h"
 #import "FinalizacaoViagem.h"
+#import "CustomAnnotation.h"
 
 
 @interface MapaViewController ()
@@ -42,6 +43,7 @@
 @property (nonatomic, strong) ConsultarParticipanteService *consultarPartService;
 @property (nonatomic, strong) BaixarImagemService *baixarImagemService;
 @property (nonatomic, strong) Participante *motoristaSolicitado;
+@property (nonatomic, strong) DesembarqueCaronaView *desembarqueCaronaView;
 
 @end
 
@@ -69,6 +71,7 @@
 @synthesize baixarImagemService;
 @synthesize motoristaSolicitado, imgTipoParticipange;
 @synthesize lblDestino, lblOrigem, lblNomeParticipante, imgParticipante;
+@synthesize desembarqueCaronaView;
 
 - (void)viewDidLoad
 {
@@ -107,8 +110,6 @@
     imgParticipante.layer.borderColor = [UIColor whiteColor].CGColor;
     imgParticipante.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
-    
-    
     NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [AppHelper getParticipanteLogado].cpf];
     NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
     
@@ -119,9 +120,6 @@
     } else {
         imgTipoParticipange.image = [UIImage imageNamed:@"ico-indica-carona_4.png"];
     }
-
-
-    
     
     self.title = @"Mapa";
     
@@ -175,6 +173,14 @@
     
     baixarImagemService = [BaixarImagemService new];
     baixarImagemService.delegate = self;
+    
+    desembarqueCaronaView = [[DesembarqueCaronaView alloc] iniciar];
+    desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height - 100);
+    desembarqueCaronaView.delegate = self;
+    desembarqueCaronaView.lblKM.text = [NSString stringWithFormat:@"0 Km"];
+    [self.view addSubview:desembarqueCaronaView];
+    
+    [desembarqueCaronaView setHidden:YES];
     
 }
 
@@ -277,6 +283,21 @@
     } else {
         config = [Configuracao new];
     }
+    
+    CLLocation *ult = [[CLLocation alloc] initWithLatitude:config.ultLatitude longitude:config.ultLongitude];
+    
+    CLLocation *atu = [[CLLocation alloc] initWithLatitude:userLocation.coordinate.latitude longitude:userLocation.coordinate.longitude];
+    
+    CLLocationDistance distance = [ult distanceFromLocation:atu];
+    
+    NSNumber *distanciaPercorrida = [AppHelper getDistaciaPercorrida];
+    
+    float distanciaTotal = [distanciaPercorrida floatValue] + distance;
+    
+    [AppHelper setDistanciaPercorrida:[NSNumber numberWithFloat:distanciaTotal]];
+    
+    desembarqueCaronaView.lblKM.text = [NSString stringWithFormat:@"%.2f Km", distanciaTotal/1000];
+    
     config.ultLatitude  = userLocation.coordinate.latitude;
     config.ultLongitude = userLocation.coordinate.longitude;
     
@@ -306,22 +327,24 @@
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    
     if ([annotation isKindOfClass:[MotoristaPin class]]) {
         NSString *identifier = [NSString stringWithFormat:@"%@", ((MotoristaPin*) annotation).motoristaAtivo.codPessoa];
         
         MKAnnotationView *pinView = (MKAnnotationView*)[mapa dequeueReusableAnnotationViewWithIdentifier:identifier];
-        
+    
         if (!pinView) {
+            
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            pinView.canShowCallout = YES;
+            pinView.canShowCallout = NO;
             pinView.image = ((MotoristaPin*) annotation).imagem;
             pinView.draggable = YES;
-            
-            PedirCaronaButton *btnPedirCarona = [PedirCaronaButton buttonWithType:UIButtonTypeInfoLight];
-            [btnPedirCarona addTarget:self action:@selector(pedirCarona:) forControlEvents:UIControlEventTouchUpInside];
-            btnPedirCarona.motoristaAtivo = ((MotoristaPin*) annotation).motoristaAtivo;
-            
-            pinView.rightCalloutAccessoryView = btnPedirCarona;
+
+//            PedirCaronaButton *btnPedirCarona = [PedirCaronaButton buttonWithType:UIButtonTypeInfoLight];
+//            [btnPedirCarona addTarget:self action:@selector(pedirCarona:) forControlEvents:UIControlEventTouchUpInside];
+//            btnPedirCarona.motoristaAtivo = ((MotoristaPin*) annotation).motoristaAtivo;
+//            
+//            pinView.rightCalloutAccessoryView = btnPedirCarona;
 
         } else {
             pinView.annotation = annotation;
@@ -353,7 +376,29 @@
 }
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+    if([view.annotation isKindOfClass:[MotoristaPin class]]) {
+        
+        EnviarSolicitacaoView *calloutView = (EnviarSolicitacaoView *)[[[NSBundle mainBundle] loadNibNamed:@"EnviarSolicitacaoView" owner:self options:nil] objectAtIndex:0];
+        calloutView.delegate = self;
+        
+        CGRect calloutViewFrame = calloutView.frame;
+        calloutViewFrame.origin = CGPointMake(-calloutViewFrame.size.width/2 + 15, -calloutViewFrame.size.height);
+        calloutView.frame = calloutViewFrame;
+        calloutView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+        
+        MotoristaAtivo *motorista = [(MotoristaPin*)[view annotation] motoristaAtivo];
+        [calloutView setMotorista: motorista];
+        [calloutView setCodigo:[NSString stringWithFormat:@"%@", motorista.codPessoa]];
+        [calloutView iniciar];
+        
+        [self.view addSubview:calloutView];
+    }
+}
 
+-(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view{
+    for (UIView *subview in view.subviews ){
+        [subview removeFromSuperview];
+    }
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -437,6 +482,7 @@
         
         
         if (participanteLogado && [participanteLogado.motorista boolValue]) {
+            [AppHelper setDistanciaPercorrida:nil];
             [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
         }
     }
@@ -451,6 +497,12 @@
         [pinsMapa addObject:pin];
     }
     [mapa addAnnotations:pinsMapa];
+}
+
+#pragma mark - EnviarSolicitacaoViewDelegate
+
+-(void)solicitouCarona:(NSString *)cod{
+    [caronaService solicitarCarona:cod destino:[AppHelper getNomeDestino]];
 }
 
 #pragma mark - Vamu
@@ -540,21 +592,20 @@
 #pragma mark - DesembarqueCaronaViewDelegate
 
 -(void)desembarquei{
+    [AppHelper setDistanciaPercorrida:nil];
     [ampulheta esconder];
     [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
 }
 
 -(void)desembarqueConcluido{
+    [AppHelper setDistanciaPercorrida:nil];
     [ampulheta esconder];
 }
 
 -(void) embarqueConcluido{
     //Confirmou o embarque - Ações para carona
     
-    DesembarqueCaronaView *desembarqueCaronaView = [[DesembarqueCaronaView alloc] iniciar];
-    desembarqueCaronaView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height - 100);
-    desembarqueCaronaView.delegate = self;
-    [self.view addSubview:desembarqueCaronaView];
+    [desembarqueCaronaView setHidden:NO];
     [viewVerGrupos removeFromSuperview];
 }
 

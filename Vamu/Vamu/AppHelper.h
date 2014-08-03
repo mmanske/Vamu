@@ -26,6 +26,9 @@
 +(Participante*)getParticipanteLogado;
 +(void)setParticipanteLogado:(Participante*) participanteLogado;
 
++(NSNumber*) getDistaciaPercorrida;
++(void) setDistanciaPercorrida:(NSNumber*) distancia;
+
 +(NSMutableArray*) getMotoristas;
 +(void) setMotoristas:(NSMutableArray*) motoristas;
 

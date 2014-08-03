@@ -2,7 +2,7 @@
 //  MotoristaAtivo.m
 //  Vamu
 //
-//  Created by Guilherme Augusto on 07/06/14.
+//  Created by MF INFORMATICA LTDA on 03/08/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -13,12 +13,17 @@
 
 @implementation MotoristaAtivo
 
-@dynamic descViagem;
-@dynamic codViagem;
 @dynamic codPessoa;
+@dynamic codViagem;
+@dynamic descViagem;
 @dynamic latitude;
 @dynamic longitude;
-@dynamic veiculo;
+@dynamic cpf;
+@dynamic quantViagens;
+@dynamic distMetros;
+@dynamic distSegundos;
+@dynamic nomeMotorista;
 @dynamic rota;
+@dynamic veiculo;
 
 @end

@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vamu/MapaViewController.m"
-            timestampString = "427766937.335655"
+            timestampString = "428797613.950513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "566"
-            endingLineNumber = "566"
-            landmarkName = "-embarcou:"
-            landmarkType = "5">
+            startingLineNumber = "617"
+            endingLineNumber = "617"
+            landmarkName = "@implementation MapaViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

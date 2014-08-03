@@ -19,7 +19,7 @@
 #import "CaronaSolicitacaoNegada.h"
 #import "CaronaConfirmarEmbarqueView.h"
 
-@interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate, SolicitacaoAceitaViewDelegate, CaronaNegadaDelegate, ConfirmarEmbarqueDelegate>
+@interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate, SolicitacaoAceitaViewDelegate, CaronaNegadaDelegate, ConfirmarEmbarqueDelegate, EnviarSolicitacaoViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblOrigem;

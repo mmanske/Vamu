@@ -312,8 +312,9 @@
 
     free(routeCoordinates);
     
-    [AppHelper setNomeDestino:edtDestino.text];
+    [AppHelper setNomeDestino:[NSMutableString stringWithString:edtDestino.text]];
     
+//    [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
     
     if ([[AppHelper getParticipanteLogado].motorista isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];

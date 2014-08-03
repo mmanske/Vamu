@@ -1,1 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?><Workspace version='1.0'><FileRef location='group:Vamu.xcodeproj'/><FileRef location='group:Pods/Pods.xcodeproj'/></Workspace>
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:PrimeiroPonto.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:QuartoPonto.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:QuintoPonto.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:SegundoPonto.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:TerceiroPonto.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:Vamu.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

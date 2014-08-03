@@ -89,28 +89,34 @@
         NSDictionary *dicMotoristas = [dicMotoristaGrupo objectForKey:@"motoristas"];
         for (NSDictionary *dicMotorista in dicMotoristas) {
             MotoristaAtivo *motorista = [MotoristaAtivo new];
-            motorista.descViagem = [dicMotorista objectForKey:@"descViagem"];
-            motorista.codViagem  = [dicMotorista objectForKey:@"codViagem"];
-            motorista.codPessoa  = [dicMotorista objectForKey:@"codigoPessoa"];
-            motorista.longitude  = [dicMotorista objectForKey:@"longitude"];
-            motorista.latitude   = [dicMotorista objectForKey:@"latitude"];
+            motorista.descViagem   = [dicMotorista objectForKey:@"descViagem"];
+            motorista.codViagem    = [dicMotorista objectForKey:@"codViagem"];
+            motorista.codPessoa    = [dicMotorista objectForKey:@"codigoPessoa"];
+            motorista.longitude    = [dicMotorista objectForKey:@"longitude"];
+            motorista.latitude     = [dicMotorista objectForKey:@"latitude"];
+            motorista.cpf          = [dicMotorista objectForKey:@"cpf"];
+            motorista.quantViagens = [dicMotorista objectForKey:@"qtdViagensMotorista"];
+            motorista.distMetros   = [dicMotorista objectForKey:@"distanciaParaCaronaMetros"];
+            motorista.distSegundos = [dicMotorista objectForKey:@"distanciaParaCaronaSegundos"];
+            motorista.nomeMotorista = [dicMotorista objectForKey:@"nome"];
             
-            NSDictionary *dicVeiculos = [dicMotorista objectForKey:@"veiculos"];
-            for (NSDictionary *dicVeiculo in dicVeiculos) {
-                Veiculo *veiculo = [Veiculo new];
-                
-                NSString *modelo = [dicVeiculo objectForKey:@"modelo"];
-                NSString *ano    = [NSString stringWithFormat:@"%@", [dicVeiculo objectForKey:@"ano"]];
-                NSString *placa  = [dicVeiculo objectForKey:@"placa"];
-                NSString *marca  = [dicVeiculo objectForKey:@"marca"];
-                
-                veiculo.ano = ano;
-                veiculo.modelo = modelo;
-                veiculo.placa = placa;
-                veiculo.marca = marca;
-                
-                motorista.veiculo = veiculo;
-            }
+            NSDictionary *dicVeiculos = [dicMotorista objectForKey:@"veiculo"];
+            
+            Veiculo *veiculo = [Veiculo new];
+            
+            NSString *modelo = [dicVeiculos objectForKey:@"modelo"];
+            NSString *ano    = [NSString stringWithFormat:@"%@", [dicVeiculos objectForKey:@"ano"]];
+            NSString *placa  = [dicVeiculos objectForKey:@"placa"];
+            NSString *marca  = [dicVeiculos objectForKey:@"marca"];
+            NSString *cor    = [dicVeiculos objectForKey:@"cor"];
+            
+            veiculo.ano = ano;
+            veiculo.modelo = modelo;
+            veiculo.placa = placa;
+            veiculo.marca = marca;
+            veiculo.cor = cor;
+            
+            motorista.veiculo = veiculo;
             
             Rota *rota = [Rota new];
             rota.descricao = motorista.descViagem;
@@ -134,28 +140,34 @@
     
     for (NSDictionary *dicMotorista in dicMotoristas) {
         MotoristaAtivo *motorista = [MotoristaAtivo new];
-        motorista.descViagem = [dicMotorista objectForKey:@"descViagem"];
-        motorista.codViagem  = [dicMotorista objectForKey:@"codViagem"];
-        motorista.codPessoa  = [dicMotorista objectForKey:@"codigoPessoa"];
-        motorista.longitude  = [dicMotorista objectForKey:@"longitude"];
-        motorista.latitude   = [dicMotorista objectForKey:@"latitude"];
+        motorista.descViagem   = [dicMotorista objectForKey:@"descViagem"];
+        motorista.codViagem    = [dicMotorista objectForKey:@"codViagem"];
+        motorista.codPessoa    = [dicMotorista objectForKey:@"codigoPessoa"];
+        motorista.longitude    = [dicMotorista objectForKey:@"longitude"];
+        motorista.latitude     = [dicMotorista objectForKey:@"latitude"];
+        motorista.cpf          = [dicMotorista objectForKey:@"cpf"];
+        motorista.quantViagens = [dicMotorista objectForKey:@"qtdViagensMotorista"];
+        motorista.distMetros   = [dicMotorista objectForKey:@"distanciaParaCaronaMetros"];
+        motorista.distSegundos = [dicMotorista objectForKey:@"distanciaParaCaronaSegundos"];
+        motorista.nomeMotorista = [dicMotorista objectForKey:@"nome"];
         
-        NSDictionary *dicVeiculos = [dicMotorista objectForKey:@"veiculos"];
-        for (NSDictionary *dicVeiculo in dicVeiculos) {
-            Veiculo *veiculo = [Veiculo new];
-            
-            NSString *modelo = [dicVeiculo objectForKey:@"modelo"];
-            NSString *ano    = [NSString stringWithFormat:@"%@", [dicVeiculo objectForKey:@"ano"]];
-            NSString *placa  = [dicVeiculo objectForKey:@"placa"];
-            NSString *marca  = [dicVeiculo objectForKey:@"marca"];
-            
-            veiculo.ano = ano;
-            veiculo.modelo = modelo;
-            veiculo.placa = placa;
-            veiculo.marca = marca;
-            
-            motorista.veiculo = veiculo;
-        }
+        NSDictionary *dicVeiculos = [dicMotorista objectForKey:@"veiculo"];
+
+        Veiculo *veiculo = [Veiculo new];
+        
+        NSString *modelo = [dicVeiculos objectForKey:@"modelo"];
+        NSString *ano    = [NSString stringWithFormat:@"%@", [dicVeiculos objectForKey:@"ano"]];
+        NSString *placa  = [dicVeiculos objectForKey:@"placa"];
+        NSString *marca  = [dicVeiculos objectForKey:@"marca"];
+        NSString *cor    = [dicVeiculos objectForKey:@"cor"];
+        
+        veiculo.ano = ano;
+        veiculo.modelo = modelo;
+        veiculo.placa = placa;
+        veiculo.marca = marca;
+        veiculo.cor = cor;
+        
+        motorista.veiculo = veiculo;
         
         Rota *rota = [Rota new];
         rota.descricao = motorista.descViagem;

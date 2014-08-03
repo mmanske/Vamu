@@ -148,9 +148,9 @@
     
     imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
     
-    lblEmissaoViagem.text = [NSString stringWithFormat:@"Você 'desconsumiu' %.2f km nessa viagem", [[dicResumo objectForKey:@"co2Viagem"] floatValue]];
+    lblEmissaoViagem.text = [NSString stringWithFormat:@"e deixou de emitir %.2f ton. de CO2", [[dicResumo objectForKey:@"co2Viagem"] floatValue]];
     
-    lblDesconsumoViagem.text = [NSString stringWithFormat:@"e deixou de emitir %.2f ton. de CO2", [[dicResumo objectForKey:@"kmViagem"] floatValue]];
+    lblDesconsumoViagem.text = [NSString stringWithFormat:@"Você 'desconsumiu' %.2f km nessa viagem", [[dicResumo objectForKey:@"kmViagem"] floatValue]];
     
     lblEmissaoParticipante.text = [NSString stringWithFormat:@"Você deixou de emitir: %.2f ton. de CO2", [[dicResumo objectForKey:@"co2Usuario"] floatValue]];
     

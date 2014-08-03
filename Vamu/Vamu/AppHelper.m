@@ -42,6 +42,16 @@ static NSString * const DeviceTokenKey = @"DeviceToken";
 	return plist;
 }
 
++(NSNumber *)getDistaciaPercorrida{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    return [delegate distanciaPercorrida];
+}
+
++(void)setDistanciaPercorrida:(NSNumber *)distancia{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setDistanciaPercorrida:distancia];
+}
+
 + (NSDictionary *)getSettingsPlist {
 	return [self getPlistWithName:@"Settings"];
 }

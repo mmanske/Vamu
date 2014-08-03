@@ -148,17 +148,17 @@
     
     imgParticipante.image = [UIImage imageWithContentsOfFile:imageFileName];
     
-    lblEmissaoViagem.text = [NSString stringWithFormat:@"e deixou de emitir %.2f ton. de CO2", [[dicResumo objectForKey:@"co2Viagem"] floatValue]];
+    lblEmissaoViagem.text = [NSString stringWithFormat:@"e deixou de emitir %@ ton. de CO2", [dicResumo objectForKey:@"co2Viagem"]];
     
-    lblDesconsumoViagem.text = [NSString stringWithFormat:@"Você 'desconsumiu' %.2f km nessa viagem", [[dicResumo objectForKey:@"kmViagem"] floatValue]];
+    lblDesconsumoViagem.text = [NSString stringWithFormat:@"Você 'desconsumiu' %@ km nessa viagem", [dicResumo objectForKey:@"kmViagem"]];
     
-    lblEmissaoParticipante.text = [NSString stringWithFormat:@"Você deixou de emitir: %.2f ton. de CO2", [[dicResumo objectForKey:@"co2Usuario"] floatValue]];
+    lblEmissaoParticipante.text = [NSString stringWithFormat:@"Você deixou de emitir: %@ ton. de CO2", [dicResumo objectForKey:@"co2Usuario"]];
     
-    lblDesconsumoParticipante.text = [NSString stringWithFormat:@"Seu 'desconsumo' total: %.2f km", [[dicResumo objectForKey:@"kmUsuario"] floatValue]];
+    lblDesconsumoParticipante.text = [NSString stringWithFormat:@"Seu 'desconsumo' total: %@ km", [dicResumo objectForKey:@"kmUsuario"]];
     
-    lblEmissaoVamu.text = [NSString stringWithFormat:@"Deixamos de emitir: %.2f ton. de CO2", [[dicResumo objectForKey:@"co2Vamu"] floatValue]];
+    lblEmissaoVamu.text = [NSString stringWithFormat:@"Deixamos de emitir: %@ ton. de CO2", [dicResumo objectForKey:@"co2Vamu"]];
     
-    lblDesconsumoVamu.text = [NSString stringWithFormat:@"'Desconsumo' TOTAL do Vamu: %.2f km", [[dicResumo objectForKey:@"kmVamu"] floatValue]];
+    lblDesconsumoVamu.text = [NSString stringWithFormat:@"'Desconsumo' TOTAL do Vamu: %@ km", [dicResumo objectForKey:@"kmVamu"]];
     
     for (Veiculo *veiculo in [AppHelper getParticipanteLogado].carro) {
         lblCarro.text = [NSString stringWithFormat:@"%@ - %@", veiculo.modelo, veiculo.cor];

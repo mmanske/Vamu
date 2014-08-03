@@ -113,6 +113,9 @@
     
     NSDictionary *dicCaronas = [dicResumo objectForKey:@"resumoCaronas"];
     
+    NSLog(@"%@", dicResumo);
+    NSLog(@"%@", dicCaronas);
+    
     for (NSDictionary *dicCarona in dicCaronas) {
         ParticipanteResumoVO *part = [ParticipanteResumoVO new];
         

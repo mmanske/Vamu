@@ -7,6 +7,7 @@
 //
 
 #import "RecuperarSenhaService.h"
+#import "AppHelper.h"
 
 @implementation RecuperarSenhaService
 
@@ -15,8 +16,8 @@
     if (strURL == nil) {
         return;
     }
-    
-    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, cpf];
+    NSString *cpfSemMascara = [AppHelper limparCPF:cpf];
+    NSString *url = [NSString stringWithFormat:@"%@/%@", strURL, cpfSemMascara];
     
     [self consultarUrl:url timeOut:30];
 }

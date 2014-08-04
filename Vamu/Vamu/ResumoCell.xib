@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -60,7 +60,7 @@
                 <outlet property="imgCarona" destination="bTo-si-yay" id="pym-aP-JSA"/>
                 <outlet property="lblDistanciaPercorrida" destination="ZGV-n3-1AT" id="L5v-v4-hMP"/>
                 <outlet property="lblHoraViagem" destination="Cdd-Mu-9Sl" id="EyP-eD-HhV"/>
-                <outlet property="lblNomeCarona" destination="Cdd-Mu-9Sl" id="OTN-Jk-6Fc"/>
+                <outlet property="lblNomeCarona" destination="5DW-lJ-1G2" id="gEs-sZ-pjC"/>
             </connections>
         </tableViewCell>
     </objects>

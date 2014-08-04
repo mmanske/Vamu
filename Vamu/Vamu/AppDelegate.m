@@ -32,7 +32,7 @@
     self.desembarqueCarona = nil;
     self.desembarqueMotorista = nil;
     self.finalizacaoViagem = nil;
-    self.numeroVersao = @"v0.8";
+    self.numeroVersao = @"v0.9";
     self.nomeOrigem = nil;
     self.distanciaPercorrida = nil;
     

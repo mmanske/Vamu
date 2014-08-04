@@ -98,19 +98,15 @@
             
             
             if (veiculo.seguradora) {
-                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.seguradora];
+                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.seg.codSeguradora];
                 NSArray *segs = [Seguradora getWithPredicate:filtro];
                 if ([segs count] > 0) {
                     Seguradora *seg = [segs objectAtIndex:0];
                     edtSegurador.text = seg.descricao;
                 }
                 
-
-                
             }
 
-            
-            
             NSString *fileName = [NSString stringWithFormat:@"%@-%@.jpg", veiculo.participante.cpf,veiculo.placa];
             NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];
             imgCarro.image = [UIImage imageWithContentsOfFile:imageFileName];

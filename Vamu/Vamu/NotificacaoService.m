@@ -133,8 +133,9 @@
             
             [grupoAtivo addMotoristasAtivosObject:motorista];
             
-            [retornoGrupos addObject:grupoAtivo];
         }
+        
+        [retornoGrupos addObject:grupoAtivo];
         
     }
     
@@ -256,6 +257,8 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(notificacaoesRecebidas:grupos:motoristas:)]) {
         [self.delegate notificacaoesRecebidas:retorno grupos:retornoGrupos motoristas:retornoMotoristas];
     }
+    
+    NSLog(@"%@", retornoGrupos);
 }
 
 @end

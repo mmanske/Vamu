@@ -50,10 +50,26 @@
     
     GrupoAtivo *grupoAtivo = [grupos objectAtIndex:indexPath.row];
     
+    MotoristaAtivo *motorista = [self getMotorista:grupoAtivo];
+    
     grupoCell.lblNomeGrupo.text = grupoAtivo.grupo.nome;
     grupoCell.lblQuantidade.text = [NSString stringWithFormat:@"%lu", (unsigned long)[grupoAtivo.motoristasAtivos count]];
+    grupoCell.lblDistancia.text = [NSString stringWithFormat:@"%.2f Km, %.2f min", [motorista.distMetros floatValue] / 1000, [motorista.distSegundos floatValue] / 60];
     
     return grupoCell;
+}
+
+-(MotoristaAtivo*) getMotorista:(GrupoAtivo*) grupo{
+    float distancia = 0;
+    MotoristaAtivo *motoristaRetorno = [MotoristaAtivo new];
+    for (MotoristaAtivo *motorista in grupo.motoristasAtivos) {
+        if (distancia == 0) distancia = [motorista.distMetros floatValue];
+        if ([motorista.distMetros floatValue] < distancia) {
+            motoristaRetorno = [motorista copy];
+            distancia = [motorista.distMetros floatValue];
+        }
+    }
+    return motoristaRetorno;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -67,8 +83,6 @@
         [self atualizarGrupos];
     }
 }
-
-
 
 -(void) atualizarGrupos{
     grupos = [AppHelper getGrupos];

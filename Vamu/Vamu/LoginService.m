@@ -215,13 +215,10 @@
     participanteLogado.viajensMotorista = vjMotori;
     participanteLogado.viajensCarona = vjCarona;
     
-
-    
     BOOL isAtivo = NO;
     
     NSDictionary *dicCarros = [dic objectForKey:@"veiculos"];
     for (NSDictionary *dicCarro in dicCarros) {
-        
         
         NSNumber *ano     = [dicCarro objectForKey:@"ano"];
         NSString *cor     = [dicCarro objectForKey:@"cor"];

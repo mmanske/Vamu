@@ -2772,7 +2772,7 @@
                                 <rect key="frame" x="172" y="712" width="128" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Salvar" backgroundImage="btn_salvar_5.png">
+                                <state key="normal" title="SALVAR" backgroundImage="btn_salvar_5.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2784,7 +2784,7 @@
                                 <rect key="frame" x="20" y="712" width="128" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Cancelar" backgroundImage="btn_cancelar_5.png">
+                                <state key="normal" title="CANCELAR" backgroundImage="btn_cancelar_5.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2938,7 +2938,7 @@
                                 <rect key="frame" x="172" y="336" width="128" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Salvar" backgroundImage="btn_salvar_5.png">
+                                <state key="normal" title="SALVAR" backgroundImage="btn_salvar_5.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2950,7 +2950,7 @@
                                 <rect key="frame" x="20" y="336" width="128" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Cancelar" backgroundImage="btn_cancelar_5.png">
+                                <state key="normal" title="CANCELAR" backgroundImage="btn_cancelar_5.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

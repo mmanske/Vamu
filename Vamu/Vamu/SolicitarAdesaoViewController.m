@@ -124,9 +124,13 @@
 #pragma mark - SolicitarAdesaoCellDelegate
 
 -(void)onSolicitouParticipacao:(Grupo *)grupo{
-    [ampulheta exibir];
     [edtNomeGrupo resignFirstResponder];
-    [grupoService solicitarAdesao:grupo participanteSolicitante:[AppHelper getParticipanteLogado]];
+    if ([grupo.receberSolicitacao isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        [ampulheta exibir];
+        [grupoService solicitarAdesao:grupo participanteSolicitante:[AppHelper getParticipanteLogado]];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Grupo" message:@"Grupo não aceita solicitação de adesão" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
+    }
 }
 
 @end

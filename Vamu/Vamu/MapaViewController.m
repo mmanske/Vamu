@@ -441,6 +441,8 @@
         
         [solicitacaoAceitaView carregarImagemMotorista];
         
+        [notificacaoService confirmacaoLeitura:aceitacao.codNotificacao];
+        
         [self.view addSubview:solicitacaoAceitaView];
         
     }
@@ -454,6 +456,8 @@
         [solicitacaoNegadaView setHidden:NO];
         
         [solicitacaoNegadaView carregarImagemMotorista];
+        
+        [notificacaoService confirmacaoLeitura:negacao.codNotificacao];
         
         [self.view addSubview:solicitacaoNegadaView];
         

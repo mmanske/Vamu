@@ -14,6 +14,8 @@
 
 @implementation LoginService
 
+
+
 -(void)derrubarSessao:(NSString *)cpf{
     NSString *strURL = [self confereURLConexao:@"login/derrubarSecao"];
     if (strURL == nil) {
@@ -45,6 +47,7 @@
 -(void)trataRecebimento{
     [super trataRecebimento];
     NSLog(@"%@", self.dadosRetorno);
+    
 
     NSRange strCpfInexistente = [self.dadosRetorno rangeOfString:@"msg:006"];
     if (strCpfInexistente.length > 0) {

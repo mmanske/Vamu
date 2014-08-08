@@ -9,6 +9,7 @@
 #import "SelecionarTipoViewController.h"
 #import "Veiculo.h"
 #import "AppHelper.h"
+#import "LogoutService.h"
 
 @interface SelecionarTipoViewController (){
     BOOL carona;
@@ -107,6 +108,8 @@
 }
 
 - (IBAction)btnSairClick:(id)sender {
+    LogoutService *service = [LogoutService new];
+    [service logout:participanteLogado.cpf];
     [AppHelper apagarUsuarioLogado];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

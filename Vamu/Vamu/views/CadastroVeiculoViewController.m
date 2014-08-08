@@ -116,7 +116,7 @@
     
     [self placeHolderTextField];
     mascaraHelper = [MascaraHelper new];
-    
+    proprietario = [AppHelper getParticipanteLogado];
 }
 
 -(void) placeHolderTextField{

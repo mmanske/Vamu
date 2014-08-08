@@ -8,6 +8,7 @@
 
 #import "LeftMenuVC.h"
 #import "AppHelper.h"
+#import "LogoutService.h"
 
 @interface LeftMenuVC ()
 
@@ -39,6 +40,9 @@
 
 
 - (IBAction)btnSairClick:(id)sender {
+    LogoutService *service = [LogoutService new];
+    [service logout:participanteLogado.cpf];
+
     [AppHelper apagarUsuarioLogado];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

@@ -8,7 +8,14 @@
 
 #import "BaseService.h"
 
+typedef enum {
+	ResumoCarona = 0,
+	ResumoMotorista = 1
+} TipoResumo;
+
 @interface ResumoViagemService : BaseService
+
+@property (nonatomic) TipoResumo tipoResumo;
 
 -(void)resumoViagemCarona;
 -(void)resumoViagemMotorista;
@@ -18,5 +25,8 @@
 @interface NSObject (ResumoViagemServiceDelegate)
 
 -(void) onRetornouResumo:(NSDictionary*) dicResumo;
+
+-(void) onRetornouResumoCarona:(NSDictionary*) dicResumo;
+-(void) onRetornouREsumoMotorista:(NSDictionary*) dicResumo;
 
 @end

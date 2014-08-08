@@ -25,6 +25,9 @@
 #import "FinalizacaoViagem.h"
 #import "CustomAnnotation.h"
 
+#import "ResumoViagemService.h"
+#import "ResumoMotoristaViewController.h"
+#import "ResumoCaronaViewController.h"
 
 @interface MapaViewController ()
 
@@ -44,6 +47,10 @@
 @property (nonatomic, strong) BaixarImagemService *baixarImagemService;
 @property (nonatomic, strong) Participante *motoristaSolicitado;
 @property (nonatomic, strong) DesembarqueCaronaView *desembarqueCaronaView;
+@property (strong, nonatomic) ResumoViagemService *resumoService;
+
+@property (strong, nonatomic) NSDictionary *dicResumoCarona;
+@property (strong, nonatomic) NSDictionary *dicResumoMotorista;
 
 @end
 
@@ -72,6 +79,9 @@
 @synthesize motoristaSolicitado, imgTipoParticipange;
 @synthesize lblDestino, lblOrigem, lblNomeParticipante, imgParticipante;
 @synthesize desembarqueCaronaView;
+@synthesize resumoService;
+@synthesize dicResumoCarona;
+@synthesize dicResumoMotorista;
 
 - (void)viewDidLoad
 {
@@ -181,6 +191,9 @@
     [self.view addSubview:desembarqueCaronaView];
     
     [desembarqueCaronaView setHidden:YES];
+    
+    resumoService = [ResumoViagemService new];
+    resumoService.delegate = self;
     
 }
 
@@ -463,6 +476,8 @@
                                  solicitacaoView.alpha = 1.0f;
                              }
                              completion:nil];
+            
+            [notificacaoService confirmacaoLeitura:solicitacao.codNotificacao];
         }
     }
     
@@ -483,7 +498,9 @@
         
         if (participanteLogado && [participanteLogado.motorista boolValue]) {
             [AppHelper setDistanciaPercorrida:nil];
-            [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
+            [ampulheta exibir];
+            [resumoService resumoViagemMotorista];
+//            [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
         }
     }
 }
@@ -593,8 +610,9 @@
 
 -(void)desembarquei{
     [AppHelper setDistanciaPercorrida:nil];
-    [ampulheta esconder];
-    [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
+    [ampulheta exibir];
+    [resumoService resumoViagemCarona];
+//    [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
 }
 
 -(void)desembarqueConcluido{
@@ -684,6 +702,32 @@
         
          }
      }];
+}
+
+#pragma mark - ResumoServiceDelegate
+
+-(void)onRetornouResumoCarona:(NSDictionary *)dicResumo{
+    [ampulheta esconder];
+    dicResumoCarona = dicResumo;
+    [self performSegueWithIdentifier:@"sgResumoCarona" sender:nil];
+}
+
+-(void)onRetornouREsumoMotorista:(NSDictionary *)dicResumo{
+    [ampulheta esconder];
+    dicResumoMotorista = dicResumo;
+    [self performSegueWithIdentifier:@"sgResumoMotorista" sender:nil];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"sgResumoCarona"]) {
+        ResumoCaronaViewController *view = (ResumoCaronaViewController*)segue.destinationViewController;
+        view.dicionarioResumo = dicResumoCarona;
+    }
+    
+    if ([segue.identifier isEqualToString:@"sgResumoMotorista"]) {
+        ResumoMotoristaViewController *view = (ResumoMotoristaViewController*)segue.destinationViewController;
+        view.dicionarioResumo = dicResumoMotorista;
+    }
 }
 
 @end

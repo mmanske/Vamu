@@ -114,6 +114,15 @@
     return YES;
 }
 
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if (textField == edtNome || textField == edtDescricao) {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > 20) ? NO : YES;
+    } else {
+        return YES;
+    }
+}
+
 #pragma mark - GrupoServiceDelegate
 
 -(void)grupoCadastradoComSucesso{

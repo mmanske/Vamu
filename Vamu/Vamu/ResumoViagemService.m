@@ -13,6 +13,8 @@
 
 @implementation ResumoViagemService
 
+@synthesize tipoResumo;
+
 -(void)resumoViagemCarona{
     NSString *strURL = [self confereURLConexao:@"historico/viagem"];
     if (strURL == nil) {
@@ -20,6 +22,8 @@
     }
     
     NSString *url = [NSString stringWithFormat:@"%@/%d/%@/2", strURL, [[AppHelper getParticipanteLogado].codParticipante intValue], [AppHelper getParticipanteLogado].codViagemAtual];
+    
+    tipoResumo = ResumoCarona;
     
     [self consultarUrl:url timeOut:30];
 }
@@ -32,6 +36,8 @@
     
     NSString *url = [NSString stringWithFormat:@"%@/%d/%@/1", strURL, [[AppHelper getParticipanteLogado].codParticipante intValue], [AppHelper getParticipanteLogado].codViagemAtual];
     
+    tipoResumo = ResumoMotorista;
+    
     [self consultarUrl:url timeOut:30];
 }
 
@@ -42,8 +48,14 @@
     
     NSDictionary *dic = [self.dadosRetorno objectFromJSONString];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onRetornouResumo:)]) {
-        [self.delegate onRetornouResumo:dic];
+    if (tipoResumo == ResumoMotorista) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onRetornouREsumoMotorista:)]) {
+            [self.delegate onRetornouREsumoMotorista:dic];
+        }
+    } else {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onRetornouResumoCarona:)]) {
+            [self.delegate onRetornouResumoCarona:dic];
+        }
     }
 }
 

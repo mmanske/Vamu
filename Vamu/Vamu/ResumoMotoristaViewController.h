@@ -10,6 +10,7 @@
 #import "ResumoCell.h"
 
 @interface ResumoMotoristaViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UIImageView *imgParticipante;
 @property (weak, nonatomic) IBOutlet UITableView *tabela;
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;
@@ -23,5 +24,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblEmissaoVamu;
 @property (strong, nonatomic) IBOutlet UILabel *lblCarro;
 @property (strong, nonatomic) IBOutlet UILabel *lblPlaca;
+
+@property (nonatomic, strong) NSDictionary *dicionarioResumo;
 
 @end

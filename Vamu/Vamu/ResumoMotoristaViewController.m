@@ -27,7 +27,7 @@
 
 @implementation ResumoMotoristaViewController
 
-@synthesize tabela, caronas, lblOrigem, lblNomeParticipante, lblDestino, lblDesconsumoParticipante, lblEmissaoParticipante, lblDesconsumoViagem, lblEmissaoViagem, lblDesconsumoVamu, lblEmissaoVamu, imgParticipante, ampulheta, resumoService, imagemService, podeAtualizarTabela, quantFoto, lblCarro, lblPlaca;
+@synthesize tabela, caronas, lblOrigem, lblNomeParticipante, lblDestino, lblDesconsumoParticipante, lblEmissaoParticipante, lblDesconsumoViagem, lblEmissaoViagem, lblDesconsumoVamu, lblEmissaoVamu, imgParticipante, ampulheta, resumoService, imagemService, podeAtualizarTabela, quantFoto, lblCarro, lblPlaca, dicionarioResumo;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,9 +56,13 @@
     
     caronas = [NSMutableArray new];
     
-    resumoService = [ResumoViagemService new];
-    resumoService.delegate = self;
-    [resumoService resumoViagemMotorista];
+    if (dicionarioResumo) {
+        [self exibirDados:dicionarioResumo];
+    }
+    
+//    resumoService = [ResumoViagemService new];
+//    resumoService.delegate = self;
+//    [resumoService resumoViagemMotorista];
     
     imagemService = [BaixarImagemService new];
     imagemService.delegate = self;
@@ -108,7 +112,7 @@
 
 #pragma mark - ResumoViagemServiceDelegate
 
--(void)onRetornouResumo:(NSDictionary *)dicResumo{
+-(void) exibirDados:(NSDictionary*) dicResumo{
     [ampulheta esconder];
     
     NSDictionary *dicCaronas = [dicResumo objectForKey:@"resumoCaronas"];
@@ -168,7 +172,6 @@
         lblPlaca.text = [NSString stringWithFormat:@"Placa %@", veiculo.placa];
         return;
     }
-    
 }
 
 #pragma mark - BaixarImagemServiceDelegate

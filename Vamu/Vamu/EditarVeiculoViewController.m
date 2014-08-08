@@ -98,7 +98,7 @@
             
             
             if (veiculo.seguradora) {
-                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.seg.codSeguradora];
+                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.seguradora];
                 NSArray *segs = [Seguradora getWithPredicate:filtro];
                 if ([segs count] > 0) {
                     Seguradora *seg = [segs objectAtIndex:0];

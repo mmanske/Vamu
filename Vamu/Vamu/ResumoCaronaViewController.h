@@ -30,4 +30,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDesconsumoVamu;
 @property (weak, nonatomic) IBOutlet UILabel *lblEmissaoVamu;
 
+@property (nonatomic, strong) NSDictionary *dicionarioResumo;
+
 @end

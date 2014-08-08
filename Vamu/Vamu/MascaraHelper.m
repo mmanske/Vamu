@@ -79,4 +79,8 @@
     return kMascara_TELEFONE;
 }
 
++(NSString *)MASCARA_PLACA{
+    return kMascara_PLACA;
+}
+
 @end

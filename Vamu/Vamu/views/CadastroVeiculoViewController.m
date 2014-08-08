@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "EnviarImagemService.h"
 #import "AppHelper.h"
+#import "MascaraHelper.h"
 
 
 @interface CadastroVeiculoViewController (){
@@ -25,6 +26,7 @@
 @property (nonatomic) NSMutableArray *formItems;
 @property (strong, nonatomic) KSEnhancedKeyboard *enhancedKeyboard;
 @property (nonatomic, strong) EnviarImagemService *enviarImagemService;
+@property (strong, nonatomic) MascaraHelper *mascaraHelper;
 @end
 
 @implementation CadastroVeiculoViewController
@@ -44,7 +46,7 @@
 @synthesize ampulheta;
 @synthesize scrollView;
 @synthesize imgBackground;
-@synthesize pickerSeguradora;
+@synthesize pickerSeguradora, mascaraHelper;
 @synthesize seguradoras, enhancedKeyboard, formItems, enviarImagemService;
 
 -(void)dadosTeste{
@@ -113,6 +115,7 @@
     ampulheta = [CustomActivityView new];
     
     [self placeHolderTextField];
+    mascaraHelper = [MascaraHelper new];
     
 }
 
@@ -243,6 +246,15 @@
     }
     return YES;
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == edtPlaca) {
+        return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_PLACA];
+    }
+    return YES;
+}
+
 
 #pragma mark - BaseTab
 

@@ -246,6 +246,13 @@
     [alertSessao show];
 }
 
+-(void)loginComAtivoEmOutroAparelho {
+    [ampulheta esconder];
+    
+    UIAlertView *alertSessao = [[UIAlertView alloc] initWithTitle:@"Login" message:@"CPF ativo em outro aparelho!" delegate:self cancelButtonTitle:@"Fechar" otherButtonTitles: nil];
+    [alertSessao show];
+}
+
 -(void)loginOk:(Participante *)participante{
     //A ampulheta será escondida após o download do participante
 //    [ampulheta esconder];

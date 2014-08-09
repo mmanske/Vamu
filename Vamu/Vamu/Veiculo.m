@@ -22,6 +22,6 @@
 @dynamic renavan;
 @dynamic seguradora;
 @dynamic participante;
-@dynamic seg;
+@dynamic codSeguradora;
 
 @end

@@ -25,6 +25,7 @@
 -(void) loginMotoristaSemViagem;
 -(void) loginCaronComViagem;
 -(void) loginCaronSemViagem;
+-(void) loginComAtivoEmOutroAparelho;
 -(void) loginContaNaoAtiva:(Participante*) participante;
 -(void) loginErroSenhaTerceiraTentativa;
 -(void) loginFalhaAoSalvarAcesso;

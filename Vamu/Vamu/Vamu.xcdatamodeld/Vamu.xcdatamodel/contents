@@ -174,6 +174,7 @@
     </entity>
     <entity name="Veiculo" representedClassName="Veiculo" syncable="YES">
         <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codSeguradora" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idBanco" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
@@ -182,7 +183,6 @@
         <attribute name="renavan" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="seguradora" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="participante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" inverseName="carro" inverseEntity="Participante" syncable="YES"/>
-        <relationship name="seg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Seguradora" syncable="YES"/>
     </entity>
     <elements>
         <element name="AceitacaoCarona" positionX="9" positionY="153" width="128" height="180"/>
@@ -204,6 +204,6 @@
         <element name="SolicitacaoAdesao" positionX="18" positionY="162" width="128" height="163"/>
         <element name="SolicitacaoCarona" positionX="9" positionY="153" width="128" height="253"/>
         <element name="TrajetoFavorito" positionX="0" positionY="0" width="128" height="120"/>
-        <element name="Veiculo" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="Veiculo" positionX="0" positionY="0" width="128" height="193"/>
     </elements>
 </model>

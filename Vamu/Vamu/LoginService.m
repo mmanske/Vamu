@@ -48,7 +48,16 @@
     [super trataRecebimento];
     NSLog(@"%@", self.dadosRetorno);
     
+    NSRange strAtivoEmOutroAparelho = [self.dadosRetorno rangeOfString:@"msg:034"];
+    if (strAtivoEmOutroAparelho.length > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(loginComAtivoEmOutroAparelho)]) {
+            [self.delegate loginComAtivoEmOutroAparelho];
+        }
+        self.dadosRetorno = nil;
+        return;
+    }
 
+    
     NSRange strCpfInexistente = [self.dadosRetorno rangeOfString:@"msg:006"];
     if (strCpfInexistente.length > 0) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(loginCPFNaoCadastrado)]) {
@@ -241,7 +250,7 @@
         veiculo.placa      = placa;
         veiculo.renavan    = renavam;
         if (segura) {
-            veiculo.seguradora = [NSString stringWithFormat:@"%@", segura ];    
+            veiculo.codSeguradora = [NSNumber numberWithInteger:[segura integerValue]];
         }
         
 

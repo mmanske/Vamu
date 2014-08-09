@@ -27,7 +27,7 @@
     [dicVeiculo setObject:veiculo.renavan forKey:@"renavam"];
     [dicVeiculo setObject:veiculo.seguradora forKey:@"seguradora"];
     [dicVeiculo setObject:veiculo.participante.codParticipante forKey:@"codPessoa"];
-    [dicVeiculo setObject:veiculo.seg.codSeguradora forKey:@"codSeguradora"];
+    [dicVeiculo setObject:veiculo.codSeguradora forKey:@"codSeguradora"];
 
     NSString *veiculoJson = [dicVeiculo JSONString];
     
@@ -50,7 +50,10 @@
     [dicVeiculo setObject:veiculo.renavan forKey:@"renavam"];
     [dicVeiculo setObject:veiculo.seguradora forKey:@"seguradora"];
     [dicVeiculo setObject:veiculo.participante.codParticipante forKey:@"codPessoa"];
-    [dicVeiculo setObject:veiculo.seg.codSeguradora forKey:@"codSeguradora"];
+    if (veiculo.codSeguradora) {
+        [dicVeiculo setObject:veiculo.codSeguradora forKey:@"codSeguradora"];
+    }
+
     
     NSString *veiculoJson = [dicVeiculo JSONString];
     

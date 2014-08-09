@@ -184,11 +184,14 @@ static NSString * const DeviceTokenKey = @"DeviceToken";
 
 + (NSString*)deviceToken
 {
-	return [[NSUserDefaults standardUserDefaults] stringForKey:DeviceTokenKey];
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:DeviceTokenKey];
+    //NSString *token = [(AppDelegate*)[[UIApplication sharedApplication] delegate] token];
+	return token;
 }
 
 + (void)setDeviceToken:(NSString*)token
 {
+//    [(AppDelegate*)[[UIApplication sharedApplication] delegate] setToken:token];
 	[[NSUserDefaults standardUserDefaults] setObject:token forKey:DeviceTokenKey];
 }
 

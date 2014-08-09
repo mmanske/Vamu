@@ -21,6 +21,6 @@
 @property (nonatomic, retain) NSString * renavan;
 @property (nonatomic, retain) NSString * seguradora;
 @property (nonatomic, retain) Participante *participante;
-@property (nonatomic, retain) Seguradora *seg;
+@property (nonatomic, retain) NSNumber *codSeguradora;
 
 @end

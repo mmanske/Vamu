@@ -97,12 +97,13 @@
             edtRenavam.text = veiculo.renavan;
             
             
-            if (veiculo.seguradora) {
-                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.seguradora];
+            if (veiculo.codSeguradora) {
+                NSString *filtro = [NSString stringWithFormat:@"codSeguradora = %@", veiculo.codSeguradora];
                 NSArray *segs = [Seguradora getWithPredicate:filtro];
                 if ([segs count] > 0) {
                     Seguradora *seg = [segs objectAtIndex:0];
                     edtSegurador.text = seg.descricao;
+                    veiculo.codSeguradora = seg.codSeguradora;
                 }
                 
             }
@@ -321,8 +322,10 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    veiculo.seg = seguradoras[row];
-    edtSegurador.text = veiculo.seg.descricao;
+    Seguradora *seg = seguradoras[row];
+    veiculo.codSeguradora = seg.codSeguradora;
+    veiculo.seguradora = seg.descricao;
+    edtSegurador.text = seg.descricao;
 }
 
 -(void) finalizaEnviarImagem {

@@ -94,6 +94,12 @@
   //  [[[UIAlertView alloc] initWithTitle:@"Login" message:@"Você erro a senha pela terceira vez. Sua conta ficará bloqueada por 15 minutos." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
+-(void)loginComAtivoEmOutroAparelho {
+    [AppHelper apagarUsuarioLogado];
+    [self performSegueWithIdentifier:@"sgLogin" sender:nil];
+}
+
+
 -(void)loginFalhaAoSalvarAcesso{
     [AppHelper apagarUsuarioLogado];
     [self performSegueWithIdentifier:@"sgLogin" sender:nil];

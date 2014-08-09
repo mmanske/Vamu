@@ -415,8 +415,10 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    veiculoParticipante.seg = seguradoras[row];
-    edtSeguradora.text = veiculoParticipante.seg.descricao;
+    Seguradora *seg = seguradoras[row];
+    veiculoParticipante.codSeguradora = seg.codSeguradora;
+    veiculoParticipante.seguradora = seg.descricao;
+    edtSeguradora.text = seg.descricao;
 }
 
 

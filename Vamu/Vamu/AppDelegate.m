@@ -37,7 +37,7 @@
     self.distanciaPercorrida = nil;
     
     [self customizeNavigationBar];
-    [AppHelper setDeviceToken:nil];
+    //[AppHelper setDeviceToken:nil];
     
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
@@ -59,6 +59,7 @@
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
     NSLog(@"Error in registration. Error: %@", err);
+    [AppHelper setDeviceToken:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

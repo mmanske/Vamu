@@ -36,7 +36,6 @@
 @property (nonatomic, strong) NSMutableString *nomeOrigem;
 @property (nonatomic, strong) NSMutableString *nomeDestino;
 @property (nonatomic, strong) NSString *numeroVersao;
-
 @property (nonatomic, strong) NSNumber *distanciaPercorrida;
 
 - (void)saveContext;

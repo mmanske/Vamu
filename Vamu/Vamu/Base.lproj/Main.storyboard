@@ -2943,7 +2943,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnSalvarClick:" destination="6c8-Jp-4nG" eventType="touchUpInside" id="Lic-sc-ZwO"/>
+                                    <action selector="btnSalvarClick:" destination="6c8-Jp-4nG" eventType="touchUpInside" id="VRv-lP-ej5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ven-fK-bdn">

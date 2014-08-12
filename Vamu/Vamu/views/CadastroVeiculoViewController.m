@@ -66,13 +66,22 @@
     self.exibirNavigationBar = YES;
     
     self.formItems = [NSMutableArray new];
-    UIView *subView = [self.view viewWithTag:88];
+//    UIView *subView = [self.view viewWithTag:88];
+//    
+//    for (UIView *view in [subView subviews]) {
+//        if ([view isKindOfClass:[UITextField class]]) {
+//            [formItems addObject:view];
+//        }
+//    }
     
-    for (UIView *view in [subView subviews]) {
-        if ([view isKindOfClass:[UITextField class]]) {
-            [formItems addObject:view];
-        }
-    }
+    [formItems addObject:edtPlaca];
+    [formItems addObject:edtRenavan];
+    [formItems addObject:edtMarca];
+    [formItems addObject:edtModelo];
+    [formItems addObject:edtCor];
+    [formItems addObject:edtAno];
+    [formItems addObject:edtSeguradora];
+    
     self.enhancedKeyboard = [KSEnhancedKeyboard new];
     self.enhancedKeyboard.delegate = self;
 

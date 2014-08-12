@@ -72,5 +72,8 @@
 +(NSDictionary*) carregaUsuarioLogado;
 +(void) apagarUsuarioLogado;
 
++(void) setLocationCarona:(CLLocation*) location;
++(CLLocation*) getLocationCarona;
+
 
 @end

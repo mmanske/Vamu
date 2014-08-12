@@ -66,21 +66,23 @@
 {
     [super viewDidLoad];
     self.formItems = [NSMutableArray new];
-    UIView *subView = [self.view viewWithTag:88];
     
-    for (UIView *view in [subView subviews]) {
-        if ([view isKindOfClass:[UITextField class]]) {
-            [formItems addObject:view];
-        }
-    }
-    
-    subView = [self.view viewWithTag:89];
-    
-    for (UIView *view in [subView subviews]) {
-        if ([view isKindOfClass:[UITextField class]]) {
-            [formItems addObject:view];
-        }
-    }
+    [formItems addObject:edtCPF];
+    [formItems addObject:edtSenha];
+    [formItems addObject:edtConfirmarSenha];
+    [formItems addObject:edtNome];
+    [formItems addObject:edtApelido];
+    [formItems addObject:edtEmail];
+    [formItems addObject:edtSexo];
+    [formItems addObject:edtNascimento];
+    [formItems addObject:edtCelular];
+    [formItems addObject:edtCEP];
+    [formItems addObject:edtEndereco];
+    [formItems addObject:edtNumero];
+    [formItems addObject:edtComplemento];
+    [formItems addObject:edtBairro];
+    [formItems addObject:edtCidade];
+    [formItems addObject:edtUF];
     
     self.exibirNavigationBar = YES;
     

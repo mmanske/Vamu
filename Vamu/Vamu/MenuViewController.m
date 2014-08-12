@@ -96,8 +96,4 @@
 //    [self trocarView:view];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 @end

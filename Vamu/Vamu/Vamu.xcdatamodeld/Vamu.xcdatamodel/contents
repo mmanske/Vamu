@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AceitacaoCarona" representedClassName="AceitacaoCarona" syncable="YES">
         <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="codNotificacao" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -29,6 +29,7 @@
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="receberSolicitacao" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="solicitar" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="visivel" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="moderador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
         <relationship name="participantes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participante" syncable="YES"/>
@@ -189,7 +190,7 @@
         <element name="CaronaDesembarcou" positionX="27" positionY="171" width="128" height="88"/>
         <element name="Configuracao" positionX="0" positionY="0" width="128" height="75"/>
         <element name="FinalizacaoViagem" positionX="45" positionY="189" width="128" height="58"/>
-        <element name="Grupo" positionX="0" positionY="0" width="128" height="163"/>
+        <element name="Grupo" positionX="0" positionY="0" width="128" height="180"/>
         <element name="GrupoAtivo" positionX="18" positionY="162" width="128" height="75"/>
         <element name="MensagemCancelamento" positionX="18" positionY="162" width="128" height="58"/>
         <element name="MotoristaAtivo" positionX="9" positionY="153" width="128" height="225"/>

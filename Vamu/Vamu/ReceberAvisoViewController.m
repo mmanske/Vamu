@@ -82,7 +82,7 @@
     [tabela reloadData];
 }
 
--(void)onSolicitouParticipacao:(Grupo *)grupo{
+-(void)onSolicitouParticipacao:(Grupo *)grupo index:(int)index valor:(BOOL)valor{
     
 }
 

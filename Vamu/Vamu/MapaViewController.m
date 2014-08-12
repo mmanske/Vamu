@@ -24,6 +24,8 @@
 #import "MotoristaDesembarcouCarona.h"
 #import "FinalizacaoViagem.h"
 #import "CustomAnnotation.h"
+#import "PinInicioFim.h"
+#import "CaronaPin.h"
 
 #import "ResumoViagemService.h"
 #import "ResumoMotoristaViewController.h"
@@ -143,6 +145,27 @@
     [mapa setRegion:regionThatFits animated:NO];
     [mapa setMapType:MKMapTypeStandard];
     if (rota) {
+        
+        NSUInteger pointCount = rota.polyline.pointCount;
+        CLLocationCoordinate2D *routeCoordinates = malloc(pointCount * sizeof(CLLocationCoordinate2D));
+        [rota.polyline getCoordinates:routeCoordinates range:NSMakeRange(0, pointCount)];
+        
+        float iniLat, fimLat, iniLong, fimLong = 0;
+        
+        iniLat = routeCoordinates[0].latitude;
+        iniLong = routeCoordinates[0].longitude;
+        fimLat = [[AppHelper getParticipanteLogado].latitudeFinal floatValue];
+        fimLong = [[AppHelper getParticipanteLogado].longitudeFinal floatValue];
+        
+        CLLocation *locationInicial = [[CLLocation new] initWithLatitude:iniLat longitude:iniLong];
+        CLLocation *locationFinal   = [[CLLocation new] initWithLatitude:fimLat longitude:fimLong];
+        
+        PinInicioFim *pinInicio = [[PinInicioFim new] initInLocation:locationInicial inicio:YES];
+        PinInicioFim *pinFim    = [[PinInicioFim new] initInLocation:locationFinal inicio:NO];
+        
+        [mapa addAnnotation:pinInicio];
+        [mapa addAnnotation:pinFim];
+        
         [mapa addOverlay:rota.polyline level:MKOverlayLevelAboveRoads];
     }
     
@@ -345,25 +368,59 @@
         NSString *identifier = [NSString stringWithFormat:@"%@", ((MotoristaPin*) annotation).motoristaAtivo.codPessoa];
         
         MKAnnotationView *pinView = (MKAnnotationView*)[mapa dequeueReusableAnnotationViewWithIdentifier:identifier];
-    
+        
         if (!pinView) {
             
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             pinView.canShowCallout = NO;
             pinView.image = ((MotoristaPin*) annotation).imagem;
             pinView.draggable = YES;
-
-//            PedirCaronaButton *btnPedirCarona = [PedirCaronaButton buttonWithType:UIButtonTypeInfoLight];
-//            [btnPedirCarona addTarget:self action:@selector(pedirCarona:) forControlEvents:UIControlEventTouchUpInside];
-//            btnPedirCarona.motoristaAtivo = ((MotoristaPin*) annotation).motoristaAtivo;
-//            
-//            pinView.rightCalloutAccessoryView = btnPedirCarona;
-
+            
         } else {
             pinView.annotation = annotation;
         }
         
         [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, 46, 46)];
+        
+        return pinView;
+    }
+    
+    if ([annotation isKindOfClass:[CaronaPin class]]) {
+        NSString *identifier = @"caronaPin";
+        
+        MKAnnotationView *pinView = (MKAnnotationView*)[mapa dequeueReusableAnnotationViewWithIdentifier:identifier];
+        
+        if (!pinView) {
+            
+            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            pinView.canShowCallout = NO;
+            pinView.image = ((CaronaPin*) annotation).image;
+            pinView.draggable = YES;
+            
+        } else {
+            pinView.annotation = annotation;
+        }
+        
+        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, 46, 46)];
+        
+        return pinView;
+    }
+    
+    if ([annotation isKindOfClass:[PinInicioFim class]]) {
+        NSString *identifier = ((PinInicioFim*) annotation).ini ? @"pinInicio" : @"pinFim";
+        
+        MKAnnotationView *pinView = (MKAnnotationView*)[mapa dequeueReusableAnnotationViewWithIdentifier:identifier];
+        
+        if (!pinView) {
+            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            pinView.draggable = YES;
+            pinView.image = ((PinInicioFim*) annotation).imagem;
+            pinView.canShowCallout = NO;
+        } else {
+            pinView.annotation = annotation;
+        }
+        
+        [pinView setFrame:CGRectMake(pinView.frame.origin.x, pinView.frame.origin.y, 25, 25)];
         
         return pinView;
     }
@@ -412,10 +469,6 @@
     for (UIView *subview in view.subviews ){
         [subview removeFromSuperview];
     }
-}
-
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Notification
@@ -517,6 +570,12 @@
         MotoristaPin *pin = [[MotoristaPin alloc] initWithMotorista:motorista];
         [pinsMapa addObject:pin];
     }
+    
+    if ([[AppHelper getParticipanteLogado].motorista boolValue]) {
+        CaronaPin *caronaPin = [[CaronaPin new] initInLocation:[AppHelper getLocationCarona]];
+        [pinsMapa addObject:caronaPin];
+    }
+    
     [mapa addAnnotations:pinsMapa];
 }
 
@@ -698,12 +757,15 @@
          {
              CLPlacemark *placemark= [placemarks objectAtIndex:0];
              
-             NSString *endereco = [NSString stringWithFormat:@"%@, %@, %@",[placemark thoroughfare],[placemark locality],[placemark administrativeArea]];
+             if ([placemark thoroughfare].length > 0 && [placemark locality].length > 0 && [placemark administrativeArea].length > 0) {
+                 NSString *endereco = [NSString stringWithFormat:@"%@, %@, %@",[placemark thoroughfare],[placemark locality],[placemark administrativeArea]];
+                 lblOrigem.text = endereco;
+                 [AppHelper setNomeOrigem:[NSMutableString stringWithString:endereco]];
+             } else {
+                 lblOrigem.text = @"";
+                 [AppHelper setNomeOrigem:[NSMutableString stringWithString:@""]];
+             }
              
-             lblOrigem.text = endereco;
-             
-             [AppHelper setNomeOrigem:[NSMutableString stringWithString:endereco]];
-        
          }
      }];
 }

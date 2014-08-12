@@ -37,6 +37,7 @@
 @property (nonatomic, strong) NSMutableString *nomeDestino;
 @property (nonatomic, strong) NSString *numeroVersao;
 @property (nonatomic, strong) NSNumber *distanciaPercorrida;
+@property (nonatomic, strong) CLLocation *locationCarona;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

@@ -212,10 +212,6 @@
     return indexPath;
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 #pragma mark - NotificacaoServiceDelegate
 
 -(void)notificacaoesRecebidas:(NSMutableArray *)notificacoes grupos:(NSMutableArray *)grupos motoristas:(NSMutableArray *)motoristas{

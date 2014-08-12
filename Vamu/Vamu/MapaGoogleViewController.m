@@ -95,8 +95,4 @@
     [self.frostedViewController hideMenuViewController];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 @end

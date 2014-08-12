@@ -35,6 +35,7 @@
     self.numeroVersao = @"v0.9";
     self.nomeOrigem = nil;
     self.distanciaPercorrida = nil;
+    self.locationCarona = nil;
     
     [self customizeNavigationBar];
     //[AppHelper setDeviceToken:nil];
@@ -198,7 +199,7 @@
 #pragma mark - Metodos
 
 -(void) customizeNavigationBar{
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.4 green:0.667 blue:0.267 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.340 green:0.607 blue:0.207 alpha:1.0]];
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
     shadow.shadowOffset = CGSizeMake(0, 1);

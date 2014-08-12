@@ -93,7 +93,7 @@
         } else {
             tipo = [NSMutableString stringWithString:@"- Carona"];
         }
-        lblNomeMotorista.text = [NSString stringWithFormat:@"%@ %@", participanteLogado.apelido, tipo];
+        lblNomeMotorista.text = [NSString stringWithFormat:@"%@ %@", participanteLogado.nome, tipo];
 
         
         NSString *fileName = [NSString stringWithFormat:@"%@.jpg", participanteLogado.cpf];
@@ -141,7 +141,7 @@
 
 - (IBAction)btnIrClick:(id)sender {
     if (edtDestino.text.length <= 0) {
-        [[[UIAlertView alloc] initWithTitle:@"Definir Destino" message:@"Informa o destino da viagem" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Definir Destino" message:@"Informe o destino da viagem" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
         return;
     }
     [ampulheta exibir];
@@ -295,11 +295,17 @@
     NSUInteger pointCount = rota.polyline.pointCount;
     CLLocationCoordinate2D *routeCoordinates = malloc(pointCount * sizeof(CLLocationCoordinate2D));
     [rota.polyline getCoordinates:routeCoordinates range:NSMakeRange(0, pointCount)];
+    
+    float ini, fim = 0;
+    
     for (int c=0; c < pointCount; c++)
     {
         if (c == pointCount - 1) {
             [[AppHelper getParticipanteLogado] setLatitudeFinal:[NSNumber numberWithFloat:routeCoordinates[c].latitude]];
             [[AppHelper getParticipanteLogado] setLongitudeFinal:[NSNumber numberWithFloat:routeCoordinates[c].longitude]];
+            
+            ini = routeCoordinates[c].latitude;
+            fim = routeCoordinates[c].longitude;
         }
         
         Ponto *ponto = [Ponto new];
@@ -312,7 +318,14 @@
 
     free(routeCoordinates);
     
-    [AppHelper setNomeDestino:[NSMutableString stringWithString:edtDestino.text]];
+    if (edtDestino.text.length > 0) {
+        [AppHelper setNomeDestino:[NSMutableString stringWithString:edtDestino.text]];
+    } else {
+        CLLocation *location = [[CLLocation new] initWithLatitude:ini longitude:fim];
+        [self getAddressFromLocation:location];
+    }
+    
+    
     
 //    [rotaService enviarRota:rtRota participante:[AppHelper getParticipanteLogado]];
     
@@ -366,10 +379,6 @@
 
 -(void)rotaFalhaJSon{
     
-}
-
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -500,6 +509,22 @@
             break;
         }
     }
+}
+
+-(void)getAddressFromLocation:(CLLocation *)location{
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if(placemarks && placemarks.count > 0)
+         {
+             CLPlacemark *placemark= [placemarks objectAtIndex:0];
+             
+             NSString *endereco = [NSString stringWithFormat:@"%@, %@, %@",[placemark thoroughfare],[placemark locality],[placemark administrativeArea]];
+             
+             [AppHelper setNomeDestino:[NSMutableString stringWithString:endereco]];
+             
+         }
+     }];
 }
 
 @end

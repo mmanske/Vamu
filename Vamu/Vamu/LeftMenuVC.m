@@ -47,8 +47,4 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 @end

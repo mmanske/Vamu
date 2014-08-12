@@ -158,6 +158,15 @@ static NSString * const DeviceTokenKey = @"DeviceToken";
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] finalizacaoViagem];
 }
 
++(void)setLocationCarona:(CLLocation *)location{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setLocationCarona:location];
+}
+
++(CLLocation *)getLocationCarona{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] locationCarona];
+}
+
 +(void)setDesembarqueCarona:(NSMutableArray *)desembarques{
     AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
     [delegate setDesembarqueCarona:desembarques];

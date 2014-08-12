@@ -13,19 +13,16 @@
 @synthesize swtSolicitar;
 @synthesize grupo;
 @synthesize delegate;
+@synthesize index;
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (IBAction)solicitouAdesao:(id)sender {
-    if (swtSolicitar.on) {
-        if (self.delegate && [delegate respondsToSelector:@selector(onSolicitouParticipacao:)]) {
-            [self.delegate onSolicitouParticipacao:grupo];
-        }
+    if (self.delegate && [delegate respondsToSelector:@selector(onSolicitouParticipacao:index:valor:)]){
+        [self.delegate onSolicitouParticipacao:grupo index:index valor:swtSolicitar.on];
     }
 }
 

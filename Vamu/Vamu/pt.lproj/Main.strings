@@ -1,0 +1,588 @@
+
+/* Class = "IBUIButton"; normalTitle = "Trocar Veículo"; ObjectID = "0Ig-ks-eMt"; */
+"0Ig-ks-eMt.normalTitle" = "Trocar Veículo";
+
+/* Class = "IBUILabel"; text = "Você \"desconsumiu\" 12km nessa viagem"; ObjectID = "1JY-5n-auB"; */
+"1JY-5n-auB.text" = "Você \"desconsumiu\" 12km nessa viagem";
+
+/* Class = "IBUILabel"; text = "\"Desconsumo\" TOTAL do Vamu: 999.999km"; ObjectID = "1ZP-bx-j3C"; */
+"1ZP-bx-j3C.text" = "\"Desconsumo\" TOTAL do Vamu: 999.999km";
+
+/* Class = "IBUIViewController"; title = "Cadastro de Veículo"; ObjectID = "24n-zb-QMt"; */
+"24n-zb-QMt.title" = "Cadastro de Veículo";
+
+/* Class = "IBUILabel"; text = "Melhore sua cidade"; ObjectID = "26b-1C-SjB"; */
+"26b-1C-SjB.text" = "Melhore sua cidade";
+
+/* Class = "IBUITextField"; placeholder = "UF"; ObjectID = "2o2-xe-um9"; */
+"2o2-xe-um9.placeholder" = "UF";
+
+/* Class = "IBUILabel"; text = "Ivete Sangalo"; ObjectID = "3Ow-cA-npl"; */
+"3Ow-cA-npl.text" = "Ivete Sangalo";
+
+/* Class = "IBUITextField"; placeholder = "Renavam"; ObjectID = "3dy-ye-rji"; */
+"3dy-ye-rji.placeholder" = "Renavam";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "3hy-To-Tie"; */
+"3hy-To-Tie.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Falcão"; ObjectID = "3x2-vw-qaT"; */
+"3x2-vw-qaT.text" = "Falcão";
+
+/* Class = "IBUILabel"; text = "Resumo da Viagem 4.345"; ObjectID = "4Fu-rG-e7j"; */
+"4Fu-rG-e7j.text" = "Resumo da Viagem 4.345";
+
+/* Class = "IBUILabel"; text = "Seu \"desconsumo\" total: 99.999km"; ObjectID = "4MR-f6-e3W"; */
+"4MR-f6-e3W.text" = "Seu \"desconsumo\" total: 99.999km";
+
+/* Class = "IBUITextField"; placeholder = "Número"; ObjectID = "4UO-T0-s1X"; */
+"4UO-T0-s1X.placeholder" = "Número";
+
+/* Class = "IBUIButton"; normalTitle = "Cadastre-se"; ObjectID = "4Un-1Y-6sY"; */
+"4Un-1Y-6sY.normalTitle" = "Cadastre-se";
+
+/* Class = "IBUITextField"; placeholder = "Cor"; ObjectID = "4c4-9w-njy"; */
+"4c4-9w-njy.placeholder" = "Cor";
+
+/* Class = "IBUINavigationItem"; title = "Definir Trajeto"; ObjectID = "4pi-yE-q6q"; */
+"4pi-yE-q6q.title" = "Definir Trajeto";
+
+/* Class = "IBUIButton"; normalTitle = "-"; ObjectID = "541-1L-e0K"; */
+"541-1L-e0K.normalTitle" = "-";
+
+/* Class = "IBUINavigationItem"; title = "Cancelar Participação"; ObjectID = "5U1-D5-7UB"; */
+"5U1-D5-7UB.title" = "Cancelar Participação";
+
+/* Class = "IBUITextField"; placeholder = "Data de nascimento"; ObjectID = "5ax-Kz-k7U"; */
+"5ax-Kz-k7U.placeholder" = "Data de nascimento";
+
+/* Class = "IBUITextField"; placeholder = "Número"; ObjectID = "5rN-cX-rqk"; */
+"5rN-cX-rqk.placeholder" = "Número";
+
+/* Class = "IBUILabel"; text = "Grupo"; ObjectID = "5wN-dz-fwj"; */
+"5wN-dz-fwj.text" = "Grupo";
+
+/* Class = "IBUIButton"; normalTitle = "SALVAR"; ObjectID = "6Od-76-SVQ"; */
+"6Od-76-SVQ.normalTitle" = "SALVAR";
+
+/* Class = "IBUIButton"; normalTitle = "Carona"; ObjectID = "6Wp-bt-JVi"; */
+"6Wp-bt-JVi.normalTitle" = "Carona";
+
+/* Class = "IBUIViewController"; title = "Cadastro de Veículo"; ObjectID = "6c8-Jp-4nG"; */
+"6c8-Jp-4nG.title" = "Cadastro de Veículo";
+
+/* Class = "IBUILabel"; text = "v1.0"; ObjectID = "6mP-8G-TSs"; */
+"6mP-8G-TSs.text" = "v1.0";
+
+/* Class = "IBUITextField"; placeholder = "Sexo"; ObjectID = "74O-Ur-BiG"; */
+"74O-Ur-BiG.placeholder" = "Sexo";
+
+/* Class = "IBUITextField"; placeholder = "Cidade"; ObjectID = "7TF-ah-UfB"; */
+"7TF-ah-UfB.placeholder" = "Cidade";
+
+/* Class = "IBUILabel"; text = "Cadastro de grupo:"; ObjectID = "7Z0-UQ-U5c"; */
+"7Z0-UQ-U5c.text" = "Cadastro de grupo:";
+
+/* Class = "IBUILabel"; text = "Editar grupo(Adm)"; ObjectID = "7pX-7a-eJd"; */
+"7pX-7a-eJd.text" = "Editar grupo(Adm)";
+
+/* Class = "IBUIButton"; normalTitle = "Cancelar"; ObjectID = "8Gd-GH-Mmw"; */
+"8Gd-GH-Mmw.normalTitle" = "Cancelar";
+
+/* Class = "IBUINavigationItem"; title = "Resumo da viagem"; ObjectID = "8PM-h7-vsa"; */
+"8PM-h7-vsa.title" = "Resumo da viagem";
+
+/* Class = "IBUILabel"; text = "Ivete Sangalo"; ObjectID = "8dQ-Fc-9Jg"; */
+"8dQ-Fc-9Jg.text" = "Ivete Sangalo";
+
+/* Class = "IBUITextField"; placeholder = "Telefone"; ObjectID = "9Ta-Bp-UZd"; */
+"9Ta-Bp-UZd.placeholder" = "Telefone";
+
+/* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "9Td-O4-aQC"; */
+"9Td-O4-aQC.title" = " ";
+
+/* Class = "IBUIButton"; normalTitle = "Enviar convite de adesão"; ObjectID = "9Xc-Zb-Qy1"; */
+"9Xc-Zb-Qy1.normalTitle" = "Enviar convite de adesão";
+
+/* Class = "IBUIButton"; normalTitle = "Receber aviso de Motorista"; ObjectID = "9dv-D4-ara"; */
+"9dv-D4-ara.normalTitle" = "Receber aviso de Motorista";
+
+/* Class = "IBUIButton"; normalTitle = "Alterar senha"; ObjectID = "Aia-qe-fEB"; */
+"Aia-qe-fEB.normalTitle" = "Alterar senha";
+
+/* Class = "IBUITextField"; placeholder = "Ano Fabricação"; ObjectID = "Ako-rF-NiW"; */
+"Ako-rF-NiW.placeholder" = "Ano Fabricação";
+
+/* Class = "IBUILabel"; text = "Seu \"desconsumo\" total: 99.999km"; ObjectID = "BBw-ZD-Mym"; */
+"BBw-ZD-Mym.text" = "Seu \"desconsumo\" total: 99.999km";
+
+/* Class = "IBUIViewController"; title = "Enviar Convite"; ObjectID = "BdP-V9-kSl"; */
+"BdP-V9-kSl.title" = "Enviar Convite";
+
+/* Class = "IBUITextField"; placeholder = "Confirmar Senha"; ObjectID = "Bf1-lx-Rnx"; */
+"Bf1-lx-Rnx.placeholder" = "Confirmar Senha";
+
+/* Class = "IBUILabel"; text = "Sua cidade agradece, o planeta agradece."; ObjectID = "CWW-lp-qzj"; */
+"CWW-lp-qzj.text" = "Sua cidade agradece, o planeta agradece.";
+
+/* Class = "IBUILabel"; text = "e deixou de emitir 99,99 ton. de CO2"; ObjectID = "D8N-KZ-MlJ"; */
+"D8N-KZ-MlJ.text" = "e deixou de emitir 99,99 ton. de CO2";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "DEE-mI-Ky0"; */
+"DEE-mI-Ky0.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "DVs-OQ-zbd"; */
+"DVs-OQ-zbd.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Enviar convite de adesão"; ObjectID = "Dum-NI-Vnh"; */
+"Dum-NI-Vnh.text" = "Enviar convite de adesão";
+
+/* Class = "IBUITextField"; placeholder = "Sexo"; ObjectID = "E72-k2-l00"; */
+"E72-k2-l00.placeholder" = "Sexo";
+
+/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "EJp-h7-F7H"; */
+"EJp-h7-F7H.placeholder" = "Email";
+
+/* Class = "IBUIButton"; normalTitle = "Sair"; ObjectID = "EZi-OK-SLM"; */
+"EZi-OK-SLM.normalTitle" = "Sair";
+
+/* Class = "IBUIButton"; normalTitle = "+"; ObjectID = "Fcx-vz-hiX"; */
+"Fcx-vz-hiX.normalTitle" = "+";
+
+/* Class = "IBUITextField"; placeholder = "CPF"; ObjectID = "FuW-CS-MFp"; */
+"FuW-CS-MFp.placeholder" = "CPF";
+
+/* Class = "IBUINavigationItem"; title = "Esqueci minha senha"; ObjectID = "Fwj-We-kK0"; */
+"Fwj-We-kK0.title" = "Esqueci minha senha";
+
+/* Class = "IBUITextField"; placeholder = "Ano de Fabricação"; ObjectID = "G1i-l1-1fs"; */
+"G1i-l1-1fs.placeholder" = "Ano de Fabricação";
+
+/* Class = "IBUILabel"; text = "Presidente Vargas, Centro, Rio de Janeiro"; ObjectID = "GjB-0E-fRv"; */
+"GjB-0E-fRv.text" = "Presidente Vargas, Centro, Rio de Janeiro";
+
+/* Class = "IBUILabel"; text = "Você \"desconsumiu\" 12km nessa viagem"; ObjectID = "HeF-Za-13H"; */
+"HeF-Za-13H.text" = "Você \"desconsumiu\" 12km nessa viagem";
+
+/* Class = "IBUITextField"; placeholder = "Nome Completo"; ObjectID = "IMt-5P-YfK"; */
+"IMt-5P-YfK.placeholder" = "Nome Completo";
+
+/* Class = "IBUITextField"; placeholder = "Marca"; ObjectID = "IVi-xg-MJu"; */
+"IVi-xg-MJu.placeholder" = "Marca";
+
+/* Class = "IBUILabel"; text = "Desde 02/2014 - 45 viagens"; ObjectID = "J2q-b3-Op4"; */
+"J2q-b3-Op4.text" = "Desde 02/2014 - 45 viagens";
+
+/* Class = "IBUILabel"; text = "Ivete Sangalo"; ObjectID = "J3X-yt-jzH"; */
+"J3X-yt-jzH.text" = "Ivete Sangalo";
+
+/* Class = "IBUILabel"; text = "Melhore seu planeta"; ObjectID = "JHP-FF-L3h"; */
+"JHP-FF-L3h.text" = "Melhore seu planeta";
+
+/* Class = "IBUILabel"; text = "Grupos:"; ObjectID = "K9E-T8-a8b"; */
+"K9E-T8-a8b.text" = "Grupos:";
+
+/* Class = "IBUITextField"; placeholder = "Apelido"; ObjectID = "KkF-Uo-NBi"; */
+"KkF-Uo-NBi.placeholder" = "Apelido";
+
+/* Class = "IBUILabel"; text = "Placa LHK 2209"; ObjectID = "KyC-lK-tjI"; */
+"KyC-lK-tjI.text" = "Placa LHK 2209";
+
+/* Class = "IBUILabel"; text = "Grupo Solicitado:"; ObjectID = "LcL-2A-pXW"; */
+"LcL-2A-pXW.text" = "Grupo Solicitado:";
+
+/* Class = "IBUILabel"; text = "Cancelar participação em um grupo"; ObjectID = "Lls-oL-XLO"; */
+"Lls-oL-XLO.text" = "Cancelar participação em um grupo";
+
+/* Class = "IBUITextField"; placeholder = "Bairro"; ObjectID = "LsR-UJ-qnb"; */
+"LsR-UJ-qnb.placeholder" = "Bairro";
+
+/* Class = "IBUILabel"; text = "Ativar filtros?"; ObjectID = "LvG-yd-fXJ"; */
+"LvG-yd-fXJ.text" = "Ativar filtros?";
+
+/* Class = "IBUILabel"; text = "EcoSport 2009 - Prata"; ObjectID = "LzU-p0-gXN"; */
+"LzU-p0-gXN.text" = "EcoSport 2009 - Prata";
+
+/* Class = "IBUILabel"; text = "Receber solicitação de adesão"; ObjectID = "MEh-Ij-JKn"; */
+"MEh-Ij-JKn.text" = "Receber solicitação de adesão";
+
+/* Class = "IBUINavigationItem"; title = "Aviso motorista"; ObjectID = "MKO-fj-CNc"; */
+"MKO-fj-CNc.title" = "Aviso motorista";
+
+/* Class = "IBUILabel"; text = "Ivete Sangalo"; ObjectID = "MeI-aI-pfb"; */
+"MeI-aI-pfb.text" = "Ivete Sangalo";
+
+/* Class = "IBUINavigationItem"; title = "Editar Participante"; ObjectID = "MiC-RQ-Nzu"; */
+"MiC-RQ-Nzu.title" = "Editar Participante";
+
+/* Class = "IBUILabel"; text = "Dados Veículo:"; ObjectID = "MyK-ad-c8M"; */
+"MyK-ad-c8M.text" = "Dados Veículo:";
+
+/* Class = "IBUIBarButtonItem"; title = "Sair"; ObjectID = "N5W-ID-6vn"; */
+"N5W-ID-6vn.title" = "Sair";
+
+/* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "Nkp-M3-D3N"; */
+"Nkp-M3-D3N.title" = " ";
+
+/* Class = "IBUILabel"; text = "Meus dados"; ObjectID = "OEi-uc-6Dy"; */
+"OEi-uc-6Dy.text" = "Meus dados";
+
+/* Class = "IBUILabel"; text = "Endereço:"; ObjectID = "POK-Uq-FWr"; */
+"POK-Uq-FWr.text" = "Endereço:";
+
+/* Class = "IBUIButton"; normalTitle = "L"; ObjectID = "PaP-Tc-Edu"; */
+"PaP-Tc-Edu.normalTitle" = "L";
+
+/* Class = "IBUIButton"; normalTitle = "Inserir Foto"; ObjectID = "Pb3-fi-wHz"; */
+"Pb3-fi-wHz.normalTitle" = "Inserir Foto";
+
+/* Class = "IBUIButton"; normalTitle = "CANCELAR"; ObjectID = "PbC-lL-NDs"; */
+"PbC-lL-NDs.normalTitle" = "CANCELAR";
+
+/* Class = "IBUIButton"; normalTitle = "ENTRAR"; ObjectID = "Qbu-M6-nmp"; */
+"Qbu-M6-nmp.normalTitle" = "ENTRAR";
+
+/* Class = "IBUIButton"; normalTitle = "Minhas viagens"; ObjectID = "QdQ-BH-SyR"; */
+"QdQ-BH-SyR.normalTitle" = "Minhas viagens";
+
+/* Class = "IBUILabel"; text = "Guilherme Augusto Barreto de Assis"; ObjectID = "RPP-8R-yGI"; */
+"RPP-8R-yGI.text" = "Guilherme Augusto Barreto de Assis";
+
+/* Class = "IBUILabel"; text = "Dados Pessoais:"; ObjectID = "RRL-Ti-PtV"; */
+"RRL-Ti-PtV.text" = "Dados Pessoais:";
+
+/* Class = "IBUILabel"; text = "Melhore seu caminho"; ObjectID = "Rba-0R-1tJ"; */
+"Rba-0R-1tJ.text" = "Melhore seu caminho";
+
+/* Class = "IBUIButton"; normalTitle = "Sair"; ObjectID = "S0i-CI-YOB"; */
+"S0i-CI-YOB.normalTitle" = "Sair";
+
+/* Class = "IBUIButton"; normalTitle = "SALVAR"; ObjectID = "SB7-iQ-pPH"; */
+"SB7-iQ-pPH.normalTitle" = "SALVAR";
+
+/* Class = "IBUINavigationItem"; title = "Novo Grupo"; ObjectID = "Seu-Vh-3cn"; */
+"Seu-Vh-3cn.title" = "Novo Grupo";
+
+/* Class = "IBUILabel"; text = "Área de Mensagem"; ObjectID = "UBw-3K-9h9"; */
+"UBw-3K-9h9.text" = "Área de Mensagem";
+
+/* Class = "IBUITextField"; placeholder = "Endereço de destino"; ObjectID = "UWt-25-EcJ"; */
+"UWt-25-EcJ.placeholder" = "Endereço de destino";
+
+/* Class = "IBUINavigationItem"; title = "Enviar Convite"; ObjectID = "Uuw-V9-PGP"; */
+"Uuw-V9-PGP.title" = "Enviar Convite";
+
+/* Class = "IBUIButton"; normalTitle = "Ir"; ObjectID = "V1J-L5-jda"; */
+"V1J-L5-jda.normalTitle" = "Ir";
+
+/* Class = "IBUILabel"; text = "Deixamos de emitir: 999.999,99 ton. de CO2"; ObjectID = "V9v-YK-COc"; */
+"V9v-YK-COc.text" = "Deixamos de emitir: 999.999,99 ton. de CO2";
+
+/* Class = "IBUITextField"; placeholder = "Complemento"; ObjectID = "VZO-RI-5nx"; */
+"VZO-RI-5nx.placeholder" = "Complemento";
+
+/* Class = "IBUIButton"; normalTitle = "Cancelar participação em um grupo"; ObjectID = "Vba-Gt-vPi"; */
+"Vba-Gt-vPi.normalTitle" = "Cancelar participação em um grupo";
+
+/* Class = "IBUITextField"; placeholder = "CEP"; ObjectID = "Vhg-Hd-uW0"; */
+"Vhg-Hd-uW0.placeholder" = "CEP";
+
+/* Class = "IBUILabel"; text = "Deixamos de emitir: 999.999,99 ton. de CO2"; ObjectID = "VpO-xZ-6ET"; */
+"VpO-xZ-6ET.text" = "Deixamos de emitir: 999.999,99 ton. de CO2";
+
+/* Class = "IBUILabel"; text = "Aceitar participação em um grupo(Adm)"; ObjectID = "VtW-85-3ve"; */
+"VtW-85-3ve.text" = "Aceitar participação em um grupo(Adm)";
+
+/* Class = "IBUITextField"; placeholder = "Telefone"; ObjectID = "XIF-wF-OIG"; */
+"XIF-wF-OIG.placeholder" = "Telefone";
+
+/* Class = "IBUILabel"; text = "Rua Riachuelo, Centro, Rio de Janeiro"; ObjectID = "XJH-z0-npo"; */
+"XJH-z0-npo.text" = "Rua Riachuelo, Centro, Rio de Janeiro";
+
+/* Class = "IBUINavigationItem"; title = "Resumo da viagem"; ObjectID = "Xew-Ia-ysv"; */
+"Xew-Ia-ysv.title" = "Resumo da viagem";
+
+/* Class = "IBUILabel"; text = "Grupos:"; ObjectID = "XlK-Oa-s85"; */
+"XlK-Oa-s85.text" = "Grupos:";
+
+/* Class = "IBUIButton"; normalTitle = "Editar grupo(Adm)"; ObjectID = "Xsk-YX-Tqg"; */
+"Xsk-YX-Tqg.normalTitle" = "Editar grupo(Adm)";
+
+/* Class = "IBUITextField"; placeholder = "Nome Completo"; ObjectID = "YH7-mg-qAN"; */
+"YH7-mg-qAN.placeholder" = "Nome Completo";
+
+/* Class = "IBUIViewController"; title = "Definir Trajeto"; ObjectID = "YnN-uc-O9g"; */
+"YnN-uc-O9g.title" = "Definir Trajeto";
+
+/* Class = "IBUILabel"; text = "Guilherme Augusto Barreto de Assis"; ObjectID = "Yv3-Zh-l92"; */
+"Yv3-Zh-l92.text" = "Guilherme Augusto Barreto de Assis";
+
+/* Class = "IBUITextField"; placeholder = "Digite o nome do grupo"; ObjectID = "Z1B-FS-iCA"; */
+"Z1B-FS-iCA.placeholder" = "Digite o nome do grupo";
+
+/* Class = "IBUIButton"; normalTitle = "Meus dados"; ObjectID = "ZFD-ge-4Tr"; */
+"ZFD-ge-4Tr.normalTitle" = "Meus dados";
+
+/* Class = "IBUILabel"; text = "Melhore seu caminho"; ObjectID = "Znn-Jc-sQq"; */
+"Znn-Jc-sQq.text" = "Melhore seu caminho";
+
+/* Class = "IBUILabel"; text = "Dados Veículo:"; ObjectID = "ZsJ-ct-YPf"; */
+"ZsJ-ct-YPf.text" = "Dados Veículo:";
+
+/* Class = "IBUIButton"; normalTitle = "Salvar"; ObjectID = "Zub-4E-z90"; */
+"Zub-4E-z90.normalTitle" = "Salvar";
+
+/* Class = "IBUIButton"; normalTitle = "ACEITAR"; ObjectID = "Zwx-8v-PkT"; */
+"Zwx-8v-PkT.normalTitle" = "ACEITAR";
+
+/* Class = "IBUILabel"; text = "Ver Grupos"; ObjectID = "aQJ-zg-09T"; */
+"aQJ-zg-09T.text" = "Ver Grupos";
+
+/* Class = "IBUIButton"; normalTitle = "Inserir Foto"; ObjectID = "aa9-yo-Vok"; */
+"aa9-yo-Vok.normalTitle" = "Inserir Foto";
+
+/* Class = "IBUIButton"; normalTitle = "Inserir Foto"; ObjectID = "bIt-xA-v9h"; */
+"bIt-xA-v9h.normalTitle" = "Inserir Foto";
+
+/* Class = "IBUITextField"; placeholder = "Marca"; ObjectID = "bVa-4l-mX9"; */
+"bVa-4l-mX9.placeholder" = "Marca";
+
+/* Class = "IBUILabel"; text = "Grupo visível"; ObjectID = "bc1-eM-ibF"; */
+"bc1-eM-ibF.text" = "Grupo visível";
+
+/* Class = "IBUILabel"; text = "Você deixou de emitir: 999,99 ton. de CO2"; ObjectID = "c5H-aS-5Rh"; */
+"c5H-aS-5Rh.text" = "Você deixou de emitir: 999,99 ton. de CO2";
+
+/* Class = "IBUILabel"; text = "Sua cidade agradece, o planeta agradece."; ObjectID = "cAI-7I-wvh"; */
+"cAI-7I-wvh.text" = "Sua cidade agradece, o planeta agradece.";
+
+/* Class = "IBUILabel"; text = "EcoSport 2009 - Prata"; ObjectID = "cBB-gN-np5"; */
+"cBB-gN-np5.text" = "EcoSport 2009 - Prata";
+
+/* Class = "IBUIViewController"; title = "Selecionar Tipo"; ObjectID = "ccs-OK-CRh"; */
+"ccs-OK-CRh.title" = "Selecionar Tipo";
+
+/* Class = "IBUITextField"; placeholder = "Descrição"; ObjectID = "ch7-Cx-cBM"; */
+"ch7-Cx-cBM.placeholder" = "Descrição";
+
+/* Class = "IBUITextField"; placeholder = "Endereço"; ObjectID = "cng-0V-x6N"; */
+"cng-0V-x6N.placeholder" = "Endereço";
+
+/* Class = "IBUIButton"; normalTitle = "Solicitar adesão a um grupo"; ObjectID = "cwn-yd-az0"; */
+"cwn-yd-az0.normalTitle" = "Solicitar adesão a um grupo";
+
+/* Class = "IBUITextField"; placeholder = "Data de nascimento"; ObjectID = "dGs-Uo-neA"; */
+"dGs-Uo-neA.placeholder" = "Data de nascimento";
+
+/* Class = "IBUILabel"; text = "Editar veículo"; ObjectID = "dMQ-C3-BuF"; */
+"dMQ-C3-BuF.text" = "Editar veículo";
+
+/* Class = "IBUIButton"; normalTitle = "CANCELAR"; ObjectID = "dZ7-EL-HFD"; */
+"dZ7-EL-HFD.normalTitle" = "CANCELAR";
+
+/* Class = "IBUITextField"; placeholder = "CEP"; ObjectID = "daq-kA-asb"; */
+"daq-kA-asb.placeholder" = "CEP";
+
+/* Class = "IBUIViewController"; title = "Recuperar Senha"; ObjectID = "dlQ-5k-aLU"; */
+"dlQ-5k-aLU.title" = "Recuperar Senha";
+
+/* Class = "IBUINavigationItem"; title = "Solicitar Adesão"; ObjectID = "eTI-04-MUM"; */
+"eTI-04-MUM.title" = "Solicitar Adesão";
+
+/* Class = "IBUIButton"; normalTitle = "Aceitar participação em um grupo(Adm)"; ObjectID = "ep7-3w-Cqp"; */
+"ep7-3w-Cqp.normalTitle" = "Aceitar participação em um grupo(Adm)";
+
+/* Class = "IBUIButton"; normalTitle = "CANCELAR"; ObjectID = "etG-Qf-p7L"; */
+"etG-Qf-p7L.normalTitle" = "CANCELAR";
+
+/* Class = "IBUILabel"; text = "12"; ObjectID = "eub-NQ-3Zl"; */
+"eub-NQ-3Zl.text" = "12";
+
+/* Class = "IBUIButton"; normalTitle = "Cancelar"; ObjectID = "eyr-jD-ssu"; */
+"eyr-jD-ssu.normalTitle" = "Cancelar";
+
+/* Class = "IBUILabel"; text = "Mapa"; ObjectID = "fOi-yN-zxN"; */
+"fOi-yN-zxN.text" = "Mapa";
+
+/* Class = "IBUILabel"; text = "\"Desconsumo\" TOTAL do Vamu: 999.999km"; ObjectID = "fUr-mf-Xgo"; */
+"fUr-mf-Xgo.text" = "\"Desconsumo\" TOTAL do Vamu: 999.999km";
+
+/* Class = "IBUILabel"; text = "Solicitar adesão a um grupo"; ObjectID = "fWm-di-fMK"; */
+"fWm-di-fMK.text" = "Solicitar adesão a um grupo";
+
+/* Class = "IBUILabel"; text = "Você deixou de emitir: 999,99 ton. de CO2"; ObjectID = "fXM-ra-6jT"; */
+"fXM-ra-6jT.text" = "Você deixou de emitir: 999,99 ton. de CO2";
+
+/* Class = "IBUILabel"; text = "Minhas viagens"; ObjectID = "fYI-u6-HgO"; */
+"fYI-u6-HgO.text" = "Minhas viagens";
+
+/* Class = "IBUIButton"; normalTitle = "Salvar"; ObjectID = "fbo-9m-J7E"; */
+"fbo-9m-J7E.normalTitle" = "Salvar";
+
+/* Class = "IBUILabel"; text = "Presidente Vargas, Centro, Rio de Janeiro"; ObjectID = "fcc-rz-kVG"; */
+"fcc-rz-kVG.text" = "Presidente Vargas, Centro, Rio de Janeiro";
+
+/* Class = "IBUIButton"; normalTitle = "Motorista"; ObjectID = "fgv-3O-W5K"; */
+"fgv-3O-W5K.normalTitle" = "Motorista";
+
+/* Class = "IBUITextField"; placeholder = "Cor"; ObjectID = "gRO-PR-kT2"; */
+"gRO-PR-kT2.placeholder" = "Cor";
+
+/* Class = "IBUITextField"; placeholder = "Qual a seguradora do veículo?"; ObjectID = "hvM-Pe-kfA"; */
+"hvM-Pe-kfA.placeholder" = "Qual a seguradora do veículo?";
+
+/* Class = "IBUILabel"; text = "email do destinatário do convite:"; ObjectID = "iLJ-Re-JNg"; */
+"iLJ-Re-JNg.text" = "email do destinatário do convite:";
+
+/* Class = "IBUIButton"; normalTitle = "Inserir Foto"; ObjectID = "iOI-oG-WgU"; */
+"iOI-oG-WgU.normalTitle" = "Inserir Foto";
+
+/* Class = "IBUITextField"; placeholder = "CPF"; ObjectID = "itt-8X-u8M"; */
+"itt-8X-u8M.placeholder" = "CPF";
+
+/* Class = "IBUILabel"; text = "Receber aviso de Motorista"; ObjectID = "k1W-vC-z04"; */
+"k1W-vC-z04.text" = "Receber aviso de Motorista";
+
+/* Class = "IBUILabel"; text = "Melhore sua cidade"; ObjectID = "k7U-Yv-Skw"; */
+"k7U-Yv-Skw.text" = "Melhore sua cidade";
+
+/* Class = "IBUITextField"; placeholder = "Endereço"; ObjectID = "kFk-5g-GxX"; */
+"kFk-5g-GxX.placeholder" = "Endereço";
+
+/* Class = "IBUITextField"; placeholder = "Placa"; ObjectID = "kRE-Mm-CYx"; */
+"kRE-Mm-CYx.placeholder" = "Placa";
+
+/* Class = "IBUIButton"; normalTitle = "Trocar Usuário"; ObjectID = "kTq-Hp-Ic2"; */
+"kTq-Hp-Ic2.normalTitle" = "Trocar Usuário";
+
+/* Class = "IBUILabel"; text = "e deixou de emitir 99,99 ton. de CO2"; ObjectID = "kkI-Vu-3il"; */
+"kkI-Vu-3il.text" = "e deixou de emitir 99,99 ton. de CO2";
+
+/* Class = "IBUITextField"; placeholder = "CPF"; ObjectID = "l5G-T3-cFd"; */
+"l5G-T3-cFd.placeholder" = "CPF";
+
+/* Class = "IBUITextField"; placeholder = "Renavam"; ObjectID = "l9d-vx-oYF"; */
+"l9d-vx-oYF.placeholder" = "Renavam";
+
+/* Class = "IBUITextField"; placeholder = "Bairro"; ObjectID = "lQp-de-C1U"; */
+"lQp-de-C1U.placeholder" = "Bairro";
+
+/* Class = "IBUILabel"; text = "Endereço:"; ObjectID = "lW6-3z-J8Z"; */
+"lW6-3z-J8Z.text" = "Endereço:";
+
+/* Class = "IBUIButton"; normalTitle = "SALVAR"; ObjectID = "mq3-7b-nBh"; */
+"mq3-7b-nBh.normalTitle" = "SALVAR";
+
+/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "mtU-cz-WDL"; */
+"mtU-cz-WDL.placeholder" = "Email";
+
+/* Class = "IBUITextField"; placeholder = "CPF"; ObjectID = "mv3-SN-BWH"; */
+"mv3-SN-BWH.placeholder" = "CPF";
+
+/* Class = "IBUITextField"; placeholder = "Cidade"; ObjectID = "nDc-9p-EQs"; */
+"nDc-9p-EQs.placeholder" = "Cidade";
+
+/* Class = "IBUILabel"; text = "Rua Riachuelo, Centro, Rio de Janeiro"; ObjectID = "o0D-XU-ig8"; */
+"o0D-XU-ig8.text" = "Rua Riachuelo, Centro, Rio de Janeiro";
+
+/* Class = "IBUIButton"; normalTitle = "CANCELAR"; ObjectID = "o21-TP-LFs"; */
+"o21-TP-LFs.normalTitle" = "CANCELAR";
+
+/* Class = "IBUILabel"; text = "Ivete Sangalo"; ObjectID = "o2k-uT-sN6"; */
+"o2k-uT-sN6.text" = "Ivete Sangalo";
+
+/* Class = "IBUILabel"; text = "Melhore seu planeta"; ObjectID = "ooL-XT-Vgb"; */
+"ooL-XT-Vgb.text" = "Melhore seu planeta";
+
+/* Class = "IBUIButton"; normalTitle = "ENVIAR CONVITE"; ObjectID = "ou2-bM-T06"; */
+"ou2-bM-T06.normalTitle" = "ENVIAR CONVITE";
+
+/* Class = "IBUILabel"; text = "Dados Pessoais:"; ObjectID = "ppC-hM-Z5M"; */
+"ppC-hM-Z5M.text" = "Dados Pessoais:";
+
+/* Class = "IBUITextField"; placeholder = "Apelido"; ObjectID = "qVb-2l-u6J"; */
+"qVb-2l-u6J.placeholder" = "Apelido";
+
+/* Class = "IBUINavigationItem"; title = "Selecionar Tipo"; ObjectID = "rCM-s6-tZv"; */
+"rCM-s6-tZv.title" = "Selecionar Tipo";
+
+/* Class = "IBUITextField"; placeholder = "UF"; ObjectID = "rFz-Lf-Pzz"; */
+"rFz-Lf-Pzz.placeholder" = "UF";
+
+/* Class = "IBUILabel"; text = "14/03/2014 - 08:23 / 10:50"; ObjectID = "rgy-IO-fHS"; */
+"rgy-IO-fHS.text" = "14/03/2014 - 08:23 / 10:50";
+
+/* Class = "IBUIButton"; normalTitle = "Editar veículo"; ObjectID = "rgy-KE-Frb"; */
+"rgy-KE-Frb.normalTitle" = "Editar veículo";
+
+/* Class = "IBUILabel"; text = "Ative os grupos em que você quiser receber aviso quando um participante entrar como Motorista"; ObjectID = "rsi-cM-tt2"; */
+"rsi-cM-tt2.text" = "Ative os grupos em que você quiser receber aviso quando um participante entrar como Motorista";
+
+/* Class = "IBUILabel"; text = "Placa LHK 2209"; ObjectID = "sSy-79-hr7"; */
+"sSy-79-hr7.text" = "Placa LHK 2209";
+
+/* Class = "IBUIButton"; normalTitle = "Esqueci minha senha"; ObjectID = "si6-dh-eKL"; */
+"si6-dh-eKL.normalTitle" = "Esqueci minha senha";
+
+/* Class = "IBUITextField"; placeholder = "Qual a seguradora do veículo?"; ObjectID = "tN0-yd-ptU"; */
+"tN0-yd-ptU.placeholder" = "Qual a seguradora do veículo?";
+
+/* Class = "IBUITextField"; placeholder = "Senha"; ObjectID = "tgI-G9-w6v"; */
+"tgI-G9-w6v.placeholder" = "Senha";
+
+/* Class = "IBUIButton"; normalTitle = "ENVIAR"; ObjectID = "txe-8f-huW"; */
+"txe-8f-huW.normalTitle" = "ENVIAR";
+
+/* Class = "IBUINavigationItem"; title = "Novo Participante"; ObjectID = "u9r-T7-TB2"; */
+"u9r-T7-TB2.title" = "Novo Participante";
+
+/* Class = "IBUITextField"; placeholder = "Placa"; ObjectID = "vLh-Hh-9Mc"; */
+"vLh-Hh-9Mc.placeholder" = "Placa";
+
+/* Class = "IBUIButton"; normalTitle = "CANCELAR"; ObjectID = "ven-fK-bdn"; */
+"ven-fK-bdn.normalTitle" = "CANCELAR";
+
+/* Class = "IBUITextField"; placeholder = "Modelo"; ObjectID = "vg1-Y6-WZ3"; */
+"vg1-Y6-WZ3.placeholder" = "Modelo";
+
+/* Class = "IBUITextField"; placeholder = "Confirmar Senha"; ObjectID = "w15-59-N2V"; */
+"w15-59-N2V.placeholder" = "Confirmar Senha";
+
+/* Class = "IBUITextField"; placeholder = "Senha"; ObjectID = "w6t-ki-4dc"; */
+"w6t-ki-4dc.placeholder" = "Senha";
+
+/* Class = "IBUINavigationItem"; title = "Cadastro de Veículo"; ObjectID = "wOi-4n-Bzs"; */
+"wOi-4n-Bzs.title" = "Cadastro de Veículo";
+
+/* Class = "IBUITextField"; placeholder = "Complemento"; ObjectID = "wfT-qa-6zW"; */
+"wfT-qa-6zW.placeholder" = "Complemento";
+
+/* Class = "IBUILabel"; text = "Grupos:"; ObjectID = "woW-db-ttf"; */
+"woW-db-ttf.text" = "Grupos:";
+
+/* Class = "IBUILabel"; text = "Grupos \"invisíveis\" não aparecem nas buscas de grupos por participantes"; ObjectID = "wrF-DS-lJd"; */
+"wrF-DS-lJd.text" = "Grupos \"invisíveis\" não aparecem nas buscas de grupos por participantes";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "xA8-cp-nwl"; */
+"xA8-cp-nwl.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Definir Trajeto"; ObjectID = "xax-CF-BjI"; */
+"xax-CF-BjI.text" = "Definir Trajeto";
+
+/* Class = "IBUITextField"; placeholder = "Nome"; ObjectID = "y7a-8h-t9d"; */
+"y7a-8h-t9d.placeholder" = "Nome";
+
+/* Class = "IBUINavigationItem"; title = "Cadastro de Veículo"; ObjectID = "yJW-ch-6vK"; */
+"yJW-ch-6vK.title" = "Cadastro de Veículo";
+
+/* Class = "IBUILabel"; text = "4"; ObjectID = "zJ8-fs-6Qv"; */
+"zJ8-fs-6Qv.text" = "4";
+
+/* Class = "IBUITextField"; placeholder = "Modelo"; ObjectID = "zb9-1J-rBH"; */
+"zb9-1J-rBH.placeholder" = "Modelo";
+
+/* Class = "IBUITextField"; placeholder = "SENHA"; ObjectID = "zdz-iT-WpJ"; */
+"zdz-iT-WpJ.placeholder" = "SENHA";
+
+/* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "zyp-zQ-6IA"; */
+"zyp-zQ-6IA.title" = " ";

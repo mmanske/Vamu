@@ -59,8 +59,10 @@
         return;
     }
     [ampulheta exibir];
-    for (Grupo *grupo in gruposSolicitados) {
-        [grupoService enviarConvite:grupo.codGrupo email:edtEmail.text];
+    for (Grupo *grupo in _grupos) {
+        if ([grupo.solicitar boolValue]) {
+            [grupoService enviarConvite:grupo.codGrupo email:edtEmail.text];
+        }
     }
     [ampulheta esconder];
 }
@@ -87,9 +89,10 @@
     Grupo *grupo = [_grupos objectAtIndex:indexPath.row];
     
     cell.lblNomeGrupo.text = grupo.nome;
-    cell.swtSolicitar.on = NO;
+    cell.swtSolicitar.on = [grupo.solicitar boolValue];
     cell.grupo = grupo;
     cell.delegate = self;
+    cell.index = indexPath.row;
     
     return cell;
 }
@@ -106,8 +109,9 @@
     [[[UIAlertView alloc] initWithTitle:@"Enviar Convite" message:@"Convite de participação enviado" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
--(void)onSolicitouParticipacao:(Grupo *)grupo{
-    [gruposSolicitados addObject:grupo];
+-(void)onSolicitouParticipacao:(Grupo *)grupo index:(int)index valor:(BOOL)valor{
+    Grupo *grup = [_grupos objectAtIndex:index];
+    grup.solicitar = [NSNumber numberWithBool:valor];
 }
 
 #pragma mark - TextFieldDelegate

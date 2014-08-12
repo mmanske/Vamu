@@ -476,6 +476,9 @@ static NSMutableArray *allInstances;
 
 - (void)openLeftMenuAnimated:(BOOL)animated
 {
+    
+    [self.currentActiveNVC.view endEditing:YES];
+    
     if (self.slideMenuDelegate && [self.slideMenuDelegate respondsToSelector:@selector(leftMenuWillOpen)])
         [self.slideMenuDelegate leftMenuWillOpen];
     

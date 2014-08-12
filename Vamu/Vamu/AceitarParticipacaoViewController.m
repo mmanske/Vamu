@@ -133,7 +133,7 @@
         solicitacao = [solicitacoes objectAtIndex:0];
         lblNomeParticipante.text = solicitacao.remetente.nome;
         lblNomeGrupo.text = solicitacao.nomeGrupo;
-        lblEstatisticasParticipante.text = [NSString stringWithFormat:@"%@ viagens desde %@", solicitacao.viagens, solicitacao.dataCadastro];
+        lblEstatisticasParticipante.text = [NSString stringWithFormat:@"%@ viagem(ns) desde %@", solicitacao.viagens, solicitacao.dataCadastro];
         
         NSString *fileName = [NSString stringWithFormat:@"%@.jpg", solicitacao.remetente.cpf];
         NSString *imageFileName = [AppHelper getAbsolutePathForImageFile:fileName];

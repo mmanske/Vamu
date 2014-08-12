@@ -11,7 +11,7 @@
 
 @protocol SolicitarAdesaoCellDelegate <NSObject>
 
--(void) onSolicitouParticipacao:(Grupo*) grupo;
+-(void) onSolicitouParticipacao:(Grupo*) grupo index:(int) index valor:(BOOL) valor;
 
 @end
 
@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeGrupo;
 @property (strong, nonatomic) IBOutlet UISwitch *swtSolicitar;
 @property (nonatomic) id delegate;
+@property (nonatomic) int index;
 
 - (IBAction)solicitouAdesao:(id)sender;
 

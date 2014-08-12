@@ -90,10 +90,6 @@
     return YES;
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 #pragma mark - GrupoServiceDelegate
 
 -(void)grupoConsultaNomeRetorno:(NSMutableArray *)grupos{
@@ -123,7 +119,7 @@
 
 #pragma mark - SolicitarAdesaoCellDelegate
 
--(void)onSolicitouParticipacao:(Grupo *)grupo{
+-(void)onSolicitouParticipacao:(Grupo *)grupo index:(int)index valor:(BOOL)valor{
     [edtNomeGrupo resignFirstResponder];
     if ([grupo.receberSolicitacao isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         [ampulheta exibir];

@@ -134,8 +134,4 @@
     roundedView.center = saveCenter;
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 @end

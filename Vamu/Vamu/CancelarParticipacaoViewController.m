@@ -93,13 +93,11 @@
 
 #pragma mark - GrupoCellDelegate
 
--(void) onSolicitouParticipacao:(Grupo *)grupo{
-    [ampulheta exibir];
-    [grupoService cancelarParticipacao:grupo status:@"4"];
-}
-
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+-(void) onSolicitouParticipacao:(Grupo *)grupo index:(int)index valor:(BOOL)valor{
+    if (valor) {
+        [ampulheta exibir];
+        [grupoService cancelarParticipacao:grupo status:@"4"];
+    }
 }
 
 #pragma mark - GrupoServiceDelegate

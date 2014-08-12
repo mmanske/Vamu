@@ -2,7 +2,7 @@
 //  Grupo.m
 //  Vamu
 //
-//  Created by Guilherme Augusto on 31/05/14.
+//  Created by Guilherme Augusto on 12/08/14.
 //  Copyright (c) 2014 Enter Sistemas. All rights reserved.
 //
 
@@ -13,11 +13,12 @@
 @implementation Grupo
 
 @dynamic ativarFiltros;
+@dynamic codGrupo;
 @dynamic descricao;
 @dynamic nome;
 @dynamic receberSolicitacao;
 @dynamic visivel;
-@dynamic codGrupo;
+@dynamic solicitar;
 @dynamic moderador;
 @dynamic participantes;
 

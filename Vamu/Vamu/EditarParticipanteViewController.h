@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *edtCidade;
 @property (strong, nonatomic) IBOutlet UITextField *edtUF;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UITextField *edtTelefone;
 
 - (IBAction)btnInserirFotoClick:(id)sender;
 - (IBAction)btnSalvarClick:(id)sender;

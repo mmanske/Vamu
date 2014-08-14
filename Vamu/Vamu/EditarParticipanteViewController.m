@@ -36,7 +36,7 @@
 @implementation EditarParticipanteViewController
 
 @synthesize participante;
-@synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF, edtDataNascimento, edtEmail, edtEndereco, edtNomeParticipante, edtNumero, edtSenha, edtSexo, edtUF;
+@synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF, edtDataNascimento, edtEmail, edtEndereco, edtNomeParticipante, edtNumero, edtSenha, edtSexo, edtUF, edtTelefone;
 @synthesize scrollView;
 @synthesize imgBg, imgParticipante, enhancedKeyboard;
 @synthesize ampulheta, enviarImagemService;
@@ -73,6 +73,7 @@
     [formItems addObject:edtSexo];
     [formItems addObject:edtDataNascimento];
     [formItems addObject:edtCelular];
+    [formItems addObject:edtTelefone];
     [formItems addObject:edtCEP];
     [formItems addObject:edtEndereco];
     [formItems addObject:edtNumero];
@@ -112,7 +113,7 @@
     imgParticipante.layer.borderColor = [UIColor whiteColor].CGColor;
     imgParticipante.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
-    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtDataNascimento.delegate = edtNomeParticipante.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = self;
+    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtDataNascimento.delegate = edtNomeParticipante.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = edtTelefone.delegate = self;
     
     ampulheta = [CustomActivityView new];
     
@@ -160,6 +161,7 @@
     edtSenha.text = participante.senha;
     edtSexo.text = [participante.sexo isEqualToNumber:[NSNumber numberWithInt:0]] ? @"Masculino" : @"Feminino";
     edtUF.text = participante.uf;
+    edtTelefone.text = participante.fixo;
 }
 
 -(BOOL) validouCampos{
@@ -201,6 +203,10 @@
         return NO;
     }
     if ([edtCelular.text isEqualToString:@""]) {
+        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo telefone"];
+        return NO;
+    }
+    if ([edtTelefone.text isEqualToString:@""]) {
         [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
         return NO;
     }
@@ -258,6 +264,7 @@
     participante.bairro = edtBairro.text;
     participante.cidade = edtCidade.text;
     participante.uf = edtUF.text;
+    participante.fixo = edtTelefone.text;
 }
 
 
@@ -294,8 +301,13 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if (textField == edtCelular) {
-        return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_TELEFONE];
+    if (textField == edtCelular || textField == edtTelefone) {
+        
+        if (textField.text.length > 12) {
+            return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_CELULAR];
+        } else {
+            return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_TELEFONE];
+        }
     }
     
     if (textField == edtCPF) {

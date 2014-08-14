@@ -35,6 +35,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *edtNascimento;
 @property (strong, nonatomic) IBOutlet UITextField *edtCelular;
 @property (strong, nonatomic) IBOutlet UIImageView *foto;
+@property (strong, nonatomic) IBOutlet UITextField *edtTelefone;
 
 
 #pragma mark - Endereco

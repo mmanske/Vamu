@@ -54,6 +54,7 @@
     [dicParticipante setObject:participante.numero forKey:@"numero"];
     [dicParticipante setObject:participante.cep forKey:@"cep"];
     [dicParticipante setObject:participante.celular forKey:@"telefone1"];
+    [dicParticipante setObject:participante.fixo forKey:@"celular"];
     if (participante.codParticipante) {
         [dicParticipante setObject:participante.codParticipante forKey:@"codigoPessoa"];
     }
@@ -86,6 +87,8 @@
 
 -(void)trataRecebimento{
     [super trataRecebimento];
+    
+    NSLog(@"%@", self.dadosRetorno);
     
     NSRange strRange = [self.dadosRetorno rangeOfString:@"HTTP Status 404"];
     if (strRange.length > 0) {

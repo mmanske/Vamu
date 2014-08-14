@@ -82,7 +82,7 @@
     }
     
     NSString* aStr;
-	aStr = [[NSString alloc] initWithData:result encoding:NSASCIIStringEncoding];
+	aStr = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
     
     return aStr;
 }

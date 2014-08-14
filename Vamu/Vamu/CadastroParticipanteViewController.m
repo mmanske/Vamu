@@ -38,7 +38,7 @@
 @synthesize scrollView;
 @synthesize imgBackGround;
 @synthesize edtApelido, edtBairro, edtCelular, edtCEP, edtCidade, edtComplemento, edtConfirmarSenha, edtCPF;
-@synthesize edtEmail, edtEndereco, edtNascimento, edtNome, edtNumero, edtSenha, edtSexo, edtUF;
+@synthesize edtEmail, edtEndereco, edtNascimento, edtNome, edtNumero, edtSenha, edtSexo, edtUF, edtTelefone;
 @synthesize foto, formItems;
 @synthesize participanteService, enhancedKeyboard;
 @synthesize ampulheta, pickerSexo, cpf, senha, enviarImagemService, mascaraHelper;
@@ -76,6 +76,7 @@
     [formItems addObject:edtSexo];
     [formItems addObject:edtNascimento];
     [formItems addObject:edtCelular];
+    [formItems addObject:edtTelefone];
     [formItems addObject:edtCEP];
     [formItems addObject:edtEndereco];
     [formItems addObject:edtNumero];
@@ -122,7 +123,7 @@
     foto.layer.borderColor = [UIColor whiteColor].CGColor;
     foto.layer.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2].CGColor;
     
-    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtNascimento.delegate = edtNome.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = self;
+    edtApelido.delegate = edtBairro.delegate = edtCelular.delegate = edtCEP.delegate = edtCidade.delegate = edtComplemento.delegate = edtConfirmarSenha.delegate = edtCPF.delegate = edtEmail.delegate = edtEndereco.delegate = edtNascimento.delegate = edtNome.delegate = edtNumero.delegate = edtSenha.delegate = edtSexo.delegate = edtUF.delegate = edtTelefone.delegate = self;
     
 //    [self dadosTeste];
     
@@ -154,6 +155,8 @@
     edtBairro.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtBairro.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
     
     edtCelular.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtCelular.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
+    
+    edtTelefone.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtTelefone.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
     
     edtCEP.attributedPlaceholder = [[NSAttributedString alloc] initWithString:edtCEP.placeholder attributes:@{NSForegroundColorAttributeName: placeHolderColor}];
     
@@ -346,10 +349,17 @@
         return NO;
     }
     if ([edtCelular.text isEqualToString:@""]) {
-//        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
+        //        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo telefone" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
+        return NO;
+    }
+    
+    if ([edtTelefone.text isEqualToString:@""]) {
+        //        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Preencha o campo celular"];
         [[[UIAlertView alloc] initWithTitle:@"" message:@"Preencha o campo celular" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
         return NO;
     }
+    
     if (![edtSenha.text isEqualToString:edtConfirmarSenha.text]) {
 //        [CSNotificationView showInViewController:self.navigationController style:CSNotificationViewStyleError message:@"Senha não confere"];
         [[[UIAlertView alloc] initWithTitle:@"" message:@"Senha não confere" delegate:nil cancelButtonTitle:@"Fechar" otherButtonTitles: nil] show];
@@ -402,7 +412,11 @@
     participanteCriado.nome = edtNome.text;
     participanteCriado.apelido = edtApelido.text;
     participanteCriado.email = edtEmail.text;
-    participanteCriado.sexo = [NSNumber numberWithInt:0];
+    if ([edtSexo.text isEqualToString:@"Masculino"]) {
+        participanteCriado.sexo = [NSNumber numberWithInt:0];
+    } else {
+        participanteCriado.sexo = [NSNumber numberWithInt:1];
+    }
     participanteCriado.nascimento = edtNascimento.text;
     participanteCriado.celular = edtCelular.text;
     participanteCriado.cep = edtCEP.text;
@@ -412,6 +426,7 @@
     participanteCriado.bairro = edtBairro.text;
     participanteCriado.cidade = edtCidade.text;
     participanteCriado.uf = edtUF.text;
+    participanteCriado.fixo = edtTelefone.text;
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -519,8 +534,13 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if (textField == edtCelular) {
-        return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_TELEFONE];
+    if (textField == edtCelular || textField == edtTelefone) {
+        
+        if (textField.text.length > 12) {
+            return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_CELULAR];
+        } else {
+            return [mascaraHelper mascarar:textField shouldChangeCharactersInRange:range replacementString:string mascara:MascaraHelper.MASCARA_TELEFONE];
+        }
     }
 
     if (textField == edtCPF) {

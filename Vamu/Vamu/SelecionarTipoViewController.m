@@ -83,11 +83,11 @@
 - (IBAction)btnMotoristaClick:(id)sender {
 
     Participante *part = [AppHelper getParticipanteLogado];
-    /*
+    
     if ([part.viajensMotorista intValue] <= 0) {
-        [[[UIAlertView alloc] initWithTitle:nil message:@"Você já excedeu o número de viagens como motorista !" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Você já excedeu o número de viagens como motorista!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         return;
-    } */
+    }
     
     carona = NO;
     [part setMotorista:[NSNumber numberWithBool:YES]];
@@ -96,12 +96,10 @@
 
 - (IBAction)btnCaronaClick:(id)sender {
     Participante *part = [AppHelper getParticipanteLogado];
-    /*
     if ([part.viajensCarona intValue] <= 0) {
-        [[[UIAlertView alloc] initWithTitle:nil message:@"Você já excedeu o número de viagens como carona !" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Você já excedeu o número de viagens como carona!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         return;
     }
-    */
     carona = YES;
     [part setMotorista:[NSNumber numberWithBool:NO]];
     [self performSegueWithIdentifier:@"sgDefinirTrajeto" sender:self];

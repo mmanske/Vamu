@@ -207,11 +207,13 @@
     NSString *uf      = [dic objectForKey:@"uf"];
     NSNumber *vjCarona = [dic objectForKey:@"viajensCarona"];
     NSNumber *vjMotori = [dic objectForKey:@"viajensMotorista"];
+    NSString *telefone = [dic objectForKey:@"celular"];
     
     participanteLogado.codParticipante = [NSString stringWithFormat:@"%@", codPart];
     participanteLogado.apelido         = apelido;
     participanteLogado.bairro          = bairro;
     participanteLogado.celular         = celular;
+    participanteLogado.fixo            = telefone;
     participanteLogado.cep             = cep;
     participanteLogado.cidade          = cidade;
     participanteLogado.complemento     = complem;

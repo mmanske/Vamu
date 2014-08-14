@@ -413,7 +413,7 @@
         
         if (!pinView) {
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            pinView.draggable = YES;
+            pinView.draggable = NO;
             pinView.image = ((PinInicioFim*) annotation).imagem;
             pinView.canShowCallout = NO;
         } else {

@@ -21,9 +21,9 @@
 @implementation DadosConexaoService
 
 +(NSString*)getBaseURL {
-//    return @"http://www.vamu.eco.br/VamuServer";
+    return @"http://www.vamu.eco.br/VamuServer";
 //    return @"http://10.125.128.47:8080/VamuServer";
-    return @"http://172.27.171.2:8080/VamuServer";
+ //   return @"http://172.27.171.2:8080/VamuServer";
     
     //return @"http://107.170.189.97:8080/VamuServer";
     //return @"http://192.168.1.157:8080/VamuServer";

@@ -36,6 +36,7 @@
     self.nomeOrigem = nil;
     self.distanciaPercorrida = nil;
     self.locationCarona = nil;
+    self.caronas = nil;
     
     [self customizeNavigationBar];
     //[AppHelper setDeviceToken:nil];

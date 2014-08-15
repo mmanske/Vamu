@@ -128,6 +128,15 @@ static NSString * const DeviceTokenKey = @"DeviceToken";
     [delegate setMotoristas:motoristas];
 }
 
++(NSMutableArray *)getCaronas{
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] caronas];
+}
+
++(void)setCaronas:(NSMutableArray *)caronas{
+    AppDelegate *delegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    [delegate setCaronas:caronas];
+}
+
 +(NSMutableString*)getNomeDestino{
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] nomeDestino];
 }

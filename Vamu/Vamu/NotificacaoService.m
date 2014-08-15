@@ -71,6 +71,7 @@
     NSDictionary *dicNotificacoes    = [dic objectForKey:@"notificacoes"];
     NSDictionary *dicMotoristas      = [dic objectForKey:@"motoristas"];
     NSDictionary *dicMotoristasGrupo = [dic objectForKey:@"motoristasPorGrupo"];
+    NSDictionary *dicCaronas         = [dic objectForKey:@"caronas"];
     
     for (NSDictionary *dicMotoristaGrupo in dicMotoristasGrupo) {
         GrupoAtivo *grupoAtivo = [GrupoAtivo new];
@@ -252,6 +253,25 @@
         
         [retorno addObject:notificacao];
         
+    }
+    
+    NSMutableArray *caronas = [NSMutableArray new];
+    
+    for (NSDictionary *dicCarona in dicCaronas) {
+        Ponto *ponto = [Ponto new];
+        
+        NSString *latitude = [dicCarona objectForKey:@"latitude"];
+        NSString *longitud = [dicCarona objectForKey:@"longitude"];
+        
+        ponto.latitude = [latitude floatValue];
+        ponto.longitude = [longitud floatValue];
+        
+        [caronas addObject:ponto];
+    }
+    
+    if ([caronas count] > 0) {
+        [AppHelper setCaronas:caronas];
+        NSLog(@"%@", [AppHelper getCaronas]);
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(notificacaoesRecebidas:grupos:motoristas:)]) {

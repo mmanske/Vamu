@@ -571,8 +571,11 @@
         [pinsMapa addObject:pin];
     }
     
-    if ([[AppHelper getParticipanteLogado].motorista boolValue]) {
-        CaronaPin *caronaPin = [[CaronaPin new] initInLocation:[AppHelper getLocationCarona]];
+    NSMutableArray *arrCaronas = [AppHelper getCaronas];
+    
+    for (Ponto *ponto in arrCaronas) {
+        CLLocation *location = [[CLLocation new] initWithLatitude:ponto.latitude longitude:ponto.longitude];
+        CaronaPin *caronaPin = [[CaronaPin new] initInLocation:location];
         [pinsMapa addObject:caronaPin];
     }
     

@@ -53,6 +53,9 @@
 +(NSMutableArray*) getNegacoes;
 +(void) setNegacoes:(NSMutableArray*) negacoes;
 
++(NSMutableArray*) getCaronas;
++(void) setCaronas:(NSMutableArray*) caronas;
+
 +(MKRoute*)getRota;
 +(void)setRota:(MKRoute*) rota;
 

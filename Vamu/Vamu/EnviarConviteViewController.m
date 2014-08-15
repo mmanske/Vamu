@@ -122,7 +122,7 @@
         [UIView setAnimationDelegate:self];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationBeginsFromCurrentState:YES];
-        self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y - 100.0), self.view.frame.size.width, self.view.frame.size.height);
+        self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y - 140.0), self.view.frame.size.width, self.view.frame.size.height);
         [UIView commitAnimations];
     }
 }
@@ -133,7 +133,7 @@
         [UIView setAnimationDelegate:self];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationBeginsFromCurrentState:YES];
-        self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y + 100.0), self.view.frame.size.width, self.view.frame.size.height);
+        self.view.frame = CGRectMake(self.view.frame.origin.x, (self.view.frame.origin.y + 140.0), self.view.frame.size.width, self.view.frame.size.height);
         [UIView commitAnimations];
     }
 }

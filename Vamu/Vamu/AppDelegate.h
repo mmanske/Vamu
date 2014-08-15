@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSMutableArray *solicitacoes;
 @property (nonatomic, strong) NSMutableArray *aceitacoes;
 @property (nonatomic, strong) NSMutableArray *negacoes;
+@property (nonatomic, strong) NSMutableArray *caronas;
 
 @property (nonatomic, strong) NSMutableArray *desembarqueCarona;
 @property (nonatomic, strong) NSMutableArray *desembarqueMotorista;

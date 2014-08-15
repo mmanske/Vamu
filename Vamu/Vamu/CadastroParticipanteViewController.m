@@ -551,6 +551,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    [self entrouTextField:textField];
     [textField setInputAccessoryView:[self.enhancedKeyboard getToolbarWithPrevEnabled:YES NextEnabled:YES DoneEnabled:YES]];
 }
 
@@ -602,6 +603,19 @@
             [field becomeFirstResponder];
             break;
         }
+    }
+}
+
+-(void) entrouTextField:(UITextField*) field{
+    UIView *parentView = field.superview;
+    CGFloat y = 120;
+    if (parentView.tag == 89) {
+        y = 300 + field.frame.origin.y;
+    }
+    
+    if (field.frame.origin.y + parentView.frame.origin.y > 160) {
+        CGPoint ponto = CGPointMake(0, y);
+        [scrollView setContentOffset:ponto animated:YES];
     }
 }
 

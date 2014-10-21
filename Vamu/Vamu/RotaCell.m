@@ -22,7 +22,7 @@
     __weak IBOutlet MKMapView *mapa;
 }
 
-@synthesize delegate, favorita, btnEstrela;
+@synthesize delegate, favorita, btnEstrela, locationManager;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -87,6 +87,19 @@
 }
 
 -(void) inicia{
+    
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+#ifdef __IPHONE_8_0
+    if(IS_OS_8_OR_LATER) {
+        // Use one or the other, not both. Depending on what you put in info.plist
+        [self.locationManager requestWhenInUseAuthorization];
+       // [self.locationManager requestAlwaysAuthorization];
+    }
+#endif
+    [self.locationManager startUpdatingLocation];
+    
     mapa.mapType = MKMapTypeStandard;
     mapa.delegate = self;
     mapa.showsUserLocation = YES;

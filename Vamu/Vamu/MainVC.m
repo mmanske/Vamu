@@ -254,6 +254,8 @@
             solicitacao.numViagens = notificacao.viagens;
             solicitacao.destinatario = notificacao.destinatario;
             solicitacao.nomeDestino = notificacao.nomeDestino;
+            solicitacao.latitudeRemetente = notificacao.latitude;
+            solicitacao.longitudeRemetente = notificacao.longitude;
             
             [solicitacoes addObject:solicitacao];
             

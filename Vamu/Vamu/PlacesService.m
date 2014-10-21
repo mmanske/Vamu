@@ -12,7 +12,7 @@
 @implementation PlacesService
 
 -(void)consultar:(NSString *)lugares{
-    NSString *req = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%@&types=geocode&language=pt_BR&key=%@", [lugares stringByReplacingOccurrencesOfString:@" " withString:@"%20"], @"AIzaSyDQ63g26q4i6t3srs6P97STY3oqMZZgZKA"];
+    NSString *req = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%@&types=geocode&language=pt_BR&key=%@", [lugares stringByReplacingOccurrencesOfString:@" " withString:@"%20"], @"AIzaSyAlPms0IbqpUQg_sXJTAqLmHKCDKm_wzfQ"];
     
     NSString *result = [NSString stringWithContentsOfURL:[NSURL URLWithString:req] encoding:NSUTF8StringEncoding error:NULL];
     if (result) {

@@ -48,7 +48,7 @@
 -(void)trataRecebimento{
     [super trataRecebimento];
     
-    NSLog(@"%@", self.dadosRetorno);
+   // NSLog(@"%@", self.dadosRetorno);
     
     [Notificacao truncateNoSave];
 
@@ -232,6 +232,11 @@
         remetente.nome = nomeRemetente;
         remetente.carro = [NSSet setWithArray:carros];
         remetente.cpf = cpfRemetente;
+        if (latitude) {
+            remetente.latitudeAtual = [NSNumber numberWithFloat:[latitude floatValue]];
+            remetente.longitudeAtual = [NSNumber numberWithFloat:[longitude floatValue]];
+            NSLog(@"Notificação: latitude = %@ , longitude = %@", latitude, longitude);
+        }
         
         notificacao.modeloVeiculo = modeloVeiculo;
         notificacao.placaVeiculo = placa;
@@ -250,7 +255,7 @@
         notificacao.nomeDestino = destinoCarona;
         notificacao.latitude = latitude;
         notificacao.longitude = longitude;
-        
+
         [retorno addObject:notificacao];
         
     }
@@ -278,7 +283,7 @@
         [self.delegate notificacaoesRecebidas:retorno grupos:retornoGrupos motoristas:retornoMotoristas];
     }
     
-    NSLog(@"%@", retornoGrupos);
+   // NSLog(@"%@", retornoGrupos);
 }
 
 @end

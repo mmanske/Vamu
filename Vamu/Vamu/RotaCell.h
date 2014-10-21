@@ -19,7 +19,7 @@
 
 @end
 
-@interface RotaCell : UICollectionViewCell<MKMapViewDelegate, UIGestureRecognizerDelegate>{
+@interface RotaCell : UICollectionViewCell<MKMapViewDelegate, UIGestureRecognizerDelegate, CLLocationManagerDelegate>{
     id <RotaCellDelegate> delegate;
 }
 
@@ -27,6 +27,7 @@
 @property (strong, nonatomic) RotasVO *rotaVO;
 @property (nonatomic) id delegate;
 @property BOOL favorita;
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 - (IBAction)btnIniciarNagevacaoClick:(id)sender;
 -(RotaCell*) initWithRoute:(MKRoute*)route indexPath:(NSIndexPath*) indexPath delegate:(id<RotaCellDelegate>) viewDelegate favorito:(BOOL) favorito ;

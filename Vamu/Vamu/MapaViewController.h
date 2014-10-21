@@ -19,7 +19,10 @@
 #import "CaronaSolicitacaoNegada.h"
 #import "CaronaConfirmarEmbarqueView.h"
 
-@interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate, SolicitacaoAceitaViewDelegate, CaronaNegadaDelegate, ConfirmarEmbarqueDelegate, EnviarSolicitacaoViewDelegate>
+
+
+@interface MapaViewController : BaseViewController<MKMapViewDelegate, SolicitacaoViewDelegate, UIActionSheetDelegate, DesembarqueCaronaViewDelegate, DesembarqueMotoristaViewDelegate, SolicitacaoAceitaViewDelegate, CaronaNegadaDelegate, ConfirmarEmbarqueDelegate, EnviarSolicitacaoViewDelegate,
+CLLocationManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *lblNomeParticipante;
 @property (strong, nonatomic) IBOutlet UILabel *lblOrigem;
@@ -36,6 +39,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgTipoParticipange;
 @property (strong, nonatomic) IBOutlet UIButton *btnVerGrupos;
 @property (strong, nonatomic) NSString *nomeDestino;
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 - (IBAction)btnLocalizacaoClick:(id)sender;
 - (IBAction)btnZoomInClick:(id)sender;

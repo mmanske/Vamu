@@ -83,7 +83,7 @@
 @synthesize desembarqueCaronaView;
 @synthesize resumoService;
 @synthesize dicResumoCarona;
-@synthesize dicResumoMotorista;
+@synthesize dicResumoMotorista, locationManager;
 
 - (void)viewDidLoad
 {
@@ -134,6 +134,18 @@
     }
     
     self.title = @"Mapa";
+    self.locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+#ifdef __IPHONE_8_0
+    if(IS_OS_8_OR_LATER) {
+        // Use one or the other, not both. Depending on what you put in info.plist
+        [self.locationManager requestWhenInUseAuthorization];
+//        [self.locationManager requestAlwaysAuthorization];
+    }
+#endif
+    [self.locationManager startUpdatingLocation];
+    
+    
     
     mapa.mapType = MKMapTypeStandard;
     mapa.delegate = self;
@@ -569,14 +581,18 @@
     for (MotoristaAtivo *motorista in motoristas) {
         MotoristaPin *pin = [[MotoristaPin alloc] initWithMotorista:motorista];
         [pinsMapa addObject:pin];
+        NSLog(@"Motorista %f - %f",[motorista.latitude floatValue], [motorista.longitude floatValue] );
     }
     
-    NSMutableArray *arrCaronas = [AppHelper getCaronas];
-    
-    for (Ponto *ponto in arrCaronas) {
-        CLLocation *location = [[CLLocation new] initWithLatitude:ponto.latitude longitude:ponto.longitude];
-        CaronaPin *caronaPin = [[CaronaPin new] initInLocation:location];
-        [pinsMapa addObject:caronaPin];
+    if ([[AppHelper getParticipanteLogado].motorista boolValue]) {
+        for (Participante* carona in caronas) {
+            CaronaPin *caronaPin = [[CaronaPin new] initWithCarona:carona];
+            [pinsMapa addObject:caronaPin];
+            NSLog(@"Carona: %f - %f",[carona.latitudeAtual floatValue], [carona.longitudeAtual floatValue] );
+        }
+        
+        //CaronaPin *caronaPin = [[CaronaPin new] initInLocation:[AppHelper getLocationCarona]];
+        
     }
     
     [mapa addAnnotations:pinsMapa];
@@ -611,6 +627,14 @@
     [self.view addSubview:desembarqueMotorista];
     
     [caronas addObject:solicitacao.remetente];
+    
+    //NSLog(@"Carona1: %f - %f",[solicitacao.remetente.latitudeAtual floatValue], [solicitacao.remetente.longitudeAtual floatValue] );
+    //NSLog(@"Carona2: %f - %f",[solicitacao.latitudeRemetente floatValue], [solicitacao.longitudeRemetente floatValue] );
+    if (solicitacao.latitudeRemetente) {
+        solicitacao.remetente.latitudeAtual = [NSNumber numberWithFloat:[solicitacao.latitudeRemetente floatValue]];
+        solicitacao.remetente.longitudeAtual = [NSNumber numberWithFloat:[solicitacao.longitudeRemetente floatValue]];
+        
+    }
     
     [caronaService aceitarSolicitacao:solicitacao];
     [UIView animateWithDuration:0.3

@@ -19,7 +19,7 @@
 #import "KSEnhancedKeyboard.h"
 #import "UIViewController+AMSlideMenu.h"
 
-@interface DefinirTrajetoViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate, KSEnhancedKeyboardDelegate>
+@interface DefinirTrajetoViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, RotaCellDelegate, UIAlertViewDelegate, MLPAutoCompleteTextFieldDelegate, MLPAutoCompleteTextFieldDataSource, PlacesServiceDelegate, UITextFieldDelegate, KSEnhancedKeyboardDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *edtOrigem;
 @property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *edtDestino;
@@ -30,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgIcoIndicacao;
 @property BOOL carona;
 @property (strong, nonatomic) Veiculo *veiculo;
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 - (IBAction)btnIrClick:(id)sender;
 - (IBAction)btnFavoritosClick:(id)sender;

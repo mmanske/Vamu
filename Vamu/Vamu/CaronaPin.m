@@ -8,6 +8,7 @@
 
 #import "CaronaPin.h"
 
+
 @implementation CaronaPin
 
 @synthesize image;
@@ -18,6 +19,14 @@
     self.title      = @"Início";
     image           = [UIImage imageNamed:@"pin-mapa-verde_5.png"];
 
+    return self;
+    
+}
+
+-(CaronaPin*) initWithCarona:(Participante*) carona {
+    self.coordinate = CLLocationCoordinate2DMake([carona.latitudeAtual floatValue], [carona.longitudeAtual floatValue]);
+    self.title      = carona.apelido;
+    image          = [UIImage imageNamed:@"pin-mapa-verde_5.png"];
     return self;
     
 }

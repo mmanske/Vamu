@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Zm5-ag-BpR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Zm5-ag-BpR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="1128" y="64"/>
         </scene>
-        <!--Selecionar Tipo View Controller - Selecionar Tipo-->
+        <!--Selecionar Tipo-->
         <scene sceneID="iKy-ME-AE3">
             <objects>
                 <viewController title="Selecionar Tipo" id="ccs-OK-CRh" customClass="SelecionarTipoViewController" sceneMemberID="viewController">
@@ -430,7 +430,7 @@
             </objects>
             <point key="canvasLocation" x="2920" y="-1456"/>
         </scene>
-        <!--Cadastro Participante View Controller - Novo Participante-->
+        <!--Novo Participante-->
         <scene sceneID="kW6-vR-s8u">
             <objects>
                 <viewController id="YJ6-rc-IBD" customClass="CadastroParticipanteViewController" sceneMemberID="viewController">
@@ -655,7 +655,7 @@
             </objects>
             <point key="canvasLocation" x="2186" y="847"/>
         </scene>
-        <!--Cadastro Veiculo View Controller - Cadastro de Veículo-->
+        <!--Cadastro de Veículo-->
         <scene sceneID="Ka1-eA-iXV">
             <objects>
                 <viewController title="Cadastro de Veículo" id="24n-zb-QMt" customClass="CadastroVeiculoViewController" sceneMemberID="viewController">
@@ -801,7 +801,7 @@
             </objects>
             <point key="canvasLocation" x="2822" y="847"/>
         </scene>
-        <!--Cadastro Grupo View Controller - Novo Grupo-->
+        <!--Novo Grupo-->
         <scene sceneID="ajO-DE-Fat">
             <objects>
                 <viewController id="hkc-fZ-Zcj" customClass="CadastroGrupoViewController" sceneMemberID="viewController">
@@ -988,7 +988,7 @@
             </objects>
             <point key="canvasLocation" x="5176" y="-1555"/>
         </scene>
-        <!--Solicitar Adesao View Controller - Solicitar Adesão-->
+        <!--Solicitar Adesão-->
         <scene sceneID="9ac-mD-Cri">
             <objects>
                 <viewController id="5m1-PL-Wla" customClass="SolicitarAdesaoViewController" sceneMemberID="viewController">
@@ -1036,7 +1036,7 @@
             </objects>
             <point key="canvasLocation" x="5176" y="-875"/>
         </scene>
-        <!--Cancelar Participacao View Controller - Cancelar Participação-->
+        <!--Cancelar Participação-->
         <scene sceneID="dSl-CC-bBO">
             <objects>
                 <viewController id="FSI-yb-198" customClass="CancelarParticipacaoViewController" sceneMemberID="viewController">
@@ -1252,7 +1252,7 @@
             </objects>
             <point key="canvasLocation" x="5166" y="-2316"/>
         </scene>
-        <!--Resumo Carona View Controller - Resumo da viagem-->
+        <!--Resumo da viagem-->
         <scene sceneID="0QC-kB-Bvw">
             <objects>
                 <viewController id="qug-Yz-URO" customClass="ResumoCaronaViewController" sceneMemberID="viewController">
@@ -1484,7 +1484,7 @@
             </objects>
             <point key="canvasLocation" x="5776" y="-2632"/>
         </scene>
-        <!--Resumo Motorista View Controller - Resumo da viagem-->
+        <!--Resumo da viagem-->
         <scene sceneID="8Zq-qQ-g7E">
             <objects>
                 <viewController id="TpK-oN-xpZ" customClass="ResumoMotoristaViewController" sceneMemberID="viewController">
@@ -1729,7 +1729,7 @@
             </objects>
             <point key="canvasLocation" x="-128" y="59"/>
         </scene>
-        <!--Recuperar Senha View Controller - Recuperar Senha-->
+        <!--Recuperar Senha-->
         <scene sceneID="Yb7-Lx-z8N">
             <objects>
                 <viewController title="Recuperar Senha" id="dlQ-5k-aLU" customClass="RecuperarSenhaViewController" sceneMemberID="viewController">
@@ -1797,7 +1797,7 @@
             </objects>
             <point key="canvasLocation" x="1128" y="740"/>
         </scene>
-        <!--Definir Trajeto View Controller - Definir Trajeto-->
+        <!--Definir Trajeto-->
         <scene sceneID="gKw-0C-5II">
             <objects>
                 <viewController title="Definir Trajeto" extendedLayoutIncludesOpaqueBars="YES" id="YnN-uc-O9g" customClass="DefinirTrajetoViewController" sceneMemberID="viewController">
@@ -2447,7 +2447,7 @@
             </objects>
             <point key="canvasLocation" x="4582" y="551"/>
         </scene>
-        <!--Enviar Convite View Controller - Enviar Convite-->
+        <!--Enviar Convite-->
         <scene sceneID="O3c-9z-FEi">
             <objects>
                 <viewController title="Enviar Convite" id="BdP-V9-kSl" customClass="EnviarConviteViewController" sceneMemberID="viewController">
@@ -2547,7 +2547,7 @@
             </objects>
             <point key="canvasLocation" x="4640" y="1311"/>
         </scene>
-        <!--Receber Aviso View Controller - Aviso motorista-->
+        <!--Aviso motorista-->
         <scene sceneID="ShZ-6E-fsa">
             <objects>
                 <viewController id="UDX-as-8Yy" customClass="ReceberAvisoViewController" sceneMemberID="viewController">
@@ -2609,7 +2609,7 @@
             </objects>
             <point key="canvasLocation" x="4656" y="2049"/>
         </scene>
-        <!--Editar Participante View Controller - Editar Participante-->
+        <!--Editar Participante-->
         <scene sceneID="l9t-qx-jE7">
             <objects>
                 <viewController id="YIE-0u-pMD" customClass="EditarParticipanteViewController" sceneMemberID="viewController">
@@ -2849,7 +2849,7 @@
             </objects>
             <point key="canvasLocation" x="4640" y="2751"/>
         </scene>
-        <!--Editar Veiculo View Controller - Cadastro de Veículo-->
+        <!--Cadastro de Veículo-->
         <scene sceneID="GNL-oD-IoR">
             <objects>
                 <viewController title="Cadastro de Veículo" id="6c8-Jp-4nG" customClass="EditarVeiculoViewController" sceneMemberID="viewController">

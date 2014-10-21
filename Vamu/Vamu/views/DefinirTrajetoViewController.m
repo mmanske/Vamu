@@ -46,7 +46,7 @@
 @synthesize veiculo;
 @synthesize ampulheta;
 @synthesize rotaService;
-@synthesize rotaFavorita;
+@synthesize rotaFavorita, locationManager;
 @synthesize placeServices, enhancedKeyboard, formItems;
 @synthesize lugares = _lugares;
 
@@ -63,6 +63,19 @@
 //    edtDestino.text = @"Avenida Embaixador Abelardo Bueno, Barra da Tijuca, Rio de Janeiro";
     
     participanteLogado = [AppHelper getParticipanteLogado];
+    
+    
+    locationManager.delegate = self;
+    self.locationManager = [[CLLocationManager alloc] init];
+#ifdef __IPHONE_8_0
+    if(IS_OS_8_OR_LATER) {
+        // Use one or the other, not both. Depending on what you put in info.plist
+        [self.locationManager requestWhenInUseAuthorization];
+        //[self.locationManager requestAlwaysAuthorization];
+    }
+#endif
+    [self.locationManager startUpdatingLocation];
+    
     
     for (Veiculo *vei in [AppHelper getParticipanteLogado].carro) {
         veiculo = vei;

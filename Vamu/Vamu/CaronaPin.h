@@ -7,11 +7,14 @@
 //
 
 #import <MapKit/MapKit.h>
+#import "Participante.h"
 
 @interface CaronaPin : MKPointAnnotation
 
 @property (nonatomic, strong) UIImage *image;
 
 -(CaronaPin*) initInLocation:(CLLocation*) location;
+-(CaronaPin*) initWithCarona:(Participante*) carona;
+
 
 @end

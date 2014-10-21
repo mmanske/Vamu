@@ -235,7 +235,7 @@
         if (latitude) {
             remetente.latitudeAtual = [NSNumber numberWithFloat:[latitude floatValue]];
             remetente.longitudeAtual = [NSNumber numberWithFloat:[longitude floatValue]];
-            NSLog(@"Notificação: latitude = %@ , longitude = %@", latitude, longitude);
+            //NSLog(@"Notificação: latitude = %@ , longitude = %@", latitude, longitude);
         }
         
         notificacao.modeloVeiculo = modeloVeiculo;
@@ -276,7 +276,7 @@
     
     if ([caronas count] > 0) {
         [AppHelper setCaronas:caronas];
-        NSLog(@"%@", [AppHelper getCaronas]);
+        //NSLog(@"%@", [AppHelper getCaronas]);
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(notificacaoesRecebidas:grupos:motoristas:)]) {

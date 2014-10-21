@@ -581,14 +581,14 @@
     for (MotoristaAtivo *motorista in motoristas) {
         MotoristaPin *pin = [[MotoristaPin alloc] initWithMotorista:motorista];
         [pinsMapa addObject:pin];
-        NSLog(@"Motorista %f - %f",[motorista.latitude floatValue], [motorista.longitude floatValue] );
+//        NSLog(@"Motorista %f - %f",[motorista.latitude floatValue], [motorista.longitude floatValue] );
     }
     
     if ([[AppHelper getParticipanteLogado].motorista boolValue]) {
         for (Participante* carona in caronas) {
             CaronaPin *caronaPin = [[CaronaPin new] initWithCarona:carona];
             [pinsMapa addObject:caronaPin];
-            NSLog(@"Carona: %f - %f",[carona.latitudeAtual floatValue], [carona.longitudeAtual floatValue] );
+//            NSLog(@"Carona: %f - %f",[carona.latitudeAtual floatValue], [carona.longitudeAtual floatValue] );
         }
         
         //CaronaPin *caronaPin = [[CaronaPin new] initInLocation:[AppHelper getLocationCarona]];
@@ -725,7 +725,7 @@
 
 -(void)embarcou:(Participante *)participante{
     //Confirmou o embarque - Ações para motorista
-    NSLog(@"teste");
+   // NSLog(@"teste");
 }
 
 -(void)cancelouEmbarque:(Participante *)participante{
